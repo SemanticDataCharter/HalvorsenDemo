@@ -1,0 +1,9 @@
+# Design record: internal, like CordovaOS and the FAIR Data Demo
+docs/design/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+app/sdc4/import_data/*
+!app/sdc4/import_data/.gitkeep
+app/sdc4/.env
