@@ -1,0 +1,176 @@
+key: payment-means
+label: Payment Means
+type: XdToken
+description: 'The means of payment agreed for the order, from the UN/ECE payment means list UBL carries as its default: the name of each means,
+  defined by the list entry.'
+source:
+  name: UN/ECE Recommendation 20
+links:
+- predicate: rdfs:seeAlso
+  iri: https://docs.oasis-open.org/ubl/os-UBL-2.3/UBL-2.3.html#T-PAYMENT-MEANS
+  basis: standard
+enumeration:
+- value: Instrument not defined
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#1
+- value: Automated clearing house credit
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#2
+- value: Automated clearing house debit
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#3
+- value: ACH demand debit reversal
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#4
+- value: ACH demand credit reversal
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#5
+- value: ACH demand credit
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#6
+- value: ACH demand debit
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#7
+- value: Hold
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#8
+- value: National or regional clearing
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#9
+- value: In cash
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#10
+- value: ACH savings credit reversal
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#11
+- value: ACH savings debit reversal
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#12
+- value: ACH savings credit
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#13
+- value: ACH savings debit
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#14
+- value: Bookentry credit
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#15
+- value: Bookentry debit
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#16
+- value: ACH demand cash concentration/disbursement (CCD) credit
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#17
+- value: ACH demand cash concentration/disbursement (CCD) debit
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#18
+- value: ACH demand corporate trade payment (CTP) credit
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#19
+- value: Cheque
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#20
+- value: Banker's draft
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#21
+- value: Certified banker's draft
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#22
+- value: Bank cheque (issued by a banking or similar establishment)
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#23
+- value: Bill of exchange awaiting acceptance
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#24
+- value: Certified cheque
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#25
+- value: Local cheque
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#26
+- value: ACH demand corporate trade payment (CTP) debit
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#27
+- value: ACH demand corporate trade exchange (CTX) credit
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#28
+- value: ACH demand corporate trade exchange (CTX) debit
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#29
+- value: Credit transfer
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#30
+- value: Debit transfer
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#31
+- value: ACH demand cash concentration/disbursement plus (CCD+)...
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#32
+- value: ACH demand cash concentration/disbursement plus (CCD+) debit
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#33
+- value: ACH prearranged payment and deposit (PPD)
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#34
+- value: ACH savings cash concentration/disbursement (CCD) credit
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#35
+- value: ACH savings cash concentration/disbursement (CCD) debit
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#36
+- value: ACH savings corporate trade payment (CTP) credit
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#37
+- value: ACH savings corporate trade payment (CTP) debit
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#38
+- value: ACH savings corporate trade exchange (CTX) credit
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#39
+- value: ACH savings corporate trade exchange (CTX) debit
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#40
+- value: ACH savings cash concentration/disbursement plus (CCD+)...
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#41
+- value: Payment to bank account
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#42
+- value: ACH savings cash concentration/disbursement plus (CC (43)
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#43
+- value: Accepted bill of exchange
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#44
+- value: Referenced home-banking credit transfer
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#45
+- value: Interbank debit transfer
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#46
+- value: Home-banking debit transfer
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#47
+- value: Bank card
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#48
+- value: Direct debit
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#49
+- value: Payment by postgiro
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#50
+- value: FR, norme 6 97-Telereglement CFONB (French Organisation...
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#51
+- value: Urgent commercial payment
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#52
+- value: Urgent Treasury Payment
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#53
+- value: Credit card
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#54
+- value: Debit card
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#55
+- value: Bankgiro
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#56
+- value: Standing agreement
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#57
+- value: SEPA credit transfer
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#58
+- value: SEPA direct debit
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#59
+- value: Promissory note
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#60
+- value: Promissory note signed by the debtor
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#61
+- value: Promissory note signed by the debtor and endorsed by a bank
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#62
+- value: Promissory note signed by the debtor and endorsed by a...
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#63
+- value: Promissory note signed by a bank
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#64
+- value: Promissory note signed by a bank and endorsed by another...
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#65
+- value: Promissory note signed by a third party
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#66
+- value: Promissory note signed by a third party and endorsed by...
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#67
+- value: Online payment service
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#68
+- value: Bill drawn by the creditor on the debtor
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#70
+- value: Bill drawn by the creditor on a bank
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#74
+- value: Bill drawn by the creditor, endorsed by another bank
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#75
+- value: Bill drawn by the creditor on a bank and endorsed by a...
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#76
+- value: Bill drawn by the creditor on a third party
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#77
+- value: Bill drawn by creditor on third party, accepted and...
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#78
+- value: Not transferable banker's draft
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#91
+- value: Not transferable local cheque
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#92
+- value: Reference giro
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#93
+- value: Urgent giro
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#94
+- value: Free format giro
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#95
+- value: Requested method for payment was not used
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#96
+- value: Clearing between partners
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#97
+- value: Mutually defined
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc#ZZZ

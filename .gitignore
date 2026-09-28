@@ -7,3 +7,7 @@ __pycache__/
 app/sdc4/import_data/*
 !app/sdc4/import_data/.gitkeep
 app/sdc4/.env
+app/sdc4/mediafiles/halvorsen/
+app/sdc4/mediafiles/retailer/
+app/sdc4/staticfiles/
+out/

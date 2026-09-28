@@ -1,0 +1,25 @@
+key: item-identification-scheme
+label: Item Identification Scheme
+type: XdToken
+description: 'The identification system an item identifier belongs to: a GS1 Global Trade Item Number, the buyer''s item number, the seller''s
+  item number, the manufacturer''s item number, a catalogue item number, or a system the parties agreed between themselves. A GTIN is GS1''s and
+  a buyer''s item number is the buyer''s; the record says which.'
+source:
+  name: UBL 2.3
+links:
+- predicate: rdfs:seeAlso
+  iri: https://docs.oasis-open.org/ubl/os-UBL-2.3/UBL-2.3.html#T-ITEM-IDENTIFICATION
+  basis: standard
+enumeration:
+- value: Global Trade Item Number (GS1)
+  definition: https://www.gs1.org/standards/id-keys
+- value: Buyer's item number
+  definition: https://schema.org/productID
+- value: Seller's item number
+  definition: https://schema.org/sku
+- value: Manufacturer's item number
+  definition: https://schema.org/mpn
+- value: Catalogue item number
+  definition: https://schema.org/productID
+- value: Mutually agreed
+  definition: https://schema.org/productID

@@ -1,0 +1,15 @@
+# Beat 1: the order as a record. Every value one order carries, by component, in this stack.
+# The order is chosen by its Order ID (the first one generated); change the literal to open another.
+# The reifier is addressed by its label and its component is read from its IRI, so nothing is unbound.
+PREFIX sdc4: <https://semanticdatacharter.com/ns/sdc4/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dc:   <http://purl.org/dc/elements/1.1/>
+
+SELECT ?inst ?label ?value ?component WHERE {
+  ?k rdfs:label "Order ID" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-wtnd4hzyrntlwtp4z3l1gcpr ?kp "KM-PO-2026-000001">> .
+  ?f sdc4:inInstance ?inst ; rdfs:label ?label ; rdf:reifies <<?mc ?p ?value>> .
+  BIND(STRBEFORE(STRAFTER(STR(?f), "/dm/v_"), "_") AS ?component)
+  FILTER(isLiteral(?value))
+}
+ORDER BY ?label
