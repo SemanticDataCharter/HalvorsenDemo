@@ -67,7 +67,7 @@ jobs:
             ${{ env.IMAGE }}:${{ steps.version.outputs.version }}
             ${{ env.IMAGE }}:latest
           labels: |
-            org.opencontainers.image.title=FAIR Data Demo
+            org.opencontainers.image.title=HalvorsenDemo
             org.opencontainers.image.version=${{ steps.version.outputs.version }}
             org.opencontainers.image.revision=${{ github.sha }}
             org.opencontainers.image.source=https://github.com/${{ github.repository }}
@@ -83,6 +83,6 @@ jobs:
           if gh release view "v$v" >/dev/null 2>&1; then
             echo "release v$v already exists; leaving its notes alone"
           else
-            gh release create "v$v" --verify-tag --title "FAIR Data Demo $v" --generate-notes \
+            gh release create "v$v" --verify-tag --title "HalvorsenDemo $v" --generate-notes \
               --notes "Image: \`${IMAGE}:$v\` (\`make pull\` fetches it). Run: \`git checkout v$v && make demo\`."
           fi

@@ -40,15 +40,16 @@ GROUP BY ?agent
 ORDER BY DESC(?records)
 """ % AGENT_NAME
 
-MONTHS = PREFIXES + """
-SELECT ?month (COUNT(DISTINCT ?inst) AS ?orders) (SUM(xsd:decimal(?payable)) AS ?total) (SAMPLE(?inst) AS ?sample) (SAMPLE(?dm) AS ?dmid) WHERE {
+MONTHS = PREFIXES + """PREFIX dc: <http://purl.org/dc/elements/1.1/>
+SELECT ?month ?model (COUNT(DISTINCT ?inst) AS ?orders) (SUM(xsd:decimal(?payable)) AS ?total) (SAMPLE(?inst) AS ?sample) (SAMPLE(?dm) AS ?dmid) WHERE {
   ?d rdfs:label "Issue Date" ; sdc4:inInstance ?inst ; sdc4:inDataModel ?dm ; rdf:reifies <<sdc4:mc-%s ?dp ?issued>> .
   ?p rdfs:label "Payable Amount" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-%s ?pp ?payable>> .
+  ?dm dc:title ?model . FILTER(CONTAINS(?model, " ") || ?model = "Order")
   FILTER(isLiteral(?payable) && REGEX(STR(?payable), "^[0-9.]+$"))
   BIND(SUBSTR(STR(?issued), 1, 7) AS ?month)
 }
-GROUP BY ?month
-ORDER BY ?month
+GROUP BY ?month ?model
+ORDER BY ?month ?model
 """ % (ISSUE_DATE, PAYABLE)
 
 DOCUMENTS = PREFIXES + """
@@ -99,7 +100,7 @@ def origin() -> Dict[str, Any]:
 
 
 def months() -> Dict[str, Any]:
-    """The orders by month of issue, with the payable total the records carry."""
+    """The documents by month of issue and by model, with the payable total the records carry."""
     records = _loaded()
     key = f'console:months:{records}'
     hit = cache.get(key)
@@ -108,7 +109,7 @@ def months() -> Dict[str, Any]:
     client = GraphDBClient()
     t0 = time.time()
     try:
-        rows = [{'month': _v(b, 'month'), 'orders': int(_v(b, 'orders', '0')), 'total': _v(b, 'total'), 'open': _open(b)} for b in _rows(client, MONTHS)]
+        rows = [{'month': _v(b, 'month'), 'model': _v(b, 'model'), 'orders': int(_v(b, 'orders', '0')), 'total': _v(b, 'total'), 'open': _open(b)} for b in _rows(client, MONTHS)]
     except Exception as exc:
         return {'unavailable': f'The triple store did not answer: {exc}', 'records': records}
     out = {'rows': rows, 'orders': sum(r['orders'] for r in rows), 'elapsed': round(time.time() - t0, 1), 'query': MONTHS.strip()}

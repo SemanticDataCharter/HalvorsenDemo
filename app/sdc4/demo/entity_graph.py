@@ -56,7 +56,8 @@ PARTY_REF_PREFIX = 'urn:kestrel:'
 #: Which components name a record on screen, per data model. First present wins,
 #: several are joined with a space.
 TITLE_LABELS: Dict[str, List[List[str]]] = {
-    'h8bttbt9afwzf9zs4jhae566': [['Order ID']],   # Order
+    'h8bttbt9afwzf9zs4jhae566': [['Order ID']],            # Order
+    'kuntv2wlkw54h7nxe0kqhvi2': [['Order Response ID']],   # Order Response
 }
 
 MAX_RECORDS = 150

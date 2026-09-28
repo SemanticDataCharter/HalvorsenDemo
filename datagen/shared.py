@@ -22,13 +22,16 @@ from schema import DMLIB, Schema
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 LIBRARY_VERSION = open(os.path.join(ROOT, "app", "sdc4", "VERSION"), encoding="utf-8").read().strip()
 IMPORT_ROOT = os.environ.get("HALVORSEN_IMPORT_DIR") or os.path.join(ROOT, "app", "sdc4", "import_data")
-#: The retailer's order system generates its records; the supplier's translator reads the documents it receives.
+#: The retailer's order system generates its orders and its translator reads the responses it receives;
+#: the supplier's order system generates its responses and its translator reads the orders it receives.
 GENERATOR = "Kestrel Mercantile order system"
 GENERATOR_ID = f"urn:kestrel:order-system:{LIBRARY_VERSION}"
 TRANSLATOR = "Halvorsen Foods document translator"
 TRANSLATOR_ID = f"urn:halvorsen:translator:{LIBRARY_VERSION}"
 RETAILER_SYSTEM = (GENERATOR_ID, GENERATOR, "Generated")
 SUPPLIER_TRANSLATOR = (TRANSLATOR_ID, TRANSLATOR, "Read")
+SUPPLIER_SYSTEM = (f"urn:halvorsen:order-system:{LIBRARY_VERSION}", "Halvorsen Foods order system", "Generated")
+RETAILER_TRANSLATOR = (f"urn:kestrel:translator:{LIBRARY_VERSION}", "Kestrel Mercantile document translator", "Read")
 _ID_ALPHABET = "abcdefghijklmnopqrstuvwxyz0123456789"
 
 
@@ -81,41 +84,42 @@ def record(title: str, values: dict, *, document_id: str, buyer: str, source: tu
     vals = {k: v for k, v in values.items() if v is not None}
     src_id, src_label, src_desc = source
     agent_id, agent_name, verb = agent
-    vals.update({
-        "Order Governed Record/PROV Activity/Activity Identifier": f"urn:halvorsen-demo:activity:{_counter:08d}",
-        "Order Governed Record/PROV Activity/Activity Label": f"{verb} the {title} {document_id}",
-        "Order Governed Record/PROV Activity/Activity Type": "RecordGeneration" if verb == "Generated" else "DocumentTranslation",
-        "Order Governed Record/PROV Activity/Activity Description": f"{title} {document_id} {verb.lower()} as a governed record by the {agent_name} from {src_label}.",
-        "Order Governed Record/PROV Activity/Activity Status": "ActivityCompleted",
-        "Order Governed Record/PROV Activity/Started At": when,
-        "Order Governed Record/PROV Activity/Ended At": when,
-        "Order Governed Record/PROV Activity/Used Entity Reference": src_id,
-        "Order Governed Record/PROV Activity/Was Associated With Reference": agent_id,
-        "Order Governed Record/PROV Agent/Agent Identifier": agent_id,
-        "Order Governed Record/PROV Agent/Agent Name": agent_name,
-        "Order Governed Record/PROV Agent/PROV Agent Type": "SoftwareAgent",
-        "Order Governed Record/PROV Agent/Software Name": agent_name,
-        "Order Governed Record/PROV Agent/Software Version": LIBRARY_VERSION,
-        "Order Governed Record/PROV Agent/Agent Organization Name": "Halvorsen Foods, Inc." if verb == "Read" else "Kestrel Mercantile, Inc.",
-        "Order Governed Record/PROV Entity/Entity Identifier": src_id,
-        "Order Governed Record/PROV Entity/Entity Label": src_label,
-        "Order Governed Record/PROV Entity/Entity Description": src_desc,
-        "Order Governed Record/PROV Entity/PROV Entity Type": "Entity",
-        "Order Governed Record/Audit Event/Audit Event Identifier": f"urn:halvorsen-demo:audit:{_counter:08d}",
-        "Order Governed Record/Audit Event/Audit Event Action": "C",
-        "Order Governed Record/Audit Event/Audit Event Outcome": "0",
-        "Order Governed Record/Audit Event/Audit Recorded At": when,
-        "Order Governed Record/Audit Event/Audit Agent Reference": agent_id,
-        "Order Governed Record/Audit Event/Audit Entity Reference": src_id,
-        "Order Governed Record/Audit Event/Data Subject Reference": f"urn:order:{document_id}",
-        "Order Governed Record/Audit Event/Purpose of Use": "HOPERAT",
-        "Order Governed Record/Audit Event/Confidentiality": "N",
-        "Order Governed Record/Audit Event/Provenance Agent Type": "transformer" if verb != "Generated" else "author",
-        "Order Governed Record/Audit Event/System Identifier": agent_id,
-        "Order Governed Record/Audit Event/System Location Name": "Duluth, Minnesota" if verb == "Read" else "Chicago, Illinois",
-    })
+    G = f"{title} Governed Record/"   # every model's data cluster is "<title> Governed Record"
+    vals.update({G + k: v for k, v in {
+        "PROV Activity/Activity Identifier": f"urn:halvorsen-demo:activity:{_counter:08d}",
+        "PROV Activity/Activity Label": f"{verb} the {title} {document_id}",
+        "PROV Activity/Activity Type": "RecordGeneration" if verb == "Generated" else "DocumentTranslation",
+        "PROV Activity/Activity Description": f"{title} {document_id} {verb.lower()} as a governed record by the {agent_name} from {src_label}.",
+        "PROV Activity/Activity Status": "ActivityCompleted",
+        "PROV Activity/Started At": when,
+        "PROV Activity/Ended At": when,
+        "PROV Activity/Used Entity Reference": src_id,
+        "PROV Activity/Was Associated With Reference": agent_id,
+        "PROV Agent/Agent Identifier": agent_id,
+        "PROV Agent/Agent Name": agent_name,
+        "PROV Agent/PROV Agent Type": "SoftwareAgent",
+        "PROV Agent/Software Name": agent_name,
+        "PROV Agent/Software Version": LIBRARY_VERSION,
+        "PROV Agent/Agent Organization Name": "Halvorsen Foods, Inc." if verb == "Read" else "Kestrel Mercantile, Inc.",
+        "PROV Entity/Entity Identifier": src_id,
+        "PROV Entity/Entity Label": src_label,
+        "PROV Entity/Entity Description": src_desc,
+        "PROV Entity/PROV Entity Type": "Entity",
+        "Audit Event/Audit Event Identifier": f"urn:halvorsen-demo:audit:{_counter:08d}",
+        "Audit Event/Audit Event Action": "C",
+        "Audit Event/Audit Event Outcome": "0",
+        "Audit Event/Audit Recorded At": when,
+        "Audit Event/Audit Agent Reference": agent_id,
+        "Audit Event/Audit Entity Reference": src_id,
+        "Audit Event/Data Subject Reference": f"urn:order:{document_id}",
+        "Audit Event/Purpose of Use": "HOPERAT",
+        "Audit Event/Confidentiality": "N",
+        "Audit Event/Provenance Agent Type": "transformer" if verb != "Generated" else "author",
+        "Audit Event/System Identifier": agent_id,
+        "Audit Event/System Location Name": "Duluth, Minnesota" if verb == "Read" else "Chicago, Illinois",
+    }.items()})
     return t.instance(vals, instance_id=instance_id or cuid_generator(rng), current_state=current_state, timestamp=when,
-                      subject=("Order", document_id), provider=("Buyer", buyer),
+                      subject=(title, document_id), provider=("Buyer" if title == "Order" else "Seller", buyer),
                       audit={"system_id": agent_id, "user": agent_name, "timestamp": when,
                              "values": {"Business Document Audit/PROV Entity/Entity Identifier": src_id, "Business Document Audit/PROV Entity/Entity Label": src_label,
                                         "Business Document Audit/PROV Entity/Entity Description": src_desc}},

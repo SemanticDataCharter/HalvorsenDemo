@@ -12,7 +12,7 @@ HALVORSEN := docker compose -p halvorsen --env-file env/halvorsen.env -f $(COMPO
 RETAILER  := docker compose -p retailer  --env-file env/retailer.env  -f $(COMPOSE_FILE)
 HALVORSEN_URL := http://localhost:18200
 RETAILER_URL  := http://localhost:18300
-.PHONY: help up down demo generate load load-halvorsen load-retailer wait test clean version release-check
+.PHONY: help up down demo generate load load-halvorsen load-retailer wait test clean version release-check pull
 
 help:
 	@echo "HalvorsenDemo quickstart:"
@@ -71,3 +71,6 @@ version:            ## Print the version (app/sdc4/VERSION is the single source)
 
 release-check:      ## What the release workflow checks: VERSION is tagged, tag is on main
 	@v=$$(cat app/sdc4/VERSION); git rev-parse -q --verify "refs/tags/v$$v" >/dev/null && echo "tag v$$v exists" || echo "tag v$$v missing"
+
+pull:               ## Pull the published web image for this version instead of building it (private package: docker login ghcr.io first)
+	IMAGE_TAG=$$(cat app/sdc4/VERSION) $(RETAILER) pull web

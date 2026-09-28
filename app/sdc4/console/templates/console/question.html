@@ -60,7 +60,7 @@
 
 <div class="ask" style="margin-top:22px">
   <span class="label">Question</span>
-  <span class="q">The orders by month, with what they come to</span>
+  <span class="q">The documents by month and by model, with what they come to</span>
   {% if not t.unavailable %}<span class="run">answered in {{ t.elapsed }} s</span>{% endif %}
 </div>
 
@@ -69,13 +69,14 @@
 {% else %}
   <div class="grid" style="margin-top:14px">
     <section class="card">
-      <header><span class="t">{{ t.orders }} orders</span></header>
+      <header><span class="t">{{ t.orders }} documents</span></header>
       <table>
-        <thead><tr><th>Month issued</th><th class="num">Orders</th><th class="num">Payable, USD</th><th></th></tr></thead>
+        <thead><tr><th>Month issued</th><th>Model</th><th class="num">Documents</th><th class="num">Payable, USD</th><th></th></tr></thead>
         <tbody>
           {% for r in t.rows %}
             <tr>
               <td>{{ r.month }}</td>
+              <td>{{ r.model }}</td>
               <td class="num">{{ r.orders }}</td>
               <td class="num">{{ r.total }}</td>
               <td>{% if r.open %}<a class="why" href="{% url 'console:instance' r.open.ct_id r.open.instance_id %}?pane=table">open a record &rsaquo;</a>{% endif %}</td>

@@ -2,7 +2,7 @@
 
 Halvorsen Foods is fictitious. It shipped a mixed pallet to a large retailer and took a three percent deduction for a non-compliant advance ship notice. Eleven days of reconstruction found no mistake: the retailer's rule had changed on a date the notice did not carry, and the pallet identifier had stopped being valid on a date the notice also did not carry. Two correct systems, one working integration, a verdict nobody could examine.
 
-This demonstration is built so the verdict survives a question. This release runs the first two of its six beats, on the purchase order alone; the other four arrive with the order response and the despatch advice.
+This demonstration is built so the verdict survives a question. This release runs three beats, on the purchase order and the supplier's response; the other four arrive with the despatch advice, the settlement and the second retailer's model.
 
 ## What you are looking at
 
@@ -10,11 +10,13 @@ Two stacks on one machine. The retailer, Kestrel Mercantile, also fictitious, ge
 
 Open the same order on both sides. The values are the same. What differs is the provenance each record carries: the retailer's says its order system generated it; the supplier's names the document it was read from, the translator that read it, and when. Neither side mapped anything. The model is the agreement.
 
-## The two points this release makes
+## The three points this release makes
 
 1. **The document is a projection of the record.** The retailer's system of record is the governed record, not the file. The file is written from it, checked against the standard's own schema, and read back into an identical record. If the standard changes, the projection changes; the record does not.
 
 2. **The party is one component.** Buyer, seller and delivery party are the same organization name and address components the published Default library provides, the ones a government's person record and a hospital's organization record compose in the other two demonstrations. No table says a buyer and a seller are both organizations. The component does.
+
+3. **The answer, line by line.** The supplier answers every order within a day, as a record: accepted, one line cut to what is in stock, one line rejected, or one line substituted. The response goes back the same way the order came, a standard document out of one stack and read into the other, and on the retailer's side it says which document it came from. Open the order and its response side by side: the same order identifier, the same component, no lookup table between them.
 
 ## What comes next
 

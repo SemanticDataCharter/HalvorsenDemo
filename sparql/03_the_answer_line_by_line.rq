@@ -1,0 +1,19 @@
+# Beat 3: the answer, line by line. Each response joined to the order it answers on the Order ID (the same
+# component, wtnd4hzyrntlwtp4z3l1gcpr, in the Order and in the response's Order Reference), the answer to the
+# order as a whole, and the answers its lines carry. A reifier is keyed by component and record, so the ten
+# lines of one response share their reifiers in the graph: which answers a response holds is the graph's
+# question; which line carries which is the record's, on its Table pane, one click away. Every component bound.
+PREFIX sdc4: <https://semanticdatacharter.com/ns/sdc4/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?order_id ?response_id ?response (GROUP_CONCAT(DISTINCT ?answer; separator=", ") AS ?line_answers) ?inst ?inst_2 WHERE {
+  ?ko rdfs:label "Order ID" ; sdc4:inInstance ?inst ; sdc4:inDataModel sdc4:dm-h8bttbt9afwzf9zs4jhae566 ; rdf:reifies <<sdc4:mc-wtnd4hzyrntlwtp4z3l1gcpr ?p1 ?order_id>> .
+  ?kr rdfs:label "Order ID" ; sdc4:inInstance ?inst_2 ; sdc4:inDataModel sdc4:dm-kuntv2wlkw54h7nxe0kqhvi2 ; rdf:reifies <<sdc4:mc-wtnd4hzyrntlwtp4z3l1gcpr ?p2 ?order_id>> .
+  ?ri rdfs:label "Order Response ID" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-loizsryf14xil5dlvr5uyg19 ?p3 ?response_id>> .
+  ?t rdfs:label "Order Response Type" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-rcwi6p3nngcq918vqofqzfpo ?p4 ?response>> .
+  ?a rdfs:label "Line Response" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-nejwaecesr3f3a819lab9ut9 ?p5 ?answer>> .
+}
+GROUP BY ?order_id ?response_id ?response ?inst ?inst_2
+ORDER BY ?order_id
+LIMIT 200
