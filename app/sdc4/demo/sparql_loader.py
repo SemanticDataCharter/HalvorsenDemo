@@ -28,6 +28,18 @@ QUERY_CATALOG = {
         'description': 'Each response joined to the order it answers on the Order ID, with the answer to every line.',
         'domains': ['Order', 'Order Response'],
     },
+    4: {
+        'file': '04_the_rule_that_changed.rq',
+        'title': 'The rule that changed',
+        'description': 'Each despatch advice joined to its order, with the pack specification version its pallets were packed to and the day it was sent; the version in force changed on 1 July.',
+        'domains': ['Order', 'Despatch Advice'],
+    },
+    5: {
+        'file': '05_the_identifier_that_expired.rq',
+        'title': 'The identifier that expired',
+        'description': 'Each despatch advice with its pallet identifiers, the earliest day one of them stops being valid, and the day the advice was sent.',
+        'domains': ['Despatch Advice'],
+    },
 }
 
 

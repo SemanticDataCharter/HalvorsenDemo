@@ -1,0 +1,21 @@
+# Beat 5: the identifier that expired. Each despatch advice with the pallet identifiers its units carry, the
+# earliest day one of those identifiers stops being valid, and the day the advice was sent. A pallet's identifier
+# is the pool operator's number with the period it is valid for, in the record and in the document; a despatch
+# whose earliest validity end is the day it was sent is the notice sent inside the period and received outside it.
+# The Date Range End component is the Default library's, used by the pallet's validity and by the requested
+# delivery window in the same record; a reifier is keyed by component and record, so the earliest end is the
+# graph's answer and which pallet it belongs to is the record's, on its Table pane. The Issue Date likewise: the
+# advice's is the later of the two the record carries. Every component bound.
+PREFIX sdc4: <https://semanticdatacharter.com/ns/sdc4/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?despatch_id (MAX(?issued) AS ?sent) (GROUP_CONCAT(DISTINCT ?pallet; separator=", ") AS ?pallet_ids) (MIN(?end) AS ?earliest_validity_end) (IF(MIN(?end) <= MAX(?issued), "lapses on despatch", "valid") AS ?verdict) ?inst WHERE {
+  ?di rdfs:label "Despatch Advice ID" ; sdc4:inInstance ?inst ; sdc4:inDataModel sdc4:dm-cacl4njrwanj15g3p3so8t6h ; rdf:reifies <<sdc4:mc-xic0zafpt7zu0ckizkj4975w ?p1 ?despatch_id>> .
+  ?d rdfs:label "Issue Date" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-tkd16hhh9wbn0qya2ykm0552 ?p2 ?issued>> .
+  ?p rdfs:label "Pallet ID" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-u1hc8cblrwytertipp1twfed ?p3 ?pallet>> .
+  ?e rdfs:label "Date Range End" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-moo2lije2b05ylq8q4t52lcb ?p4 ?end>> .
+}
+GROUP BY ?despatch_id ?inst
+ORDER BY ?despatch_id
+LIMIT 200

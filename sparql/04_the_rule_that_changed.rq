@@ -1,0 +1,23 @@
+# Beat 4: the rule that changed. Each despatch advice joined to the order it fulfils on the Order ID (the same
+# component, wtnd4hzyrntlwtp4z3l1gcpr, in the Order and in the despatch's Order Reference), the pack specification
+# version its pallets were packed to (the retailer's rule, named by version in every unit), the pallets by their
+# serial shipping container codes, and the day the advice was sent. The retailer's version in force changed on
+# 1 July 2026; a despatch after that date packed to KM-PACK-2026-01 is the notice the story is about, and the
+# store says so without a table of versions. The Issue Date component appears twice in a despatch (the advice's
+# and the order reference's); a reifier is keyed by component and record, so the two share it and the advice's
+# date is the later of the two. Every component bound.
+PREFIX sdc4: <https://semanticdatacharter.com/ns/sdc4/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?order_id ?despatch_id (MAX(?issued) AS ?sent) (GROUP_CONCAT(DISTINCT ?version; separator=", ") AS ?pack_specification) (COUNT(DISTINCT ?sscc) AS ?pallets) ?inst ?inst_2 WHERE {
+  ?ko rdfs:label "Order ID" ; sdc4:inInstance ?inst ; sdc4:inDataModel sdc4:dm-h8bttbt9afwzf9zs4jhae566 ; rdf:reifies <<sdc4:mc-wtnd4hzyrntlwtp4z3l1gcpr ?p1 ?order_id>> .
+  ?kd rdfs:label "Order ID" ; sdc4:inInstance ?inst_2 ; sdc4:inDataModel sdc4:dm-cacl4njrwanj15g3p3so8t6h ; rdf:reifies <<sdc4:mc-wtnd4hzyrntlwtp4z3l1gcpr ?p2 ?order_id>> .
+  ?di rdfs:label "Despatch Advice ID" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-xic0zafpt7zu0ckizkj4975w ?p3 ?despatch_id>> .
+  ?d rdfs:label "Issue Date" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-tkd16hhh9wbn0qya2ykm0552 ?p4 ?issued>> .
+  ?v rdfs:label "Pack Specification Version" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-qd6oq894pmea3e6adz3cji85 ?p5 ?version>> .
+  ?u rdfs:label "Transport Handling Unit ID" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-fmicvqjowc64hani966ab62m ?p6 ?sscc>> .
+}
+GROUP BY ?order_id ?despatch_id ?inst ?inst_2
+ORDER BY ?order_id
+LIMIT 200
