@@ -1,0 +1,12 @@
+# Beat 2: the party is one component. Every party the records name, by the Default library's
+# Organization Name component (the same one a NIEM organization and a FHIR organization compose),
+# with how many orders each appears on. Buyer, seller and delivery party fall out of one component.
+PREFIX sdc4: <https://semanticdatacharter.com/ns/sdc4/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?party (COUNT(DISTINCT ?inst) AS ?orders) (SAMPLE(?inst) AS ?inst_1) WHERE {
+  ?f rdfs:label "Organization Name" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-xcn8r67fg7soty17homzok44 ?p ?party>> .
+}
+GROUP BY ?party
+ORDER BY DESC(?orders) ?party

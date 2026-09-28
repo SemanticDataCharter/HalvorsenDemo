@@ -1,0 +1,27 @@
+key: party-identification-scheme
+label: Party Identification Scheme
+type: XdToken
+description: 'The identification system a party''s identifier belongs to: a GS1 Global Location Number, a DUNS number, a tax identifier, a company
+  registration number, an identifier the buyer assigned, an identifier the seller assigned, or one the parties agreed between themselves. A GLN
+  is GS1''s and a buyer-assigned number is the buyer''s; the record says which.'
+source:
+  name: UBL 2.3
+links:
+- predicate: rdfs:seeAlso
+  iri: https://docs.oasis-open.org/ubl/os-UBL-2.3/UBL-2.3.html#T-PARTY-IDENTIFICATION
+  basis: standard
+enumeration:
+- value: Global Location Number (GS1)
+  definition: https://www.gs1.org/standards/id-keys
+- value: DUNS number
+  definition: https://www.dnb.com/duns.html
+- value: Tax identifier
+  definition: https://schema.org/taxID
+- value: Company registration number
+  definition: https://schema.org/leiCode
+- value: Assigned by the buyer
+  definition: https://schema.org/identifier
+- value: Assigned by the seller
+  definition: https://schema.org/identifier
+- value: Mutually agreed
+  definition: https://schema.org/identifier

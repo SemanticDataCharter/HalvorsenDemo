@@ -1,0 +1,222 @@
+key: allowance-charge-reason
+label: Allowance Charge Reason
+type: XdToken
+description: 'The reason for the allowance or charge, from the UN/ECE allowance and charge reason list UBL carries as its default: the name of
+  each reason, defined by the list entry.'
+source:
+  name: UN/ECE Recommendation 20
+links:
+- predicate: rdfs:seeAlso
+  iri: https://docs.oasis-open.org/ubl/os-UBL-2.3/UBL-2.3.html#T-ALLOWANCE-CHARGE
+  basis: standard
+enumeration:
+- value: Agreed settlement
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#1
+- value: Below specification goods
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#2
+- value: Damaged goods
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#3
+- value: Short delivery
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#4
+- value: Price query
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#5
+- value: Proof of delivery required
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#6
+- value: Payment on account
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#7
+- value: Returnable container charge included
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#8
+- value: Invoice error
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#9
+- value: Costs for draft
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#10
+- value: Bank charges
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#11
+- value: Agent commission
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#12
+- value: Counter claim
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#13
+- value: Wrong delivery
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#14
+- value: Goods returned to agent
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#15
+- value: Goods partly returned
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#16
+- value: Transport damage
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#17
+- value: Goods on consignment
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#18
+- value: Trade discount
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#19
+- value: Deduction for late delivery
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#20
+- value: Advertising costs
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#21
+- value: Customs duties
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#22
+- value: Telephone and postal costs
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#23
+- value: Repair costs
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#24
+- value: Attorney fees
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#25
+- value: Taxes
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#26
+- value: Reclaimed deduction
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#27
+- value: See separate advice
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#28
+- value: Buyer refused to take delivery
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#29
+- value: Direct payment to seller
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#30
+- value: Buyer disagrees with due date
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#31
+- value: Goods not delivered
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#32
+- value: Late delivery
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#33
+- value: Quoted as paid to you
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#34
+- value: Goods returned
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#35
+- value: Invoice not received
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#36
+- value: Credit note to debtor/not to us
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#37
+- value: Deducted bonus
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#38
+- value: Deducted discount
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#39
+- value: Deducted freight costs
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#40
+- value: Deduction against other invoices
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#41
+- value: Credit balance(s)
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#42
+- value: Reason unknown
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#43
+- value: Awaiting message from seller
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#44
+- value: Debit note to seller
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#45
+- value: Discount beyond terms
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#46
+- value: See buyer's letter
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#47
+- value: Allowance/charge error
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#48
+- value: Substitute product
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#49
+- value: Terms of sale error
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#50
+- value: Required data missing
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#51
+- value: Wrong invoice
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#52
+- value: Duplicate invoice
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#53
+- value: Weight error
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#54
+- value: Additional charge not authorized
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#55
+- value: Incorrect discount
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#56
+- value: Price change
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#57
+- value: Variation
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#58
+- value: Chargeback
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#59
+- value: Offset
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#60
+- value: Indirect payment
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#61
+- value: Financial reassignment
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#62
+- value: Reinstatement of chargeback/offset
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#63
+- value: Expecting new terms
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#64
+- value: Settlement to agent
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#65
+- value: Cash discount
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#66
+- value: Delcredere costs
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#67
+- value: Early payment allowance adjustment
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#68
+- value: Incorrect due date for monetary amount
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#69
+- value: Wrong monetary amount resulting from incorrect free...
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#70
+- value: Rack or shelf replenishment service by a supplier
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#71
+- value: Temporary special promotion
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#72
+- value: Difference in tax rate
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#73
+- value: Quantity discount
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#74
+- value: Promotion discount
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#75
+- value: Cancellation deadline passed
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#76
+- value: Pricing discount
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#77
+- value: Volume discount
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#78
+- value: Sundry discount
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#79
+- value: Card holder signature missing
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#80
+- value: Card expiry date missing
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#81
+- value: Card number error
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#82
+- value: Card expired
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#83
+- value: Test card transaction
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#84
+- value: Permission limit exceeded
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#85
+- value: Wrong authorisation code
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#86
+- value: Wrong authorised amount
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#87
+- value: Authorisation failed
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#88
+- value: Card acceptor data error
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#89
+- value: Treasury management service charge
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#90
+- value: Agreed discount
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#91
+- value: Expediting fee
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#92
+- value: Invoicing fee
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#93
+- value: Freight charge
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#94
+- value: Small order processing service charge
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#95
+- value: Currency exchange differences
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#96
+- value: Insolvency
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#97
+- value: Incorrect references
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#98
+- value: Incorrect identification of the buyer
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#99
+- value: Incorrect product identification
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#100
+- value: New employee
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#101
+- value: Employee retirement
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#102
+- value: Salary change
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#103
+- value: Parental leave
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#104
+- value: Mutually defined
+  definition: http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc#ZZZ

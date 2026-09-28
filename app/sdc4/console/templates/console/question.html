@@ -1,0 +1,96 @@
+{% extends "console/base.html" %}
+{% block title %}Where the records came from{% endblock %}
+
+{% block content %}
+<div class="ask">
+  <span class="label">Question</span>
+  <span class="q">Where did every record in this stack come from, and what does it hold?</span>
+  {% if not q.unavailable %}<span class="run">answered in {{ q.elapsed }} s</span>{% endif %}
+</div>
+
+{% if q.unavailable %}
+  <section class="card" style="margin-top:14px">
+    <div class="note">{{ q.unavailable }}</div>
+  </section>
+{% else %}
+  <section class="answer">
+    <div class="figs">
+      <div class="fig">
+        <div class="v">{{ q.records }}</div>
+        <div class="k">records</div>
+        <div class="src">in PostgreSQL, each validated under its model's schema on the way in</div>
+      </div>
+      <div class="fig">
+        <div class="v">{{ q.from_documents }}</div>
+        <div class="k">read from a document</div>
+        <div class="src">each names the UBL Order it was read from as the entity its activity used</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="grid" style="margin-top:14px">
+    <section class="card">
+      <header><span class="t">By the system that produced them</span></header>
+      <table>
+        <thead><tr><th>Agent</th><th class="num">Records</th><th></th></tr></thead>
+        <tbody>
+          {% for r in q.rows %}
+            <tr>
+              <td>{{ r.agent }}</td>
+              <td class="num">{{ r.records }}</td>
+              <td>{% if r.open %}<a class="why" href="{% url 'console:instance' r.open.ct_id r.open.instance_id %}?pane=table">open a record &rsaquo;</a>{% endif %}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <p class="hint">
+        The retailer's order system generates its records; the supplier's translator reads the documents it receives.
+        Each record says which, in the PROV agent it carries, and the store answers from that component, bound by its identifier.
+      </p>
+    </section>
+
+    <aside>
+      <section class="card">
+        <header><span class="t">The query, in full</span></header>
+        <div class="pane"><pre>{{ q.query }}</pre></div>
+      </section>
+    </aside>
+  </div>
+{% endif %}
+
+<div class="ask" style="margin-top:22px">
+  <span class="label">Question</span>
+  <span class="q">The orders by month, with what they come to</span>
+  {% if not t.unavailable %}<span class="run">answered in {{ t.elapsed }} s</span>{% endif %}
+</div>
+
+{% if t.unavailable %}
+  <section class="card" style="margin-top:14px"><div class="note">{{ t.unavailable }}</div></section>
+{% else %}
+  <div class="grid" style="margin-top:14px">
+    <section class="card">
+      <header><span class="t">{{ t.orders }} orders</span></header>
+      <table>
+        <thead><tr><th>Month issued</th><th class="num">Orders</th><th class="num">Payable, USD</th><th></th></tr></thead>
+        <tbody>
+          {% for r in t.rows %}
+            <tr>
+              <td>{{ r.month }}</td>
+              <td class="num">{{ r.orders }}</td>
+              <td class="num">{{ r.total }}</td>
+              <td>{% if r.open %}<a class="why" href="{% url 'console:instance' r.open.ct_id r.open.instance_id %}?pane=table">open a record &rsaquo;</a>{% endif %}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <p class="hint">Every amount is a quantity in a currency the schema enumerates; the total is the store's sum of the Payable Amount component across the records of the month.</p>
+    </section>
+    <aside>
+      <section class="card">
+        <header><span class="t">The query, in full</span></header>
+        <div class="pane"><pre>{{ t.query }}</pre></div>
+      </section>
+    </aside>
+  </div>
+{% endif %}
+{% endblock %}
