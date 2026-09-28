@@ -58,6 +58,7 @@ PARTY_REF_PREFIX = 'urn:kestrel:'
 TITLE_LABELS: Dict[str, List[List[str]]] = {
     'h8bttbt9afwzf9zs4jhae566': [['Order ID']],            # Order
     'kuntv2wlkw54h7nxe0kqhvi2': [['Order Response ID']],   # Order Response
+    'cacl4njrwanj15g3p3so8t6h': [['Despatch Advice ID']],  # Despatch Advice
 }
 
 MAX_RECORDS = 150

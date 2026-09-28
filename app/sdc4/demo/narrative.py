@@ -1,9 +1,9 @@
 """
 The walk-through: the order as a governed record, the document as its projection.
 
-Three beats run in this release, on the Order and the Order Response. The other four
-need the despatch advice (the rule that changed, the identifier that expired,
-the verdict) and the two retailer profile models (two profiles), and are listed here as what comes.
+Five beats run in this release, on the Order, the Order Response and the Despatch Advice. The
+other two need the settlement receipt (the verdict) and the two retailer profile models (two
+profiles), and are listed here as what comes.
 """
 
 BEATS = [
@@ -57,12 +57,44 @@ BEATS = [
         ),
         'query_label': 'Show the answers',
     },
+    {
+        'number': 4,
+        'title': 'The rule that changed',
+        'query_number': 4,
+        'icon': 'bi-box-seam',
+        'color': 'warning',
+        'narrative': (
+            'The supplier ships every answered order the day before the delivery window opens, as a record of '
+            'the published Despatch Advice model: the pallets by serial shipping container code, the cases on '
+            'each, and the version of the retailer\'s pack specification each pallet was packed to. The '
+            'retailer replaced that specification on the first of July. The query joins each despatch to its '
+            'order on the Order ID and lists the version its pallets name beside the day it was sent; a despatch '
+            'after July packed to the January version is the non-compliant notice of the story, and the store '
+            'says so from the record, with no table of versions and no reconstruction.'
+        ),
+        'query_label': 'Show the versions',
+    },
+    {
+        'number': 5,
+        'title': 'The identifier that expired',
+        'query_number': 5,
+        'icon': 'bi-upc-scan',
+        'color': 'danger',
+        'narrative': (
+            'Each pallet is an asset with an identifier from the pool operator and the period that identifier '
+            'is valid for. The record carries the period; so does the UBL 2.3 DespatchAdvice written from it, '
+            'as the equipment\'s validity period, and the retailer\'s translator reads it back. The query lists '
+            'every despatch with its pallet identifiers, the earliest day one of them stops being valid, and the '
+            'day the advice was sent. Where the two are the same day, the notice was sent inside the period and '
+            'the goods arrive outside it. The receipt advice, in the next release, holds that against the day '
+            'they were received.'
+        ),
+        'query_label': 'Show the identifiers',
+    },
 ]
 
 #: The beats the next releases add, in the order the documents arrive.
 COMING = [
-    ('The rule that changed', 'the despatch advice against two versions of the retailer\'s pack specification, both in the store with dates'),
-    ('The identifier that expired', 'the pallet identifier with its validity range; the notice sent inside it and received outside it'),
     ('The verdict, examinable', 'the deduction as the OrderProblem transition, settled with a receipt that verifies offline'),
     ('Two profiles', 'the same order under two retailers\' models; what each requires, and which the receipt names'),
 ]

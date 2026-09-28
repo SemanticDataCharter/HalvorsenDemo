@@ -1,0 +1,20 @@
+key: pallet-id-scheme
+label: Pallet ID Scheme
+type: XdToken
+description: 'The scheme the pallet identifier belongs to: GS1''s Global Returnable Asset Identifier, a pool operator''s number, the shipper''s
+  own, or one the parties agreed.'
+source:
+  name: UBL 2.3
+links:
+- predicate: rdfs:seeAlso
+  iri: https://docs.oasis-open.org/ubl/os-UBL-2.3/UBL-2.3.html#T-TRANSPORT-HANDLING-UNIT
+  basis: standard
+enumeration:
+- value: Global Returnable Asset Identifier (GS1)
+  definition: https://www.gs1.org/standards/id-keys
+- value: Pool operator number
+  definition: https://schema.org/identifier
+- value: Shipper's number
+  definition: https://schema.org/identifier
+- value: Mutually agreed
+  definition: https://schema.org/identifier

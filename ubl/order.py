@@ -49,7 +49,7 @@ R = ("Order Governed Record", "Order")   # the record's data cluster
 NOT_PROJECTED = {"Contact Method", "Contact Use"}
 NOT_PROJECTED_UNDER = {("Catalogue Reference", "Document Type")}
 #: UN/ECE Recommendation 20 codes for the unit symbols the Default library's SI unit lists carry.
-REC20 = {"mm": "MMT", "cm": "CMT", "m": "MTR", "km": "KMT", "mg": "MGM", "g": "GRM", "kg": "KGM", "mL": "MLT", "L": "LTR"}
+REC20 = {"mm": "MMT", "cm": "CMT", "m": "MTR", "km": "KMT", "mg": "MGM", "g": "GRM", "kg": "KGM", "mL": "MLT", "L": "LTR", "°C": "CEL", "K": "KEL"}
 SYMBOL = {v: k for k, v in REC20.items()}
 #: The identification schemes an identifier can name (this library's tokens) and the UN/ECE 3055 agency that issues them.
 PARTY_SCHEMES = {"Global Location Number (GS1)": ("GLN", "9"), "DUNS number": ("DUNS", "16")}
@@ -796,7 +796,7 @@ class _Reader:
 
 @lru_cache(maxsize=None)
 def _scheme_values(label: str) -> tuple[str, ...]:
-    key = {"Party Identification Scheme": "party-identification-scheme", "Item Identification Scheme": "item-identification-scheme"}[label]
+    key = {"Party Identification Scheme": "party-identification-scheme", "Item Identification Scheme": "item-identification-scheme", "Pallet ID Scheme": "pallet-id-scheme"}[label]
     with open(os.path.join(ROOT, "datagen", "records", f"{key}.yaml"), encoding="utf-8") as f:
         return tuple(e["value"] for e in yaml.safe_load(f)["enumeration"])
 
