@@ -1,8 +1,8 @@
 """
 The walk-through: the order as a governed record, the document as its projection.
 
-Two of the six beats of the demonstration run in this release, on the Order alone. The other four
-need the order response and the despatch advice (the rule that changed, the identifier that expired,
+Three beats run in this release, on the Order and the Order Response. The other four
+need the despatch advice (the rule that changed, the identifier that expired,
 the verdict) and the two retailer profile models (two profiles), and are listed here as what comes.
 """
 
@@ -39,6 +39,23 @@ BEATS = [
             'says that a buyer and a seller are both organizations; the component does.'
         ),
         'query_label': 'Show the parties',
+    },
+    {
+        'number': 3,
+        'title': 'The answer, line by line',
+        'query_number': 3,
+        'icon': 'bi-reply',
+        'color': 'info',
+        'narrative': (
+            'The supplier answers every order within a day, as a record of the published Order Response '
+            'model: accepted as ordered, one line cut to what is in stock, one line rejected, or one line '
+            'substituted by the next product of the family. The response was written out of the supplier\'s '
+            'stack as a UBL 2.3 OrderResponse and read into the retailer\'s. The query joins each response '
+            'to the order it answers on the Order ID, the same component in both models, and lists the '
+            'answer to every line. On the retailer\'s stack the orders are generated and the responses read; '
+            'on the supplier\'s it is the other way round, and the store says so.'
+        ),
+        'query_label': 'Show the answers',
     },
 ]
 

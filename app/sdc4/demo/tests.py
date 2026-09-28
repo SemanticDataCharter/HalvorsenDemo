@@ -78,5 +78,5 @@ class WalkThroughTests(SimpleTestCase):
             entry = QUERY_CATALOG[beat['query_number']]
             self.assertTrue((SPARQL_DIR / entry['file']).exists(), entry['file'])
 
-    def test_the_beats_and_the_ones_to_come_make_six(self):
-        self.assertEqual(len(BEATS) + len(COMING), 6)
+    def test_the_beats_and_the_ones_to_come_make_seven(self):
+        self.assertEqual(len(BEATS) + len(COMING), 7)   # the six of the plan, and the answer line by line the OrderResponse added

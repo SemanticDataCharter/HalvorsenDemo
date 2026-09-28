@@ -22,6 +22,12 @@ QUERY_CATALOG = {
         'description': 'Every party the records name, grouped by the Default Organization Name component, with the orders each appears on.',
         'domains': ['Order'],
     },
+    3: {
+        'file': '03_the_answer_line_by_line.rq',
+        'title': 'The answer, line by line',
+        'description': 'Each response joined to the order it answers on the Order ID, with the answer to every line.',
+        'domains': ['Order', 'Order Response'],
+    },
 }
 
 

@@ -72,7 +72,7 @@ def validate_ubl(xml: str) -> list[str]:
 @lru_cache(maxsize=None)
 def codes(key: str) -> tuple[dict[str, str], dict[str, str]]:
     """value -> code and code -> value for a token record whose values come from a UBL default code list (the code is the fragment of each definition)."""
-    with open(os.path.join(ROOT, "datagen", "records", f"{key}.yaml"), encoding="utf-8") as f:   # the library records the tokens come from
+    with open(os.path.join(ROOT, "datagen", "records", f"{key}.yaml"), encoding="utf-8") as f:
         rec = yaml.safe_load(f)
     to_code = {e["value"]: e["definition"].rsplit("#", 1)[1] for e in rec["enumeration"]}
     return to_code, {c: v for v, c in to_code.items()}
@@ -380,10 +380,10 @@ class _Writer:
             self.amount(s, "TaxAmount", sub.leaf("Tax Amount"))
             self.tax_category(s, "TaxCategory", sub.get("Tax Category") or Node("Tax Category"))
 
-    def monetary_total(self, parent, node: Node | None):
+    def monetary_total(self, parent, node: Node | None, name: str = "AnticipatedMonetaryTotal"):
         if node is None or node.leaf("Payable Amount") is None:
             return
-        el = self.cac(parent, "AnticipatedMonetaryTotal")
+        el = self.cac(parent, name)
         for name, label in (("LineExtensionAmount", "Line Extension Total Amount"), ("TaxExclusiveAmount", "Tax Exclusive Amount"), ("TaxInclusiveAmount", "Tax Inclusive Amount"),
                             ("AllowanceTotalAmount", "Allowance Total Amount"), ("ChargeTotalAmount", "Charge Total Amount"), ("PrepaidAmount", "Prepaid Amount"),
                             ("PayableRoundingAmount", "Payable Rounding Amount"), ("PayableAmount", "Payable Amount")):
@@ -435,17 +435,14 @@ class _Writer:
         self.token(el, "PriceTypeCode", node.leaf("Price Type"), "price-type")
         self.period(el, "ValidityPeriod", node.get("Price Validity Period"))
 
-    def order_line(self, parent, node: Node | None):
-        if node is None:
-            return
-        li = node.get("Line Item")
+    def line_item(self, parent, name: str, li: Node | None, status=None, status_key: str = "line-status"):
+        """A UBL LineItem (cac:LineItem, or a substitute line item) from a Line Item cluster; ``status`` overrides the line's own status (a response carries its answer there)."""
         if li is None or li.leaf("Line ID") is None:
-            return   # UBL requires the line item and its identifier
-        ol = self.cac(parent, "OrderLine")
-        el = self.cac(ol, "LineItem")
+            return None   # UBL requires the line item's identifier
+        el = self.cac(parent, name)
         self.cbc(el, "ID", li.leaf("Line ID"))
         self.cbc(el, "Note", li.leaf("Note"))
-        self.token(el, "LineStatusCode", li.leaf("Line Status"), "line-status")
+        self.token(el, "LineStatusCode", status if status is not None else li.leaf("Line Status"), status_key)
         self.quantity(el, "Quantity", li.leaf("Ordered Quantity"))
         self.amount(el, "LineExtensionAmount", li.leaf("Line Extension Amount"))
         self.amount(el, "TotalTaxAmount", li.leaf("Total Tax Amount"))
@@ -454,6 +451,16 @@ class _Writer:
         self.delivery(el, li.get("Delivery"))
         self.price(el, li.get("Price"))
         self.item(el, li.get("Item"))
+        return el
+
+    def order_line(self, parent, node: Node | None):
+        if node is None:
+            return
+        li = node.get("Line Item")
+        if li is None or li.leaf("Line ID") is None:
+            return   # UBL requires the line item and its identifier
+        ol = self.cac(parent, "OrderLine")
+        self.line_item(ol, "LineItem", li)
         self.docref(ol, "DocumentReference", node.get("Line Document Reference", "Document Reference"))
 
 
@@ -718,8 +725,8 @@ class _Reader:
                 self.amount(st, "cbc:TaxAmount", to + ("Tax Subtotal", "Tax Amount"))
                 self.tax_category(st, "cac:TaxCategory", to + ("Tax Subtotal", "Tax Category"))
 
-    def monetary_total(self, el, to: tuple[str, ...]):
-        mt = self.one(el, "cac:AnticipatedMonetaryTotal")
+    def monetary_total(self, el, to: tuple[str, ...], name: str = "AnticipatedMonetaryTotal"):
+        mt = self.one(el, f"cac:{name}")
         if mt is not None:
             for name, label in (("LineExtensionAmount", "Line Extension Total Amount"), ("TaxExclusiveAmount", "Tax Exclusive Amount"), ("TaxInclusiveAmount", "Tax Inclusive Amount"),
                                 ("AllowanceTotalAmount", "Allowance Total Amount"), ("ChargeTotalAmount", "Charge Total Amount"), ("PrepaidAmount", "Prepaid Amount"),
@@ -765,12 +772,13 @@ class _Reader:
             self.text(p, "cbc:PriceTypeCode", to + ("Price Type",))
             self.period(p, "cac:ValidityPeriod", to + ("Price Validity Period",))
 
-    def order_line(self, ol, to: tuple[str, ...]):
-        li = self.one(ol, "cac:LineItem")
-        t = to + ("Line Item",)
+    def line_item_from(self, li, t: tuple[str, ...], status_to: tuple[str, ...] | None = None):
+        """A UBL LineItem into the Line Item cluster at ``t``; its status goes to ``status_to`` when given (a response's answer)."""
+        if li is None:
+            return
         self.text(li, "cbc:ID", t + ("Line ID",))
         self.text(li, "cbc:Note", t + ("Note",))
-        self.text(li, "cbc:LineStatusCode", t + ("Line Status",))
+        self.text(li, "cbc:LineStatusCode", status_to if status_to is not None else t + ("Line Status",))
         self.quantity(li, "cbc:Quantity", t + ("Ordered Quantity",))
         self.amount(li, "cbc:LineExtensionAmount", t + ("Line Extension Amount",))
         self.amount(li, "cbc:TotalTaxAmount", t + ("Total Tax Amount",))
@@ -779,7 +787,11 @@ class _Reader:
         self.delivery(self.one(li, "cac:Delivery"), t + ("Delivery",))
         self.price(li, t + ("Price",))
         self.item(li, t + ("Item",))
+
+    def order_line(self, ol, to: tuple[str, ...]):
+        self.line_item_from(self.one(ol, "cac:LineItem"), to + ("Line Item",))
         self.docref(ol, "cac:DocumentReference", to + ("Line Document Reference", "Document Reference"))
+
 
 
 @lru_cache(maxsize=None)
