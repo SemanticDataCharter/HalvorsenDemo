@@ -27,7 +27,7 @@ PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 """
 AGENT_NAME = "xxe21o9ojzmy9wxxky1tnmog"      # PROV Agent / Agent Name
-ENTITY_LABEL = "m9minyaug6ypyzt52zfxlyyi"    # PROV Entity / Entity Label: the document the activity used
+ACTIVITY_TYPE = "jjzmhdxvbt97pq81iwqubtxk"   # PROV Activity / Activity Type: DocumentTranslation when the record was read from a document
 ORDER_ID = "wtnd4hzyrntlwtp4z3l1gcpr"         # Order Document / Order ID
 ISSUE_DATE = "tkd16hhh9wbn0qya2ykm0552"       # Order Document / Issue Date
 PAYABLE = "axifzu4nt8m8n4qpfn838yy8"          # Anticipated Monetary Total / Payable Amount
@@ -52,11 +52,10 @@ ORDER BY ?month
 """ % (ISSUE_DATE, PAYABLE)
 
 DOCUMENTS = PREFIXES + """
-SELECT (COUNT(DISTINCT ?inst) AS ?records) (COUNT(DISTINCT ?doc) AS ?documents) WHERE {
-  ?e rdfs:label "Entity Label" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-%s ?ep ?doc>> .
-  FILTER(STRENDS(STR(?doc), ".xml"))
+SELECT (COUNT(DISTINCT ?inst) AS ?documents) WHERE {
+  ?t rdfs:label "Activity Type" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-%s ?tp "DocumentTranslation">> .
 }
-""" % ENTITY_LABEL
+""" % ACTIVITY_TYPE
 
 
 def _loaded() -> int:
@@ -93,7 +92,7 @@ def origin() -> Dict[str, Any]:
         docs = _rows(client, DOCUMENTS)
     except Exception as exc:   # the store being down leaves the page standing and saying why
         return {'unavailable': f'The triple store did not answer: {exc}', 'records': records}
-    from_documents = int(_v(docs[0], 'documents', '0')) if docs else 0
+    from_documents = int(_v(docs[0], 'documents', '0')) if docs else 0   # records whose activity read a document
     out = {'rows': rows, 'records': records, 'from_documents': from_documents, 'elapsed': round(time.time() - t0, 1), 'query': ORIGIN.strip()}
     cache.set(key, out, CACHE_SECONDS)
     return out

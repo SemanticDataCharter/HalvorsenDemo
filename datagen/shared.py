@@ -82,7 +82,7 @@ def record(title: str, values: dict, *, document_id: str, buyer: str, source: tu
     src_id, src_label, src_desc = source
     agent_id, agent_name, verb = agent
     vals.update({
-        "Order Governed Record/PROV Activity/Activity Identifier": f"urn:axius-sdc:business-documents:activity:{_counter:08d}",
+        "Order Governed Record/PROV Activity/Activity Identifier": f"urn:halvorsen-demo:activity:{_counter:08d}",
         "Order Governed Record/PROV Activity/Activity Label": f"{verb} the {title} {document_id}",
         "Order Governed Record/PROV Activity/Activity Type": "RecordGeneration" if verb == "Generated" else "DocumentTranslation",
         "Order Governed Record/PROV Activity/Activity Description": f"{title} {document_id} {verb.lower()} as a governed record by the {agent_name} from {src_label}.",
@@ -101,7 +101,7 @@ def record(title: str, values: dict, *, document_id: str, buyer: str, source: tu
         "Order Governed Record/PROV Entity/Entity Label": src_label,
         "Order Governed Record/PROV Entity/Entity Description": src_desc,
         "Order Governed Record/PROV Entity/PROV Entity Type": "Entity",
-        "Order Governed Record/Audit Event/Audit Event Identifier": f"urn:axius-sdc:business-documents:audit:{_counter:08d}",
+        "Order Governed Record/Audit Event/Audit Event Identifier": f"urn:halvorsen-demo:audit:{_counter:08d}",
         "Order Governed Record/Audit Event/Audit Event Action": "C",
         "Order Governed Record/Audit Event/Audit Event Outcome": "0",
         "Order Governed Record/Audit Event/Audit Recorded At": when,

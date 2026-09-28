@@ -24,6 +24,8 @@ make demo
 - http://localhost:18300/console/ the retailer, Kestrel Mercantile: 52 orders its order system generated.
 - http://localhost:18200/console/ the supplier, Halvorsen Foods: the same 52 orders, each read from the UBL 2.3 document the retailer sent, and saying so.
 
+Measured on the first run: 52 records and 52 named graphs on each side, none invalid, loaded in six seconds each; the saved queries answer in half a second and a fiftieth of a second (`sparql/README.md`).
+
 `make down` stops both. Two stacks need about 14 GB of RAM; `HALVORSEN_ORDERS=260 make demo` generates five years.
 
 ## What runs in this release
