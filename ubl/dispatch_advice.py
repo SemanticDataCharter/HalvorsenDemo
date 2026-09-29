@@ -1,12 +1,12 @@
 """
 The DespatchAdvice's open projection: a conformant OASIS UBL 2.3 DespatchAdvice written from a governed record, and read into one.
 
-    from ubl.despatch_advice import write_despatch_advice, read_despatch_advice, validate_ubl_despatch
-    ubl_xml = write_despatch_advice(instance_xml)
-    assert not validate_ubl_despatch(ubl_xml)
-    values = read_despatch_advice(ubl_xml)
+    from ubl.dispatch_advice import write_dispatch_advice, read_dispatch_advice, validate_ubl_dispatch
+    ubl_xml = write_dispatch_advice(instance_xml)
+    assert not validate_ubl_dispatch(ubl_xml)
+    values = read_dispatch_advice(ubl_xml)
 
-The despatch advice composes the Order's parties, delivery, item and document references, so its
+The dispatch advice composes the Order's parties, delivery, item and document references, so its
 writer and reader are the Order's and the OrderResponse's with the shipment added. Where the record
 names something UBL has no element for, the projection says where it went:
 
@@ -44,10 +44,10 @@ from order import CAC, CBC, NOT_PROJECTED, NOT_PROJECTED_UNDER, NS, ROOT, UBL_VE
 from order_response import _ResponseReader, _ResponseWriter  # noqa: E402
 from schema import Schema  # noqa: E402
 
-DESPATCH_CT = "cacl4njrwanj15g3p3so8t6h"
-DESPATCH_NS = "urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2"
-NSMAP_DESPATCH = {None: DESPATCH_NS, "cac": CAC, "cbc": CBC}
-UBL_DESPATCH_XSD = os.path.join(ROOT, "data", "ubl-2.3", "xsd", "maindoc", "UBL-DespatchAdvice-2.3.xsd")
+DISPATCH_CT = "cacl4njrwanj15g3p3so8t6h"
+DISPATCH_NS = "urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2"
+NSMAP_DISPATCH = {None: DISPATCH_NS, "cac": CAC, "cbc": CBC}
+UBL_DISPATCH_XSD = os.path.join(ROOT, "data", "ubl-2.3", "xsd", "maindoc", "UBL-DespatchAdvice-2.3.xsd")
 DR = ("Despatch Advice Governed Record", "Despatch Advice")
 #: The pallet identifier schemes with a UN/ECE 3055 agency: GS1's Global Returnable Asset Identifier.
 PALLET_SCHEMES = {"Global Returnable Asset Identifier (GS1)": ("GRAI", "9")}
@@ -61,23 +61,23 @@ LINES = 10
 
 
 @lru_cache(maxsize=None)
-def ubl_despatch_schema():
+def ubl_dispatch_schema():
     import xmlschema
-    return xmlschema.XMLSchema(UBL_DESPATCH_XSD)
+    return xmlschema.XMLSchema(UBL_DISPATCH_XSD)
 
 
-def validate_ubl_despatch(xml: str) -> list[str]:
+def validate_ubl_dispatch(xml: str) -> list[str]:
     """Validation errors of a document against the OASIS UBL 2.3 DespatchAdvice schema; empty when conformant."""
-    return [str(e) for e in ubl_despatch_schema().iter_errors(etree.fromstring(xml.encode() if isinstance(xml, str) else xml))]
+    return [str(e) for e in ubl_dispatch_schema().iter_errors(etree.fromstring(xml.encode() if isinstance(xml, str) else xml))]
 
 
 # ================================================================ writer
-def write_despatch_advice(instance_xml: str) -> str:
-    tree = read_tree(instance_xml, Schema.for_dm(DESPATCH_CT))
+def write_dispatch_advice(instance_xml: str) -> str:
+    tree = read_tree(instance_xml, Schema.for_dm(DISPATCH_CT))
     d = tree.get(*DR)
-    assert d is not None, "no Despatch Advice cluster in the instance"
-    w = _DespatchWriter()
-    root = etree.Element(f"{{{DESPATCH_NS}}}DespatchAdvice", nsmap=NSMAP_DESPATCH)
+    assert d is not None, "no Dispatch Advice cluster in the instance"
+    w = _DispatchWriter()
+    root = etree.Element(f"{{{DISPATCH_NS}}}DespatchAdvice", nsmap=NSMAP_DISPATCH)
     h = d.get("Despatch Advice Document") or Node("Despatch Advice Document")
     w.cbc(root, "UBLVersionID", UBL_VERSION)
     w.cbc(root, "CustomizationID", h.leaf("Customization ID"))
@@ -94,7 +94,7 @@ def write_despatch_advice(instance_xml: str) -> str:
     w.number(root, "LineCountNumeric", h.leaf("Line Count"))
     w.order_reference(root, d.get("Order Reference"))
     w.docref(root, "AdditionalDocumentReference", d.get("Additional Document Reference", "Document Reference"))
-    # UBL requires the despatching supplier and the delivery customer, every member optional: present even when the record has none
+    # UBL requires the dispatching supplier and the delivery customer, every member optional: present even when the record has none
     w.supplier_party(root, "DespatchSupplierParty", d.get("Despatch Supplier Party", "Supplier Party"))
     w.required(root, "DespatchSupplierParty")
     w.customer_party(root, "DeliveryCustomerParty", d.get("Delivery Customer Party", "Customer Party"))
@@ -105,11 +105,11 @@ def write_despatch_advice(instance_xml: str) -> str:
     w.shipment(root, d.get("Shipment"))
     lines = d.get("Despatch Lines") or Node("Despatch Lines")
     for n in range(1, LINES + 1):
-        w.despatch_line(root, lines.get(f"Despatch Line {n}", "Despatch Line"))
+        w.dispatch_line(root, lines.get(f"Despatch Line {n}", "Despatch Line"))
     return etree.tostring(root, pretty_print=True, encoding="unicode")
 
 
-class _DespatchWriter(_ResponseWriter):
+class _DispatchWriter(_ResponseWriter):
     def required(self, parent, name: str):
         """An aggregate UBL requires, empty when the record has nothing for it (every member of the two parties is optional)."""
         if parent.find(f"cac:{name}", NS) is None:
@@ -155,15 +155,7 @@ class _DespatchWriter(_ResponseWriter):
         self.cbc(el, "HandlingInstructions", node.leaf("Handling Instructions"))
         self.number(el, "TotalPackageQuantity", node.leaf("Total Package Quantity"))
         self.cbc(el, "ShippingMarks", node.leaf("Shipping Marks"))
-        pallet = node.get("Pallet Identification")
-        if pallet is not None and pallet.leaf("Pallet ID") is not None:
-            te = self.cac(el, "TransportEquipment")
-            self.scheme(te, "ID", pallet.leaf("Pallet ID"), pallet.leaf("Pallet ID Scheme"), PALLET_SCHEMES)
-            if pallet.get("Date Range") is not None:
-                ref = self.cac(te, "ShipmentDocumentReference")
-                self.cbc(ref, "ID", pallet.leaf("Pallet ID"))
-                self.cbc(ref, "DocumentType", PALLET_ID_DOCUMENT)
-                self.period(ref, "ValidityPeriod", pallet)
+        self.pallet_equipment(el, node.get("Pallet Identification"))
         for label, name in (("Minimum Temperature", "MinimumTemperature"), ("Maximum Temperature", "MaximumTemperature")):
             if node.leaf(label) is not None:
                 t = self.cac(el, name)
@@ -171,12 +163,29 @@ class _DespatchWriter(_ResponseWriter):
                 self.quantity(t, "Measure", node.leaf(label), si=True)
         package = node.get("Package")
         spec = None if package is None else package.get("Pack Specification")
-        if spec is not None and spec.leaf("Pack Specification Version") is not None:
-            ref = self.cac(el, "ShipmentDocumentReference")
-            self.cbc(ref, "ID", spec.leaf("Pack Specification Version"))
-            self.cbc(ref, "DocumentType", PACK_SPECIFICATION_DOCUMENT)
+        self.unit_document(el, None if spec is None else spec.leaf("Pack Specification Version"), PACK_SPECIFICATION_DOCUMENT)
         self.package(el, package)
         self.drop_if_empty(el)
+
+    def pallet_equipment(self, parent, pallet: Node | None):
+        """The pallet as transport equipment: its identifier with the scheme, and the identifier's validity period as the equipment's document reference."""
+        if pallet is None or pallet.leaf("Pallet ID") is None:
+            return
+        te = self.cac(parent, "TransportEquipment")
+        self.scheme(te, "ID", pallet.leaf("Pallet ID"), pallet.leaf("Pallet ID Scheme"), PALLET_SCHEMES)
+        if pallet.get("Date Range") is not None:
+            ref = self.cac(te, "ShipmentDocumentReference")
+            self.cbc(ref, "ID", pallet.leaf("Pallet ID"))
+            self.cbc(ref, "DocumentType", PALLET_ID_DOCUMENT)
+            self.period(ref, "ValidityPeriod", pallet)
+
+    def unit_document(self, parent, identifier, document_type: str):
+        """A document the unit names by identifier and kind (the pack specification version it was packed to, the one in force)."""
+        if identifier is None:
+            return
+        ref = self.cac(parent, "ShipmentDocumentReference")
+        self.cbc(ref, "ID", identifier)
+        self.cbc(ref, "DocumentType", document_type)
 
     def package(self, parent, node: Node | None):
         if node is None:
@@ -202,7 +211,7 @@ class _DespatchWriter(_ResponseWriter):
                     self.quantity(dim, "Measure", spec.leaf(label), si=True)
         self.drop_if_empty(el)
 
-    def despatch_line(self, parent, node: Node | None):
+    def dispatch_line(self, parent, node: Node | None):
         if node is None or node.leaf("Line ID") is None:
             return   # UBL requires the line's identifier
         dl = self.cac(parent, "DespatchLine")
@@ -225,11 +234,11 @@ class _DespatchWriter(_ResponseWriter):
 
 
 # ================================================================ reader
-def read_despatch_advice(ubl_xml: str) -> dict[str, Any]:
-    """The values of a UBL 2.3 DespatchAdvice by label path in the Despatch Advice model, the engine's input for a record."""
+def read_dispatch_advice(ubl_xml: str) -> dict[str, Any]:
+    """The values of a UBL 2.3 DespatchAdvice by label path in the Dispatch Advice model, the engine's input for a record."""
     root = etree.fromstring(ubl_xml.encode() if isinstance(ubl_xml, str) else ubl_xml)
-    assert root.tag == f"{{{DESPATCH_NS}}}DespatchAdvice", root.tag
-    r = _DespatchReader()
+    assert root.tag == f"{{{DISPATCH_NS}}}DespatchAdvice", root.tag
+    r = _DispatchReader()
     out = r.out
     h = DR + ("Despatch Advice Document",)
     r.text(root, "cbc:CustomizationID", h + ("Customization ID",))
@@ -253,13 +262,13 @@ def read_despatch_advice(ubl_xml: str) -> dict[str, Any]:
     r.customer_party(root, "cac:OriginatorCustomerParty", DR + ("Originator Customer Party", "Customer Party"))
     r.shipment(r.one(root, "cac:Shipment"), DR + ("Shipment",))
     lines = root.findall("cac:DespatchLine", NS)
-    assert len(lines) <= LINES, f"the Despatch Advice model carries {LINES} lines; the document has {len(lines)}"
+    assert len(lines) <= LINES, f"the Dispatch Advice model carries {LINES} lines; the document has {len(lines)}"
     for n, dl in enumerate(lines, start=1):
-        r.despatch_line(dl, DR + ("Despatch Lines", f"Despatch Line {n}", "Despatch Line"))
+        r.dispatch_line(dl, DR + ("Despatch Lines", f"Despatch Line {n}", "Despatch Line"))
     return out
 
 
-class _DespatchReader(_ResponseReader):
+class _DispatchReader(_ResponseReader):
     def shipment(self, s, to: tuple[str, ...]):
         if s is None:
             return
@@ -278,7 +287,7 @@ class _DespatchReader(_ResponseReader):
             self.party_from(self.one(c, "cac:CarrierParty"), to + ("Consignment", "Carrier Party", "Party"))
         self.delivery(self.one(s, "cac:Delivery"), to + ("Delivery",))
         units = s.findall("cac:TransportHandlingUnit", NS)
-        assert len(units) <= UNITS, f"the Despatch Advice model carries {UNITS} transport handling units; the document has {len(units)}"
+        assert len(units) <= UNITS, f"the Dispatch Advice model carries {UNITS} transport handling units; the document has {len(units)}"
         for n, u in enumerate(units, start=1):
             self.handling_unit(u, to + ("Transport Handling Units", f"Transport Handling Unit {n}", "Transport Handling Unit"))
 
@@ -288,23 +297,30 @@ class _DespatchReader(_ResponseReader):
         self.text(u, "cbc:HandlingInstructions", to + ("Handling Instructions",))
         self.number(u, "cbc:TotalPackageQuantity", to + ("Total Package Quantity",), "count")
         self.text(u, "cbc:ShippingMarks", to + ("Shipping Marks",))
-        te = self.one(u, "cac:TransportEquipment")
-        if te is not None and self.one(te, "cbc:ID") is not None:
-            pid = self.one(te, "cbc:ID")
-            p = to + ("Pallet Identification",)
-            self.put(p + ("Pallet ID Scheme",), self.scheme(pid, p + ("Pallet ID Scheme",), PALLET_SCHEMES, "Mutually agreed"))
-            self.put(p + ("Pallet ID",), (pid.text or "").strip())
-            for ref in te.findall("cac:ShipmentDocumentReference", NS):
-                if (self.one(ref, "cbc:DocumentType") is not None and self.one(ref, "cbc:DocumentType").text == PALLET_ID_DOCUMENT):
-                    self.period(ref, "cac:ValidityPeriod", p)
+        self.pallet_equipment(u, to + ("Pallet Identification",))
         for label, name in (("Minimum Temperature", "cac:MinimumTemperature"), ("Maximum Temperature", "cac:MaximumTemperature")):
             t = self.one(u, name)
             if t is not None:
                 self.quantity(t, "cbc:Measure", to + (label,), si=True)
-        for ref in u.findall("cac:ShipmentDocumentReference", NS):
-            if self.one(ref, "cbc:DocumentType") is not None and self.one(ref, "cbc:DocumentType").text == PACK_SPECIFICATION_DOCUMENT:
-                self.text(ref, "cbc:ID", to + ("Package", "Pack Specification", "Pack Specification Version"))
+        self.unit_documents(u, {PACK_SPECIFICATION_DOCUMENT: to + ("Package", "Pack Specification", "Pack Specification Version")})
         self.package(self.one(u, "cac:Package"), to + ("Package",))
+
+    def pallet_equipment(self, u, p: tuple[str, ...]):
+        te = self.one(u, "cac:TransportEquipment")
+        if te is not None and self.one(te, "cbc:ID") is not None:
+            pid = self.one(te, "cbc:ID")
+            self.put(p + ("Pallet ID Scheme",), self.scheme(pid, p + ("Pallet ID Scheme",), PALLET_SCHEMES, "Mutually agreed"))
+            self.put(p + ("Pallet ID",), (pid.text or "").strip())
+            for ref in te.findall("cac:ShipmentDocumentReference", NS):
+                if self.one(ref, "cbc:DocumentType") is not None and self.one(ref, "cbc:DocumentType").text == PALLET_ID_DOCUMENT:
+                    self.period(ref, "cac:ValidityPeriod", p)
+
+    def unit_documents(self, u, by_type: dict):
+        """The unit's document references by kind, each read into the path its kind names."""
+        for ref in u.findall("cac:ShipmentDocumentReference", NS):
+            kind = self.one(ref, "cbc:DocumentType")
+            if kind is not None and kind.text in by_type:
+                self.text(ref, "cbc:ID", by_type[kind.text])
 
     def package(self, p, to: tuple[str, ...]):
         if p is None:
@@ -325,7 +341,7 @@ class _DespatchReader(_ResponseReader):
             if label:
                 self.quantity(d, "cbc:Measure", spec + (label,), si=True)
 
-    def despatch_line(self, dl, to: tuple[str, ...]):
+    def dispatch_line(self, dl, to: tuple[str, ...]):
         self.text(dl, "cbc:ID", to + ("Line ID",))
         self.text(dl, "cbc:Note", to + ("Note",))
         self.text(dl, "cbc:LineStatusCode", to + ("Line Status",))
@@ -343,7 +359,7 @@ class _DespatchReader(_ResponseReader):
         self.item(dl, to + ("Item",))
 
 
-def projected_despatch(values: dict[str, Any]) -> dict[str, Any]:
+def projected_dispatch(values: dict[str, Any]) -> dict[str, Any]:
     """The record's values a UBL DespatchAdvice can carry: everything but NOT_PROJECTED and NOT_PROJECTED_UNDER."""
     out = {}
     for path, v in values.items():

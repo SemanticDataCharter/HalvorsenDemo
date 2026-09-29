@@ -40,6 +40,12 @@ QUERY_CATALOG = {
         'description': 'Each despatch advice with its pallet identifiers, the earliest day one of them stops being valid, and the day the advice was sent.',
         'domains': ['Despatch Advice'],
     },
+    6: {
+        'file': '06_the_verdict_in_the_record.rq',
+        'title': 'The verdict, in the record',
+        'description': 'Each receipt advice with the dispatch it answers, the day received, and the two answers its pallets carry: the identifier within its period, the pack specification in force.',
+        'domains': ['Despatch Advice', 'Receipt Advice'],
+    },
 }
 
 
