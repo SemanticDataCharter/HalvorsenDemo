@@ -33,6 +33,7 @@ SUPPLIER_TRANSLATOR = (TRANSLATOR_ID, TRANSLATOR, "Read")
 SUPPLIER_SYSTEM = (f"urn:halvorsen:order-system:{LIBRARY_VERSION}", "Halvorsen Foods order system", "Generated")
 RETAILER_TRANSLATOR = (f"urn:kestrel:translator:{LIBRARY_VERSION}", "Kestrel Mercantile document translator", "Read")
 SUPPLIER_WAREHOUSE = (f"urn:halvorsen:warehouse-system:{LIBRARY_VERSION}", "Halvorsen Foods warehouse system", "Generated")
+RETAILER_RECEIVING = (f"urn:kestrel:receiving-system:{LIBRARY_VERSION}", "Kestrel Mercantile receiving system", "Generated")
 _ID_ALPHABET = "abcdefghijklmnopqrstuvwxyz0123456789"
 
 
@@ -120,7 +121,7 @@ def record(title: str, values: dict, *, document_id: str, buyer: str, source: tu
         "Audit Event/System Location Name": "Duluth, Minnesota" if verb == "Read" else "Chicago, Illinois",
     }.items()})
     return t.instance(vals, instance_id=instance_id or cuid_generator(rng), current_state=current_state, timestamp=when,
-                      subject=(title, document_id), provider=("Buyer" if title == "Order" else "Seller", buyer),
+                      subject=(title, document_id), provider=("Buyer" if title in ("Order", "Receipt Advice") else "Seller", buyer),
                       audit={"system_id": agent_id, "user": agent_name, "timestamp": when,
                              "values": {"Business Document Audit/PROV Entity/Entity Identifier": src_id, "Business Document Audit/PROV Entity/Entity Label": src_label,
                                         "Business Document Audit/PROV Entity/Entity Description": src_desc}},

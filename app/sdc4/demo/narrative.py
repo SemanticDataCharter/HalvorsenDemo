@@ -1,9 +1,9 @@
 """
 The walk-through: the order as a governed record, the document as its projection.
 
-Five beats run in this release, on the Order, the Order Response and the Despatch Advice. The
-other two need the settlement receipt (the verdict) and the two retailer profile models (two
-profiles), and are listed here as what comes.
+Six beats run in this release, on the Order, the Order Response, the Despatch Advice and the
+Receipt Advice. The other two need the settlement receipt (the verdict settled) and the two
+retailer profile models (two profiles), and are listed here as what comes.
 """
 
 BEATS = [
@@ -91,10 +91,28 @@ BEATS = [
         ),
         'query_label': 'Show the identifiers',
     },
+    {
+        'number': 6,
+        'title': 'The verdict, in the record',
+        'query_number': 6,
+        'icon': 'bi-clipboard-check',
+        'color': 'dark',
+        'narrative': (
+            'The retailer receives each shipment the day after it was sent and checks every pallet on that day '
+            'against both rules: was the identifier within its period, was the unit packed to the version in '
+            'force. The receipt advice holds the answers beside the facts they were judged on, the identifier, its '
+            'period, the received date, the version packed to and the version in force, and a failing pallet '
+            'puts the record in the OrderProblem state. Written as a UBL 2.3 ReceiptAdvice and read into the '
+            'supplier\'s stack, the same record on both sides. The query lists every receipt with its dispatch, '
+            'the day received and the two yes-or-no answers its pallets carry. Nobody reconstructs anything; the '
+            'deduction, when it comes, has a record to be examined against.'
+        ),
+        'query_label': 'Show the verdicts',
+    },
 ]
 
 #: The beats the next releases add, in the order the documents arrive.
 COMING = [
-    ('The verdict, examinable', 'the deduction as the OrderProblem transition, settled with a receipt that verifies offline'),
+    ('The verdict, settled', 'the deduction as the OrderProblem transition, settled with a receipt that verifies offline'),
     ('Two profiles', 'the same order under two retailers\' models; what each requires, and which the receipt names'),
 ]

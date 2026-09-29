@@ -1,8 +1,8 @@
 """
-Halvorsen's despatch advices for Kestrel's orders, generated on the template engine.
+Halvorsen's dispatch advices for Kestrel's orders, generated on the template engine.
 
 Each order the seller answered is shipped the day before the requested delivery window opens, from
-the Duluth warehouse to the Joliet distribution center by the carrier. The despatch fulfils the
+the Duluth warehouse to the Joliet distribution center by the carrier. The dispatch fulfils the
 response: the confirmed quantity of every line is delivered, a rejected line is canceled, a
 substituted line carries the substitute, and now and then a line is short-shipped with the balance on
 back order. The cases are stacked on pallets, up to six, each a transport handling unit with its
@@ -15,8 +15,8 @@ by the day the goods are received, and a unit packed to a pack specification ver
 had already replaced. Both are in the record, both travel in the UBL projection, and the receipt
 advice will hold them against the receipt date.
 
-    from halvorsen_despatch import generate_despatches
-    for h, order_values, order_xml, rh, response_values, response_xml, dh, despatch_values, despatch_xml in generate_despatches(52):
+    from halvorsen_dispatch import generate_dispatches
+    for h, order_values, order_xml, rh, response_values, response_xml, dh, dispatch_values, dispatch_xml in generate_dispatches(52):
         ...
 """
 from __future__ import annotations
@@ -68,13 +68,13 @@ def _response_lines(rv: dict) -> list[int]:
     return [n for n in range(1, 11) if (R + f"Order Response Lines/Order Response Line {n}/Order Response Line/Line Response") in rv]
 
 
-def despatch(h: dict, order: dict, rh: dict, rv: dict, rng: random.Random) -> tuple[dict, dict, str]:
-    """Halvorsen's despatch advice for one answered order: (header, values, instance xml)."""
+def dispatch(h: dict, order: dict, rh: dict, rv: dict, rng: random.Random) -> tuple[dict, dict, str]:
+    """Halvorsen's dispatch advice for one answered order: (header, values, instance xml)."""
     order_id = h["order_id"]
     seq = int(order_id.rsplit("-", 1)[1])
     window_start = date.fromisoformat(order[O + "Delivery/Requested Delivery Period/Date Range/Date Range Start"])
     issued = window_start - timedelta(days=1)
-    despatch_id = f"HF-DA-{issued.year}-{seq:06d}"
+    dispatch_id = f"HF-DA-{issued.year}-{seq:06d}"
     catalog = {c[0]: c for c in CATALOG}
     kind = "short" if seq % 12 == 7 else "canceled-line" if rh["kind"] == "rejected" else "substituted" if rh["kind"] == "substituted" else "complete"
     pallet_lapses = seq % 12 == 5
@@ -83,7 +83,7 @@ def despatch(h: dict, order: dict, rh: dict, rv: dict, rng: random.Random) -> tu
     v = {
         D + "Despatch Advice Document/Customization ID": "https://axius-sdc.com/library/business/despatch-advice-governed-record",
         D + "Despatch Advice Document/Profile ID": order.get(O + "Order Document/Profile ID"),
-        D + "Despatch Advice Document/Despatch Advice ID": despatch_id,
+        D + "Despatch Advice Document/Despatch Advice ID": dispatch_id,
         D + "Despatch Advice Document/Copy Indicator": False,
         D + "Despatch Advice Document/Document UUID": f"{rng.getrandbits(32):08x}-{rng.getrandbits(16):04x}-4{rng.getrandbits(12):03x}-{rng.getrandbits(16):04x}-{rng.getrandbits(48):012x}",
         D + "Despatch Advice Document/Issue Date": issued.isoformat(),
@@ -99,7 +99,7 @@ def despatch(h: dict, order: dict, rh: dict, rv: dict, rng: random.Random) -> tu
         D + "Additional Document Reference/Document Reference/Document Reference ID": rh["response_id"],
         D + "Additional Document Reference/Document Reference/Document Reference Issue Date": rh["issued"],
         D + "Additional Document Reference/Document Reference/Document Type": "Other document",   # the document-type list predates the response; a revision will name it
-        D + "Additional Document Reference/Document Reference/Document Description": "The order response this despatch fulfils.",
+        D + "Additional Document Reference/Document Reference/Document Description": "The order response this dispatch fulfils.",
         D + "Shipment/Shipment ID": f"HF-SH-{issued.year}-{seq:06d}",
         D + "Shipment/Consignment/Consignment ID": f"HF-CN-{issued.year}-{seq:06d}",
         D + "Shipment/Consignment/Carrier Assigned ID": f"NLF{rng.randint(10000000, 99999999)}",
@@ -152,7 +152,7 @@ def despatch(h: dict, order: dict, rh: dict, rv: dict, rng: random.Random) -> tu
         elif n == short_line:
             shipped = max(1, confirmed - 6)
             v[L + "Backorder Quantity"] = Quantity(str(confirmed - shipped), "CS")
-            v[L + "Backorder Reason"] = "Short stock at despatch; the balance follows on the next run."
+            v[L + "Backorder Reason"] = "Short stock at dispatch; the balance follows on the next run."
         elif answer == "Substituted":
             v[L + "Note"] = rv.get(RL + "Seller Substituted Line Item/Line Item/Note")
         if confirmed and shipped < ordered and answer != "Rejected" and n != short_line:
@@ -213,19 +213,19 @@ def despatch(h: dict, order: dict, rh: dict, rv: dict, rng: random.Random) -> tu
     })
     v = {k: val for k, val in v.items() if val is not None}
     when = f"{issued.isoformat()}T{rng.randint(6, 15):02d}:{rng.randint(0, 59):02d}:00"
-    xml = record("Despatch Advice", v, document_id=despatch_id, buyer=HALVORSEN["name"], when=when,
-                 source=(f"urn:halvorsen:response:{rh['response_id']}", f"{rh['response_id']}.xml", "The Order Response this despatch fulfils"),
+    xml = record("Despatch Advice", v, document_id=dispatch_id, buyer=HALVORSEN["name"], when=when,
+                 source=(f"urn:halvorsen:response:{rh['response_id']}", f"{rh['response_id']}.xml", "The Order Response this dispatch fulfils"),
                  agent=WAREHOUSE_SYSTEM, current_state="OrderInTransit", instance_id=cuid_generator(rng), rng=rng)
-    dh = {"despatch_id": despatch_id, "order_id": order_id, "response_id": rh["response_id"], "issued": issued.isoformat(), "kind": kind,
+    dh = {"dispatch_id": dispatch_id, "order_id": order_id, "response_id": rh["response_id"], "issued": issued.isoformat(), "kind": kind,
           "pallets": pallets, "pallet_lapses": pallet_lapses and pallets > 0, "pack_version": previous if pack_stale else version, "pack_stale": pack_stale,
           "seller": HALVORSEN["name"], "buyer": KESTREL["name"]}
     return dh, v, xml
 
 
-def generate_despatches(orders: int, seed: str = "halvorsen-2026"):
-    """Yield (order header, values, xml, response header, values, xml, despatch header, values, xml) for each order."""
+def generate_dispatches(orders: int, seed: str = "halvorsen-2026"):
+    """Yield (order header, values, xml, response header, values, xml, dispatch header, values, xml) for each order."""
     from halvorsen_responses import generate_responses
-    rng = random.Random(seed + ":despatches")
+    rng = random.Random(seed + ":dispatches")
     for h, values, xml, rh, rv, rxml in generate_responses(orders, seed=seed):
-        dh, dv, dxml = despatch(h, values, rh, rv, rng)
+        dh, dv, dxml = dispatch(h, values, rh, rv, rng)
         yield h, values, xml, rh, rv, rxml, dh, dv, dxml
