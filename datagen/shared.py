@@ -23,7 +23,7 @@ ROOT = os.path.join(os.path.dirname(__file__), "..")
 LIBRARY_VERSION = open(os.path.join(ROOT, "app", "sdc4", "VERSION"), encoding="utf-8").read().strip()
 IMPORT_ROOT = os.environ.get("HALVORSEN_IMPORT_DIR") or os.path.join(ROOT, "app", "sdc4", "import_data")
 #: The retailer's order system generates its orders and its translator reads the responses it receives;
-#: the supplier's order system generates its responses, its warehouse system the despatch advices, and its translator reads the orders it receives.
+#: the supplier's order system generates its responses, its warehouse system the dispatch advices, and its translator reads the orders it receives.
 GENERATOR = "Kestrel Mercantile order system"
 GENERATOR_ID = f"urn:kestrel:order-system:{LIBRARY_VERSION}"
 TRANSLATOR = "Halvorsen Foods document translator"

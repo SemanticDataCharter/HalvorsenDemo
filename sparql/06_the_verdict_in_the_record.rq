@@ -1,5 +1,5 @@
 # Beat 6, first half: the verdict, in the record. Each receipt advice joined to the dispatch advice it answers (the
-# receipt's despatch document reference carries the dispatch's identifier), the day the goods were received, the
+# receipt's Despatch Document Reference carries the dispatch's identifier), the day the goods were received, the
 # receiver's decision on its pallets, and the exception where there is one: what was found, and against which rule,
 # on that day. A receipt whose conditions include "Accepted with exception" is in the OrderProblem state. The two
 # yes-or-no answers every pallet carries (the identifier within its period, the pack specification compliant) are in
