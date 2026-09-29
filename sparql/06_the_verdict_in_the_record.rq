@@ -1,23 +1,24 @@
 # Beat 6, first half: the verdict, in the record. Each receipt advice joined to the dispatch advice it answers (the
-# receipt's Despatch Document Reference carries the dispatch's identifier), the day the goods were received, the
-# receiver's decision on its pallets, and the exception where there is one: what was found, and against which rule,
-# on that day. A receipt whose conditions include "Accepted with exception" is in the OrderProblem state. The two
-# yes-or-no answers every pallet carries (the identifier within its period, the pack specification compliant) are in
-# the record and in the UBL document; the generated application's RDF projection does not yet write a boolean's
-# value into the graph (SDCStudio #714), so here the exception's own words carry the verdict. A reifier is keyed by
-# component and record, so a receipt with six pallets shows the set of its conditions, and which pallet is the
-# record's, on its Table pane. Every component bound.
+# receipt's Despatch Document Reference carries the dispatch's identifier), the day the goods were received, the two
+# answers every pallet carries, made on that day (was the pallet identifier within its validity period, was the unit
+# packed to the pack specification version in force), the receiver's decision, and the exception where there is one:
+# what was found, and against which rule. A receipt whose answers include "false" holds a pallet accepted with an
+# exception, and the record is in the OrderProblem state. The answers are booleans, one component each, used once per
+# pallet; a reifier is keyed by component and record, so a receipt with six pallets shows the set of its answers, and
+# which pallet failed is the record's, on its Table pane. Every component bound.
 PREFIX sdc4: <https://semanticdatacharter.com/ns/sdc4/>
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?receipt_id ?dispatch_id (MIN(?received) AS ?received_on) (GROUP_CONCAT(DISTINCT ?condition; separator=", ") AS ?conditions) (GROUP_CONCAT(DISTINCT ?exception; separator=" | ") AS ?exceptions) ?inst ?inst_2 WHERE {
+SELECT ?receipt_id ?dispatch_id (MIN(?received) AS ?received_on) (GROUP_CONCAT(DISTINCT STR(?pallet_valid); separator=", ") AS ?pallet_id_valid) (GROUP_CONCAT(DISTINCT STR(?compliant); separator=", ") AS ?pack_specification_compliant) (GROUP_CONCAT(DISTINCT ?condition; separator=", ") AS ?conditions) (GROUP_CONCAT(DISTINCT ?exception; separator=" | ") AS ?exceptions) ?inst ?inst_2 WHERE {
   ?kd rdfs:label "Despatch Advice ID" ; sdc4:inInstance ?inst ; sdc4:inDataModel sdc4:dm-cacl4njrwanj15g3p3so8t6h ; rdf:reifies <<sdc4:mc-xic0zafpt7zu0ckizkj4975w ?p1 ?dispatch_id>> .
   ?kr rdfs:label "Document Reference ID" ; sdc4:inInstance ?inst_2 ; sdc4:inDataModel sdc4:dm-tog0v0p1zit1xwpxysxwpf3d ; rdf:reifies <<sdc4:mc-k153quyn7i9ravd1b3c61ad9 ?p2 ?dispatch_id>> .
   ?ri rdfs:label "Receipt Advice ID" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-n8ktn56c09i6kzy6kxzqs53j ?p3 ?receipt_id>> .
   ?d rdfs:label "Received Date" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-hjwyyftryqy2wwiodxm5334r ?p4 ?received>> .
-  ?s rdfs:label "Receiving Condition" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-xpl4g1gsbbgsqq3okyp08qb3 ?p5 ?condition>> .
-  OPTIONAL { ?e rdfs:label "Exception Description" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-civdvmt96axod0ho162jf37u ?p6 ?exception>> . }
+  ?v rdfs:label "Pallet ID Valid on Receipt" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-o4tzku1fyzr7n78h4p64mvnx ?p5 ?pallet_valid>> .
+  ?c rdfs:label "Pack Specification Compliant" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-wrnl8gyzup8j3i8s00oh9n8y ?p6 ?compliant>> .
+  ?s rdfs:label "Receiving Condition" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-xpl4g1gsbbgsqq3okyp08qb3 ?p7 ?condition>> .
+  OPTIONAL { ?e rdfs:label "Exception Description" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-civdvmt96axod0ho162jf37u ?p8 ?exception>> . }
 }
 GROUP BY ?receipt_id ?dispatch_id ?inst ?inst_2
 ORDER BY ?receipt_id
