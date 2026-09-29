@@ -1,6 +1,6 @@
 # HalvorsenDemo for the people who run it
 
-Two stacks from one compose file, the CordovaOS skeleton each: PostgreSQL, GraphDB, SirixDB, Keycloak, Redis, the Django web app and a Celery worker. `make demo` starts both, generates the year of orders, responses, dispatch advices and receipt advices on the host, and loads each side in its own web container.
+Two stacks from one compose file, the CordovaOS skeleton each: PostgreSQL, GraphDB, SirixDB, Keycloak, Redis, the Django web app and a Celery worker. `make demo` starts both, generates the year of orders, responses, dispatch advices, receipt advices and invoices on the host, and loads each side in its own web container.
 
 ## Getting it running
 
@@ -25,7 +25,7 @@ The project name, the ports and the data directory (`app/sdc4/mediafiles/<stack>
 
 ## 1. The application is generated. The model is the source of truth.
 
-`app/sdc4/order/`, `app/sdc4/order_response/`, `app/sdc4/despatch_advice/` and `app/sdc4/receipt_advice/` are the standalone applications SDCStudio generated for the published Order (`h8bttbt9afwzf9zs4jhae566`), Order Response (`kuntv2wlkw54h7nxe0kqhvi2`), Despatch Advice (`cacl4njrwanj15g3p3so8t6h`) and Receipt Advice (`tog0v0p1zit1xwpxysxwpf3d`) models, installed verbatim; `sdcstudio_downloads/` holds the zips and the model packages as downloaded. The models compose the UBL 2.3 concepts and GS1's identifiers on the Default and ProvGov libraries by identifier slot, with the ProvGov `order` workflow bound. The skeleton discovers an application by its directory; nothing is registered by hand.
+`app/sdc4/order/`, `app/sdc4/order_response/`, `app/sdc4/despatch_advice/`, `app/sdc4/receipt_advice/` and `app/sdc4/invoice/` are the standalone applications SDCStudio generated for the published Order (`h8bttbt9afwzf9zs4jhae566`), Order Response (`kuntv2wlkw54h7nxe0kqhvi2`), Despatch Advice (`cacl4njrwanj15g3p3so8t6h`), Receipt Advice (`tog0v0p1zit1xwpxysxwpf3d`) and Invoice (`u19w614300a8ot4a7qnn2o1c`) models, installed verbatim; `sdcstudio_downloads/` holds the zips and the model packages as downloaded. The models compose the UBL 2.3 concepts and GS1's identifiers on the Default and ProvGov libraries by identifier slot, with the ProvGov `order` workflow bound. The skeleton discovers an application by its directory; nothing is registered by hand.
 
 ## 2. The exchange in both directions, and where each record says it came from
 
@@ -39,18 +39,20 @@ Then the retailer receives. `datagen/halvorsen_receipts.py` generates the receiv
 
 The two answers are booleans, and the first run of 4.1.3 found that no boolean reached any generated application's graph: the generator named the value `xdboolean-value` where the reference model writes `true-value` or `false-value` (SDCStudio #714, fixed and deployed the same day). The four applications were regenerated, apps only, the packages untouched, and installed verbatim in 4.1.4; saved query 6 binds the two answers beside the receiving condition and the exception.
 
+Then the supplier bills. `datagen/halvorsen_invoices.py` generates the billing system's invoice for each receipt (`import_data/halvorsen/invoice/`): every line at the received quantity and the confirmed price, the short and rejected cases left off, a deposit deducted every twelfth order, the order, dispatch and receipt lines it settles named in UBL's own line references; the state is OrderPaymentDue. `ubl/invoice.py` writes it as a UBL 2.3 Invoice into the exchange; the retailer's translator reads it back (`import_data/retailer/invoice/`). UBL's Invoice carries no document status, so that one leaf of the header is left out and named (`NOT_PROJECTED_INVOICE`).
+
 Two leaves of the record have no home in a UBL Order (a contact point's method and use); they are named in `ubl/order.py` as `NOT_PROJECTED`. Everything else round-trips, and the supplier's record projects back to the document byte for byte. `datagen/tests/test_round_trip.py` holds that.
 
 ## 3. Loading
 
-`load_all_data` in each web container validates every instance under the model's XSD 1.1 schema on the way in, writes PostgreSQL and one named graph per record in GraphDB. Each stack mounts its own `app/sdc4/import_data/<stack>/` as `/app/import_data`, so the retailer loads `retailer/order/`, `retailer/order_response/`, `retailer/despatch_advice/` and `retailer/receipt_advice/`, the supplier the same four under `halvorsen/`. Every load clears the previous graphs first: a reload mints fresh instance identifiers, and the stale graphs would otherwise inflate every count.
+`load_all_data` in each web container validates every instance under the model's XSD 1.1 schema on the way in, writes PostgreSQL and one named graph per record in GraphDB. Each stack mounts its own `app/sdc4/import_data/<stack>/` as `/app/import_data`, so the retailer loads `retailer/order/`, `retailer/order_response/`, `retailer/despatch_advice/`, `retailer/receipt_advice/` and `retailer/invoice/`, the supplier the same five under `halvorsen/`. Every load clears the previous graphs first: a reload mints fresh instance identifiers, and the stale graphs would otherwise inflate every count.
 
 ## 4. The console and the saved questions
 
-`/console/` on either stack: the records, and one question answered by the store, where the records came from (the PROV agent, bound by its component identifier) and the orders by month with their payable totals. `/demo/` carries the six saved queries of the walk-through (`sparql/`), the SPARQL explorer and the entity graph, which joins a record to its counterpart, and a response or a dispatch to its order, on the Order ID component, and a receipt to its dispatch on the dispatch advice's identifier. A reifier in the graph is keyed by component and record, so the ten lines of one response share their reifiers, and so do the six pallets' validity periods and the delivery window of one dispatch, all on the Default library's date range: which answers a response holds, or the earliest day a dispatch's pallet identifiers stop being valid, is the graph's question; which line or which pallet is the record's, on its Table pane.
+`/console/` on either stack: the records, and one question answered by the store, where the records came from (the PROV agent, bound by its component identifier) and the documents that carry a payable amount, the orders, the responses and the invoices, by month and by model with their totals. `/demo/` carries the seven saved queries of the walk-through (`sparql/`), the SPARQL explorer and the entity graph, which joins a record to its counterpart, and a response or a dispatch to its order, on the Order ID component, and a receipt to its dispatch and an invoice to its receipt on the identifiers each names. A reifier in the graph is keyed by component and record, so the ten lines of one response share their reifiers, and so do the six pallets' validity periods and the delivery window of one dispatch, all on the Default library's date range: which answers a response holds, or the earliest day a dispatch's pallet identifiers stop being valid, is the graph's question; which line or which pallet is the record's, on its Table pane.
 
 Every query binds its component: the reifier is addressed by its label and the component read from its IRI. A triple term with the component unbound makes GraphDB scan every reifier in the store, which cost the other demonstrations a six-minute query before it was written down.
 
 ## 5. What this release does not show
 
-The invoice; the two retailer profile models; the settlement receipt on the OrderProblem transition. They are the remaining two beats and arrive with those documents. The receipt advice holds the notice's two facts against the receipt date; the settlement receipt will make the deduction a transition anyone can verify offline.
+The two retailer profile models; the settlement receipt on the OrderProblem transition. They are the remaining two beats and arrive with those documents. The receipt advice holds the notice's two facts against the receipt date; the settlement receipt will make the deduction a transition anyone can verify offline.

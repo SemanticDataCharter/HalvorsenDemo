@@ -1,6 +1,6 @@
 # The saved questions
 
-Six queries against the knowledge graph each stack projects, one named graph per record. Each anchors on a published component by its `ct_id`; the reifier is addressed by its label and its component is read from its IRI, so nothing in a triple term is left unbound (a triple term with the component unbound makes GraphDB scan every reifier).
+Seven queries against the knowledge graph each stack projects, one named graph per record. Each anchors on a published component by its `ct_id`; the reifier is addressed by its label and its component is read from its IRI, so nothing in a triple term is left unbound (a triple term with the component unbound makes GraphDB scan every reifier).
 
 | # | File | What it shows |
 |---|------|---------------|
@@ -10,17 +10,19 @@ Six queries against the knowledge graph each stack projects, one named graph per
 | 4 | `04_the_rule_that_changed.rq` | Each dispatch advice joined to its order on the Order ID, the pack specification version its pallets were packed to, the pallet count, and the day it was sent |
 | 5 | `05_the_identifier_that_expired.rq` | Each dispatch advice with its pallet identifiers, the earliest day one of them stops being valid, the day the advice was sent, and the verdict the two dates give |
 | 6 | `06_the_verdict_in_the_record.rq` | Each receipt advice joined to the dispatch it answers, the day received, the receiver's decision on its pallets, and the exception where there is one |
+| 7 | `07_the_bill_for_what_arrived.rq` | Each invoice joined to the receipt it settles, the dispatch and the order, with the amount due, the deposit deducted, and the receiver's conditions on the pallets |
 
-## What each returned (release 4.1.4, 52 of each of the four documents, GraphDB cold)
+## What each returned (release 4.1.5, 52 of each of the five documents, GraphDB cold)
 
 | # | Rows | Time | Retailer | Supplier |
 |---|---|---|---|---|
-| 1 | 190 | 2.0 s | every value of order KM-PO-2026-000001 (190 since 4.1.4: the three booleans now reach the graph), the activity reading "Generated the Order" | the same values, the activity reading "Read the Order", the entity the document `KM-PO-2026-000001.xml` |
-| 2 | 3 | 0.05 s | Halvorsen Foods, Inc. and Kestrel Mercantile, Inc. on all 208 documents; Northline Freight, LLC, the carrier, on the 104 dispatches and receipts | the same three rows: the party is the same component in the four models and on both sides |
-| 3 | 52 | 0.05 s | every response joined to its order; the response type and the line answers | the same 52 rows, the responses generated here and the orders read |
-| 4 | 52 | 0.11 s | every dispatch joined to its order with its pack specification version and pallet count; two after 1 July name `KM-PACK-2026-01` | the same 52 rows, the dispatches generated here and the orders read |
-| 5 | 52 | 0.12 s | every dispatch with its pallet identifiers and the earliest validity end; four read `lapses on dispatch` | the same 52 rows |
-| 6 | 52 | 0.08 s | every receipt joined to its dispatch with the day received, its pallets' two answers, its conditions and its exceptions; eight read `Accepted with exception` with a `false` beside it, two of them shipments that crossed 1 July in transit | the same 52 rows, the receipts read here and the dispatches generated |
+| 1 | 190 | 4.6 s | every value of order KM-PO-2026-000001 (190 since 4.1.4: the three booleans now reach the graph), the activity reading "Generated the Order" | the same values, the activity reading "Read the Order", the entity the document `KM-PO-2026-000001.xml` |
+| 2 | 3 | 0.19 s | Halvorsen Foods, Inc. and Kestrel Mercantile, Inc. on all 260 documents; Northline Freight, LLC, the carrier, on the 104 dispatches and receipts | the same three rows: the party is the same component in the five models and on both sides |
+| 3 | 52 | 0.16 s | every response joined to its order; the response type and the line answers | the same 52 rows, the responses generated here and the orders read |
+| 4 | 52 | 0.68 s | every dispatch joined to its order with its pack specification version and pallet count; two after 1 July name `KM-PACK-2026-01` | the same 52 rows, the dispatches generated here and the orders read |
+| 5 | 52 | 0.16 s | every dispatch with its pallet identifiers and the earliest validity end; four read `lapses on dispatch` | the same 52 rows |
+| 6 | 52 | 0.62 s | every receipt joined to its dispatch with the day received, its pallets' two answers, its conditions and its exceptions; eight read `Accepted with exception` with a `false` beside it, two of them shipments that crossed 1 July in transit | the same 52 rows, the receipts read here and the dispatches generated |
+| 7 | 52 | 0.04 s | every invoice joined to its receipt, its dispatch and its order, with the day due, the amount payable, the deposit where one was paid (five) and the receiver's conditions; eight bills stand beside an exception | the same 52 rows, the invoices generated here and the receipts read |
 
 Both stacks answer the same questions; what differs is the provenance each record carries.
 

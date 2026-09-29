@@ -48,9 +48,10 @@ JOIN_KEYS: Dict[str, Dict[str, str]] = {
     'place': {
         'ude1r385xvd2002r5h851vwk': 'Delivery Location Name',
     },
-    'dispatch': {
-        'xic0zafpt7zu0ckizkj4975w': 'Despatch Advice ID',        # the dispatch advice, and the receipt that answers it by the same identifier
-        'k153quyn7i9ravd1b3c61ad9': 'Document Reference ID',     # in the receipt's despatch document reference
+    'document': {
+        'xic0zafpt7zu0ckizkj4975w': 'Despatch Advice ID',        # the dispatch advice; the receipt names it in its despatch document reference
+        'n8ktn56c09i6kzy6kxzqs53j': 'Receipt Advice ID',         # the receipt advice; the invoice names it in its receipt document reference
+        'k153quyn7i9ravd1b3c61ad9': 'Document Reference ID',     # the reference, wherever a record names another document
     },
 }
 
@@ -64,6 +65,7 @@ TITLE_LABELS: Dict[str, List[List[str]]] = {
     'kuntv2wlkw54h7nxe0kqhvi2': [['Order Response ID']],   # Order Response
     'cacl4njrwanj15g3p3so8t6h': [['Despatch Advice ID']],  # Despatch Advice
     'tog0v0p1zit1xwpxysxwpf3d': [['Receipt Advice ID']],   # Receipt Advice
+    'u19w614300a8ot4a7qnn2o1c': [['Invoice ID']],          # Invoice
 }
 
 MAX_RECORDS = 150

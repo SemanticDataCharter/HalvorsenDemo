@@ -1,0 +1,25 @@
+# Beat 7: the bill, for what arrived. Each invoice joined to the receipt advice it settles (the invoice's Receipt
+# Document Reference carries the receipt's identifier), the receipt to the dispatch it answers, and the order they all
+# name; the day the invoice is due, the amount payable, the deposit already paid where there was one, and the
+# receiver's conditions on the pallets, so a bill and the exception it will be argued over stand in one row. The
+# invoice's Document Reference ID component is used for every document it names (the dispatch, the receipt, and
+# each line's references), and a reifier is keyed by component and record, so the receipt's identifier is picked out
+# by joining on the receipt's own Receipt Advice ID. Every component bound.
+PREFIX sdc4: <https://semanticdatacharter.com/ns/sdc4/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?order_id ?dispatch_id ?receipt_id ?invoice_id (MAX(?due) AS ?due_on) (SAMPLE(?payable) AS ?payable_amount) (SAMPLE(?prepaid) AS ?deposit) (GROUP_CONCAT(DISTINCT ?condition; separator=", ") AS ?conditions) ?inst ?inst_2 WHERE {
+  ?ii rdfs:label "Invoice ID" ; sdc4:inInstance ?inst ; sdc4:inDataModel sdc4:dm-u19w614300a8ot4a7qnn2o1c ; rdf:reifies <<sdc4:mc-jjrdrfy8mwl5mrhknuj91xnl ?p1 ?invoice_id>> .
+  ?io rdfs:label "Order ID" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-wtnd4hzyrntlwtp4z3l1gcpr ?p2 ?order_id>> .
+  ?ir rdfs:label "Document Reference ID" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-k153quyn7i9ravd1b3c61ad9 ?p3 ?receipt_id>> .
+  ?d rdfs:label "Due Date" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-izmk5n12dei1ocsv7dms9i99 ?p4 ?due>> .
+  ?pa rdfs:label "Payable Amount" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-axifzu4nt8m8n4qpfn838yy8 ?p5 ?payable>> .
+  OPTIONAL { ?pp rdfs:label "Prepaid Amount" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-oeoory19276gd0hy5m521d8p ?p6 ?prepaid>> . }
+  ?ri rdfs:label "Receipt Advice ID" ; sdc4:inInstance ?inst_2 ; sdc4:inDataModel sdc4:dm-tog0v0p1zit1xwpxysxwpf3d ; rdf:reifies <<sdc4:mc-n8ktn56c09i6kzy6kxzqs53j ?p7 ?receipt_id>> .
+  ?rd rdfs:label "Document Reference ID" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-k153quyn7i9ravd1b3c61ad9 ?p8 ?dispatch_id>> .
+  ?s rdfs:label "Receiving Condition" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-xpl4g1gsbbgsqq3okyp08qb3 ?p9 ?condition>> .
+}
+GROUP BY ?order_id ?dispatch_id ?receipt_id ?invoice_id ?inst ?inst_2
+ORDER BY ?invoice_id
+LIMIT 200
