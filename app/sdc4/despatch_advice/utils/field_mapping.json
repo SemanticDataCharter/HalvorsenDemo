@@ -344,10 +344,10 @@
     "label": "US State Code"
   },
   "nsv2eblxq8s0vk28ue2vh1fl": {
-    "placeholder": "__PLACEHOLDER__xdboolean-value_nsv2eblxq8s0vk28ue2vh1fl",
+    "placeholder": "__PLACEHOLDER__true-value_nsv2eblxq8s0vk28ue2vh1fl",
     "ct_id": "nsv2eblxq8s0vk28ue2vh1fl",
     "adapter_ctid": "kq1axd3psm1tsnz26dtvpzb3",
-    "element_name": "xdboolean-value",
+    "element_name": "true-value",
     "type": "XdBoolean",
     "label": "Copy Indicator"
   },

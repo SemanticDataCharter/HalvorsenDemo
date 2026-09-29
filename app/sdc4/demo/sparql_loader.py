@@ -43,7 +43,7 @@ QUERY_CATALOG = {
     6: {
         'file': '06_the_verdict_in_the_record.rq',
         'title': 'The verdict, in the record',
-        'description': 'Each receipt advice with the dispatch it answers, the day received, and the two answers its pallets carry: the identifier within its period, the pack specification in force.',
+        'description': 'Each receipt advice with the dispatch it answers, the day received, the two answers its pallets carry (the identifier within its period, the pack specification in force), the decision, and the exception.',
         'domains': ['Despatch Advice', 'Receipt Advice'],
     },
 }
