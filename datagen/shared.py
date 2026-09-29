@@ -34,6 +34,7 @@ SUPPLIER_SYSTEM = (f"urn:halvorsen:order-system:{LIBRARY_VERSION}", "Halvorsen F
 RETAILER_TRANSLATOR = (f"urn:kestrel:translator:{LIBRARY_VERSION}", "Kestrel Mercantile document translator", "Read")
 SUPPLIER_WAREHOUSE = (f"urn:halvorsen:warehouse-system:{LIBRARY_VERSION}", "Halvorsen Foods warehouse system", "Generated")
 RETAILER_RECEIVING = (f"urn:kestrel:receiving-system:{LIBRARY_VERSION}", "Kestrel Mercantile receiving system", "Generated")
+SUPPLIER_BILLING = (f"urn:halvorsen:billing-system:{LIBRARY_VERSION}", "Halvorsen Foods billing system", "Generated")
 _ID_ALPHABET = "abcdefghijklmnopqrstuvwxyz0123456789"
 
 

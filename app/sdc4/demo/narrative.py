@@ -1,9 +1,9 @@
 """
 The walk-through: the order as a governed record, the document as its projection.
 
-Six beats run in this release, on the Order, the Order Response, the Despatch Advice and the
-Receipt Advice. The other two need the settlement receipt (the verdict settled) and the two
-retailer profile models (two profiles), and are listed here as what comes.
+Seven beats run in this release, on the Order, the Order Response, the Despatch Advice, the
+Receipt Advice and the Invoice. The other two need the settlement receipt (the verdict settled) and
+the two retailer profile models (two profiles), and are listed here as what comes.
 """
 
 BEATS = [
@@ -108,6 +108,23 @@ BEATS = [
             'deduction, when it comes, has a record to be examined against.'
         ),
         'query_label': 'Show the verdicts',
+    },
+    {
+        'number': 7,
+        'title': 'The bill, for what arrived',
+        'query_number': 7,
+        'icon': 'bi-receipt',
+        'color': 'secondary',
+        'narrative': (
+            'The supplier bills the day after the receipt advice arrives, for what the retailer says it received: '
+            'every line at the received quantity and the confirmed price, the short and the rejected cases left '
+            'off, a deposit deducted where one was paid. The invoice names the order, the dispatch advice and the '
+            'receipt advice it settles, line by line, in UBL\'s own references, and goes back as a UBL 2.3 Invoice '
+            'read into the retailer\'s stack. The query walks the chain from the invoice to the receipt to the '
+            'dispatch to the order, and puts the amount due beside the receiver\'s conditions on the pallets: the '
+            'bill and the exception it will be argued over, in one row, from records either side can produce.'
+        ),
+        'query_label': 'Show the bills',
     },
 ]
 

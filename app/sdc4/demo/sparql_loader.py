@@ -46,6 +46,12 @@ QUERY_CATALOG = {
         'description': 'Each receipt advice with the dispatch it answers, the day received, the two answers its pallets carry (the identifier within its period, the pack specification in force), the decision, and the exception.',
         'domains': ['Despatch Advice', 'Receipt Advice'],
     },
+    7: {
+        'file': '07_the_bill_for_what_arrived.rq',
+        'title': 'The bill, for what arrived',
+        'description': 'Each invoice joined to the receipt it settles, the dispatch and the order, with the amount due, the deposit deducted, and the receiver\'s conditions on the pallets.',
+        'domains': ['Receipt Advice', 'Invoice'],
+    },
 }
 
 
