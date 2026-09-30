@@ -58,6 +58,12 @@ QUERY_CATALOG = {
         'description': 'Each settled receipt advice paired with its original: the Settlement Receipt its provenance names, the state reached, and the conditions the original carried.',
         'domains': ['Receipt Advice'],
     },
+    9: {
+        'file': '09_two_profiles.rq',
+        'title': 'Two profiles',
+        'description': 'Every order in this stack by the model that governs it: Kestrel\'s under the Order model with its delivery terms, Torvale\'s under the Torvale Order model with its terms, pack specification version and delivery window.',
+        'domains': ['Order', 'Torvale Order'],
+    },
 }
 
 

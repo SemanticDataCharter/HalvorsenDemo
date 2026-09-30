@@ -21,7 +21,7 @@ help:
 	@echo "  make generate        Generate the records and the UBL documents on the host (writes app/sdc4/import_data/)."
 	@echo "  make load            Load the retailer's records, then the supplier's."
 	@echo "  make test            Run the datagen and round-trip tests on the host."
-	@echo "  make settle          Settle the deductions live against the issuer (needs SDCRECEIPT_TOKEN or settlement/.token; one credit a Receipt)."
+	@echo "  make settle          Settle the deductions, and the Torvale order's release, live against the issuer (needs SDCRECEIPT_TOKEN or settlement/.token; one credit a Receipt)."
 	@echo "  make verify-settlements  Verify the Receipts held in settlement/ offline, against the record and schema bytes here."
 	@echo ""
 	@echo "  $(RETAILER_URL)/console/    the retailer's records (Kestrel Mercantile)"
@@ -66,7 +66,7 @@ test:
 	python3 -m pytest datagen/tests -q
 
 clean: down
-	rm -rf app/sdc4/import_data/halvorsen app/sdc4/import_data/retailer app/sdc4/import_data/exchange
+	rm -rf app/sdc4/import_data/halvorsen app/sdc4/import_data/retailer app/sdc4/import_data/torvale app/sdc4/import_data/exchange profiles/exhibit.json
 
 version:            ## Print the version (app/sdc4/VERSION is the single source)
 	@cat app/sdc4/VERSION

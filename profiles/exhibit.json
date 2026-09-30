@@ -1,0 +1,93 @@
+{
+  "models": [
+    {
+      "model": "Order",
+      "retailer": "Kestrel Mercantile",
+      "ct_id": "h8bttbt9afwzf9zs4jhae566",
+      "requirements": []
+    },
+    {
+      "model": "Torvale Order",
+      "retailer": "Torvale Markets",
+      "ct_id": "cq1fjrvyn0fxl1kyk9y3kr1w",
+      "requirements": [
+        {
+          "cluster": "Torvale Order",
+          "requires": [
+            "Order Document",
+            "Contract",
+            "Buyer Customer Party",
+            "Seller Supplier Party",
+            "Delivery",
+            "Torvale Delivery Terms",
+            "Torvale Order Requirements",
+            "Anticipated Monetary Total",
+            "Order Lines"
+          ]
+        },
+        {
+          "cluster": "Torvale Delivery Terms",
+          "requires": [
+            "Torvale Delivery Terms Code"
+          ]
+        },
+        {
+          "cluster": "Torvale Order Requirements",
+          "requires": [
+            "Torvale Pack Specification Version",
+            "Torvale Delivery Window Days"
+          ]
+        }
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "order_id": "KM-PO-2026-000001",
+      "written_by": "Kestrel Mercantile",
+      "own_model": "Order",
+      "under": [
+        {
+          "model": "Order",
+          "retailer": "Kestrel Mercantile",
+          "ct_id": "h8bttbt9afwzf9zs4jhae566",
+          "values": 254,
+          "refused": []
+        },
+        {
+          "model": "Torvale Order",
+          "retailer": "Torvale Markets",
+          "ct_id": "cq1fjrvyn0fxl1kyk9y3kr1w",
+          "values": 254,
+          "refused": [
+            "'DAP' is not in the list ['DDP']",
+            "a requirement of 'Torvale Order' is not met"
+          ]
+        }
+      ]
+    },
+    {
+      "order_id": "TV-PO-2026-000001",
+      "written_by": "Torvale Markets",
+      "own_model": "Torvale Order",
+      "under": [
+        {
+          "model": "Order",
+          "retailer": "Kestrel Mercantile",
+          "ct_id": "h8bttbt9afwzf9zs4jhae566",
+          "values": 143,
+          "refused": [
+            "'Pack specification' is not in the list ['Quotation', 'Contract', 'Catalogue', 'Originator document', 'Order', ...]"
+          ]
+        },
+        {
+          "model": "Torvale Order",
+          "retailer": "Torvale Markets",
+          "ct_id": "cq1fjrvyn0fxl1kyk9y3kr1w",
+          "values": 143,
+          "refused": []
+        }
+      ]
+    }
+  ]
+}

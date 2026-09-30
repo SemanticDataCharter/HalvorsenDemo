@@ -18,6 +18,7 @@ from sdc4_shared.utils.graphdb_client import GraphDBClient
 
 from . import entity_graph
 from . import settlements as settlements_module
+from . import profiles as profiles_module
 from .narrative import BEATS, COMING
 from .sparql_loader import load_query, load_all_queries, QUERY_CATALOG, SPARQL_DIR
 from sdc4_shared.utils.dm_title import dm_title
@@ -169,3 +170,8 @@ def run_query(request):
     context['graph_script_id'] = f"graph-data-{context['uid']}"
     template = 'demo/_beat_results.html' if source == 'narrative' else 'demo/_query_results.html'
     return render(request, template, context)
+
+
+def profiles(request):
+    """The same order under two retailers' models: what each requires, what each refuses."""
+    return render(request, 'demo/profiles.html', {'x': profiles_module.exhibit()})

@@ -1,6 +1,6 @@
 # The saved questions
 
-Eight queries against the knowledge graph each stack projects, one named graph per record. Each anchors on a published component by its `ct_id`; the reifier is addressed by its label and its component is read from its IRI, so nothing in a triple term is left unbound (a triple term with the component unbound makes GraphDB scan every reifier).
+Nine queries against the knowledge graph each stack projects, one named graph per record. Each anchors on a published component by its `ct_id`; the reifier is addressed by its label and its component is read from its IRI, so nothing in a triple term is left unbound (a triple term with the component unbound makes GraphDB scan every reifier).
 
 | # | File | What it shows |
 |---|------|---------------|
@@ -12,8 +12,9 @@ Eight queries against the knowledge graph each stack projects, one named graph p
 | 6 | `06_the_verdict_in_the_record.rq` | Each receipt advice joined to the dispatch it answers, the day received, the receiver's decision on its pallets, and the exception where there is one |
 | 7 | `07_the_bill_for_what_arrived.rq` | Each invoice joined to the receipt it settles, the dispatch and the order, with the amount due, the deposit deducted, and the receiver's conditions on the pallets |
 | 8 | `08_the_verdict_settled.rq` | Each settled receipt advice paired with its original: the Settlement Receipt its provenance names, and the conditions the original carried |
+| 9 | `09_two_profiles.rq` | Every order by the model that governs it: Kestrel's under the Order model with its delivery terms, Torvale's under the Torvale Order model with its terms, pack specification version and delivery window |
 
-## What each returned (release 4.1.6, 52 of each of the five documents and 8 settled receipt advices on the retailer, GraphDB cold)
+## What each returned (release 4.1.7, 52 of each of the five documents and 8 settled receipt advices on the retailer, 12 Torvale orders on the supplier, GraphDB cold)
 
 | # | Rows | Time | Retailer | Supplier |
 |---|---|---|---|---|
@@ -25,7 +26,8 @@ Eight queries against the knowledge graph each stack projects, one named graph p
 | 6 | 52 | 0.03 s | every receipt joined to its dispatch with the day received, its pallets' two answers, its conditions and its exceptions; eight read `Accepted with exception` with a `false` beside it, two of them shipments that crossed 1 July in transit | the same 52 rows, the receipts read here and the dispatches generated |
 | 7 | 52 | 0.04 s | every invoice joined to its receipt, its dispatch and its order, with the day due, the amount payable, the deposit where one was paid (five) and the receiver's conditions; eight bills stand beside an exception | the same 52 rows, the invoices generated here and the receipts read |
 | 8 | 8 | 0.04 s | every settled receipt advice paired with its original: the Settlement Receipt its provenance names (`urn:vsl:receipt:<id>`), the conditions and the exception the original carried | no rows: the settled records are the retailer's |
+| 9 | 52 | 2.5 s | every order under the Order model with its delivery terms (DAP); no Torvale rows: the retailer's stack holds none | 64 rows in 4.3 s cold, 0.04 s warm: the 52 under the Order model, and the 12 Torvale orders under the Torvale Order model with DDP, `TV-PACK-2026-01` and a two-day window, the profile's requirements bound on every one |
 
 Both stacks answer the same questions; what differs is the provenance each record carries.
 
-A reifier is keyed by component and record, so a component the model composes ten times (the lines) or six times (the pallets) shares its reifier across the lines or pallets of one record in the graph, and a Default component used twice in one record (the date range of a pallet's validity and of the delivery window; the issue date of the advice and of the order it references) shares it too. Which answers a response holds, or the earliest day a dispatch's identifiers stop being valid, is the graph's question; which line or which pallet is the record's, on its Table pane. Queries 4 and 5 say so in their comments and take the later issue date and the earliest end. Queries 6 and 7 keep the settled records of beat 8 out by their activity label, so a receipt advice counts once. Query 6 binds the two boolean answers beside the receiving condition and the exception; on the first run of 4.1.3 the answers were absent from the graph, the generated application naming a boolean's value by an element the reference model does not have (SDCStudio #714, fixed the same day, the applications regenerated for 4.1.4).
+A reifier is keyed by component and record, so a component the model composes ten times (the lines) or six times (the pallets) shares its reifier across the lines or pallets of one record in the graph, and a Default component used twice in one record (the date range of a pallet's validity and of the delivery window; the issue date of the advice and of the order it references) shares it too. Which answers a response holds, or the earliest day a dispatch's identifiers stop being valid, is the graph's question; which line or which pallet is the record's, on its Table pane. Queries 4 and 5 say so in their comments and take the later issue date and the earliest end. Queries 6, 7 and 9 keep the settled records out by their activity label, so a receipt advice or a Torvale order counts once. Query 6 binds the two boolean answers beside the receiving condition and the exception; on the first run of 4.1.3 the answers were absent from the graph, the generated application naming a boolean's value by an element the reference model does not have (SDCStudio #714, fixed the same day, the applications regenerated for 4.1.4).

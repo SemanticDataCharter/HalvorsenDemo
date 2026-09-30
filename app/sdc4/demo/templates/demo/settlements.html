@@ -9,7 +9,7 @@ pre.doc { font-size: 0.75rem; max-height: 22rem; overflow: auto; background: #f8
 {% endblock %}
 {% block content %}
 <h1 class="display-5 mb-1">The verdict, settled</h1>
-<p class="lead text-muted mb-3">Every deduction settled as a transition of the receipt advice from OrderProblem to OrderProcessing, attested by a Settlement Receipt the issuer signed, and verified here with nothing from the issuer: its published key document as saved beside the Receipts, the two parties' key documents, the record's bytes as this stack read them in where it holds them, and the schema's bytes in the model library.</p>
+<p class="lead text-muted mb-3">Every deduction settled as a transition of the receipt advice from OrderProblem to OrderProcessing, and the second retailer's first order released to transit under its own profile, each attested by a Settlement Receipt the issuer signed, and verified here with nothing from the issuer: its published key document as saved beside the Receipts, the two parties' key documents, the record's bytes as this stack read them in where it holds them, and the schema's bytes in the model library.</p>
 
 {% if not s.issued %}
 <div class="alert alert-secondary">No settlements have been issued yet. <code>make settle</code> with an issuer token settles every receipt advice in the OrderProblem state and writes the Receipts under <code>settlement/</code>; this page verifies them.</div>
@@ -23,20 +23,20 @@ pre.doc { font-size: 0.75rem; max-height: 22rem; overflow: auto; background: #f8
 
 <div class="table-responsive">
 <table class="table table-sm align-middle">
-  <thead><tr><th>Receipt advice</th><th>Asked</th><th>Decision</th><th>Verified</th><th>Record it names</th><th>Schema</th><th>Triggers</th><th>Deduction</th><th>Receipt</th></tr></thead>
+  <thead><tr><th>Record</th><th>Asked</th><th>Decision</th><th>Verified</th><th>Record it names</th><th>Schema</th><th>Triggers</th><th>Condition</th><th>Receipt</th></tr></thead>
   <tbody>
   {% for r in s.rows %}
     <tr>
-      <td>{{ r.receipt_advice_id }}<div class="text-muted small">{{ r.order_id }}{% if r.invoice_id %} &middot; {{ r.invoice_id }}{% endif %}</div></td>
-      <td>OrderProblem &rarr; {{ r.target_state }}</td>
+      <td>{{ r.document_id }}<div class="text-muted small">{{ r.model }}{% if r.order_id != r.document_id %} &middot; {{ r.order_id }}{% endif %}{% if r.invoice_id %} &middot; {{ r.invoice_id }}{% endif %}</div></td>
+      <td>{{ r.from_state }} &rarr; {{ r.target_state }}</td>
       <td><span class="badge {% if r.decision == 'PERMIT' %}bg-success{% else %}bg-danger{% endif %}">{{ r.decision }}</span>{% if not r.settleable %}<div class="text-muted small">not settleable</div>{% endif %}</td>
       <td>{% if r.verified %}<span class="badge bg-success">VERIFIED</span>{% else %}<span class="badge bg-warning text-dark">not verified</span>{% for f in r.failures %}<div class="text-muted small">{{ f }}</div>{% endfor %}{% endif %}</td>
-      <td>{% if r.record_found %}<a class="why" href="{% url 'console:instance' s.ct_id r.record_instance %}?pane=document">the record &rsaquo;</a>{% else %}<span class="text-muted small">not in this store</span>{% endif %}
-          <div class="text-muted small">{% if r.payload_matches %}the bytes as read in: match{% else %}the bytes it names are the retailer's record; this stack holds the document as read{% endif %}</div>
-          {% if r.settled_instance %}<div><a class="why" href="{% url 'console:instance' s.ct_id r.settled_instance %}?pane=table">the settled record &rsaquo;</a></div>{% endif %}</td>
+      <td>{% if r.record_found %}<a class="why" href="{% url 'console:instance' r.ct_id r.record_instance %}?pane=document">the record &rsaquo;</a>{% else %}<span class="text-muted small">not in this store</span>{% endif %}
+          <div class="text-muted small">{% if r.payload_matches %}the bytes as read in: match{% elif r.record_found %}the bytes it names are the other stack's record; this stack holds the document as read{% else %}the bytes it names are held by the other stack{% endif %}</div>
+          {% if r.settled_instance %}<div><a class="why" href="{% url 'console:instance' r.ct_id r.settled_instance %}?pane=table">the settled record &rsaquo;</a></div>{% endif %}</td>
       <td>{% if r.schema_ok %}<span class="badge bg-success">bytes match</span>{% else %}<span class="badge bg-warning text-dark">differs</span>{% endif %}</td>
       <td>{{ r.triggers }} of {{ r.parties|length }}</td>
-      <td>{% if r.deduction %}{{ r.deduction.magnitude }} {{ r.deduction.unit }}{% else %}&mdash;{% endif %}<div class="text-muted small">{{ r.pallets|length }} pallet{{ r.pallets|length|pluralize }}</div></td>
+      <td>{% if r.profile %}released under {{ r.profile.model }}<div class="text-muted small">{{ r.profile.delivery_terms }} &middot; {{ r.profile.pack_specification_version }} &middot; {{ r.profile.delivery_window_days }} days</div>{% else %}{% if r.deduction %}{{ r.deduction.magnitude }} {{ r.deduction.unit }}{% else %}&mdash;{% endif %}<div class="text-muted small">{{ r.pallets|length }} pallet{{ r.pallets|length|pluralize }}</div>{% endif %}</td>
       <td><button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#receipt-{{ forloop.counter }}">show</button></td>
     </tr>
     <tr class="collapse" id="receipt-{{ forloop.counter }}"><td colspan="9">
@@ -49,6 +49,6 @@ pre.doc { font-size: 0.75rem; max-height: 22rem; overflow: auto; background: #f8
   </tbody>
 </table>
 </div>
-<p class="text-muted small">Verification: <code>pip install sdcreceipt</code>, then <code>sdcreceipt verify settlement/receipts/&lt;id&gt;.json --keys settlement/issuer-keys.json --keys settlement/keys/kestrel-key.json --keys settlement/keys/halvorsen-key.json --payload app/sdc4/import_data/retailer/receipt_advice/&lt;record&gt;.xml</code>. Nothing in it needs the issuer to be reachable.</p>
+<p class="text-muted small">Verification: <code>pip install sdcreceipt</code>, then <code>sdcreceipt verify settlement/receipts/&lt;id&gt;.json --keys settlement/issuer-keys.json --keys settlement/keys/kestrel-key.json --keys settlement/keys/halvorsen-key.json --payload app/sdc4/import_data/retailer/receipt_advice/&lt;record&gt;.xml</code> (the Torvale order: <code>--keys settlement/keys/torvale-key.json --payload app/sdc4/import_data/halvorsen/torvale_order/&lt;record&gt;.xml</code>). Nothing in it needs the issuer to be reachable.</p>
 {% endif %}
 {% endblock %}

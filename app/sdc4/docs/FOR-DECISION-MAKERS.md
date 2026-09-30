@@ -2,7 +2,7 @@
 
 Halvorsen Foods is fictitious. It shipped a mixed pallet to a large retailer and took a three percent deduction for a non-compliant advance ship notice. Eleven days of reconstruction found no mistake: the retailer's rule had changed on a date the notice did not carry, and the pallet identifier had stopped being valid on a date the notice also did not carry. Two correct systems, one working integration, a verdict nobody could examine.
 
-This demonstration is built so the verdict survives a question. This release runs eight beats, on the purchase order, the supplier's response, the dispatch advice, the receipt, the invoice and the settlement of the deduction; the last arrives with the second retailer's model.
+This demonstration is built so the verdict survives a question. This release runs all nine beats, on the purchase order, the supplier's response, the dispatch advice, the receipt, the invoice, the settlement of the deduction, and a second retailer's profile.
 
 ## What you are looking at
 
@@ -28,9 +28,11 @@ Open the same order on both sides. The values are the same. What differs is the 
 
 8. **The verdict, settled.** Every deduction was settled once, live, against the Verifiable Settlement Layer: the deduction notice, the invoice, the percentage, the pallet and the rule it failed, as the condition; the receipt advice's move from problem to processing as the transition; the two companies named by their keys. The issuer checked the record against the exact schema, asked the model's own workflow whether the move is allowed, and signed a receipt; both companies signed it too. One record was asked to skip straight to delivered, and the receipt records the refusal. The receipts sit in this repository and verify on the Settlements page with nothing from the issuer: not the issuer's site, not its database, only its published key. If the issuer disappeared tomorrow, every verdict here would still verify.
 
+9. **Two profiles.** A second retailer, Torvale Markets, buys from the same supplier with its own rules: one delivery term, a pack specification version and a delivery window on every order. In the usual arrangement those rules live in a trading-partner document beside the standard, and each side's staff keep their own copy. Here Torvale publishes them as a model on the same components Kestrel's order uses, and the rules are in the model's own schema: an order without them is not a valid Torvale order at all. The supplier's translator reads each Torvale order into that model, beside Kestrel's. Put one order of each retailer under both models and each model says what it refuses, value by value: Kestrel's terms are not Torvale's, Torvale's pack version is a kind of reference Kestrel's model does not know. One Torvale order was released to transit on a Settlement Receipt, and that Receipt names Torvale's model by the hash of its schema, so the verdict says which profile governed. Nothing was replaced; the two profiles are two models on one library, and a partner's format is a projection of the record.
+
 ## What comes next
 
-The same order under two retailers' profile models. Each is a beat of the walk-through, listed on the page, and each arrives with the document that carries it.
+The plan's nine beats all run. What follows is the remaining documents of the exchange (the credit note, the remittance advice) on the same components.
 
 ## What this is not
 

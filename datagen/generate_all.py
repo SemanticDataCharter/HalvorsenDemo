@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate the year of orders, responses, dispatch advices, receipt advices and invoices for both stacks.
+Generate the year of orders, responses, dispatch advices, receipt advices and invoices for both stacks, and the second retailer's orders.
 
 The retailer, Kestrel Mercantile, is the system of record for its purchase orders: each order is
 generated as a record of the published Order model and loaded into the retailer's stack. On the way
@@ -28,6 +28,7 @@ Every UBL document is validated against the OASIS schema of its type before it i
 from __future__ import annotations
 
 import glob
+import json
 import os
 import sys
 import time
@@ -40,13 +41,17 @@ from halvorsen_dispatch import dispatch  # noqa: E402
 from halvorsen_invoices import invoice  # noqa: E402
 from halvorsen_receipts import receive  # noqa: E402
 from halvorsen_responses import respond  # noqa: E402
+from torvale import generate_torvale  # noqa: E402
 from invoice import read_invoice, validate_ubl_invoice, write_invoice  # noqa: E402
-from order import read_order, validate_ubl, write_order  # noqa: E402
+from order import TORVALE, read_order, validate_ubl, write_order  # noqa: E402
+from profiles import two_models  # noqa: E402
 from order_response import read_order_response, validate_ubl_response, write_order_response  # noqa: E402
 from receipt_advice import read_receipt_advice, validate_ubl_receipt, write_receipt_advice  # noqa: E402
 from shared import IMPORT_ROOT, RETAILER_TRANSLATOR, SUPPLIER_TRANSLATOR, record, write_record  # noqa: E402
 
 ORDERS = int(os.environ.get("HALVORSEN_ORDERS", "52"))
+TORVALE_ORDERS = int(os.environ.get("TORVALE_ORDERS", "12"))
+PROFILES_DIR = os.environ.get("HALVORSEN_PROFILES_DIR", os.path.join(os.path.dirname(__file__), "..", "profiles"))
 SEED = os.environ.get("HALVORSEN_SEED", "halvorsen-2026")
 
 
@@ -67,7 +72,8 @@ def main():
         "supplier_responses": ("halvorsen", "order_response"), "retailer_responses": ("retailer", "order_response"),
         "supplier_dispatches": ("halvorsen", "despatch_advice"), "retailer_dispatches": ("retailer", "despatch_advice"),
         "retailer_receipts": ("retailer", "receipt_advice"), "supplier_receipts": ("halvorsen", "receipt_advice"),
-        "supplier_invoices": ("halvorsen", "invoice"), "retailer_invoices": ("retailer", "invoice"), "exchange": ("exchange",)}.items()}
+        "supplier_invoices": ("halvorsen", "invoice"), "retailer_invoices": ("retailer", "invoice"),
+        "torvale_orders": ("torvale", "torvale_order"), "supplier_torvale_orders": ("halvorsen", "torvale_order"), "exchange": ("exchange",)}.items()}
     for d in dirs.values():
         os.makedirs(d, exist_ok=True)
         for f in glob.glob(os.path.join(d, "*.xml")):
@@ -79,6 +85,7 @@ def main():
     drng = random.Random(SEED + ":dispatches")
     krng = random.Random(SEED + ":receipts")
     irng = random.Random(SEED + ":invoices")
+    trng = random.Random(SEED + ":torvale")
     n = 0; lapsed = 0; stale = 0; problems = 0; deposits = 0
     for h, values, xml in generate(ORDERS, seed=SEED):
         # 1. the retailer's order, the system of record; written out as a UBL Order; read in by the supplier
@@ -132,14 +139,33 @@ def main():
         write_record(dirs["retailer_invoices"], "invoice", retailer_invoice, name=ih["invoice_id"].lower())
         lapsed += dh["pallet_lapses"]; stale += dh["pack_stale"]; problems += bool(kh["exceptions"]); deposits += ih["kind"] == "deposit"
         n += 1
-    # 6. the settled records: for every Settlement Receipt issued on a receipt advice in OrderProblem (settlement/), the
+    # 6. the second retailer: Torvale Markets orders monthly under its own profile of the same components; its record is written
+    #    as a UBL 2.3 Order (the requirements in UBL's own places) and read by the supplier's translator into the Torvale Order model
+    first_kestrel = first_torvale = None
+    for th, tvalues, txml in generate_torvale(TORVALE_ORDERS, seed=SEED + ":torvale"):
+        write_record(dirs["torvale_orders"], "torvale_order", txml, name=th["order_id"].lower())
+        tubl = write_order(txml)
+        assert not validate_ubl(tubl), (th["order_id"], validate_ubl(tubl)[:2])
+        treceived = read_order(exchange(dirs["exchange"], th["order_id"], tubl), TORVALE)
+        supplier_torvale = record("Torvale Order", treceived, document_id=th["order_id"], buyer=th["buyer"], when=f"{th['issued']}T{trng.randint(9, 17):02d}:{trng.randint(0, 59):02d}:00",
+                                  source=(f"urn:torvale:order:{th['order_id']}:ubl", f"{th['order_id']}.xml", "The UBL 2.3 Order received from Torvale Markets"),
+                                  agent=SUPPLIER_TRANSLATOR, current_state="OrderProcessing")
+        write_record(dirs["supplier_torvale_orders"], "torvale_order", supplier_torvale, name=th["order_id"].lower())
+        first_torvale = first_torvale or txml
+    # 7. the same order under two models: the first order of each retailer, each as its own document, read into both models
+    first_kestrel = open(sorted(glob.glob(os.path.join(dirs["retailer_orders"], "*.xml")))[0], encoding="utf-8").read()
+    exhibit = two_models(first_kestrel, first_torvale)
+    os.makedirs(PROFILES_DIR, exist_ok=True)
+    with open(os.path.join(PROFILES_DIR, "exhibit.json"), "w", encoding="utf-8") as f:
+        json.dump(exhibit, f, indent=2)
+    # 8. the settled records: for every Settlement Receipt issued on a receipt advice in OrderProblem (settlement/), the
     #    record in the state the settlement reached, its provenance naming the Receipt; only where the bytes still match
     sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "settlement"))
     from settled import write_settled_records  # noqa: E402
     settled, unmatched = write_settled_records(IMPORT_ROOT)
     for name, d in dirs.items():
         print(f"  {name:<20} {len(glob.glob(os.path.join(d, '*.xml'))):>6,}   {d}")
-    print(f"  {n} orders; {lapsed} dispatches with a pallet identifier that lapses on the day of dispatch; {stale} packed to the replaced pack specification; {problems} receipts in OrderProblem; {deposits} invoices with a deposit deducted; {settled} settled records from the Receipts held ({unmatched} not matching)")
+    print(f"  {n} orders; {lapsed} dispatches with a pallet identifier that lapses on the day of dispatch; {stale} packed to the replaced pack specification; {problems} receipts in OrderProblem; {deposits} invoices with a deposit deducted; {settled} settled records from the Receipts held ({unmatched} not matching); {TORVALE_ORDERS} Torvale orders under the second profile, the exhibit in profiles/exhibit.json")
     print(f"Completed in {time.time() - t0:.1f}s")
 
 

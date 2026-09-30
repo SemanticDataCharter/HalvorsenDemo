@@ -1,0 +1,12 @@
+{
+  "issuer": "https://axius-sdc.com/vsl/parties/torvale-markets/vsl-key.json",
+  "keys": [
+    {
+      "key_id": "https://axius-sdc.com/vsl/parties/torvale-markets/vsl-key.json",
+      "algorithm": "EC_SIGN_P256_SHA256",
+      "alg": "ES256",
+      "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE7+DHeGJ/Dbtw0QTRDd4FANlBOGoy\n7esBoSO8RRkJ2S8hdavnPvdMrSHENxzHPwIkYN5uFGXfN3ArdW/5/N6NXQ==\n-----END PUBLIC KEY-----\n",
+      "status": "active"
+    }
+  ]
+}

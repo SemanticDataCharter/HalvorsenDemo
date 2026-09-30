@@ -1,0 +1,29 @@
+# Beat 9: two profiles. Every order in this stack by the model that governs it: Kestrel Mercantile's orders as records of
+# the Order model, with the Incoterms rule each carries; Torvale Markets' orders as records of the Torvale Order model,
+# with the one rule Torvale accepts, the pack specification version and the delivery window Torvale requires on every
+# order. The Order ID is the same component in both models; the terms are each profile's own token. What a profile
+# requires is an assertion in its schema, so a Torvale order without its requirements is not in the store at all;
+# the Profiles page shows what each model refuses when given the other retailer's order. The settled record of beat 8's
+# kind (the Torvale order released to transit on a Receipt) is kept out by its activity label, so an order counts once.
+# Every component bound.
+PREFIX sdc4: <https://semanticdatacharter.com/ns/sdc4/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?model ?order_id ?terms ?pack_specification ?window_days ?inst WHERE {
+  {
+    ?k rdfs:label "Order ID" ; sdc4:inInstance ?inst ; sdc4:inDataModel sdc4:dm-h8bttbt9afwzf9zs4jhae566 ; rdf:reifies <<sdc4:mc-wtnd4hzyrntlwtp4z3l1gcpr ?p1 ?order_id>> .
+    ?t rdfs:label "Delivery Terms Code" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-w8xglen3ypxximnzzjzsvm5u ?p2 ?terms>> .
+    BIND("Order" AS ?model)
+  } UNION {
+    ?k rdfs:label "Order ID" ; sdc4:inInstance ?inst ; sdc4:inDataModel sdc4:dm-cq1fjrvyn0fxl1kyk9y3kr1w ; rdf:reifies <<sdc4:mc-wtnd4hzyrntlwtp4z3l1gcpr ?p1 ?order_id>> .
+    ?t rdfs:label "Torvale Delivery Terms Code" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-l9iss79lbdhtzheg9jehfsbn ?p2 ?terms>> .
+    ?v rdfs:label "Torvale Pack Specification Version" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-p6wvmna4ue7b3nqvy1woo9eq ?p3 ?pack_specification>> .
+    ?w rdfs:label "Torvale Delivery Window Days" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-wy54p367cfepk7qlnonl3y9k ?p4 ?window_days>> .
+    BIND("Torvale Order" AS ?model)
+  }
+  ?l rdfs:label "Activity Label" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-r6hkunjm2q0hlxiknlc9ljix ?p5 ?activity>> .
+  FILTER(!STRSTARTS(STR(?activity), "Settled"))
+}
+ORDER BY ?model ?order_id
+LIMIT 200

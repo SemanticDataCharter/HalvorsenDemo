@@ -20,6 +20,8 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 sys.path.insert(0, str(ROOT / "datagen"))
+sys.path.insert(0, str(HERE))
+from entries import norm  # noqa: E402
 from shared import DMLIB, IMPORT_ROOT  # noqa: E402
 from sdcreceipt import verify  # noqa: E402
 from sdcreceipt.party import KeySet, load_key_set_file  # noqa: E402
@@ -54,16 +56,17 @@ def expected_failures(receipt: dict, result) -> tuple[list, bool]:
 
 
 def check(entry: dict, keyset: KeySet, import_root: str = IMPORT_ROOT, dmlib: str = DMLIB) -> dict:
+    entry = norm(entry)
     receipt = json.loads((HERE / "receipts" / f"{entry['receipt_id']}.json").read_text(encoding="utf-8"))
     issuer, parties = split_keys(receipt, keyset)
-    payload_path = Path(import_root) / "retailer" / "receipt_advice" / entry["record_file"]
+    payload_path = Path(import_root).joinpath(*entry["record_dir"].split("/")) / entry["record_file"]
     payload = payload_path.read_bytes() if payload_path.exists() else None
     schema_path = Path(dmlib) / f"dm-{receipt['schema_ct_id']}.xsd"
     schema_hash = hashlib.sha256(schema_path.read_bytes()).hexdigest() if schema_path.exists() else None
     result = verify(receipt, issuer_keys=issuer, party_keys=parties if entry["decision"] == "PERMIT" else None, payload=payload)
     failures, verified = expected_failures(receipt, result)
     return {
-        "receipt_advice_id": entry["receipt_advice_id"], "receipt_id": entry["receipt_id"], "decision": receipt["governance"]["decision"], "kind": entry["kind"],
+        "receipt_advice_id": entry["document_id"], "document_id": entry["document_id"], "model": entry["model"], "receipt_id": entry["receipt_id"], "decision": receipt["governance"]["decision"], "kind": entry["kind"],
         "verified": verified, "failures": failures, "record": dict(result.record) if hasattr(result, "record") and isinstance(result.record, dict) else str(getattr(result, "record", "")),
         "payload_present": payload is not None, "payload_matches": payload is not None and hashlib.sha256(payload).hexdigest() == receipt["payload_hash"],
         "schema_matches": schema_hash == receipt["schema_hash"], "triggers": len(receipt.get("settlement", {}).get("triggers", [])), "parties": receipt.get("settlement", {}).get("parties", []),

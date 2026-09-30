@@ -21,6 +21,8 @@ from __future__ import annotations
 
 import os
 import sys
+import re
+from dataclasses import dataclass
 from functools import lru_cache
 from typing import Any
 
@@ -45,6 +47,34 @@ LIB = "https://axius-sdc.com/library/business/"
 DEFAULT = "https://axius-sdc.com/library/default/"
 UBL_VERSION = "2.3"
 R = ("Order Governed Record", "Order")   # the record's data cluster
+
+
+@dataclass(frozen=True)
+class Profile:
+    """A retailer's order profile: the model, its root cluster, and the labels where the profile departs from the Order."""
+    ct: str
+    root: tuple
+    terms: str = "Delivery Terms"                    # the delivery terms cluster
+    terms_code: str = "Delivery Terms Code"          # the Incoterms token in it
+    payment_means: str = "Payment Means"             # the Order composes the first Payment Means cluster; later profiles the revised "Payment Means Instruction"
+    requirements: str | None = None                  # the profile's own requirements cluster, if any
+    pack_version: str | None = None                  # ... its pack specification version (UBL: an AdditionalDocumentReference of type "Pack specification")
+    window_days: str | None = None                   # ... its delivery window in days (UBL: the requested delivery period's DurationMeasure, in DAY)
+
+
+KESTREL = Profile(ORDER_CT, R)
+TORVALE = Profile("cq1fjrvyn0fxl1kyk9y3kr1w", ("Torvale Order Governed Record", "Torvale Order"), "Torvale Delivery Terms", "Torvale Delivery Terms Code",
+                  "Payment Means Instruction", "Torvale Order Requirements", "Torvale Pack Specification Version", "Torvale Delivery Window Days")
+PROFILES = {p.ct: p for p in (KESTREL, TORVALE)}
+PACK_SPECIFICATION_DOCUMENT = "Pack specification"
+
+
+def profile_of(instance_xml: str) -> Profile:
+    """The profile an instance is governed by, from the model identifier its root element carries."""
+    m = re.search(r"dm-([a-z0-9]{24})", instance_xml[:600])
+    if not m or m.group(1) not in PROFILES:
+        raise ValueError("the instance is not governed by a profile this module knows")
+    return PROFILES[m.group(1)]
 #: Values of the record that have no home in a UBL Order (by the leaf's label, or by the path's cluster and the leaf).
 NOT_PROJECTED = {"Contact Method", "Contact Use"}
 NOT_PROJECTED_UNDER = {("Catalogue Reference", "Document Type")}
@@ -55,7 +85,7 @@ SYMBOL = {v: k for k, v in REC20.items()}
 PARTY_SCHEMES = {"Global Location Number (GS1)": ("GLN", "9"), "DUNS number": ("DUNS", "16")}
 ITEM_SCHEMES = {"Global Trade Item Number (GS1)": ("GTIN", "9")}
 DIMENSIONS = (("Length/Distance", "Length"), ("Weight", "Weight"), ("Volume", "Volume"))
-UNIT_DEFAULT = {"count": "items", "percent": "%", "ratio": "ratio"}
+UNIT_DEFAULT = {"count": "items", "percent": "%", "ratio": "ratio", "days": "days"}
 
 
 @lru_cache(maxsize=None)
@@ -79,10 +109,11 @@ def codes(key: str) -> tuple[dict[str, str], dict[str, str]]:
 
 
 # ================================================================ writer
-def write_order(instance_xml: str) -> str:
-    tree = read_tree(instance_xml, Schema.for_dm(ORDER_CT))
-    o = tree.get(*R)
-    assert o is not None, "no Order cluster in the instance"
+def write_order(instance_xml: str, profile: Profile | None = None) -> str:
+    profile = profile or profile_of(instance_xml)
+    tree = read_tree(instance_xml, Schema.for_dm(profile.ct))
+    o = tree.get(*profile.root)
+    assert o is not None, f"no {profile.root[-1]} cluster in the instance"
     w = _Writer()
     root = etree.Element(f"{{{ORDER_NS}}}Order", nsmap=NSMAP)
     h = o.get("Order Document") or Node("Order Document")
@@ -108,14 +139,20 @@ def write_order(instance_xml: str) -> str:
     w.docref(root, "OriginatorDocumentReference", o.get("Originator Document Reference", "Document Reference"))
     w.catref(root, o.get("Catalogue Reference", "Document Reference"))
     w.docref(root, "AdditionalDocumentReference", o.get("Additional Document Reference", "Document Reference"))
+    req = o.get(profile.requirements) if profile.requirements else None
+    if req is not None and profile.pack_version and req.leaf(profile.pack_version) is not None:
+        # the profile's pack specification version: a second additional document reference, of the library's kind
+        ref = w.cac(root, "AdditionalDocumentReference")
+        w.cbc(ref, "ID", req.leaf(profile.pack_version))
+        w.cbc(ref, "DocumentType", PACK_SPECIFICATION_DOCUMENT)
     w.contract(root, o.get("Contract"))
     w.customer_party(root, "BuyerCustomerParty", o.get("Buyer Customer Party", "Customer Party"))
     w.supplier_party(root, "SellerSupplierParty", o.get("Seller Supplier Party", "Supplier Party"))
     w.customer_party(root, "OriginatorCustomerParty", o.get("Originator Customer Party", "Customer Party"))
     w.customer_party(root, "AccountingCustomerParty", o.get("Accounting Customer Party", "Customer Party"))
-    w.delivery(root, o.get("Delivery"))
-    w.delivery_terms(root, o.get("Delivery Terms"))
-    w.payment_means(root, o.get("Payment Means"))
+    w.delivery(root, o.get("Delivery"), window_days=req.leaf(profile.window_days) if req is not None and profile.window_days else None)
+    w.delivery_terms(root, o.get(profile.terms), code_label=profile.terms_code)
+    w.payment_means(root, o.get(profile.payment_means))
     w.payment_terms(root, o.get("Payment Terms"))
     w.allowance_charge(root, o.get("Allowance Charge"))
     w.tax_total(root, o.get("Tax Total"))
@@ -302,26 +339,33 @@ class _Writer:
         self.address(el, "Address", node)
         self.drop_if_empty(el)
 
-    def delivery(self, parent, node: Node | None):
-        if node is None:
+    def delivery(self, parent, node: Node | None, window_days: Quantity | None = None):
+        """The delivery; a profile's delivery window in days goes on the requested delivery period as UBL's DurationMeasure."""
+        if node is None and window_days is None:
             return
+        node = node or Node("Delivery")
         el = self.cac(parent, "Delivery")
         self.cbc(el, "ID", node.leaf("Delivery ID"))
         self.quantity(el, "Quantity", node.leaf("Delivery Quantity"))
         self.cbc(el, "LatestDeliveryDate", node.leaf("Latest Delivery Date"))
         self.location(el, "DeliveryLocation", node.get("Delivery Location"))
         self.period(el, "RequestedDeliveryPeriod", node.get("Requested Delivery Period"))
+        if window_days is not None:
+            period = el.find("cac:RequestedDeliveryPeriod", NS)
+            if period is None:
+                period = self.cac(el, "RequestedDeliveryPeriod")
+            self.cbc(period, "DurationMeasure", window_days.magnitude, unitCode="DAY")
         if node.get("Delivery Party", "Party") is not None:
             dp = self.cac(el, "DeliveryParty")
             self.party_into(dp, node.get("Delivery Party", "Party"))
             self.drop_if_empty(dp)
         self.drop_if_empty(el)
 
-    def delivery_terms(self, parent, node: Node | None):
+    def delivery_terms(self, parent, node: Node | None, code_label: str = "Delivery Terms Code"):
         if node is None:
             return
         el = self.cac(parent, "DeliveryTerms")
-        self.cbc(el, "ID", node.leaf("Delivery Terms Code"), schemeName="Incoterms 2020")
+        self.cbc(el, "ID", node.leaf(code_label), schemeName="Incoterms 2020")
         self.cbc(el, "SpecialTerms", node.leaf("Delivery Special Terms"))
         self.location(el, "DeliveryLocation", node.get("Delivery Location"))
         self.drop_if_empty(el)
@@ -465,12 +509,13 @@ class _Writer:
 
 
 # ================================================================ reader
-def read_order(ubl_xml: str) -> dict[str, Any]:
-    """The values of a UBL 2.3 Order by label path in the Order model, the engine's input for a record."""
+def read_order(ubl_xml: str, profile: Profile = KESTREL) -> dict[str, Any]:
+    """The values of a UBL 2.3 Order by label path in the profile's model (the Order by default), the engine's input for a record."""
     root = etree.fromstring(ubl_xml.encode() if isinstance(ubl_xml, str) else ubl_xml)
     assert root.tag == f"{{{ORDER_NS}}}Order", root.tag
     r = _Reader()
     out = r.out
+    R = profile.root
     h = R + ("Order Document",)
     r.text(root, "cbc:CustomizationID", h + ("Customization ID",))
     r.text(root, "cbc:ProfileID", h + ("Profile ID",))
@@ -494,14 +539,21 @@ def read_order(ubl_xml: str) -> dict[str, Any]:
     r.docref(root, "cac:OriginatorDocumentReference", R + ("Originator Document Reference", "Document Reference"))
     r.catref(root, R + ("Catalogue Reference", "Document Reference"))
     r.contract(root, R + ("Contract",))
-    r.docref(root, "cac:AdditionalDocumentReference", R + ("Additional Document Reference", "Document Reference"))
+    for ref in root.findall("cac:AdditionalDocumentReference", NS):
+        kind = r.one(ref, "cbc:DocumentType")
+        if profile.requirements and profile.pack_version and kind is not None and (kind.text or "").strip() == PACK_SPECIFICATION_DOCUMENT:
+            r.text(ref, "cbc:ID", R + (profile.requirements, profile.pack_version))   # the profile's pack specification version, by its kind
+        elif "/".join(R + ("Additional Document Reference", "Document Reference", "Document Reference ID")) not in out:
+            r.docref_element(ref, R + ("Additional Document Reference", "Document Reference"))   # the record carries one; the first of any others
+    if profile.requirements and profile.window_days:
+        r.number(root, "cac:Delivery/cac:RequestedDeliveryPeriod/cbc:DurationMeasure", R + (profile.requirements, profile.window_days), "days")
     r.customer_party(root, "cac:BuyerCustomerParty", R + ("Buyer Customer Party", "Customer Party"))
     r.supplier_party(root, "cac:SellerSupplierParty", R + ("Seller Supplier Party", "Supplier Party"))
     r.customer_party(root, "cac:OriginatorCustomerParty", R + ("Originator Customer Party", "Customer Party"))
     r.customer_party(root, "cac:AccountingCustomerParty", R + ("Accounting Customer Party", "Customer Party"))
     r.delivery(r.one(root, "cac:Delivery"), R + ("Delivery",))
-    r.delivery_terms(root, R + ("Delivery Terms",))
-    r.payment_means(root, R + ("Payment Means",))
+    r.delivery_terms(root, R + (profile.terms,), code_label=profile.terms_code)
+    r.payment_means(root, R + (profile.payment_means,))
     r.payment_terms(root, R + ("Payment Terms",))
     r.allowance_charge(root, R + ("Allowance Charge",))
     r.tax_total(root, R + ("Tax Total",))
@@ -576,7 +628,9 @@ class _Reader:
             self.text(p, "cbc:EndDate", to + ("Date Range", "Date Range End"))
 
     def docref(self, el, path: str, to: tuple[str, ...]):
-        d = self.one(el, path)
+        self.docref_element(self.one(el, path), to)
+
+    def docref_element(self, d, to: tuple[str, ...]):
         if d is not None:
             self.text(d, "cbc:ID", to + ("Document Reference ID",))
             self.text(d, "cbc:IssueDate", to + ("Document Reference Issue Date",))
@@ -672,10 +726,10 @@ class _Reader:
         self.period(d, "cac:RequestedDeliveryPeriod", to + ("Requested Delivery Period",))
         self.party_from(self.one(d, "cac:DeliveryParty"), to + ("Delivery Party", "Party"))
 
-    def delivery_terms(self, el, to: tuple[str, ...]):
+    def delivery_terms(self, el, to: tuple[str, ...], code_label: str = "Delivery Terms Code"):
         dt = self.one(el, "cac:DeliveryTerms")
         if dt is not None:
-            self.text(dt, "cbc:ID", to + ("Delivery Terms Code",))
+            self.text(dt, "cbc:ID", to + (code_label,))
             self.text(dt, "cbc:SpecialTerms", to + ("Delivery Special Terms",))
             self.location(dt, "cac:DeliveryLocation", to + ("Delivery Location",))
 
