@@ -17,6 +17,7 @@ from sdc4_shared.utils.dm_registry import get_dm_registry
 from sdc4_shared.utils.graphdb_client import GraphDBClient
 
 from . import entity_graph
+from . import settlements as settlements_module
 from .narrative import BEATS, COMING
 from .sparql_loader import load_query, load_all_queries, QUERY_CATALOG, SPARQL_DIR
 from sdc4_shared.utils.dm_title import dm_title
@@ -63,8 +64,13 @@ def dashboard(request):
 
 
 def narrative(request):
-    """The walk-through: two beats on the Order, and the four the next documents bring."""
-    return render(request, 'demo/narrative.html', {'beats': BEATS, 'coming': COMING})
+    """The walk-through: the beats that run, and the ones the next documents bring."""
+    return render(request, 'demo/narrative.html', {'beats': BEATS, 'coming': COMING, 'first_coming': len(BEATS)})
+
+
+def settlements(request):
+    """Every Settlement Receipt held in settlement/, verified here with nothing from the issuer."""
+    return render(request, 'demo/settlements.html', {'s': settlements_module.settlements()})
 
 
 def explorer(request):

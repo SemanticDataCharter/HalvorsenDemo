@@ -12,7 +12,7 @@ HALVORSEN := docker compose -p halvorsen --env-file env/halvorsen.env -f $(COMPO
 RETAILER  := docker compose -p retailer  --env-file env/retailer.env  -f $(COMPOSE_FILE)
 HALVORSEN_URL := http://localhost:18200
 RETAILER_URL  := http://localhost:18300
-.PHONY: help up down demo generate load load-halvorsen load-retailer wait test clean version release-check pull
+.PHONY: help up down demo generate load load-halvorsen load-retailer wait test clean version release-check pull build settle verify-settlements
 
 help:
 	@echo "HalvorsenDemo quickstart:"
@@ -21,6 +21,8 @@ help:
 	@echo "  make generate        Generate the records and the UBL documents on the host (writes app/sdc4/import_data/)."
 	@echo "  make load            Load the retailer's records, then the supplier's."
 	@echo "  make test            Run the datagen and round-trip tests on the host."
+	@echo "  make settle          Settle the deductions live against the issuer (needs SDCRECEIPT_TOKEN or settlement/.token; one credit a Receipt)."
+	@echo "  make verify-settlements  Verify the Receipts held in settlement/ offline, against the record and schema bytes here."
 	@echo ""
 	@echo "  $(RETAILER_URL)/console/    the retailer's records (Kestrel Mercantile)"
 	@echo "  $(HALVORSEN_URL)/console/   the supplier's records (Halvorsen Foods), each read from a document"
@@ -74,3 +76,16 @@ release-check:      ## What the release workflow checks: VERSION is tagged, tag 
 
 pull:               ## Pull the published web image for this version instead of building it (private package: docker login ghcr.io first)
 	IMAGE_TAG=$$(cat app/sdc4/VERSION) $(RETAILER) pull web
+
+build:               ## Build the web image locally (after a change to app/sdc4/requirements.txt)
+	$(RETAILER) build web
+
+# The settlement is issued live, once, by whoever holds an issuer token; what it writes under settlement/ is committed and
+# verified offline at every run. make generate writes the settled records from the Receipts held.
+settle:
+	@python3 -m pip install -q -r datagen/requirements.txt
+	python3 settlement/settle.py
+	cd datagen && python3 generate_all.py
+
+verify-settlements:
+	python3 settlement/verify_all.py

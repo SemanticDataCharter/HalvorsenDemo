@@ -1,0 +1,12 @@
+# The build context is the repository root (app/sdc4/Dockerfile copies sparql/ and settlement/). The stacks' data and the
+# generated records live under it too and are not part of the image; the data directories are root-owned by the containers.
+.git
+app/sdc4/mediafiles/halvorsen
+app/sdc4/mediafiles/retailer
+app/sdc4/import_data
+app/sdc4/staticfiles
+settlement/keys/*.pem
+settlement/.token
+docs/design
+**/__pycache__
+**/.pytest_cache

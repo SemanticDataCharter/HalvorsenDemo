@@ -19,6 +19,8 @@ SELECT ?order_id ?dispatch_id ?receipt_id ?invoice_id (MAX(?due) AS ?due_on) (SA
   ?ri rdfs:label "Receipt Advice ID" ; sdc4:inInstance ?inst_2 ; sdc4:inDataModel sdc4:dm-tog0v0p1zit1xwpxysxwpf3d ; rdf:reifies <<sdc4:mc-n8ktn56c09i6kzy6kxzqs53j ?p7 ?receipt_id>> .
   ?rd rdfs:label "Document Reference ID" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-k153quyn7i9ravd1b3c61ad9 ?p8 ?dispatch_id>> .
   ?s rdfs:label "Receiving Condition" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-xpl4g1gsbbgsqq3okyp08qb3 ?p9 ?condition>> .
+  ?made rdfs:label "Activity Label" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-r6hkunjm2q0hlxiknlc9ljix ?pm ?made_by>> .
+  FILTER(!STRSTARTS(STR(?made_by), "Settled"))   # the receipt as received, not the settled record of it (beat 8)
 }
 GROUP BY ?order_id ?dispatch_id ?receipt_id ?invoice_id ?inst ?inst_2
 ORDER BY ?invoice_id

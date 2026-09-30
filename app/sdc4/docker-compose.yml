@@ -128,6 +128,7 @@ services:
              python manage.py runserver 0.0.0.0:8000"
     volumes:
       - ../../sparql:/sparql:ro
+      - ../../settlement:/settlement:ro
       - .:/app
       - ./import_data/${APP_NAME:-halvorsen}:/app/import_data
       - ./import_data/${APP_NAME:-halvorsen}:/import_data

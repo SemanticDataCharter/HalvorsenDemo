@@ -20,7 +20,11 @@ from engine import Template
 from schema import DMLIB, Schema
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
-LIBRARY_VERSION = open(os.path.join(ROOT, "app", "sdc4", "VERSION"), encoding="utf-8").read().strip()
+APP_VERSION = open(os.path.join(ROOT, "app", "sdc4", "VERSION"), encoding="utf-8").read().strip()
+#: The version the generated records carry in their agents' identifiers and software versions. Pinned, not the app's:
+#: a Settlement Receipt names a record by the hash of its bytes, so the bytes must not change with a release that
+#: touches nothing in the data. Bump it only when the generated data itself changes, and re-issue the settlements.
+LIBRARY_VERSION = "4.1.5"
 IMPORT_ROOT = os.environ.get("HALVORSEN_IMPORT_DIR") or os.path.join(ROOT, "app", "sdc4", "import_data")
 #: The retailer's order system generates its orders and its translator reads the responses it receives;
 #: the supplier's order system generates its responses, its warehouse system the dispatch advices, and its translator reads the orders it receives.
@@ -91,7 +95,7 @@ def record(title: str, values: dict, *, document_id: str, buyer: str, source: tu
     vals.update({G + k: v for k, v in {
         "PROV Activity/Activity Identifier": f"urn:halvorsen-demo:activity:{_counter:08d}",
         "PROV Activity/Activity Label": f"{verb} the {title} {document_id}",
-        "PROV Activity/Activity Type": "RecordGeneration" if verb == "Generated" else "DocumentTranslation",
+        "PROV Activity/Activity Type": "RecordGeneration" if verb == "Generated" else "StateTransition" if verb == "Settled" else "DocumentTranslation",
         "PROV Activity/Activity Description": f"{title} {document_id} {verb.lower()} as a governed record by the {agent_name} from {src_label}.",
         "PROV Activity/Activity Status": "ActivityCompleted",
         "PROV Activity/Started At": when,
@@ -117,7 +121,7 @@ def record(title: str, values: dict, *, document_id: str, buyer: str, source: tu
         "Audit Event/Data Subject Reference": f"urn:order:{document_id}",
         "Audit Event/Purpose of Use": "HOPERAT",
         "Audit Event/Confidentiality": "N",
-        "Audit Event/Provenance Agent Type": "transformer" if verb != "Generated" else "author",
+        "Audit Event/Provenance Agent Type": "author" if verb in ("Generated", "Settled") else "transformer",
         "Audit Event/System Identifier": agent_id,
         "Audit Event/System Location Name": "Duluth, Minnesota" if verb == "Read" else "Chicago, Illinois",
     }.items()})

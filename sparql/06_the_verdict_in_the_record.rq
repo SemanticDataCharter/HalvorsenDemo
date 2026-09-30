@@ -18,6 +18,8 @@ SELECT ?receipt_id ?dispatch_id (MIN(?received) AS ?received_on) (GROUP_CONCAT(D
   ?v rdfs:label "Pallet ID Valid on Receipt" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-o4tzku1fyzr7n78h4p64mvnx ?p5 ?pallet_valid>> .
   ?c rdfs:label "Pack Specification Compliant" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-wrnl8gyzup8j3i8s00oh9n8y ?p6 ?compliant>> .
   ?s rdfs:label "Receiving Condition" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-xpl4g1gsbbgsqq3okyp08qb3 ?p7 ?condition>> .
+  ?made rdfs:label "Activity Label" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-r6hkunjm2q0hlxiknlc9ljix ?pm ?made_by>> .
+  FILTER(!STRSTARTS(STR(?made_by), "Settled"))   # the receipt as received, not the settled record of it (beat 8)
   OPTIONAL { ?e rdfs:label "Exception Description" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-civdvmt96axod0ho162jf37u ?p8 ?exception>> . }
 }
 GROUP BY ?receipt_id ?dispatch_id ?inst ?inst_2

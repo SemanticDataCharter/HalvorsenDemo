@@ -1,0 +1,46 @@
+{
+  "version": "1.0",
+  "canonicalization": "rfc8785",
+  "receipt_id": "bcwiqmil3bmwlgirxyrfuzt0",
+  "timestamp": "2026-09-30T14:26:10Z",
+  "payload_hash": "3777926a6c7a03975e9a7491e82c79b404997f9a80932d81494dc5db34763e6d",
+  "payload_media_type": "application/xml",
+  "schema_ct_id": "tog0v0p1zit1xwpxysxwpf3d",
+  "schema_url": "https://semanticdatacharter.com/dmlib/dm-tog0v0p1zit1xwpxysxwpf3d.xsd",
+  "schema_hash": "6a7deb9c980adb2c6d8c8165c95ae8824e3eca2135e5c1ba9e5865b0412e5db8",
+  "rm_version": "SDC4",
+  "validation": {
+    "valid": true,
+    "structural_errors": 0,
+    "semantic_errors": 0,
+    "recovered": false,
+    "ev_injections": [],
+    "validator_version": "sdcvalidator 4.5.2"
+  },
+  "provenance_hash": "3bb496dee8a551b1f9f97f6b7696fe7fca3570a8abb1a3898e79d4035b5e30a1",
+  "governance": {
+    "decision": "DENY",
+    "dimensions_checked": [
+      "workflow"
+    ],
+    "receipt_hash": "a2d683ad77e906db5e72ee61d4b9f8be92ab73d839d9d41c089cc02c49509e67",
+    "receipt_url": null
+  },
+  "settlement": {
+    "condition_hash": "da77e829d75317b3613fcfca519e0ae28b4eca27a96d00d9289aa12746541452",
+    "parties": [
+      "https://axius-sdc.com/vsl/parties/kestrel-mercantile/vsl-key.json",
+      "https://axius-sdc.com/vsl/parties/halvorsen-foods/vsl-key.json"
+    ],
+    "triggers": []
+  },
+  "previous_hash": null,
+  "receipt_hash": "2e41e3d3ee8522ecd220f628dcb9845ffba15293c878df416dcdcaffbf97bdba",
+  "signatures": [
+    {
+      "key_id": "sdcstudio-signing-key-v1",
+      "alg": "ES256",
+      "sig": "FQf4iw8eWD0N4SQk8NTD0P8D1635zxSU5Y1JeDnEEeCsz8QE4ZhK0Qvh0P1ybUb0ErQf1aCUp1aMpke5jxbNpg"
+    }
+  ]
+}

@@ -11,3 +11,6 @@ app/sdc4/mediafiles/halvorsen/
 app/sdc4/mediafiles/retailer/
 app/sdc4/staticfiles/
 out/
+# the parties' private keys and the issuer token stay on the machine that settled
+settlement/keys/*.pem
+settlement/.token

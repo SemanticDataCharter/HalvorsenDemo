@@ -29,8 +29,9 @@ pyshacl==0.30.0
 # XML Processing
 lxml==6.1.0  # Security: CVE-2026-41066 (XXE in default iterparse config)
 sdcvalidator==4.5.0  # XSD 1.1 substitution-group restriction support (>=4.4.0) + ExceptionalValue recovery (>=4.3.0); 4.1.x/4.2.x are structural-only
-sdcgovernance==4.1.0  # governed execution (DMN decisions + tamper-evident receipts) over the v2 ProvGov/Audit components
+sdcgovernance==4.2.4  # governed execution (DMN decisions + tamper-evident receipts) over the v2 ProvGov/Audit components
 
 # SirixDB client (HTTPS requests)
 httpx==0.28.1
 urllib3==2.7.0  # Security: CVE-2026-44431/44432
+sdcreceipt==4.2.3  # verifies the Settlement Receipts held in settlement/ against the record and schema bytes, with nothing from the issuer

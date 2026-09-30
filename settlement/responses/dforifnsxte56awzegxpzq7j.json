@@ -1,0 +1,17 @@
+{
+  "governance": {
+    "decision": "PERMIT",
+    "settleable": true
+  },
+  "verification": {
+    "tool": "pip install sdcreceipt",
+    "command": "sdcreceipt verify receipt.json --keys keys.json",
+    "keys_url": "https://sdcstudio.axius-sdc.com/.well-known/sdcstudio-signing-keys.json",
+    "schema_url": "https://semanticdatacharter.com/dmlib/dm-tog0v0p1zit1xwpxysxwpf3d.xsd",
+    "schema_resolver_url": "https://sdcstudio.axius-sdc.com/dmlib/dm-tog0v0p1zit1xwpxysxwpf3d.xsd?sha256=6a7deb9c980adb2c6d8c8165c95ae8824e3eca2135e5c1ba9e5865b0412e5db8"
+  },
+  "wallet": {
+    "charged": "1.00",
+    "balance": "345.8000"
+  }
+}
