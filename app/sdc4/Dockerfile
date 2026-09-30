@@ -26,6 +26,7 @@ COPY app/sdc4/ /app/
 # Copy SPARQL queries (baked into image, no volume mount needed)
 COPY sparql/ /sparql/
 COPY settlement/ /settlement/
+COPY profiles/ /profiles/
 
 # Copy startup script
 COPY scripts/start.sh /app/scripts/start.sh

@@ -1,9 +1,9 @@
 """
 The walk-through: the order as a governed record, the document as its projection.
 
-Eight beats run in this release, on the Order, the Order Response, the Despatch Advice, the
-Receipt Advice, the Invoice and the Settlement Receipts held in settlement/. The last needs the
-two retailer profile models (two profiles), and is listed here as what comes.
+All nine beats run in this release: on the Order, the Order Response, the Despatch Advice, the
+Receipt Advice, the Invoice, the Settlement Receipts held in settlement/, and the second retailer's
+order profile. Nothing is listed as what comes.
 """
 
 BEATS = [
@@ -145,9 +145,25 @@ BEATS = [
         ),
         'query_label': 'Show the settled records',
     },
+    {
+        'number': 9,
+        'title': 'Two profiles',
+        'query_number': 9,
+        'icon': 'bi-layers',
+        'color': 'primary',
+        'narrative': (
+            'A second retailer, Torvale Markets, publishes its own order profile as a model on the same '
+            'components: the delivery terms narrowed to the one rule it accepts, the pack specification version '
+            'and the delivery window required on every order. The requirements are assertions in the model\'s '
+            'schema, not a rule set beside it. Torvale orders monthly; the supplier\'s translator reads each order '
+            'into the Torvale Order model, beside Kestrel\'s under the Order model. The query lists every order in '
+            'this stack by the model that governs it, with the terms and the requirements each carries. The '
+            'Profiles page puts one order of each retailer under both models and names what each refuses; the '
+            'Settlements page shows a Receipt naming the Torvale model, so the verdict says which profile governed.'
+        ),
+        'query_label': 'Show the orders by profile',
+    },
 ]
 
 #: The beats the next releases add, in the order the documents arrive.
-COMING = [
-    ('Two profiles', 'the same order under two retailers\' models; what each requires, and which the receipt names'),
-]
+COMING = []   # every beat of the plan runs

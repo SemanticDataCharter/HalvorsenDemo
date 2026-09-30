@@ -80,3 +80,4 @@ class WalkThroughTests(SimpleTestCase):
 
     def test_the_beats_and_the_ones_to_come_make_nine(self):
         self.assertEqual(len(BEATS) + len(COMING), 9)   # the six of the plan, the answer line by line, the verdict in two halves (in the record, then settled), and the bill
+        self.assertEqual(COMING, [])   # every beat runs since 4.1.7

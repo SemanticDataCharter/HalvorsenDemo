@@ -7,6 +7,7 @@ urlpatterns = [
     path('', views.dashboard, name='dashboard'),
     path('narrative/', views.narrative, name='narrative'),
     path('settlements/', views.settlements, name='settlements'),
+    path('profiles/', views.profiles, name='profiles'),
     path('explorer/', views.explorer, name='explorer'),
     path('run-query/', views.run_query, name='run-query'),
 ]

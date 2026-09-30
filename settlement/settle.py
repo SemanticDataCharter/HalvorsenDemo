@@ -14,6 +14,12 @@ the parties' key documents and the issuer's, and index.json naming which record 
 its bytes. Nothing here runs at `make demo`; `settlement/settled.py` and the demo page read what this
 wrote, and `settlement/verify_all.py` verifies it with nothing from the issuer.
 
+One more Receipt settles the second retailer's profile: the supplier's record of Torvale Markets' first order,
+read under the Torvale Order model, moves from OrderProcessing to OrderInTransit between Torvale and Halvorsen on
+the condition that the order is released to transit under the profile it carries (its terms, its pack specification
+version, its delivery window, and what the model's own schema requires). The Receipt names the Torvale model by its
+schema bytes, so the verdict says which profile governed.
+
 Each Receipt costs the issuer's account one credit. The parties' private keys stay in settlement/keys/
 and are not committed; their key documents are.
 """
@@ -35,7 +41,11 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 sys.path.insert(0, str(ROOT / "datagen"))
 sys.path.insert(0, str(ROOT / "ubl"))
+sys.path.insert(0, str(HERE))
+from entries import norm  # noqa: E402
 from invoice import INVOICE_CT, IR  # noqa: E402
+from order import TORVALE  # noqa: E402
+from profiles import requirements_of  # noqa: E402
 from receipt_advice import KR, RECEIPT_CT  # noqa: E402
 from instance import read_tree  # noqa: E402
 from schema import Schema  # noqa: E402
@@ -49,7 +59,10 @@ ORIGIN = ENDPOINT.split("/api/", 1)[0]
 #: The two parties. The issuer fetches each party's key document over HTTPS when a trigger arrives, so the identifiers
 #: must resolve: fictitious companies own no domain, so their documents are published on the company site under a path
 #: for this demonstration. The verifier here takes the same documents from settlement/keys/ and never fetches them.
-PARTIES = {"kestrel": "https://axius-sdc.com/vsl/parties/kestrel-mercantile/vsl-key.json", "halvorsen": "https://axius-sdc.com/vsl/parties/halvorsen-foods/vsl-key.json"}
+PARTIES = {"kestrel": "https://axius-sdc.com/vsl/parties/kestrel-mercantile/vsl-key.json", "halvorsen": "https://axius-sdc.com/vsl/parties/halvorsen-foods/vsl-key.json",
+           "torvale": "https://axius-sdc.com/vsl/parties/torvale-markets/vsl-key.json"}
+#: The settlement of the second retailer's profile: the supplier's record of Torvale's first order, released to transit under the profile it carries.
+TORVALE_ORDER = "TV-PO-2026-000001"
 DEDUCTION_PERCENT = Decimal("3")
 KEYS = HERE / "keys"
 CONDITIONS = HERE / "conditions"
@@ -123,6 +136,47 @@ def deduction_notice(record_text: str) -> dict:
     }
 
 
+def release_notice(record_text: str) -> dict:
+    """The condition on a Torvale order: released to transit under the profile the record carries, and what that profile requires."""
+    t = read_tree(record_text, Schema.for_dm(TORVALE.ct)).get(*TORVALE.root)
+    return {
+        "notice": "Release to transit", "issued_by": "Torvale Markets, Inc.", "to": "Halvorsen Foods, Inc.",
+        "order_id": t.leaf("Order Document", "Order ID"), "issued_on": t.leaf("Order Document", "Issue Date"),
+        "profile": {"model": "Torvale Order", "model_ct": TORVALE.ct,
+                    "delivery_terms": t.leaf("Torvale Delivery Terms", "Torvale Delivery Terms Code"),
+                    "pack_specification_version": t.leaf("Torvale Order Requirements", "Torvale Pack Specification Version"),
+                    "delivery_window_days": t.leaf("Torvale Order Requirements", "Torvale Delivery Window Days"),
+                    "requires": requirements_of(TORVALE)},
+        "resolution": "The order is released to transit under Torvale's profile as the record carries it; the order moves from OrderProcessing to OrderInTransit.",
+    }
+
+
+def settle_one(text: str, *, tok: str, kind: str, current_state: str, target: str, condition: dict, parties: list[str], keys: dict, label: str) -> dict | None:
+    """One settlement, live: the Receipt as issued, both parties' triggers, the Receipt as it finally stands; None on a refusal the issuer explains."""
+    try:
+        response = issue.settle(text, endpoint=ENDPOINT, token=tok, current_state=current_state, target_state=target, condition=condition, parties=parties)
+    except issue.SettleError as exc:   # a refusal the issuer explains (INDETERMINATE, a bad state) is kept as text, not as a Receipt
+        print(f"  {label} -> {target}: {exc}")
+        (RESPONSES / f"{label}-{kind}-error.txt").write_text(str(exc) + "\n")
+        return None
+    receipt, envelope = issue.split_response(response)
+    receipt_id = receipt["receipt_id"]
+    decision = receipt["governance"]["decision"]
+    settleable = bool(envelope.get("governance", {}).get("settleable", decision == "PERMIT"))
+    (RESPONSES / f"{receipt_id}.json").write_text(json.dumps(envelope, indent=2) + "\n")
+    (RECEIPTS / f"{receipt_id}.json").write_text(json.dumps(receipt, indent=2) + "\n")   # as issued, before any trigger
+    if settleable:
+        for kid, key in keys.values():
+            post_json(f"{BASE}/trigger", sign_trigger(key, receipt, kid))
+        final = get_json(f"{BASE}/receipt/{receipt_id}")
+        receipt = final.get("receipt", final) if isinstance(final, dict) else receipt
+    (RECEIPTS / f"{receipt_id}.json").write_text(json.dumps(receipt, indent=2) + "\n")
+    triggers = len(receipt.get("settlement", {}).get("triggers", []))
+    print(f"  {label} -> {target}: {decision}{'' if settleable else ' (not settleable)'}, receipt {receipt_id}, {triggers} triggers, {envelope.get('wallet', {}).get('charged', '?')} charged")
+    return {"kind": kind, "target_state": target, "receipt_id": receipt_id, "decision": decision, "settleable": settleable, "triggers": triggers,
+            "settled_on": receipt.get("timestamp", "")[:10] or date.today().isoformat()}
+
+
 def post_json(url: str, body: dict) -> dict:
     issue.check_endpoint(url, what="submit URL")
     req = urllib.request.Request(url, data=json.dumps(body).encode("utf-8"), headers={"Content-Type": "application/json"}, method="POST")
@@ -143,9 +197,10 @@ def main() -> int:
     for d in (CONDITIONS, RECEIPTS, RESPONSES):
         d.mkdir(exist_ok=True)
     keys = party_keys()
-    parties = [kid for kid, _ in keys.values()]
+    pair = {n: keys[n] for n in ("kestrel", "halvorsen")}
+    parties = [kid for kid, _ in pair.values()]
     (HERE / "issuer-keys.json").write_text(json.dumps(get_json(f"{ORIGIN}/.well-known/sdcstudio-signing-keys.json"), indent=2) + "\n")
-    print(f"issuer {ORIGIN}: signing keys saved; parties {', '.join(parties)}")
+    print(f"issuer {ORIGIN}: signing keys saved; parties {', '.join(kid for kid, _ in keys.values())}")
     index_path = HERE / "index.json"
     index = json.loads(index_path.read_text(encoding="utf-8")) if index_path.exists() else []
     done = {(e["record_sha256"], e["kind"]) for e in index}   # a rerun picks up where it stopped; a Receipt already held is not bought twice
@@ -161,31 +216,28 @@ def main() -> int:
         for kind, target in asks:
             if (sha, kind) in done:
                 continue
-            try:
-                response = issue.settle(text, endpoint=ENDPOINT, token=tok, current_state="OrderProblem", target_state=target, condition=condition, parties=parties)
-            except issue.SettleError as exc:   # a refusal the issuer explains (INDETERMINATE, a bad state) is kept as text, not as a Receipt
-                print(f"  {rid} -> {target}: {exc}")
-                (RESPONSES / f"{rid}-{kind}-error.txt").write_text(str(exc) + "\n")
+            got = settle_one(text, tok=tok, kind=kind, current_state="OrderProblem", target=target, condition=condition, parties=parties, keys=pair, label=rid)
+            if got is None:
                 continue
-            receipt, envelope = issue.split_response(response)
-            receipt_id = receipt["receipt_id"]
-            decision = receipt["governance"]["decision"]
-            settleable = bool(envelope.get("governance", {}).get("settleable", decision == "PERMIT"))
-            (RESPONSES / f"{receipt_id}.json").write_text(json.dumps(envelope, indent=2) + "\n")
-            (RECEIPTS / f"{receipt_id}.json").write_text(json.dumps(receipt, indent=2) + "\n")   # as issued, before any trigger
-            if settleable:
-                for name, (kid, key) in keys.items():
-                    trigger = sign_trigger(key, receipt, kid)
-                    post_json(f"{BASE}/trigger", trigger)
-                final = get_json(f"{BASE}/receipt/{receipt_id}")
-                receipt = final.get("receipt", final) if isinstance(final, dict) else receipt
-            (RECEIPTS / f"{receipt_id}.json").write_text(json.dumps(receipt, indent=2) + "\n")
-            triggers = len(receipt.get("settlement", {}).get("triggers", []))
-            print(f"  {rid} -> {target}: {decision}{'' if settleable else ' (not settleable)'}, receipt {receipt_id}, {triggers} triggers, {envelope.get('wallet', {}).get('charged', '?')} charged")
             index.append({"receipt_advice_id": rid, "order_id": condition["order_id"], "invoice_id": condition["invoice_id"], "record_file": path.name, "record_sha256": sha,
-                          "kind": kind, "target_state": target, "receipt_id": receipt_id, "decision": decision, "settleable": settleable, "triggers": triggers,
-                          "condition_file": f"conditions/{rid}.json", "settled_on": receipt.get("timestamp", "")[:10] or date.today().isoformat()})
+                          "condition_file": f"conditions/{rid}.json", **got})
             index_path.write_text(json.dumps(index, indent=2) + "\n")
+    # the second retailer's profile: one Receipt naming the Torvale Order model
+    tpath = Path(IMPORT_ROOT) / "halvorsen" / "torvale_order" / f"torvale_order-{TORVALE_ORDER.lower()}.xml"
+    if tpath.exists():
+        text = tpath.read_text(encoding="utf-8")
+        sha = hashlib.sha256(text.encode("utf-8")).hexdigest()
+        if (sha, "permit") not in done:
+            condition = release_notice(text)
+            (CONDITIONS / f"{TORVALE_ORDER}.json").write_text(json.dumps(condition, indent=2) + "\n")
+            tpair = {n: keys[n] for n in ("torvale", "halvorsen")}
+            got = settle_one(text, tok=tok, kind="permit", current_state="OrderProcessing", target="OrderInTransit", condition=condition, parties=[kid for kid, _ in tpair.values()], keys=tpair, label=TORVALE_ORDER)
+            if got is not None:
+                index.append({"document_id": TORVALE_ORDER, "model_ct": TORVALE.ct, "model": "Torvale Order", "record_dir": "halvorsen/torvale_order", "from_state": "OrderProcessing",
+                              "order_id": TORVALE_ORDER, "invoice_id": None, "record_file": tpath.name, "record_sha256": sha, "condition_file": f"conditions/{TORVALE_ORDER}.json", **got})
+                index_path.write_text(json.dumps(index, indent=2) + "\n")
+    else:
+        print(f"  no {tpath.name} under {IMPORT_ROOT}: run the generator first for the Torvale settlement")
     print(f"{len(index)} Receipts in settlement/receipts; index.json written")
     return 0
 

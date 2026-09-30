@@ -1,0 +1,54 @@
+{% extends "demo/base.html" %}
+{% block title %}Two profiles{% endblock %}
+{% block extra_css %}
+<style>
+.refused { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.8rem; }
+.why { font-size: 0.85rem; }
+</style>
+{% endblock %}
+{% block content %}
+<h1 class="display-5 mb-1">Two profiles</h1>
+<p class="lead text-muted mb-3">Two retailers, two order models, one component set. Each retailer publishes its profile as a model; what it requires is in the model's schema, read here from that schema, not from a rule set beside it. The first order of each retailer's year is written as its own UBL 2.3 Order, read into both models, and validated under each. What a model refuses is named.</p>
+
+{% if not x.present %}
+<div class="alert alert-secondary">No exhibit yet: <code>make generate</code> writes <code>profiles/exhibit.json</code>.</div>
+{% else %}
+<h2 class="h4 mt-4 mb-3">What each model requires</h2>
+<div class="row">
+{% for m in x.models %}
+  <div class="col-md-6 mb-3">
+    <div class="card h-100"><div class="card-body">
+      <h5 class="card-title mb-1">{{ m.model }} <span class="text-muted small">{{ m.retailer }}</span></h5>
+      <div class="text-muted small mb-2">model <code>{{ m.ct_id }}</code></div>
+      {% if m.requirements %}
+        {% for r in m.requirements %}
+          <div class="mb-2"><strong>{{ r.cluster }}</strong> requires: {{ r.requires|join:", " }}</div>
+        {% endfor %}
+      {% else %}
+        <div class="text-muted">Requires nothing beyond what its components constrain: every member is optional, and the Order accepts any of the eleven Incoterms rules.</div>
+      {% endif %}
+    </div></div>
+  </div>
+{% endfor %}
+</div>
+
+<h2 class="h4 mt-4 mb-3">The same order under both models</h2>
+<div class="table-responsive">
+<table class="table table-sm align-middle">
+  <thead><tr><th>Order</th><th>Written by</th>{% for m in x.models %}<th>Under {{ m.model }}</th>{% endfor %}</tr></thead>
+  <tbody>
+  {% for o in x.orders %}
+    <tr>
+      <td>{{ o.order_id }}</td>
+      <td>{{ o.written_by }}<div class="text-muted small">its own model: {{ o.own_model }}</div></td>
+      {% for u in o.under %}
+        <td>{% if u.refused %}<span class="badge bg-danger">refused</span>{% for r in u.refused %}<div class="refused">{{ r }}</div>{% endfor %}{% else %}<span class="badge bg-success">accepted</span><div class="text-muted small">{{ u.values }} values</div>{% endif %}</td>
+      {% endfor %}
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+<p class="text-muted small">A Kestrel order under Torvale's model fails Torvale's terms list and Torvale's requirements. A Torvale order under Kestrel's model names a kind of document Kestrel's list does not know: the pack specification version travels as a document reference, and Kestrel's Order, published before the list gained that kind, refuses it. Each under its own model is accepted. The Settlements page shows which model a Receipt names.</p>
+{% endif %}
+{% endblock %}
