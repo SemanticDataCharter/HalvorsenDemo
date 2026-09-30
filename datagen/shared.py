@@ -91,7 +91,7 @@ def record(title: str, values: dict, *, document_id: str, buyer: str, source: tu
     vals.update({G + k: v for k, v in {
         "PROV Activity/Activity Identifier": f"urn:halvorsen-demo:activity:{_counter:08d}",
         "PROV Activity/Activity Label": f"{verb} the {title} {document_id}",
-        "PROV Activity/Activity Type": "RecordGeneration" if verb == "Generated" else "DocumentTranslation",
+        "PROV Activity/Activity Type": "RecordGeneration" if verb == "Generated" else "StateTransition" if verb == "Settled" else "DocumentTranslation",
         "PROV Activity/Activity Description": f"{title} {document_id} {verb.lower()} as a governed record by the {agent_name} from {src_label}.",
         "PROV Activity/Activity Status": "ActivityCompleted",
         "PROV Activity/Started At": when,
@@ -117,7 +117,7 @@ def record(title: str, values: dict, *, document_id: str, buyer: str, source: tu
         "Audit Event/Data Subject Reference": f"urn:order:{document_id}",
         "Audit Event/Purpose of Use": "HOPERAT",
         "Audit Event/Confidentiality": "N",
-        "Audit Event/Provenance Agent Type": "transformer" if verb != "Generated" else "author",
+        "Audit Event/Provenance Agent Type": "author" if verb in ("Generated", "Settled") else "transformer",
         "Audit Event/System Identifier": agent_id,
         "Audit Event/System Location Name": "Duluth, Minnesota" if verb == "Read" else "Chicago, Illinois",
     }.items()})

@@ -1,0 +1,53 @@
+{% extends "demo/base.html" %}
+{% block title %}The verdict, settled{% endblock %}
+{% block extra_css %}
+<style>
+.hash { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.8rem; word-break: break-all; }
+.why { font-size: 0.85rem; }
+pre.doc { font-size: 0.75rem; max-height: 22rem; overflow: auto; background: #f8f9fa; padding: 0.75rem; }
+</style>
+{% endblock %}
+{% block content %}
+<h1 class="display-5 mb-1">The verdict, settled</h1>
+<p class="lead text-muted mb-3">Every deduction settled as a transition of the receipt advice from OrderProblem to OrderProcessing, attested by a Settlement Receipt the issuer signed, and verified here with nothing from the issuer: its published key document as saved beside the Receipts, the two parties' key documents, the record's own bytes in this store, and the schema's bytes in the model library.</p>
+
+{% if not s.issued %}
+<div class="alert alert-secondary">No settlements have been issued yet. <code>make settle</code> with an issuer token settles every receipt advice in the OrderProblem state and writes the Receipts under <code>settlement/</code>; this page verifies them.</div>
+{% else %}
+<div class="row mb-4">
+  <div class="col-md-3"><div class="card"><div class="card-body"><div class="text-muted small">Receipts held</div><div class="h3 mb-0">{{ s.rows|length }}</div></div></div></div>
+  <div class="col-md-3"><div class="card"><div class="card-body"><div class="text-muted small">Verified here</div><div class="h3 mb-0">{{ s.verified }}</div></div></div></div>
+  <div class="col-md-3"><div class="card"><div class="card-body"><div class="text-muted small">PERMIT</div><div class="h3 mb-0">{{ s.permits }}</div></div></div></div>
+  <div class="col-md-3"><div class="card"><div class="card-body"><div class="text-muted small">DENY</div><div class="h3 mb-0">{{ s.denies }}</div></div></div></div>
+</div>
+
+<div class="table-responsive">
+<table class="table table-sm align-middle">
+  <thead><tr><th>Receipt advice</th><th>Asked</th><th>Decision</th><th>Verified</th><th>Record</th><th>Schema</th><th>Triggers</th><th>Deduction</th><th>Receipt</th></tr></thead>
+  <tbody>
+  {% for r in s.rows %}
+    <tr>
+      <td>{{ r.receipt_advice_id }}<div class="text-muted small">{{ r.order_id }}{% if r.invoice_id %} &middot; {{ r.invoice_id }}{% endif %}</div></td>
+      <td>OrderProblem &rarr; {{ r.target_state }}</td>
+      <td><span class="badge {% if r.decision == 'PERMIT' %}bg-success{% else %}bg-danger{% endif %}">{{ r.decision }}</span>{% if not r.settleable %}<div class="text-muted small">not settleable</div>{% endif %}</td>
+      <td>{% if r.verified %}<span class="badge bg-success">VERIFIED</span>{% else %}<span class="badge bg-warning text-dark">not verified</span>{% for f in r.failures %}<div class="text-muted small">{{ f }}</div>{% endfor %}{% endif %}</td>
+      <td>{% if r.record_found %}<a class="why" href="{% url 'console:instance' s.ct_id r.record_instance %}?pane=document">the bytes it names &rsaquo;</a>{% else %}<span class="text-muted small">not in this store</span>{% endif %}
+          {% if r.settled_instance %}<div><a class="why" href="{% url 'console:instance' s.ct_id r.settled_instance %}?pane=table">the settled record &rsaquo;</a></div>{% endif %}</td>
+      <td>{% if r.schema_ok %}<span class="badge bg-success">bytes match</span>{% else %}<span class="badge bg-warning text-dark">differs</span>{% endif %}</td>
+      <td>{{ r.triggers }} of {{ r.parties|length }}</td>
+      <td>{% if r.deduction %}{{ r.deduction.magnitude }} {{ r.deduction.unit }}{% else %}&mdash;{% endif %}<div class="text-muted small">{{ r.pallets|length }} pallet{{ r.pallets|length|pluralize }}</div></td>
+      <td><button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#receipt-{{ forloop.counter }}">show</button></td>
+    </tr>
+    <tr class="collapse" id="receipt-{{ forloop.counter }}"><td colspan="9">
+      <div class="row">
+        <div class="col-md-6"><div class="text-muted small mb-1">The condition, hashed into the Receipt as <span class="hash">{{ r.condition_hash }}</span></div><pre class="doc">{{ r.condition_json }}</pre></div>
+        <div class="col-md-6"><div class="text-muted small mb-1">The Receipt, as issued and triggered; payload <span class="hash">{{ r.payload_hash }}</span>; schema <span class="hash">{{ r.schema_hash }}</span></div><pre class="doc">{{ r.receipt_json }}</pre></div>
+      </div>
+    </td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+<p class="text-muted small">Verification: <code>pip install sdcreceipt</code>, then <code>sdcreceipt verify settlement/receipts/&lt;id&gt;.json --keys settlement/issuer-keys.json --keys settlement/keys/kestrel-key.json --keys settlement/keys/halvorsen-key.json --payload app/sdc4/import_data/retailer/receipt_advice/&lt;record&gt;.xml</code>. Nothing in it needs the issuer to be reachable.</p>
+{% endif %}
+{% endblock %}

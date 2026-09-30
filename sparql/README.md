@@ -1,6 +1,6 @@
 # The saved questions
 
-Seven queries against the knowledge graph each stack projects, one named graph per record. Each anchors on a published component by its `ct_id`; the reifier is addressed by its label and its component is read from its IRI, so nothing in a triple term is left unbound (a triple term with the component unbound makes GraphDB scan every reifier).
+Eight queries against the knowledge graph each stack projects, one named graph per record. Each anchors on a published component by its `ct_id`; the reifier is addressed by its label and its component is read from its IRI, so nothing in a triple term is left unbound (a triple term with the component unbound makes GraphDB scan every reifier).
 
 | # | File | What it shows |
 |---|------|---------------|
@@ -11,6 +11,7 @@ Seven queries against the knowledge graph each stack projects, one named graph p
 | 5 | `05_the_identifier_that_expired.rq` | Each dispatch advice with its pallet identifiers, the earliest day one of them stops being valid, the day the advice was sent, and the verdict the two dates give |
 | 6 | `06_the_verdict_in_the_record.rq` | Each receipt advice joined to the dispatch it answers, the day received, the receiver's decision on its pallets, and the exception where there is one |
 | 7 | `07_the_bill_for_what_arrived.rq` | Each invoice joined to the receipt it settles, the dispatch and the order, with the amount due, the deposit deducted, and the receiver's conditions on the pallets |
+| 8 | `08_the_verdict_settled.rq` | Each settled receipt advice paired with its original: the Settlement Receipt its provenance names, and the conditions the original carried |
 
 ## What each returned (release 4.1.5, 52 of each of the five documents, GraphDB cold)
 

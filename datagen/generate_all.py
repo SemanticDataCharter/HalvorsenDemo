@@ -132,9 +132,14 @@ def main():
         write_record(dirs["retailer_invoices"], "invoice", retailer_invoice, name=ih["invoice_id"].lower())
         lapsed += dh["pallet_lapses"]; stale += dh["pack_stale"]; problems += bool(kh["exceptions"]); deposits += ih["kind"] == "deposit"
         n += 1
+    # 6. the settled records: for every Settlement Receipt issued on a receipt advice in OrderProblem (settlement/), the
+    #    record in the state the settlement reached, its provenance naming the Receipt; only where the bytes still match
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "settlement"))
+    from settled import write_settled_records  # noqa: E402
+    settled, unmatched = write_settled_records(IMPORT_ROOT)
     for name, d in dirs.items():
         print(f"  {name:<20} {len(glob.glob(os.path.join(d, '*.xml'))):>6,}   {d}")
-    print(f"  {n} orders; {lapsed} dispatches with a pallet identifier that lapses on the day of dispatch; {stale} packed to the replaced pack specification; {problems} receipts in OrderProblem; {deposits} invoices with a deposit deducted")
+    print(f"  {n} orders; {lapsed} dispatches with a pallet identifier that lapses on the day of dispatch; {stale} packed to the replaced pack specification; {problems} receipts in OrderProblem; {deposits} invoices with a deposit deducted; {settled} settled records from the Receipts held ({unmatched} not matching)")
     print(f"Completed in {time.time() - t0:.1f}s")
 
 

@@ -52,6 +52,12 @@ QUERY_CATALOG = {
         'description': 'Each invoice joined to the receipt it settles, the dispatch and the order, with the amount due, the deposit deducted, and the receiver\'s conditions on the pallets.',
         'domains': ['Receipt Advice', 'Invoice'],
     },
+    8: {
+        'file': '08_the_verdict_settled.rq',
+        'title': 'The verdict, settled',
+        'description': 'Each settled receipt advice paired with its original: the Settlement Receipt its provenance names, the state reached, and the conditions the original carried.',
+        'domains': ['Receipt Advice'],
+    },
 }
 
 

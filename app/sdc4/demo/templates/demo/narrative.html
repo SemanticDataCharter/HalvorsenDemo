@@ -39,7 +39,7 @@
 
 {% block content %}
 <h1 class="display-5 mb-1">The walk-through</h1>
-<p class="lead text-muted mb-4">The order as a governed record, the document as its projection. Two beats run on the Order; four arrive with the next documents.</p>
+<p class="lead text-muted mb-4">The order as a governed record, the document as its projection. {{ beats|length }} beats run; {{ coming|length }} arrive with the next documents.</p>
 
 {% for beat in beats %}
 <div class="card beat-card border-{{ beat.color }} mb-3">
@@ -70,7 +70,7 @@
 <div class="list-group mb-4">
   {% for title, what in coming %}
     <div class="list-group-item">
-      <span class="badge bg-secondary me-2">{{ forloop.counter|add:2 }}</span>
+      <span class="badge bg-secondary me-2">{{ forloop.counter|add:first_coming }}</span>
       <strong>{{ title }}.</strong> <span class="text-muted">{{ what }}</span>
     </div>
   {% endfor %}

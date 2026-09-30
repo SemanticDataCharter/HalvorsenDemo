@@ -2,7 +2,7 @@
 
 Halvorsen Foods is fictitious. It shipped a mixed pallet to a large retailer and took a three percent deduction for a non-compliant advance ship notice. Eleven days of reconstruction found no mistake: the retailer's rule had changed on a date the notice did not carry, and the pallet identifier had stopped being valid on a date the notice also did not carry. Two correct systems, one working integration, a verdict nobody could examine.
 
-This demonstration is built so the verdict survives a question. This release runs seven beats, on the purchase order, the supplier's response, the dispatch advice, the receipt and the invoice; the other two arrive with the settlement and the second retailer's model.
+This demonstration is built so the verdict survives a question. This release runs eight beats, on the purchase order, the supplier's response, the dispatch advice, the receipt, the invoice and the settlement of the deduction; the last arrives with the second retailer's model.
 
 ## What you are looking at
 
@@ -10,7 +10,7 @@ Two stacks on one machine. The retailer, Kestrel Mercantile, also fictitious, ge
 
 Open the same order on both sides. The values are the same. What differs is the provenance each record carries: the retailer's says its order system generated it; the supplier's names the document it was read from, the translator that read it, and when. Neither side mapped anything. The model is the agreement.
 
-## The seven points this release makes
+## The eight points this release makes
 
 1. **The document is a projection of the record.** The retailer's system of record is the governed record, not the file. The file is written from it, checked against the standard's own schema, and read back into an identical record. If the standard changes, the projection changes; the record does not.
 
@@ -24,11 +24,13 @@ Open the same order on both sides. The values are the same. What differs is the 
 
 6. **The verdict, in the record.** The retailer receives each shipment the day after it was sent and checks every pallet on that day against both rules. The receipt advice holds the answers beside the facts they were judged on: the identifier and its period, the day received, the version packed to and the version in force. A failing pallet is accepted with an exception that says what was found and against which rule, and the record moves to the problem state. It goes back to the supplier as a standard document and reads into the same record there. Two shipments in the year left on the last day of June packed to the rule in force that day and arrived on the first of July, when it was not. That is the story's notice, and this time both sides can read why.
 
-7. **The bill, for what arrived.** The supplier bills the day after the receipt arrives, for what the retailer says it received, at the prices the response confirmed, with the short and the rejected cases left off and a deposit deducted where one was paid. The invoice names the order, the dispatch advice and the receipt it settles, line by line, and goes back as a standard document. Ask the store for the bills and it puts each one beside the receiver's decision on the pallets: the amount due and the exception it will be argued over, in one row, from records either side can produce. The deduction itself is the next release.
+7. **The bill, for what arrived.** The supplier bills the day after the receipt arrives, for what the retailer says it received, at the prices the response confirmed, with the short and the rejected cases left off and a deposit deducted where one was paid. The invoice names the order, the dispatch advice and the receipt it settles, line by line, and goes back as a standard document. Ask the store for the bills and it puts each one beside the receiver's decision on the pallets: the amount due and the exception it will be argued over, in one row, from records either side can produce. The deduction itself is the eighth point.
+
+8. **The verdict, settled.** Every deduction was settled once, live, against the Verifiable Settlement Layer: the deduction notice, the invoice, the percentage, the pallet and the rule it failed, as the condition; the receipt advice's move from problem to processing as the transition; the two companies named by their keys. The issuer checked the record against the exact schema, asked the model's own workflow whether the move is allowed, and signed a receipt; both companies signed it too. One record was asked to skip straight to delivered, and the receipt records the refusal. The receipts sit in this repository and verify on the Settlements page with nothing from the issuer: not the issuer's site, not its database, only its published key. If the issuer disappeared tomorrow, every verdict here would still verify.
 
 ## What comes next
 
-The verdict settled with a receipt that verifies offline, and the same order under two retailers' profile models. Each is a beat of the walk-through, listed on the page, and each arrives with the document that carries it.
+The same order under two retailers' profile models. Each is a beat of the walk-through, listed on the page, and each arrives with the document that carries it.
 
 ## What this is not
 

@@ -1,9 +1,9 @@
 """
 The walk-through: the order as a governed record, the document as its projection.
 
-Seven beats run in this release, on the Order, the Order Response, the Despatch Advice, the
-Receipt Advice and the Invoice. The other two need the settlement receipt (the verdict settled) and
-the two retailer profile models (two profiles), and are listed here as what comes.
+Eight beats run in this release, on the Order, the Order Response, the Despatch Advice, the
+Receipt Advice, the Invoice and the Settlement Receipts held in settlement/. The last needs the
+two retailer profile models (two profiles), and is listed here as what comes.
 """
 
 BEATS = [
@@ -126,10 +126,28 @@ BEATS = [
         ),
         'query_label': 'Show the bills',
     },
+    {
+        'number': 8,
+        'title': 'The verdict, settled',
+        'query_number': 8,
+        'icon': 'bi-patch-check',
+        'color': 'success',
+        'narrative': (
+            'Each receipt advice in the OrderProblem state was settled, once, against the issuer: the deduction '
+            'notice as the condition (the invoice, three percent, the pallets and the rule each failed), the '
+            'transition OrderProblem to OrderProcessing, the two parties named by their keys. The issuer '
+            'validated the record against the exact schema bytes, asked governance whether the transition is '
+            'legal in the bound workflow, and signed a Settlement Receipt; both parties signed their triggers. '
+            'One record was also asked to go straight to OrderDelivered, and the Receipt records the refusal. '
+            'The Receipts are held here and verified on the Settlements page with nothing from the issuer. '
+            'The settled record is a second record of the same receipt advice, in OrderProcessing, whose '
+            'provenance names the Receipt; the query pairs it with the original and its conditions.'
+        ),
+        'query_label': 'Show the settled records',
+    },
 ]
 
 #: The beats the next releases add, in the order the documents arrive.
 COMING = [
-    ('The verdict, settled', 'the deduction as the OrderProblem transition, settled with a receipt that verifies offline'),
     ('Two profiles', 'the same order under two retailers\' models; what each requires, and which the receipt names'),
 ]
