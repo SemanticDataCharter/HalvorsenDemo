@@ -25,6 +25,7 @@ import json
 import os
 import re
 import sys
+import urllib.error
 import urllib.request
 from datetime import date
 from decimal import Decimal, ROUND_HALF_UP
@@ -45,9 +46,10 @@ from sdcreceipt.party import generate_key, key_document, load_private_key, sign_
 ENDPOINT = os.environ.get("HALVORSEN_SETTLE_ENDPOINT", "https://sdcstudio.axius-sdc.com/api/v1/vsl/settle")
 BASE = ENDPOINT.rsplit("/settle", 1)[0]
 ORIGIN = ENDPOINT.split("/api/", 1)[0]
-#: The two parties. Fictitious companies own no domain, so their identifiers are did:web names under .example;
-#: the verifier takes their key documents from settlement/keys/ rather than resolving them.
-PARTIES = {"kestrel": "did:web:kestrelmercantile.example", "halvorsen": "did:web:halvorsenfoods.example"}
+#: The two parties. The issuer fetches each party's key document over HTTPS when a trigger arrives, so the identifiers
+#: must resolve: fictitious companies own no domain, so their documents are published on the company site under a path
+#: for this demonstration. The verifier here takes the same documents from settlement/keys/ and never fetches them.
+PARTIES = {"kestrel": "https://axius-sdc.com/vsl/parties/kestrel-mercantile/vsl-key.json", "halvorsen": "https://axius-sdc.com/vsl/parties/halvorsen-foods/vsl-key.json"}
 DEDUCTION_PERCENT = Decimal("3")
 KEYS = HERE / "keys"
 CONDITIONS = HERE / "conditions"
@@ -124,8 +126,11 @@ def deduction_notice(record_text: str) -> dict:
 def post_json(url: str, body: dict) -> dict:
     issue.check_endpoint(url, what="submit URL")
     req = urllib.request.Request(url, data=json.dumps(body).encode("utf-8"), headers={"Content-Type": "application/json"}, method="POST")
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return json.loads(r.read().decode("utf-8"))
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return json.loads(r.read().decode("utf-8"))
+    except urllib.error.HTTPError as exc:
+        raise SystemExit(f"error: {exc.code} from {url}: {exc.read().decode('utf-8', errors='replace')[:600]}")
 
 
 def get_json(url: str) -> dict:
@@ -141,9 +146,11 @@ def main() -> int:
     parties = [kid for kid, _ in keys.values()]
     (HERE / "issuer-keys.json").write_text(json.dumps(get_json(f"{ORIGIN}/.well-known/sdcstudio-signing-keys.json"), indent=2) + "\n")
     print(f"issuer {ORIGIN}: signing keys saved; parties {', '.join(parties)}")
-    index = []
+    index_path = HERE / "index.json"
+    index = json.loads(index_path.read_text(encoding="utf-8")) if index_path.exists() else []
+    done = {(e["record_sha256"], e["kind"]) for e in index}   # a rerun picks up where it stopped; a Receipt already held is not bought twice
     records = problem_records()
-    print(f"{len(records)} receipt advices in OrderProblem")
+    print(f"{len(records)} receipt advices in OrderProblem, {len(index)} Receipts already held")
     for i, path in enumerate(records):
         text = path.read_text(encoding="utf-8")
         sha = hashlib.sha256(text.encode("utf-8")).hexdigest()
@@ -152,6 +159,8 @@ def main() -> int:
         (CONDITIONS / f"{rid}.json").write_text(json.dumps(condition, indent=2) + "\n")
         asks = [("permit", "OrderProcessing")] + ([("deny", "OrderDelivered")] if i == 0 else [])
         for kind, target in asks:
+            if (sha, kind) in done:
+                continue
             try:
                 response = issue.settle(text, endpoint=ENDPOINT, token=tok, current_state="OrderProblem", target_state=target, condition=condition, parties=parties)
             except issue.SettleError as exc:   # a refusal the issuer explains (INDETERMINATE, a bad state) is kept as text, not as a Receipt
@@ -163,6 +172,7 @@ def main() -> int:
             decision = receipt["governance"]["decision"]
             settleable = bool(envelope.get("governance", {}).get("settleable", decision == "PERMIT"))
             (RESPONSES / f"{receipt_id}.json").write_text(json.dumps(envelope, indent=2) + "\n")
+            (RECEIPTS / f"{receipt_id}.json").write_text(json.dumps(receipt, indent=2) + "\n")   # as issued, before any trigger
             if settleable:
                 for name, (kid, key) in keys.items():
                     trigger = sign_trigger(key, receipt, kid)
@@ -175,7 +185,7 @@ def main() -> int:
             index.append({"receipt_advice_id": rid, "order_id": condition["order_id"], "invoice_id": condition["invoice_id"], "record_file": path.name, "record_sha256": sha,
                           "kind": kind, "target_state": target, "receipt_id": receipt_id, "decision": decision, "settleable": settleable, "triggers": triggers,
                           "condition_file": f"conditions/{rid}.json", "settled_on": receipt.get("timestamp", "")[:10] or date.today().isoformat()})
-    (HERE / "index.json").write_text(json.dumps(index, indent=2) + "\n")
+            index_path.write_text(json.dumps(index, indent=2) + "\n")
     print(f"{len(index)} Receipts in settlement/receipts; index.json written")
     return 0
 

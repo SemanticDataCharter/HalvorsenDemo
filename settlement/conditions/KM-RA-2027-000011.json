@@ -1,0 +1,33 @@
+{
+  "notice": "Deduction notice",
+  "issued_by": "Kestrel Mercantile, Inc.",
+  "to": "Halvorsen Foods, Inc.",
+  "order_id": "KM-PO-2026-000011",
+  "dispatch_id": "HF-DA-2027-000011",
+  "receipt_id": "KM-RA-2027-000011",
+  "invoice_id": "HF-INV-2027-000011",
+  "received_on": "2027-01-08",
+  "deduction_percent": "3",
+  "deduction_amount": {
+    "magnitude": "44.93",
+    "unit": "USD"
+  },
+  "invoice_payable": {
+    "magnitude": "1497.60",
+    "unit": "USD"
+  },
+  "pallets": [
+    {
+      "sscc": "000000012247870148",
+      "pallet_id": "PL-321775",
+      "identifier_valid_to": "2028-10-24",
+      "identifier_valid_on_receipt": true,
+      "packed_to": "KM-PACK-2026-01",
+      "in_force_on_receipt": "KM-PACK-2026-02",
+      "pack_specification_compliant": false,
+      "received_on": "2027-01-08",
+      "finding": "Accepted with exception: packed to KM-PACK-2026-01; KM-PACK-2026-02 in force on 2027-01-08."
+    }
+  ],
+  "resolution": "The deduction is agreed by both parties; the receipt advice moves from OrderProblem to OrderProcessing and the balance is paid against the invoice."
+}

@@ -1,0 +1,14 @@
+{
+  "issuer": "Axius SDC, Inc.",
+  "keys": [
+    {
+      "key_id": "sdcstudio-signing-key-v1",
+      "algorithm": "EC_SIGN_P256_SHA256",
+      "alg": "ES256",
+      "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEq1A+8aHEejYlmB8oS+IbLNW1xlL7\nip8PGQOLET81gl/21dSdUUzMBkJt97E3aanF8KnmOiAG79VqRM/6rAzXkg==\n-----END PUBLIC KEY-----\n",
+      "status": "active",
+      "not_before": "2026-09-17T00:20:33Z",
+      "not_after": null
+    }
+  ]
+}

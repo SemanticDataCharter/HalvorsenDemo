@@ -20,7 +20,11 @@ from engine import Template
 from schema import DMLIB, Schema
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
-LIBRARY_VERSION = open(os.path.join(ROOT, "app", "sdc4", "VERSION"), encoding="utf-8").read().strip()
+APP_VERSION = open(os.path.join(ROOT, "app", "sdc4", "VERSION"), encoding="utf-8").read().strip()
+#: The version the generated records carry in their agents' identifiers and software versions. Pinned, not the app's:
+#: a Settlement Receipt names a record by the hash of its bytes, so the bytes must not change with a release that
+#: touches nothing in the data. Bump it only when the generated data itself changes, and re-issue the settlements.
+LIBRARY_VERSION = "4.1.5"
 IMPORT_ROOT = os.environ.get("HALVORSEN_IMPORT_DIR") or os.path.join(ROOT, "app", "sdc4", "import_data")
 #: The retailer's order system generates its orders and its translator reads the responses it receives;
 #: the supplier's order system generates its responses, its warehouse system the dispatch advices, and its translator reads the orders it receives.

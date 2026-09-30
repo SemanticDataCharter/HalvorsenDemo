@@ -9,7 +9,7 @@ pre.doc { font-size: 0.75rem; max-height: 22rem; overflow: auto; background: #f8
 {% endblock %}
 {% block content %}
 <h1 class="display-5 mb-1">The verdict, settled</h1>
-<p class="lead text-muted mb-3">Every deduction settled as a transition of the receipt advice from OrderProblem to OrderProcessing, attested by a Settlement Receipt the issuer signed, and verified here with nothing from the issuer: its published key document as saved beside the Receipts, the two parties' key documents, the record's own bytes in this store, and the schema's bytes in the model library.</p>
+<p class="lead text-muted mb-3">Every deduction settled as a transition of the receipt advice from OrderProblem to OrderProcessing, attested by a Settlement Receipt the issuer signed, and verified here with nothing from the issuer: its published key document as saved beside the Receipts, the two parties' key documents, the record's bytes as this stack read them in where it holds them, and the schema's bytes in the model library.</p>
 
 {% if not s.issued %}
 <div class="alert alert-secondary">No settlements have been issued yet. <code>make settle</code> with an issuer token settles every receipt advice in the OrderProblem state and writes the Receipts under <code>settlement/</code>; this page verifies them.</div>
@@ -23,7 +23,7 @@ pre.doc { font-size: 0.75rem; max-height: 22rem; overflow: auto; background: #f8
 
 <div class="table-responsive">
 <table class="table table-sm align-middle">
-  <thead><tr><th>Receipt advice</th><th>Asked</th><th>Decision</th><th>Verified</th><th>Record</th><th>Schema</th><th>Triggers</th><th>Deduction</th><th>Receipt</th></tr></thead>
+  <thead><tr><th>Receipt advice</th><th>Asked</th><th>Decision</th><th>Verified</th><th>Record it names</th><th>Schema</th><th>Triggers</th><th>Deduction</th><th>Receipt</th></tr></thead>
   <tbody>
   {% for r in s.rows %}
     <tr>
@@ -31,7 +31,8 @@ pre.doc { font-size: 0.75rem; max-height: 22rem; overflow: auto; background: #f8
       <td>OrderProblem &rarr; {{ r.target_state }}</td>
       <td><span class="badge {% if r.decision == 'PERMIT' %}bg-success{% else %}bg-danger{% endif %}">{{ r.decision }}</span>{% if not r.settleable %}<div class="text-muted small">not settleable</div>{% endif %}</td>
       <td>{% if r.verified %}<span class="badge bg-success">VERIFIED</span>{% else %}<span class="badge bg-warning text-dark">not verified</span>{% for f in r.failures %}<div class="text-muted small">{{ f }}</div>{% endfor %}{% endif %}</td>
-      <td>{% if r.record_found %}<a class="why" href="{% url 'console:instance' s.ct_id r.record_instance %}?pane=document">the bytes it names &rsaquo;</a>{% else %}<span class="text-muted small">not in this store</span>{% endif %}
+      <td>{% if r.record_found %}<a class="why" href="{% url 'console:instance' s.ct_id r.record_instance %}?pane=document">the record &rsaquo;</a>{% else %}<span class="text-muted small">not in this store</span>{% endif %}
+          <div class="text-muted small">{% if r.payload_matches %}the bytes as read in: match{% else %}the bytes it names are the retailer's record; this stack holds the document as read{% endif %}</div>
           {% if r.settled_instance %}<div><a class="why" href="{% url 'console:instance' s.ct_id r.settled_instance %}?pane=table">the settled record &rsaquo;</a></div>{% endif %}</td>
       <td>{% if r.schema_ok %}<span class="badge bg-success">bytes match</span>{% else %}<span class="badge bg-warning text-dark">differs</span>{% endif %}</td>
       <td>{{ r.triggers }} of {{ r.parties|length }}</td>

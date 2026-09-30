@@ -39,9 +39,9 @@ def test_every_receipt_verifies_offline_against_the_record_and_schema_bytes(tmp_
     import verify_all
     env = dict(os.environ, HALVORSEN_IMPORT_DIR=str(tmp_path), HALVORSEN_ORDERS="52")
     subprocess.run([sys.executable, os.path.join(ROOT, "datagen", "generate_all.py")], check=True, env=env, capture_output=True)
-    issuer, parties = verify_all.key_documents()
+    keyset = verify_all.key_documents()
     for e in entries():
-        r = verify_all.check(e, issuer, parties, import_root=str(tmp_path))
+        r = verify_all.check(e, keyset, import_root=str(tmp_path))
         assert r["payload_matches"] and r["schema_matches"], (e["receipt_id"], r)
         assert r["verified"], (e["receipt_id"], r["failures"])
         if e["kind"] == "permit":

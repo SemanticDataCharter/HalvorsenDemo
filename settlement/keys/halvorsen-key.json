@@ -1,0 +1,12 @@
+{
+  "issuer": "https://axius-sdc.com/vsl/parties/halvorsen-foods/vsl-key.json",
+  "keys": [
+    {
+      "key_id": "https://axius-sdc.com/vsl/parties/halvorsen-foods/vsl-key.json",
+      "algorithm": "EC_SIGN_P256_SHA256",
+      "alg": "ES256",
+      "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEt/kEzyYhhyPDoau4PK7CTqKj7et7\nmYSdEBLF2I/uJjW4xYw9riSL4VqQ1b4J8Jz0NA6k02lL4D9QKrv7AH2tpw==\n-----END PUBLIC KEY-----\n",
+      "status": "active"
+    }
+  ]
+}
