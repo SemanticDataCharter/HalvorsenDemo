@@ -1,0 +1,57 @@
+{
+  "version": "1.0",
+  "timestamp": "2026-09-30T23:20:46Z",
+  "governance": {
+    "decision": "PERMIT",
+    "receipt_url": null,
+    "receipt_hash": "47f306407adcafc6b57e85cab5f4c7a94b6de2c1c30a244c5f7711ca29933a0e",
+    "dimensions_checked": [
+      "workflow"
+    ]
+  },
+  "receipt_id": "c5xx3x87h609sbwp2dn9gart",
+  "rm_version": "SDC4",
+  "schema_url": "https://semanticdatacharter.com/dmlib/dm-cq1fjrvyn0fxl1kyk9y3kr1w.xsd",
+  "settlement": {
+    "parties": [
+      "https://axius-sdc.com/vsl/parties/torvale-markets/vsl-key.json",
+      "https://axius-sdc.com/vsl/parties/halvorsen-foods/vsl-key.json"
+    ],
+    "triggers": [
+      {
+        "key_id": "https://axius-sdc.com/vsl/parties/torvale-markets/vsl-key.json",
+        "signature": "PazJ3wR7FkvsXXHDcCl-ahQKQKE0f7_QfYnGHEP6Wz_ufDl5tBFrHkEDVlaWOP05eSgqDfJG6UTRkP2KzsYNPg",
+        "timestamp": "2026-09-30T23:20:47Z"
+      },
+      {
+        "key_id": "https://axius-sdc.com/vsl/parties/halvorsen-foods/vsl-key.json",
+        "signature": "op2zdQmwG62Uxbh7br2hw9xcrf9jzcBbG-FNZTBQ-PspNTC8meZSbrgTVkSBqObwl-OQMUWLdvHU9uYZDN-WsA",
+        "timestamp": "2026-09-30T23:20:47Z"
+      }
+    ],
+    "condition_hash": "cbc08644942e31b18e0c43b0c9539af52fa8809441ab0b4b58a4af16b35d32de"
+  },
+  "signatures": [
+    {
+      "alg": "ES256",
+      "sig": "7uVi2CbQZqlA1822n09g2ugdvMl2XY8hrBCg36L72MAxD9oWUvfHU-mBn3ps_1e702BJWf24ZJNiYoAWIQg2pw",
+      "key_id": "sdcstudio-signing-key-v1"
+    }
+  ],
+  "validation": {
+    "valid": true,
+    "recovered": false,
+    "ev_injections": [],
+    "semantic_errors": 0,
+    "structural_errors": 0,
+    "validator_version": "sdcvalidator 4.5.2"
+  },
+  "schema_hash": "350525049782a672c5afb0085e497e49f636b5db65f41c77423ace4cf208e6e7",
+  "payload_hash": "675e587737bfe156bacfe60083bac395e50a786b645ec03ebd7731a0c48dab49",
+  "receipt_hash": "8b57615918b2b3d20019f53b1292495227b75f2ef4efffda9161de819e2ae1b9",
+  "schema_ct_id": "cq1fjrvyn0fxl1kyk9y3kr1w",
+  "previous_hash": null,
+  "provenance_hash": "a2b8765a5ff5346313eed040952269b8af9dfedfa53ad684a9acb3cac2eefb9c",
+  "canonicalization": "rfc8785",
+  "payload_media_type": "application/xml"
+}

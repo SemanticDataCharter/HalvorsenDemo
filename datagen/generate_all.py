@@ -47,7 +47,7 @@ from order import TORVALE, read_order, validate_ubl, write_order  # noqa: E402
 from profiles import two_models  # noqa: E402
 from order_response import read_order_response, validate_ubl_response, write_order_response  # noqa: E402
 from receipt_advice import read_receipt_advice, validate_ubl_receipt, write_receipt_advice  # noqa: E402
-from shared import IMPORT_ROOT, RETAILER_TRANSLATOR, SUPPLIER_TRANSLATOR, record, write_record  # noqa: E402
+from shared import IMPORT_ROOT, RETAILER_TRANSLATOR, SUPPLIER_TRANSLATOR, cuid_generator, record, write_record  # noqa: E402
 
 ORDERS = int(os.environ.get("HALVORSEN_ORDERS", "52"))
 TORVALE_ORDERS = int(os.environ.get("TORVALE_ORDERS", "12"))
@@ -86,6 +86,7 @@ def main():
     krng = random.Random(SEED + ":receipts")
     irng = random.Random(SEED + ":invoices")
     trng = random.Random(SEED + ":torvale")
+    idrng = random.Random(SEED + ":instance-ids")   # the translated records' instance ids: a Receipt names a record by its bytes, so every byte must regenerate
     n = 0; lapsed = 0; stale = 0; problems = 0; deposits = 0
     for h, values, xml in generate(ORDERS, seed=SEED):
         # 1. the retailer's order, the system of record; written out as a UBL Order; read in by the supplier
@@ -93,7 +94,7 @@ def main():
         ubl = write_order(xml)
         assert not validate_ubl(ubl), (h["order_id"], validate_ubl(ubl)[:2])
         received = read_order(exchange(dirs["exchange"], h["order_id"], ubl))
-        supplier_order = record("Order", received, document_id=h["order_id"], buyer=h["buyer"], when=f"{h['issued']}T{h['received_time']}",
+        supplier_order = record("Order", received, instance_id=cuid_generator(idrng), document_id=h["order_id"], buyer=h["buyer"], when=f"{h['issued']}T{h['received_time']}",
                                 source=(f"urn:kestrel:order:{h['order_id']}:ubl", f"{h['order_id']}.xml", "The UBL 2.3 Order received from Kestrel Mercantile"),
                                 agent=SUPPLIER_TRANSLATOR, current_state="OrderProcessing")
         write_record(dirs["supplier_orders"], "order", supplier_order, name=h["order_id"].lower())
@@ -103,7 +104,7 @@ def main():
         rubl = write_order_response(rxml)
         assert not validate_ubl_response(rubl), (rh["response_id"], validate_ubl_response(rubl)[:2])
         rreceived = read_order_response(exchange(dirs["exchange"], rh["response_id"], rubl))
-        retailer_response = record("Order Response", rreceived, document_id=rh["response_id"], buyer=rh["seller"], when=f"{rh['issued']}T{rng.randint(9, 17):02d}:{rng.randint(0, 59):02d}:00",
+        retailer_response = record("Order Response", rreceived, instance_id=cuid_generator(idrng), document_id=rh["response_id"], buyer=rh["seller"], when=f"{rh['issued']}T{rng.randint(9, 17):02d}:{rng.randint(0, 59):02d}:00",
                                    source=(f"urn:halvorsen:response:{rh['response_id']}:ubl", f"{rh['response_id']}.xml", "The UBL 2.3 OrderResponse received from Halvorsen Foods"),
                                    agent=RETAILER_TRANSLATOR, current_state="OrderProcessing")
         write_record(dirs["retailer_responses"], "order_response", retailer_response, name=rh["response_id"].lower())
@@ -113,7 +114,7 @@ def main():
         dubl = write_dispatch_advice(dxml)
         assert not validate_ubl_dispatch(dubl), (dh["dispatch_id"], validate_ubl_dispatch(dubl)[:2])
         dreceived = read_dispatch_advice(exchange(dirs["exchange"], dh["dispatch_id"], dubl))
-        retailer_dispatch = record("Despatch Advice", dreceived, document_id=dh["dispatch_id"], buyer=dh["seller"], when=f"{dh['issued']}T{drng.randint(16, 21):02d}:{drng.randint(0, 59):02d}:00",
+        retailer_dispatch = record("Despatch Advice", dreceived, instance_id=cuid_generator(idrng), document_id=dh["dispatch_id"], buyer=dh["seller"], when=f"{dh['issued']}T{drng.randint(16, 21):02d}:{drng.randint(0, 59):02d}:00",
                                    source=(f"urn:halvorsen:dispatch:{dh['dispatch_id']}:ubl", f"{dh['dispatch_id']}.xml", "The UBL 2.3 DespatchAdvice received from Halvorsen Foods"),
                                    agent=RETAILER_TRANSLATOR, current_state="OrderInTransit")
         write_record(dirs["retailer_dispatches"], "despatch_advice", retailer_dispatch, name=dh["dispatch_id"].lower())
@@ -123,7 +124,7 @@ def main():
         kubl = write_receipt_advice(kxml)
         assert not validate_ubl_receipt(kubl), (kh["receipt_id"], validate_ubl_receipt(kubl)[:2])
         kreceived = read_receipt_advice(exchange(dirs["exchange"], kh["receipt_id"], kubl))
-        supplier_receipt = record("Receipt Advice", kreceived, document_id=kh["receipt_id"], buyer=kh["buyer"], when=f"{kh['received']}T{krng.randint(17, 21):02d}:{krng.randint(0, 59):02d}:00",
+        supplier_receipt = record("Receipt Advice", kreceived, instance_id=cuid_generator(idrng), document_id=kh["receipt_id"], buyer=kh["buyer"], when=f"{kh['received']}T{krng.randint(17, 21):02d}:{krng.randint(0, 59):02d}:00",
                                   source=(f"urn:kestrel:receipt:{kh['receipt_id']}:ubl", f"{kh['receipt_id']}.xml", "The UBL 2.3 ReceiptAdvice received from Kestrel Mercantile"),
                                   agent=SUPPLIER_TRANSLATOR, current_state="OrderProblem" if kh["exceptions"] else "OrderDelivered")
         write_record(dirs["supplier_receipts"], "receipt_advice", supplier_receipt, name=kh["receipt_id"].lower())
@@ -133,7 +134,7 @@ def main():
         iubl = write_invoice(ixml)
         assert not validate_ubl_invoice(iubl), (ih["invoice_id"], validate_ubl_invoice(iubl)[:2])
         ireceived = read_invoice(exchange(dirs["exchange"], ih["invoice_id"], iubl))
-        retailer_invoice = record("Invoice", ireceived, document_id=ih["invoice_id"], buyer=ih["seller"], when=f"{ih['issued']}T{irng.randint(17, 21):02d}:{irng.randint(0, 59):02d}:00",
+        retailer_invoice = record("Invoice", ireceived, instance_id=cuid_generator(idrng), document_id=ih["invoice_id"], buyer=ih["seller"], when=f"{ih['issued']}T{irng.randint(17, 21):02d}:{irng.randint(0, 59):02d}:00",
                                   source=(f"urn:halvorsen:invoice:{ih['invoice_id']}:ubl", f"{ih['invoice_id']}.xml", "The UBL 2.3 Invoice received from Halvorsen Foods"),
                                   agent=RETAILER_TRANSLATOR, current_state="OrderPaymentDue")
         write_record(dirs["retailer_invoices"], "invoice", retailer_invoice, name=ih["invoice_id"].lower())
@@ -147,7 +148,7 @@ def main():
         tubl = write_order(txml)
         assert not validate_ubl(tubl), (th["order_id"], validate_ubl(tubl)[:2])
         treceived = read_order(exchange(dirs["exchange"], th["order_id"], tubl), TORVALE)
-        supplier_torvale = record("Torvale Order", treceived, document_id=th["order_id"], buyer=th["buyer"], when=f"{th['issued']}T{trng.randint(9, 17):02d}:{trng.randint(0, 59):02d}:00",
+        supplier_torvale = record("Torvale Order", treceived, instance_id=cuid_generator(idrng), document_id=th["order_id"], buyer=th["buyer"], when=f"{th['issued']}T{trng.randint(9, 17):02d}:{trng.randint(0, 59):02d}:00",
                                   source=(f"urn:torvale:order:{th['order_id']}:ubl", f"{th['order_id']}.xml", "The UBL 2.3 Order received from Torvale Markets"),
                                   agent=SUPPLIER_TRANSLATOR, current_state="OrderProcessing")
         write_record(dirs["supplier_torvale_orders"], "torvale_order", supplier_torvale, name=th["order_id"].lower())
