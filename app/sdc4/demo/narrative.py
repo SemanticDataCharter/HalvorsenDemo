@@ -1,9 +1,9 @@
 """
 The walk-through: the order as a governed record, the document as its projection.
 
-All nine beats run in this release: on the Order, the Order Response, the Despatch Advice, the
-Receipt Advice, the Invoice, the Settlement Receipts held in settlement/, and the second retailer's
-order profile. Nothing is listed as what comes.
+All ten beats run in this release: on the Order, the Order Response, the Despatch Advice, the
+Receipt Advice, the Invoice, the Settlement Receipts held in settlement/, the second retailer's
+order profile, and the Credit Note. Nothing is listed as what comes.
 """
 
 BEATS = [
@@ -163,7 +163,26 @@ BEATS = [
         ),
         'query_label': 'Show the orders by profile',
     },
+    {
+        'number': 10,
+        'title': 'The deduction, credited',
+        'query_number': 10,
+        'icon': 'bi-arrow-counterclockwise',
+        'color': 'success',
+        'narrative': (
+            'The deduction was agreed on a Settlement Receipt; now the supplier credits it. For every receipt advice '
+            'whose transition a Receipt permitted, the billing system issues a credit note against the invoice: three '
+            'percent of what was payable, one line, the discrepancy response naming the invoice and the receipt advice '
+            'with what the receiver found on each pallet, in the receiver\'s own words. The credit note\'s provenance '
+            'names the Receipt as the entity its activity used. It goes to the retailer as a UBL 2.3 CreditNote and is '
+            'read back into the same model; there its provenance names the document it was read from, and the settled '
+            'receipt advice names the Receipt. Provenance belongs to the record, not to the document, and each stack '
+            'holds its own. The query puts the bill, the credit and the Receipt that permitted it in one row, taking the '
+            'Receipt from whichever record names it.'
+        ),
+        'query_label': 'Show the deductions credited',
+    },
 ]
 
 #: The beats the next releases add, in the order the documents arrive.
-COMING = []   # every beat of the plan runs
+COMING = []   # every beat runs; the plan's nine, and the credit note as the tenth (the demo is a tutorial: one document a beat)

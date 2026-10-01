@@ -64,6 +64,12 @@ QUERY_CATALOG = {
         'description': 'Every order in this stack by the model that governs it: Kestrel\'s under the Order model with its delivery terms, Torvale\'s under the Torvale Order model with its terms, pack specification version and delivery window.',
         'domains': ['Order', 'Torvale Order'],
     },
+    10: {
+        'file': '10_the_deduction_credited.rq',
+        'title': 'The deduction, credited',
+        'description': 'Each credit note joined to the invoice it credits and the receipt advice whose deduction it settles: the amount payable, the amount credited, the discrepancy stated, and the Settlement Receipt that permitted the deduction, from whichever record names it in this stack.',
+        'domains': ['Credit Note', 'Invoice', 'Receipt Advice'],
+    },
 }
 
 

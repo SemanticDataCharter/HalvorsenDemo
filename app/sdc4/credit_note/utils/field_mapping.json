@@ -1,0 +1,1522 @@
+{
+  "dkc2ccj5te35z9gd4bu1blcq": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_dkc2ccj5te35z9gd4bu1blcq",
+    "ct_id": "dkc2ccj5te35z9gd4bu1blcq",
+    "adapter_ctid": "hpkc8xrccpwc3shm4ubm5o47",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Audit Agent Reference"
+  },
+  "gcjyjrnp0wsfoelcp4m05c67": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_gcjyjrnp0wsfoelcp4m05c67",
+    "ct_id": "gcjyjrnp0wsfoelcp4m05c67",
+    "adapter_ctid": "ynnnvgi8748h2d01z2gf4z8x",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Audit Entity Reference"
+  },
+  "fjhgr5fyqxt2crmg2cb5c513": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_fjhgr5fyqxt2crmg2cb5c513",
+    "ct_id": "fjhgr5fyqxt2crmg2cb5c513",
+    "adapter_ctid": "uf11uwd9s5x5t9bw98z9dr5l",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Audit Event Identifier"
+  },
+  "sndpbhm3xbd6qtbyxmvh3i0e": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_sndpbhm3xbd6qtbyxmvh3i0e",
+    "ct_id": "sndpbhm3xbd6qtbyxmvh3i0e",
+    "adapter_ctid": "jwpkqjchavj885uwt5v1jgid",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Data Subject Reference"
+  },
+  "nf1air1zbj8v9w66jozdxmyl": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_nf1air1zbj8v9w66jozdxmyl",
+    "ct_id": "nf1air1zbj8v9w66jozdxmyl",
+    "adapter_ctid": "lbor36zlwkf6u7yx9lgqfx0d",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "On Behalf Of Reference"
+  },
+  "h3kdbvdtyalpvik97saaf0an": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_h3kdbvdtyalpvik97saaf0an",
+    "ct_id": "h3kdbvdtyalpvik97saaf0an",
+    "adapter_ctid": "yec6svv50u9d1tz9rp6kmv3v",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "System Identifier"
+  },
+  "ujir739mf1g8ajeczs9nzh9m": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_ujir739mf1g8ajeczs9nzh9m",
+    "ct_id": "ujir739mf1g8ajeczs9nzh9m",
+    "adapter_ctid": "r6x55vvha5ci3rl1o29adk03",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "System Location Name"
+  },
+  "ce1c8sydkov8bkv4dgdmwe5x": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_ce1c8sydkov8bkv4dgdmwe5x",
+    "ct_id": "ce1c8sydkov8bkv4dgdmwe5x",
+    "adapter_ctid": "lcsns9hrrzcg74jlit8srxgp",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "Audit Event Action"
+  },
+  "rpz1czz06jhpahmfz30rblvp": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_rpz1czz06jhpahmfz30rblvp",
+    "ct_id": "rpz1czz06jhpahmfz30rblvp",
+    "adapter_ctid": "wu8f1x11e6ihbltdd6w20rg5",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "Audit Event Outcome"
+  },
+  "vbctgmdcwps5b3r3l6sboa6y": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_vbctgmdcwps5b3r3l6sboa6y",
+    "ct_id": "vbctgmdcwps5b3r3l6sboa6y",
+    "adapter_ctid": "kce8557jd9vg6ei59m7o1kc2",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "Confidentiality"
+  },
+  "jujsdur1igws8orw6tvvlqco": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_jujsdur1igws8orw6tvvlqco",
+    "ct_id": "jujsdur1igws8orw6tvvlqco",
+    "adapter_ctid": "vgvl7vcmbiz2z7zn9v7ayc04",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "Provenance Agent Type"
+  },
+  "d1evlz8yvdlwt6ia9fjq4pgj": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_d1evlz8yvdlwt6ia9fjq4pgj",
+    "ct_id": "d1evlz8yvdlwt6ia9fjq4pgj",
+    "adapter_ctid": "xcmayroyt4krhroimfb3e859",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "Purpose of Use"
+  },
+  "uwiosm2q9ym3ewr4de910s70": {
+    "placeholder": "__PLACEHOLDER__xdtemporal-value_uwiosm2q9ym3ewr4de910s70",
+    "ct_id": "uwiosm2q9ym3ewr4de910s70",
+    "adapter_ctid": "r5fply6fvzhg90zybxgdx5cb",
+    "element_name": "xdtemporal-value",
+    "type": "XdTemporal",
+    "label": "Audit Recorded At"
+  },
+  "ybdlctks32zkkteycr5y1eq8": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_ybdlctks32zkkteycr5y1eq8",
+    "ct_id": "ybdlctks32zkkteycr5y1eq8",
+    "adapter_ctid": "v8os8mvqm7xtuix2azpc61nq",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Customer Assigned Account ID"
+  },
+  "nhvx21mf5ac81670xyrpwbaz": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_nhvx21mf5ac81670xyrpwbaz",
+    "ct_id": "nhvx21mf5ac81670xyrpwbaz",
+    "adapter_ctid": "vxq98yo8545y4x4jjam1lebt",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Supplier Assigned Account ID"
+  },
+  "fpb149j9um0l676icmhyp56d": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_fpb149j9um0l676icmhyp56d",
+    "ct_id": "fpb149j9um0l676icmhyp56d",
+    "adapter_ctid": "o7k32jjcoq56jts8buzz4gxd",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Endpoint ID"
+  },
+  "xcn8r67fg7soty17homzok44": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_xcn8r67fg7soty17homzok44",
+    "ct_id": "xcn8r67fg7soty17homzok44",
+    "adapter_ctid": "mpweekufi4296o2qdi0wfd9a",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Organization Name"
+  },
+  "ncxxt7wgs7soxw7kbmapxvg3": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_ncxxt7wgs7soxw7kbmapxvg3",
+    "ct_id": "ncxxt7wgs7soxw7kbmapxvg3",
+    "adapter_ctid": "x4vy9z1ejuarhvnhcyc8cy8c",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Address (Line 1)"
+  },
+  "sexw93x5276zwsn1qx15htpv": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_sexw93x5276zwsn1qx15htpv",
+    "ct_id": "sexw93x5276zwsn1qx15htpv",
+    "adapter_ctid": "fnh39fyrub04naiw1csr9rcu",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Address (Line 2)"
+  },
+  "toysvef93azt57fgh8rwpd4b": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_toysvef93azt57fgh8rwpd4b",
+    "ct_id": "toysvef93azt57fgh8rwpd4b",
+    "adapter_ctid": "r81s8h0fj8tb56kdwj0az7bu",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "City Name"
+  },
+  "gf841eedvv6cjiegs934srai": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_gf841eedvv6cjiegs934srai",
+    "ct_id": "gf841eedvv6cjiegs934srai",
+    "adapter_ctid": "te0rs3ybu4espghrgec012cb",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Postal Code"
+  },
+  "jw1b9q6ulyte599sdsqp2mvp": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_jw1b9q6ulyte599sdsqp2mvp",
+    "ct_id": "jw1b9q6ulyte599sdsqp2mvp",
+    "adapter_ctid": "vezmaftdi44japrlpt07mp4l",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Region Name"
+  },
+  "b25dj42zxhm19pih328ga8pl": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_b25dj42zxhm19pih328ga8pl",
+    "ct_id": "b25dj42zxhm19pih328ga8pl",
+    "adapter_ctid": "x8d5ltgmjarqw07qli8ocwcu",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "Address Use"
+  },
+  "f2jicaigehz7xmwcp1gm5gh0": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_f2jicaigehz7xmwcp1gm5gh0",
+    "ct_id": "f2jicaigehz7xmwcp1gm5gh0",
+    "adapter_ctid": "zyd1bdzhksql5z05sfip0m78",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "Country Code ISO 3166"
+  },
+  "bkw6awwe7kp01kowlwbgn21b": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_bkw6awwe7kp01kowlwbgn21b",
+    "ct_id": "bkw6awwe7kp01kowlwbgn21b",
+    "adapter_ctid": "pie59rwktjnrs9ryzkukigx3",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Contact Department"
+  },
+  "ozkpv9buivm77ozkybm0ww39": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_ozkpv9buivm77ozkybm0ww39",
+    "ct_id": "ozkpv9buivm77ozkybm0ww39",
+    "adapter_ctid": "jrvyn9tnjk1y9a4awn9luxi1",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Contact Job Title"
+  },
+  "fp533gyfb6yatp6jgpg2emb2": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_fp533gyfb6yatp6jgpg2emb2",
+    "ct_id": "fp533gyfb6yatp6jgpg2emb2",
+    "adapter_ctid": "ko9sky98bffl3rypvh072rwt",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Contact Name"
+  },
+  "wriny2gz8aqcvffmfpwbompk": {
+    "placeholder": "__PLACEHOLDER__xdlink-value_wriny2gz8aqcvffmfpwbompk",
+    "ct_id": "wriny2gz8aqcvffmfpwbompk",
+    "adapter_ctid": "uikaaefutpxhmfraowwo28x4",
+    "element_name": "xdlink-value",
+    "type": "XdLink",
+    "label": "Website URL"
+  },
+  "q922mqaon3yn5zlwf2bszf28": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_q922mqaon3yn5zlwf2bszf28",
+    "ct_id": "q922mqaon3yn5zlwf2bszf28",
+    "adapter_ctid": "rr45vpoto55jhvob6vtzsz27",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Email Address"
+  },
+  "ll6ltsnvakomixuitxkbkxfz": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_ll6ltsnvakomixuitxkbkxfz",
+    "ct_id": "ll6ltsnvakomixuitxkbkxfz",
+    "adapter_ctid": "ogtraclb0bgvqgrhbyko69yh",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Fax Number"
+  },
+  "zpfwg52r88j6jdypj7rg71ke": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_zpfwg52r88j6jdypj7rg71ke",
+    "ct_id": "zpfwg52r88j6jdypj7rg71ke",
+    "adapter_ctid": "f2caqwqmsl0fnkscaz4uhrya",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Phone Number"
+  },
+  "miqo30r5b554nyj7ubryw43x": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_miqo30r5b554nyj7ubryw43x",
+    "ct_id": "miqo30r5b554nyj7ubryw43x",
+    "adapter_ctid": "b31lflr8prid6hdega5v93zf",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "Contact Method"
+  },
+  "vmruk4j9y1orvvz8cwafrax5": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_vmruk4j9y1orvvz8cwafrax5",
+    "ct_id": "vmruk4j9y1orvvz8cwafrax5",
+    "adapter_ctid": "rv5pul6lm3ntpxynzxmkpeus",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "Contact Use"
+  },
+  "iwxh8exsn4qb6eyetfbwqvmj": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_iwxh8exsn4qb6eyetfbwqvmj",
+    "ct_id": "iwxh8exsn4qb6eyetfbwqvmj",
+    "adapter_ctid": "f6wumzzw4wb7itpz4lfmzifi",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Party Identification Value"
+  },
+  "c9v9nkkg6b8sixoaf55vyjrn": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_c9v9nkkg6b8sixoaf55vyjrn",
+    "ct_id": "c9v9nkkg6b8sixoaf55vyjrn",
+    "adapter_ctid": "ldm5kmibox484imu15oomg42",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "Party Identification Scheme"
+  },
+  "axizk9c3k82w84p1t1wkwayu": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_axizk9c3k82w84p1t1wkwayu",
+    "ct_id": "axizk9c3k82w84p1t1wkwayu",
+    "adapter_ctid": "xhhp4as6f4zy16ga4dhs95lq",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Company ID"
+  },
+  "ev7lhh4t59tt8ot0tfoaztb6": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_ev7lhh4t59tt8ot0tfoaztb6",
+    "ct_id": "ev7lhh4t59tt8ot0tfoaztb6",
+    "adapter_ctid": "ke7bgbzgqairvtht2ahpqbv4",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Registration Name"
+  },
+  "cjzq0xnrm0uu8p1h51koheoz": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_cjzq0xnrm0uu8p1h51koheoz",
+    "ct_id": "cjzq0xnrm0uu8p1h51koheoz",
+    "adapter_ctid": "vtl0hnkbu6vi871qrq2arr72",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "US ZIP Code"
+  },
+  "k9tqm489kilg33mx4cibyto6": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_k9tqm489kilg33mx4cibyto6",
+    "ct_id": "k9tqm489kilg33mx4cibyto6",
+    "adapter_ctid": "zs08zf3rl2m68qsuso4cq5jx",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "US State Code"
+  },
+  "z181ta9jftxc7k63rv4nz1zv": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_z181ta9jftxc7k63rv4nz1zv",
+    "ct_id": "z181ta9jftxc7k63rv4nz1zv",
+    "adapter_ctid": "jl90imb6cjrpdgipixlh07hf",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Document Description"
+  },
+  "k153quyn7i9ravd1b3c61ad9": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_k153quyn7i9ravd1b3c61ad9",
+    "ct_id": "k153quyn7i9ravd1b3c61ad9",
+    "adapter_ctid": "xkrijnxj470ojec234gx70uv",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Document Reference ID"
+  },
+  "hyw1higymybzar9tv2ze77xa": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_hyw1higymybzar9tv2ze77xa",
+    "ct_id": "hyw1higymybzar9tv2ze77xa",
+    "adapter_ctid": "sb6fbrfwk4ej0ct2dlxj7kyu",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "Document Type"
+  },
+  "ncxchb14dkm790w4rnuzafju": {
+    "placeholder": "__PLACEHOLDER__xdtemporal-value_ncxchb14dkm790w4rnuzafju",
+    "ct_id": "ncxchb14dkm790w4rnuzafju",
+    "adapter_ctid": "pbt46pibez5c5hihmqv8dgni",
+    "element_name": "xdtemporal-value",
+    "type": "XdTemporal",
+    "label": "Document Reference Issue Date"
+  },
+  "wf9pzmcdm06vu2l3usnfkdp0": {
+    "placeholder": "__PLACEHOLDER__true-value_wf9pzmcdm06vu2l3usnfkdp0",
+    "ct_id": "wf9pzmcdm06vu2l3usnfkdp0",
+    "adapter_ctid": "w3u4gwyovzufkyqgoh6wr7vy",
+    "element_name": "true-value",
+    "type": "XdBoolean",
+    "label": "Charge Indicator"
+  },
+  "n3v2ahdss6egqpmdmgd77de8": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_n3v2ahdss6egqpmdmgd77de8",
+    "ct_id": "n3v2ahdss6egqpmdmgd77de8",
+    "adapter_ctid": "x6nm0c0y6b44q657aje9ttdc",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Allowance Charge Reason Text"
+  },
+  "dmk3uu59n8dpdso1vw6jhif5": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_dmk3uu59n8dpdso1vw6jhif5",
+    "ct_id": "dmk3uu59n8dpdso1vw6jhif5",
+    "adapter_ctid": "jzrn01gubpzmyipx4ek1iizr",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "Allowance Charge Reason"
+  },
+  "mlog5q5v5rmcnry4n07m63m6": {
+    "placeholder": "__PLACEHOLDER__xdquantity-value_mlog5q5v5rmcnry4n07m63m6",
+    "ct_id": "mlog5q5v5rmcnry4n07m63m6",
+    "adapter_ctid": "na43l6izmnhmmptegwyd0fqq",
+    "element_name": "xdquantity-value",
+    "type": "XdQuantity",
+    "label": "Allowance Charge Amount"
+  },
+  "hjjou19np3pohe63fxmqtkoi": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_hjjou19np3pohe63fxmqtkoi",
+    "ct_id": "hjjou19np3pohe63fxmqtkoi",
+    "adapter_ctid": null,
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Currency"
+  },
+  "qosequlh47qfvr6d5nzn9gh8": {
+    "placeholder": "__PLACEHOLDER__xdquantity-value_qosequlh47qfvr6d5nzn9gh8",
+    "ct_id": "qosequlh47qfvr6d5nzn9gh8",
+    "adapter_ctid": "bollrm0ski4wuec8dn5gxmce",
+    "element_name": "xdquantity-value",
+    "type": "XdQuantity",
+    "label": "Base Amount"
+  },
+  "ak6fih808akzuax3o6btb8lz": {
+    "placeholder": "__PLACEHOLDER__xdquantity-value_ak6fih808akzuax3o6btb8lz",
+    "ct_id": "ak6fih808akzuax3o6btb8lz",
+    "adapter_ctid": "fhu8x62kdqlohl6fc5qbelck",
+    "element_name": "xdquantity-value",
+    "type": "XdQuantity",
+    "label": "Multiplier Factor"
+  },
+  "wqe0nspsio7u9ed8xy78sjsl": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_wqe0nspsio7u9ed8xy78sjsl",
+    "ct_id": "wqe0nspsio7u9ed8xy78sjsl",
+    "adapter_ctid": null,
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Unitless"
+  },
+  "arra8d8x6kv6l5mluiomye3t": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_arra8d8x6kv6l5mluiomye3t",
+    "ct_id": "arra8d8x6kv6l5mluiomye3t",
+    "adapter_ctid": "vpo48n3msqtdb8gocy0e32hg",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "Document Type"
+  },
+  "ksr1tl7okjcyf18nprakncw7": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_ksr1tl7okjcyf18nprakncw7",
+    "ct_id": "ksr1tl7okjcyf18nprakncw7",
+    "adapter_ctid": "ecbrot5hf4phkputnnjlnx82",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Contract ID"
+  },
+  "r4yktyzzaxury9xsfdw788tj": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_r4yktyzzaxury9xsfdw788tj",
+    "ct_id": "r4yktyzzaxury9xsfdw788tj",
+    "adapter_ctid": "y4599g260rbzt6sl2c2a9kay",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Contract Type"
+  },
+  "nvna1bzcdyspz7k40coxn5y7": {
+    "placeholder": "__PLACEHOLDER__xdtemporal-value_nvna1bzcdyspz7k40coxn5y7",
+    "ct_id": "nvna1bzcdyspz7k40coxn5y7",
+    "adapter_ctid": "trtpz4evvkp1x18yd851idkq",
+    "element_name": "xdtemporal-value",
+    "type": "XdTemporal",
+    "label": "Contract Issue Date"
+  },
+  "nsv2eblxq8s0vk28ue2vh1fl": {
+    "placeholder": "__PLACEHOLDER__true-value_nsv2eblxq8s0vk28ue2vh1fl",
+    "ct_id": "nsv2eblxq8s0vk28ue2vh1fl",
+    "adapter_ctid": "kq1axd3psm1tsnz26dtvpzb3",
+    "element_name": "true-value",
+    "type": "XdBoolean",
+    "label": "Copy Indicator"
+  },
+  "jy2iyemtj9qmi8rvmzu1xw2f": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_jy2iyemtj9qmi8rvmzu1xw2f",
+    "ct_id": "jy2iyemtj9qmi8rvmzu1xw2f",
+    "adapter_ctid": "munudzn7vrlq8sgk6lxmgjid",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Accounting Cost"
+  },
+  "yzdm2ldib2w5nqattpealocf": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_yzdm2ldib2w5nqattpealocf",
+    "ct_id": "yzdm2ldib2w5nqattpealocf",
+    "adapter_ctid": "nva2k6r3vjrvugvsi4hc70gf",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Buyer Reference"
+  },
+  "tnapfsz8ytrxb7oqk54ju0r7": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_tnapfsz8ytrxb7oqk54ju0r7",
+    "ct_id": "tnapfsz8ytrxb7oqk54ju0r7",
+    "adapter_ctid": "ug28kcg7zjyz3ivkul6azn1f",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Credit Note ID"
+  },
+  "rgnvj03kjtej1s8brdeil4kq": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_rgnvj03kjtej1s8brdeil4kq",
+    "ct_id": "rgnvj03kjtej1s8brdeil4kq",
+    "adapter_ctid": "haiqjii7v81fewii6c47rrig",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Customization ID"
+  },
+  "xywkj11p7u8jhjaiim3h3gyp": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_xywkj11p7u8jhjaiim3h3gyp",
+    "ct_id": "xywkj11p7u8jhjaiim3h3gyp",
+    "adapter_ctid": "sl8a87bqrctj0rrfmrs0gtp0",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Document Currency"
+  },
+  "wa674d96vzd8um4nwbtjrorz": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_wa674d96vzd8um4nwbtjrorz",
+    "ct_id": "wa674d96vzd8um4nwbtjrorz",
+    "adapter_ctid": "xabobrcq23y1c3c52z7lox5x",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Document UUID"
+  },
+  "dke6vuqm4c79e6hlnqo9kz6k": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_dke6vuqm4c79e6hlnqo9kz6k",
+    "ct_id": "dke6vuqm4c79e6hlnqo9kz6k",
+    "adapter_ctid": "vol3insgqgbp5qju88w79u83",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Payment Currency"
+  },
+  "a3o0vyby3nousr4jhtlsddn9": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_a3o0vyby3nousr4jhtlsddn9",
+    "ct_id": "a3o0vyby3nousr4jhtlsddn9",
+    "adapter_ctid": "y5y9hx86tp826k3z9n2pc64g",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Pricing Currency"
+  },
+  "blz32vkqw11awazaklpdih7b": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_blz32vkqw11awazaklpdih7b",
+    "ct_id": "blz32vkqw11awazaklpdih7b",
+    "adapter_ctid": "vu57v4kyp5ngwq8r8jdwfvd8",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Profile Execution ID"
+  },
+  "ato2r6lpk92i9e5djcwrna74": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_ato2r6lpk92i9e5djcwrna74",
+    "ct_id": "ato2r6lpk92i9e5djcwrna74",
+    "adapter_ctid": "v3muwa45bsb1zv8ymshfzae0",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Profile ID"
+  },
+  "ftby5cu9ote7glq4chdq7iml": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_ftby5cu9ote7glq4chdq7iml",
+    "ct_id": "ftby5cu9ote7glq4chdq7iml",
+    "adapter_ctid": "uyswea4yx23x4okyi2mqs1ia",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Tax Currency"
+  },
+  "zvkk8ztob9gmrvvkzyibyrzk": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_zvkk8ztob9gmrvvkzyibyrzk",
+    "ct_id": "zvkk8ztob9gmrvvkzyibyrzk",
+    "adapter_ctid": "tn1sbi0vbjvrlyhl1faun9wu",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Note"
+  },
+  "quhtguex1ms7x4ghlg0ellk3": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_quhtguex1ms7x4ghlg0ellk3",
+    "ct_id": "quhtguex1ms7x4ghlg0ellk3",
+    "adapter_ctid": "xvda5uvzgqw42f96ddfbb8vs",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "Credit Note Type"
+  },
+  "mnuyvuxqsy0qskx8hiy6epff": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_mnuyvuxqsy0qskx8hiy6epff",
+    "ct_id": "mnuyvuxqsy0qskx8hiy6epff",
+    "adapter_ctid": "epmd1tsidl9d5inpx6bzgj97",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "Document Status"
+  },
+  "c1c7iydc13os47ppwwtwsnum": {
+    "placeholder": "__PLACEHOLDER__xdcount-value_c1c7iydc13os47ppwwtwsnum",
+    "ct_id": "c1c7iydc13os47ppwwtwsnum",
+    "adapter_ctid": "uhrr3e2qzx8yyt0rnnrtz4t9",
+    "element_name": "xdcount-value",
+    "type": "XdCount",
+    "label": "Line Count"
+  },
+  "c3ycqqk7ns1bvmsc0ricnsbn": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_c3ycqqk7ns1bvmsc0ricnsbn",
+    "ct_id": "c3ycqqk7ns1bvmsc0ricnsbn",
+    "adapter_ctid": null,
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Items"
+  },
+  "izmk5n12dei1ocsv7dms9i99": {
+    "placeholder": "__PLACEHOLDER__xdtemporal-value_izmk5n12dei1ocsv7dms9i99",
+    "ct_id": "izmk5n12dei1ocsv7dms9i99",
+    "adapter_ctid": "ifusbvm5bsy2sr827nb50cd7",
+    "element_name": "xdtemporal-value",
+    "type": "XdTemporal",
+    "label": "Due Date"
+  },
+  "tkd16hhh9wbn0qya2ykm0552": {
+    "placeholder": "__PLACEHOLDER__xdtemporal-value_tkd16hhh9wbn0qya2ykm0552",
+    "ct_id": "tkd16hhh9wbn0qya2ykm0552",
+    "adapter_ctid": "s7avc24uiao7vsqvjoc2xxq0",
+    "element_name": "xdtemporal-value",
+    "type": "XdTemporal",
+    "label": "Issue Date"
+  },
+  "oybfzltffyfioix1zdblxcp3": {
+    "placeholder": "__PLACEHOLDER__xdtemporal-value_oybfzltffyfioix1zdblxcp3",
+    "ct_id": "oybfzltffyfioix1zdblxcp3",
+    "adapter_ctid": "q1u1nttzsb9blnszjdzpgd78",
+    "element_name": "xdtemporal-value",
+    "type": "XdTemporal",
+    "label": "Issue Time"
+  },
+  "wc6bib746nf7du213xlzousz": {
+    "placeholder": "__PLACEHOLDER__xdtemporal-value_wc6bib746nf7du213xlzousz",
+    "ct_id": "wc6bib746nf7du213xlzousz",
+    "adapter_ctid": "y5jn0xguaonwprzdi6iqi8u7",
+    "element_name": "xdtemporal-value",
+    "type": "XdTemporal",
+    "label": "Tax Point Date"
+  },
+  "moo2lije2b05ylq8q4t52lcb": {
+    "placeholder": "__PLACEHOLDER__xdtemporal-value_moo2lije2b05ylq8q4t52lcb",
+    "ct_id": "moo2lije2b05ylq8q4t52lcb",
+    "adapter_ctid": "jvr16i2xcvgkoeu0fb0foyf9",
+    "element_name": "xdtemporal-value",
+    "type": "XdTemporal",
+    "label": "Date Range End"
+  },
+  "bcyjfdwobh9q60umle1amw0w": {
+    "placeholder": "__PLACEHOLDER__xdtemporal-value_bcyjfdwobh9q60umle1amw0w",
+    "ct_id": "bcyjfdwobh9q60umle1amw0w",
+    "adapter_ctid": "qmsn5fmk6j41d2nvl7h4dsqr",
+    "element_name": "xdtemporal-value",
+    "type": "XdTemporal",
+    "label": "Date Range Start"
+  },
+  "ko11zu0n8anavb1ovyib9xyf": {
+    "placeholder": "__PLACEHOLDER__true-value_ko11zu0n8anavb1ovyib9xyf",
+    "ct_id": "ko11zu0n8anavb1ovyib9xyf",
+    "adapter_ctid": "a1qkcm070dtnidjc37266k59",
+    "element_name": "true-value",
+    "type": "XdBoolean",
+    "label": "Free of Charge"
+  },
+  "qnymhn26y7zfy7jav1pi3dqi": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_qnymhn26y7zfy7jav1pi3dqi",
+    "ct_id": "qnymhn26y7zfy7jav1pi3dqi",
+    "adapter_ctid": "sy20cw9fbqms6s27gbtlihuz",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Line ID"
+  },
+  "fyv04qqt334geqxungef4kfi": {
+    "placeholder": "__PLACEHOLDER__xdquantity-value_fyv04qqt334geqxungef4kfi",
+    "ct_id": "fyv04qqt334geqxungef4kfi",
+    "adapter_ctid": "ogfdzhgb0gekfyiu03r69dfc",
+    "element_name": "xdquantity-value",
+    "type": "XdQuantity",
+    "label": "Credited Quantity"
+  },
+  "ntkkz1y6mcw04pswtx7ghkn4": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_ntkkz1y6mcw04pswtx7ghkn4",
+    "ct_id": "ntkkz1y6mcw04pswtx7ghkn4",
+    "adapter_ctid": null,
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Trade Units"
+  },
+  "q2fgdapi4r5d406rbiuuwomp": {
+    "placeholder": "__PLACEHOLDER__xdquantity-value_q2fgdapi4r5d406rbiuuwomp",
+    "ct_id": "q2fgdapi4r5d406rbiuuwomp",
+    "adapter_ctid": "wgwl9zc7dlwq1i9c74z2c0ck",
+    "element_name": "xdquantity-value",
+    "type": "XdQuantity",
+    "label": "Line Extension Amount"
+  },
+  "dzsmbbloyp19dbgy6j1maz1q": {
+    "placeholder": "__PLACEHOLDER__xdquantity-value_dzsmbbloyp19dbgy6j1maz1q",
+    "ct_id": "dzsmbbloyp19dbgy6j1maz1q",
+    "adapter_ctid": "zcqbysxum54fjw8flibnlghe",
+    "element_name": "xdquantity-value",
+    "type": "XdQuantity",
+    "label": "Tax Inclusive Line Extension Amount"
+  },
+  "sb5gat3jakjg1j6m78nq79in": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_sb5gat3jakjg1j6m78nq79in",
+    "ct_id": "sb5gat3jakjg1j6m78nq79in",
+    "adapter_ctid": "f4e2el4je70wv8vjqg50cery",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "Line Status"
+  },
+  "bwe98nxxki0ubggnyocrbf81": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_bwe98nxxki0ubggnyocrbf81",
+    "ct_id": "bwe98nxxki0ubggnyocrbf81",
+    "adapter_ctid": "cffun9m8vxe9x0tpwcaq7th3",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Discrepancy Description"
+  },
+  "wqofh61h0u2y7hbh1ago8p0x": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_wqofh61h0u2y7hbh1ago8p0x",
+    "ct_id": "wqofh61h0u2y7hbh1ago8p0x",
+    "adapter_ctid": "l7txzsc6negljo7vx8r0que7",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Discrepancy Reference ID"
+  },
+  "o5flyzualxgjq0t6ohcreefx": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_o5flyzualxgjq0t6ohcreefx",
+    "ct_id": "o5flyzualxgjq0t6ohcreefx",
+    "adapter_ctid": "mleu1ddxfdqvacxo7sk8u6ke",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Discrepancy Response Code"
+  },
+  "lobcz6jauu9a06dcu09holtm": {
+    "placeholder": "__PLACEHOLDER__xdtemporal-value_lobcz6jauu9a06dcu09holtm",
+    "ct_id": "lobcz6jauu9a06dcu09holtm",
+    "adapter_ctid": "svbweotwdgoof15q8p4lzbvj",
+    "element_name": "xdtemporal-value",
+    "type": "XdTemporal",
+    "label": "Discrepancy Effective Date"
+  },
+  "z2hiu8mpip80cq23km4fggwr": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_z2hiu8mpip80cq23km4fggwr",
+    "ct_id": "z2hiu8mpip80cq23km4fggwr",
+    "adapter_ctid": "tk64uu24ea7nmgyyo7bzfntr",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Brand Name"
+  },
+  "k0n1pwt88vd4e97alxtobizg": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_k0n1pwt88vd4e97alxtobizg",
+    "ct_id": "k0n1pwt88vd4e97alxtobizg",
+    "adapter_ctid": "iyaota3iyct4046302051nzs",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Item Description"
+  },
+  "iz74r6dn6ud4wqb2jsr8b82y": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_iz74r6dn6ud4wqb2jsr8b82y",
+    "ct_id": "iz74r6dn6ud4wqb2jsr8b82y",
+    "adapter_ctid": "wt0e63gbiuwlnp8i57tlxz9i",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Item Name"
+  },
+  "lgcfrui3pdx1rhceu488rxyy": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_lgcfrui3pdx1rhceu488rxyy",
+    "ct_id": "lgcfrui3pdx1rhceu488rxyy",
+    "adapter_ctid": "hxcl2rrjrdth6c39alfo7dyz",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Model Name"
+  },
+  "reydo3ozx3ie5sit1rfwsoc4": {
+    "placeholder": "__PLACEHOLDER__xdcount-value_reydo3ozx3ie5sit1rfwsoc4",
+    "ct_id": "reydo3ozx3ie5sit1rfwsoc4",
+    "adapter_ctid": "scahu6mweyw2locx0u6yft5l",
+    "element_name": "xdcount-value",
+    "type": "XdCount",
+    "label": "Pack Quantity"
+  },
+  "zf1gwuh6jx7iyy2w0aam4plx": {
+    "placeholder": "__PLACEHOLDER__xdcount-value_zf1gwuh6jx7iyy2w0aam4plx",
+    "ct_id": "zf1gwuh6jx7iyy2w0aam4plx",
+    "adapter_ctid": "otiz3o781jcgcsphq36q6pwv",
+    "element_name": "xdcount-value",
+    "type": "XdCount",
+    "label": "Pack Size"
+  },
+  "span8j8v0dghr4rjnit4s5uh": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_span8j8v0dghr4rjnit4s5uh",
+    "ct_id": "span8j8v0dghr4rjnit4s5uh",
+    "adapter_ctid": "omtwbnb6cikriuep995i3svd",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Item Extended ID"
+  },
+  "db1bt3xlh3m1jpvnmesx480v": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_db1bt3xlh3m1jpvnmesx480v",
+    "ct_id": "db1bt3xlh3m1jpvnmesx480v",
+    "adapter_ctid": "tqc6djid52nj8j3efiw52q94",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Item Identification Value"
+  },
+  "k84kh4trdynaoi242c268lat": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_k84kh4trdynaoi242c268lat",
+    "ct_id": "k84kh4trdynaoi242c268lat",
+    "adapter_ctid": "vl5ouc8p84o6b1mfd3fqvrr2",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "Item Identification Scheme"
+  },
+  "lx0s1wl1avkrf61p5j3135bn": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_lx0s1wl1avkrf61p5j3135bn",
+    "ct_id": "lx0s1wl1avkrf61p5j3135bn",
+    "adapter_ctid": "ow1pr8apiyqy2c06ie1hu2ni",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Commodity Code"
+  },
+  "aeu7ruba5it242eejjc653r9": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_aeu7ruba5it242eejjc653r9",
+    "ct_id": "aeu7ruba5it242eejjc653r9",
+    "adapter_ctid": "ebi3f0dokfwun1hwqfnqtdn8",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Item Classification Code"
+  },
+  "vl0xhkn7z4gkgq5j2psifiil": {
+    "placeholder": "__PLACEHOLDER__xdquantity-value_vl0xhkn7z4gkgq5j2psifiil",
+    "ct_id": "vl0xhkn7z4gkgq5j2psifiil",
+    "adapter_ctid": "u8me7r8qis816xsxto7m61cc",
+    "element_name": "xdquantity-value",
+    "type": "XdQuantity",
+    "label": "Length/Distance"
+  },
+  "g7gz7adgd2fh6egkt84jnx7m": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_g7gz7adgd2fh6egkt84jnx7m",
+    "ct_id": "g7gz7adgd2fh6egkt84jnx7m",
+    "adapter_ctid": null,
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Length/Distance (SI - Metric)"
+  },
+  "pkye7oq6g55daxxjtbiwe7uv": {
+    "placeholder": "__PLACEHOLDER__xdquantity-value_pkye7oq6g55daxxjtbiwe7uv",
+    "ct_id": "pkye7oq6g55daxxjtbiwe7uv",
+    "adapter_ctid": "m2xcr9r902blg9kzgx703dqp",
+    "element_name": "xdquantity-value",
+    "type": "XdQuantity",
+    "label": "Volume"
+  },
+  "lnp7izhoh1fxop40bhzwancq": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_lnp7izhoh1fxop40bhzwancq",
+    "ct_id": "lnp7izhoh1fxop40bhzwancq",
+    "adapter_ctid": null,
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Volume/Liquid Capacity (SI - Metric)"
+  },
+  "cc2p4vt57qgbdttxkngwhv93": {
+    "placeholder": "__PLACEHOLDER__xdquantity-value_cc2p4vt57qgbdttxkngwhv93",
+    "ct_id": "cc2p4vt57qgbdttxkngwhv93",
+    "adapter_ctid": "fd49d06mnxni7cpwpil6m1dy",
+    "element_name": "xdquantity-value",
+    "type": "XdQuantity",
+    "label": "Weight"
+  },
+  "n7s7hcgef4pxius8a0l6r5qp": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_n7s7hcgef4pxius8a0l6r5qp",
+    "ct_id": "n7s7hcgef4pxius8a0l6r5qp",
+    "adapter_ctid": null,
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Mass/Weight (SI - Metric)"
+  },
+  "p6c7q343dafqwvcq6m1ffz5i": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_p6c7q343dafqwvcq6m1ffz5i",
+    "ct_id": "p6c7q343dafqwvcq6m1ffz5i",
+    "adapter_ctid": "djtvfcxu7bigwbv7eznl1y0w",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Tax Category ID"
+  },
+  "ehh24wvyu4fsa3rbeheft3kj": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_ehh24wvyu4fsa3rbeheft3kj",
+    "ct_id": "ehh24wvyu4fsa3rbeheft3kj",
+    "adapter_ctid": "t37p0g2cgueam6ywe2zp8iqd",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Tax Category Name"
+  },
+  "v4zn5xtqlkni8qr3ly7e2j1a": {
+    "placeholder": "__PLACEHOLDER__xdquantity-value_v4zn5xtqlkni8qr3ly7e2j1a",
+    "ct_id": "v4zn5xtqlkni8qr3ly7e2j1a",
+    "adapter_ctid": "l3ue9scta9uq277rtu869kag",
+    "element_name": "xdquantity-value",
+    "type": "XdQuantity",
+    "label": "Tax Percent"
+  },
+  "bvz91uwa2c28sr0k5u85zx04": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_bvz91uwa2c28sr0k5u85zx04",
+    "ct_id": "bvz91uwa2c28sr0k5u85zx04",
+    "adapter_ctid": null,
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Percentage"
+  },
+  "mexx9mfi4rglmgi71nqf37ux": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_mexx9mfi4rglmgi71nqf37ux",
+    "ct_id": "mexx9mfi4rglmgi71nqf37ux",
+    "adapter_ctid": "pws7nq68fp2xy8pjvhtqc2s3",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Tax Scheme ID"
+  },
+  "g7952fbwz8uh2ig9uidu9877": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_g7952fbwz8uh2ig9uidu9877",
+    "ct_id": "g7952fbwz8uh2ig9uidu9877",
+    "adapter_ctid": "cu10je9x3ad1ip3v8jwfr6aq",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Tax Scheme Name"
+  },
+  "vzzejwis0nptpcqf5t5rb9sl": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_vzzejwis0nptpcqf5t5rb9sl",
+    "ct_id": "vzzejwis0nptpcqf5t5rb9sl",
+    "adapter_ctid": "y3yfc0wa2uhywxg9h4ehus1z",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Sales Order Line ID"
+  },
+  "n2bk18wxzh5oggb19qgrbo3t": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_n2bk18wxzh5oggb19qgrbo3t",
+    "ct_id": "n2bk18wxzh5oggb19qgrbo3t",
+    "adapter_ctid": "f3mjcwiptd801n8nf434qqxm",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "Price Type"
+  },
+  "ivmsm0wfok9g4chzb0gryzqy": {
+    "placeholder": "__PLACEHOLDER__xdquantity-value_ivmsm0wfok9g4chzb0gryzqy",
+    "ct_id": "ivmsm0wfok9g4chzb0gryzqy",
+    "adapter_ctid": "bg61jdtt3gfwgptnh8l4n2qh",
+    "element_name": "xdquantity-value",
+    "type": "XdQuantity",
+    "label": "Base Quantity"
+  },
+  "xmhraye8g23oss82ihfmwjkd": {
+    "placeholder": "__PLACEHOLDER__xdquantity-value_xmhraye8g23oss82ihfmwjkd",
+    "ct_id": "xmhraye8g23oss82ihfmwjkd",
+    "adapter_ctid": "s141aty6wckrzmyirh5i0n2h",
+    "element_name": "xdquantity-value",
+    "type": "XdQuantity",
+    "label": "Price Amount"
+  },
+  "gi49b158luigt4x2bhhbnux0": {
+    "placeholder": "__PLACEHOLDER__xdquantity-value_gi49b158luigt4x2bhhbnux0",
+    "ct_id": "gi49b158luigt4x2bhhbnux0",
+    "adapter_ctid": "kffezf2yyrd2hi9azksuxy23",
+    "element_name": "xdquantity-value",
+    "type": "XdQuantity",
+    "label": "Tax Amount"
+  },
+  "cx5gdd7pofanddbh9yaf53xl": {
+    "placeholder": "__PLACEHOLDER__xdquantity-value_cx5gdd7pofanddbh9yaf53xl",
+    "ct_id": "cx5gdd7pofanddbh9yaf53xl",
+    "adapter_ctid": "mn3h6pcpnblaif2eocrytzip",
+    "element_name": "xdquantity-value",
+    "type": "XdQuantity",
+    "label": "Taxable Amount"
+  },
+  "xxnvc50tm2l6hqejitd5lalh": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_xxnvc50tm2l6hqejitd5lalh",
+    "ct_id": "xxnvc50tm2l6hqejitd5lalh",
+    "adapter_ctid": "smz7muy7l3ffwcgvd0zcmedu",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Delivery ID"
+  },
+  "mgt29p1un237uma77q8ay8or": {
+    "placeholder": "__PLACEHOLDER__xdquantity-value_mgt29p1un237uma77q8ay8or",
+    "ct_id": "mgt29p1un237uma77q8ay8or",
+    "adapter_ctid": "wctakdib938yao66p1qmn5e7",
+    "element_name": "xdquantity-value",
+    "type": "XdQuantity",
+    "label": "Delivery Quantity"
+  },
+  "z180eu0o81qv2cfgjejo5unw": {
+    "placeholder": "__PLACEHOLDER__xdtemporal-value_z180eu0o81qv2cfgjejo5unw",
+    "ct_id": "z180eu0o81qv2cfgjejo5unw",
+    "adapter_ctid": "die5dtjctbn0x6me70fhtxmq",
+    "element_name": "xdtemporal-value",
+    "type": "XdTemporal",
+    "label": "Latest Delivery Date"
+  },
+  "lpixlk20bads9j3ggtte22px": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_lpixlk20bads9j3ggtte22px",
+    "ct_id": "lpixlk20bads9j3ggtte22px",
+    "adapter_ctid": "ssorswtsz2g7zfvoob75ksza",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Delivery Location ID"
+  },
+  "ude1r385xvd2002r5h851vwk": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_ude1r385xvd2002r5h851vwk",
+    "ct_id": "ude1r385xvd2002r5h851vwk",
+    "adapter_ctid": "nwwuwlyygva4raa115o48vjo",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Delivery Location Name"
+  },
+  "pfag6soto6wul7frsg8bt8rv": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_pfag6soto6wul7frsg8bt8rv",
+    "ct_id": "pfag6soto6wul7frsg8bt8rv",
+    "adapter_ctid": "gwe7rso7y1n3hm8n2dvd0yjz",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Delivery Special Terms"
+  },
+  "w8xglen3ypxximnzzjzsvm5u": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_w8xglen3ypxximnzzjzsvm5u",
+    "ct_id": "w8xglen3ypxximnzzjzsvm5u",
+    "adapter_ctid": "niieu8fdv2i2qh4y90bo6twd",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "Delivery Terms Code"
+  },
+  "imolx6ui92t4lv1ise4tue7b": {
+    "placeholder": "__PLACEHOLDER__xdquantity-value_imolx6ui92t4lv1ise4tue7b",
+    "ct_id": "imolx6ui92t4lv1ise4tue7b",
+    "adapter_ctid": "vpnbpfs1t6vezvmlt00ctmxm",
+    "element_name": "xdquantity-value",
+    "type": "XdQuantity",
+    "label": "Allowance Total Amount"
+  },
+  "akme82vh7v2fvgnrht228b5h": {
+    "placeholder": "__PLACEHOLDER__xdquantity-value_akme82vh7v2fvgnrht228b5h",
+    "ct_id": "akme82vh7v2fvgnrht228b5h",
+    "adapter_ctid": "esdocm44afng4qn0dzy97v92",
+    "element_name": "xdquantity-value",
+    "type": "XdQuantity",
+    "label": "Charge Total Amount"
+  },
+  "zoqvpnsbbfcs2ma5ah6srf27": {
+    "placeholder": "__PLACEHOLDER__xdquantity-value_zoqvpnsbbfcs2ma5ah6srf27",
+    "ct_id": "zoqvpnsbbfcs2ma5ah6srf27",
+    "adapter_ctid": "ewlm2n408m8kxmwzhf5d1he2",
+    "element_name": "xdquantity-value",
+    "type": "XdQuantity",
+    "label": "Line Extension Total Amount"
+  },
+  "axifzu4nt8m8n4qpfn838yy8": {
+    "placeholder": "__PLACEHOLDER__xdquantity-value_axifzu4nt8m8n4qpfn838yy8",
+    "ct_id": "axifzu4nt8m8n4qpfn838yy8",
+    "adapter_ctid": "aj0uh7ma0349wlymsxkateh7",
+    "element_name": "xdquantity-value",
+    "type": "XdQuantity",
+    "label": "Payable Amount"
+  },
+  "dj7znans3l4hdl28mux0vc5s": {
+    "placeholder": "__PLACEHOLDER__xdquantity-value_dj7znans3l4hdl28mux0vc5s",
+    "ct_id": "dj7znans3l4hdl28mux0vc5s",
+    "adapter_ctid": "no1rbnm9fucazjsff73a9n76",
+    "element_name": "xdquantity-value",
+    "type": "XdQuantity",
+    "label": "Payable Rounding Amount"
+  },
+  "oeoory19276gd0hy5m521d8p": {
+    "placeholder": "__PLACEHOLDER__xdquantity-value_oeoory19276gd0hy5m521d8p",
+    "ct_id": "oeoory19276gd0hy5m521d8p",
+    "adapter_ctid": "pgmsi0b38zfwjf18sd7avk71",
+    "element_name": "xdquantity-value",
+    "type": "XdQuantity",
+    "label": "Prepaid Amount"
+  },
+  "fddz3gxz8pjvgxmymmma54jp": {
+    "placeholder": "__PLACEHOLDER__xdquantity-value_fddz3gxz8pjvgxmymmma54jp",
+    "ct_id": "fddz3gxz8pjvgxmymmma54jp",
+    "adapter_ctid": "k2unnu8h69lwm1kqedhalhu5",
+    "element_name": "xdquantity-value",
+    "type": "XdQuantity",
+    "label": "Tax Exclusive Amount"
+  },
+  "oqk5mad2efz8sg444h8pis0e": {
+    "placeholder": "__PLACEHOLDER__xdquantity-value_oqk5mad2efz8sg444h8pis0e",
+    "ct_id": "oqk5mad2efz8sg444h8pis0e",
+    "adapter_ctid": "rm74febcvxr2pr0j5u5yvaow",
+    "element_name": "xdquantity-value",
+    "type": "XdQuantity",
+    "label": "Tax Inclusive Amount"
+  },
+  "wtnd4hzyrntlwtp4z3l1gcpr": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_wtnd4hzyrntlwtp4z3l1gcpr",
+    "ct_id": "wtnd4hzyrntlwtp4z3l1gcpr",
+    "adapter_ctid": "jt0sjviikpk1shux6xsq839c",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Order ID"
+  },
+  "mllhwxhu0zvxhwt32em2t821": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_mllhwxhu0zvxhwt32em2t821",
+    "ct_id": "mllhwxhu0zvxhwt32em2t821",
+    "adapter_ctid": "yawjqsq0umyk2jmfxbnb4w19",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Sales Order ID"
+  },
+  "q9k20amngqerxvhpvhwn9t3q": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_q9k20amngqerxvhpvhwn9t3q",
+    "ct_id": "q9k20amngqerxvhpvhwn9t3q",
+    "adapter_ctid": "nrof7p2oc3pzwuimxznlbh1f",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "Order Type"
+  },
+  "pv15bnowaxjtczx4wx4vit4d": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_pv15bnowaxjtczx4wx4vit4d",
+    "ct_id": "pv15bnowaxjtczx4wx4vit4d",
+    "adapter_ctid": "eypy118xrs2j6i6a9x7ox6x1",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "Payment Means"
+  },
+  "iw79shpxfxnmiueutlhubpr2": {
+    "placeholder": "__PLACEHOLDER__xdtemporal-value_iw79shpxfxnmiueutlhubpr2",
+    "ct_id": "iw79shpxfxnmiueutlhubpr2",
+    "adapter_ctid": "vft2wpeny3khc2whtji4qve5",
+    "element_name": "xdtemporal-value",
+    "type": "XdTemporal",
+    "label": "Payment Due Date"
+  },
+  "q439xnetx63djdu56tw5e0jm": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_q439xnetx63djdu56tw5e0jm",
+    "ct_id": "q439xnetx63djdu56tw5e0jm",
+    "adapter_ctid": "anqkfbafiy7an37fug3a2n2p",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Payment Terms ID"
+  },
+  "erekzvcx8ierm1tneaiuv109": {
+    "placeholder": "__PLACEHOLDER__xdquantity-value_erekzvcx8ierm1tneaiuv109",
+    "ct_id": "erekzvcx8ierm1tneaiuv109",
+    "adapter_ctid": "y6dnrrmhqbupqz57myt0pxnu",
+    "element_name": "xdquantity-value",
+    "type": "XdQuantity",
+    "label": "Penalty Surcharge Percent"
+  },
+  "ng30ck36wgei6bmx79qxy3xm": {
+    "placeholder": "__PLACEHOLDER__xdquantity-value_ng30ck36wgei6bmx79qxy3xm",
+    "ct_id": "ng30ck36wgei6bmx79qxy3xm",
+    "adapter_ctid": "wb1hkrbvvn000c63be4x9ww4",
+    "element_name": "xdquantity-value",
+    "type": "XdQuantity",
+    "label": "Settlement Discount Percent"
+  },
+  "hhusuzzig19rs46ngz23k5g7": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_hhusuzzig19rs46ngz23k5g7",
+    "ct_id": "hhusuzzig19rs46ngz23k5g7",
+    "adapter_ctid": "vycps7awt38y25jhnrr4okxt",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Activity Description"
+  },
+  "wr06h54xqqw2q9id8i9673jy": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_wr06h54xqqw2q9id8i9673jy",
+    "ct_id": "wr06h54xqqw2q9id8i9673jy",
+    "adapter_ctid": "o9p6k7c9ie20j5du0jmd3749",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Activity Identifier"
+  },
+  "r6hkunjm2q0hlxiknlc9ljix": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_r6hkunjm2q0hlxiknlc9ljix",
+    "ct_id": "r6hkunjm2q0hlxiknlc9ljix",
+    "adapter_ctid": "o0qu77y6w4lwvu2qhms3ilbw",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Activity Label"
+  },
+  "uzai5uey5p1fnn9ezj9u6vor": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_uzai5uey5p1fnn9ezj9u6vor",
+    "ct_id": "uzai5uey5p1fnn9ezj9u6vor",
+    "adapter_ctid": "rat798vb1tfxjuf56sqrvtty",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Activity Location"
+  },
+  "jjzmhdxvbt97pq81iwqubtxk": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_jjzmhdxvbt97pq81iwqubtxk",
+    "ct_id": "jjzmhdxvbt97pq81iwqubtxk",
+    "adapter_ctid": "qeu9jq1owxxh2woqo1f7m8jk",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Activity Type"
+  },
+  "xlgjqdpwdbn2re3mdh5yy2rk": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_xlgjqdpwdbn2re3mdh5yy2rk",
+    "ct_id": "xlgjqdpwdbn2re3mdh5yy2rk",
+    "adapter_ctid": "jwvcklvakotmdztpikyodwkx",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Error Message"
+  },
+  "vhezo2cckpe92x4c3j2memeh": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_vhezo2cckpe92x4c3j2memeh",
+    "ct_id": "vhezo2cckpe92x4c3j2memeh",
+    "adapter_ctid": "r48fyfvuhl62i5yihku0hws1",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Had Plan Reference"
+  },
+  "t0whhrqtnb54te4mk48i1ooj": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_t0whhrqtnb54te4mk48i1ooj",
+    "ct_id": "t0whhrqtnb54te4mk48i1ooj",
+    "adapter_ctid": "mjj6mlhqgzcprfwuwnhu5npz",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Used Entity Reference"
+  },
+  "r48alj7hc3797qfjnf2uj71n": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_r48alj7hc3797qfjnf2uj71n",
+    "ct_id": "r48alj7hc3797qfjnf2uj71n",
+    "adapter_ctid": "in4ct2aoguzdvzg4mlsmsxfd",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Was Associated With Reference"
+  },
+  "ueb5g1ojzlwwt0mnds5zb6wl": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_ueb5g1ojzlwwt0mnds5zb6wl",
+    "ct_id": "ueb5g1ojzlwwt0mnds5zb6wl",
+    "adapter_ctid": "k87dda72y8upko7dnrcs425s",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Was Ended By Reference"
+  },
+  "qh84jdzp1kxt85aq4ilo0svk": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_qh84jdzp1kxt85aq4ilo0svk",
+    "ct_id": "qh84jdzp1kxt85aq4ilo0svk",
+    "adapter_ctid": "eeyxfka9q0b81swhc0cpvd1l",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Was Informed By Reference"
+  },
+  "ginfqbk7q59ld2r4us8sjnv1": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_ginfqbk7q59ld2r4us8sjnv1",
+    "ct_id": "ginfqbk7q59ld2r4us8sjnv1",
+    "adapter_ctid": "vmiyaznvvl2jw19cyv414jj3",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Was Started By Reference"
+  },
+  "wl6j4ekcmu4hvt2m12zw4zp8": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_wl6j4ekcmu4hvt2m12zw4zp8",
+    "ct_id": "wl6j4ekcmu4hvt2m12zw4zp8",
+    "adapter_ctid": "q4rwxzoldz452g7rbii2an1h",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "Activity Status"
+  },
+  "a5scyosu6j84vz350mqyrzl2": {
+    "placeholder": "__PLACEHOLDER__xdtemporal-value_a5scyosu6j84vz350mqyrzl2",
+    "ct_id": "a5scyosu6j84vz350mqyrzl2",
+    "adapter_ctid": "xiy4gn6vievei3614sso5vmk",
+    "element_name": "xdtemporal-value",
+    "type": "XdTemporal",
+    "label": "Ended At"
+  },
+  "sa4nl1kbpdr842fkucvfjkpq": {
+    "placeholder": "__PLACEHOLDER__xdtemporal-value_sa4nl1kbpdr842fkucvfjkpq",
+    "ct_id": "sa4nl1kbpdr842fkucvfjkpq",
+    "adapter_ctid": "vzyuqpkegby4er3pw12gxw2c",
+    "element_name": "xdtemporal-value",
+    "type": "XdTemporal",
+    "label": "Started At"
+  },
+  "og08xf6bu928uuz6t3y0e23f": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_og08xf6bu928uuz6t3y0e23f",
+    "ct_id": "og08xf6bu928uuz6t3y0e23f",
+    "adapter_ctid": "j9gccgohqlb59l1t37doseiq",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Acted On Behalf Of Reference"
+  },
+  "gb78cmuyo72hqs5apymdki7l": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_gb78cmuyo72hqs5apymdki7l",
+    "ct_id": "gb78cmuyo72hqs5apymdki7l",
+    "adapter_ctid": "px1s852i5pfng3v0ikk6fw4m",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Agent Description"
+  },
+  "qb90a0sp9vvb6c5cbcf236ys": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_qb90a0sp9vvb6c5cbcf236ys",
+    "ct_id": "qb90a0sp9vvb6c5cbcf236ys",
+    "adapter_ctid": "wi324lr48j1pzugpnw17p87m",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Agent Email"
+  },
+  "w2ruemcfy35rw60jl1t9dew2": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_w2ruemcfy35rw60jl1t9dew2",
+    "ct_id": "w2ruemcfy35rw60jl1t9dew2",
+    "adapter_ctid": "qfmes86biux1nl7gbaowsgc4",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Agent Identifier"
+  },
+  "xxe21o9ojzmy9wxxky1tnmog": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_xxe21o9ojzmy9wxxky1tnmog",
+    "ct_id": "xxe21o9ojzmy9wxxky1tnmog",
+    "adapter_ctid": "ljldab8e1bjizncv01akb0n5",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Agent Name"
+  },
+  "eftvwi5byq6cdtd931qyxzw0": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_eftvwi5byq6cdtd931qyxzw0",
+    "ct_id": "eftvwi5byq6cdtd931qyxzw0",
+    "adapter_ctid": "f6z431hl60ra8eqbrcyrsvji",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Agent Organization Name"
+  },
+  "aa663ivutjf2fs4757t0bbzy": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_aa663ivutjf2fs4757t0bbzy",
+    "ct_id": "aa663ivutjf2fs4757t0bbzy",
+    "adapter_ctid": "cpaj0unbnudntl1brmdnuqhu",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Software Name"
+  },
+  "x0lebwtobgaelj5pev3258sd": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_x0lebwtobgaelj5pev3258sd",
+    "ct_id": "x0lebwtobgaelj5pev3258sd",
+    "adapter_ctid": "ebn1a6s1d1dy724l4y692qsl",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Software Version"
+  },
+  "i16vqj89it3db7d3c5qjko9p": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_i16vqj89it3db7d3c5qjko9p",
+    "ct_id": "i16vqj89it3db7d3c5qjko9p",
+    "adapter_ctid": "y1u3ladafqtryhgyetpn5ild",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "PROV Agent Type"
+  },
+  "abub2eah26yd2uzni3p9l58i": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_abub2eah26yd2uzni3p9l58i",
+    "ct_id": "abub2eah26yd2uzni3p9l58i",
+    "adapter_ctid": "wy38zv02dmcp5gjul57yejmk",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Entity Description"
+  },
+  "i1defiugxfdcwfb9rqv4p5tz": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_i1defiugxfdcwfb9rqv4p5tz",
+    "ct_id": "i1defiugxfdcwfb9rqv4p5tz",
+    "adapter_ctid": "gujvcggdotm3z1hmygdrey09",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Entity Identifier"
+  },
+  "m9minyaug6ypyzt52zfxlyyi": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_m9minyaug6ypyzt52zfxlyyi",
+    "ct_id": "m9minyaug6ypyzt52zfxlyyi",
+    "adapter_ctid": "s0xrd3gbobtgtexdxkxcor3l",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Entity Label"
+  },
+  "wn77qo3b1xjwc4dudtyme2io": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_wn77qo3b1xjwc4dudtyme2io",
+    "ct_id": "wn77qo3b1xjwc4dudtyme2io",
+    "adapter_ctid": "jdugzq309qlimui7675txmyi",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Entity Location"
+  },
+  "kmcck093437mfdlnxnrzm0xw": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_kmcck093437mfdlnxnrzm0xw",
+    "ct_id": "kmcck093437mfdlnxnrzm0xw",
+    "adapter_ctid": "bk8actrinati1b6smyypwj6m",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Entity Value"
+  },
+  "phus5105uw30xejqs7baamyx": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_phus5105uw30xejqs7baamyx",
+    "ct_id": "phus5105uw30xejqs7baamyx",
+    "adapter_ctid": "fti6dssqpaatbprjx0mqu2mj",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Had Primary Source Reference"
+  },
+  "kqlatg3rz00z58muv7j8toyl": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_kqlatg3rz00z58muv7j8toyl",
+    "ct_id": "kqlatg3rz00z58muv7j8toyl",
+    "adapter_ctid": "hj4gt95jsr6xvywruyi9ip51",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Was Attributed To Reference"
+  },
+  "credrxhz4hg4c42sihm0wb6s": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_credrxhz4hg4c42sihm0wb6s",
+    "ct_id": "credrxhz4hg4c42sihm0wb6s",
+    "adapter_ctid": "e793unvukokgt3c5y0kilui1",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Was Derived From Reference"
+  },
+  "bfn83x3fw1cyuqriuoquu9t1": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_bfn83x3fw1cyuqriuoquu9t1",
+    "ct_id": "bfn83x3fw1cyuqriuoquu9t1",
+    "adapter_ctid": "vsnnmsojiqwcx33jeavt4bkf",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Was Generated By Reference"
+  },
+  "h1vwqq8ulrb27qpl6zuzppnf": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_h1vwqq8ulrb27qpl6zuzppnf",
+    "ct_id": "h1vwqq8ulrb27qpl6zuzppnf",
+    "adapter_ctid": "o31fztf2l2gj0nuljugpl1s9",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Was Invalidated By Reference"
+  },
+  "mjl0vv39zsbigqiuyqm66fkv": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_mjl0vv39zsbigqiuyqm66fkv",
+    "ct_id": "mjl0vv39zsbigqiuyqm66fkv",
+    "adapter_ctid": "bh5kiii8wc47sp8hibxv9qtk",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Was Quoted From Reference"
+  },
+  "lghqkvp7vapqk10l248kzqs8": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_lghqkvp7vapqk10l248kzqs8",
+    "ct_id": "lghqkvp7vapqk10l248kzqs8",
+    "adapter_ctid": "an1yte2y7kubvf64ao70apuu",
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Was Revision Of Reference"
+  },
+  "g2xnh3uhnlrnqlo7ki2s0fs3": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_g2xnh3uhnlrnqlo7ki2s0fs3",
+    "ct_id": "g2xnh3uhnlrnqlo7ki2s0fs3",
+    "adapter_ctid": "p5zjm3c1d2x9jxc2n3wyzbth",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "PROV Derivation Type"
+  },
+  "i4e2nod7ss9d4cumhn2pah8b": {
+    "placeholder": "__PLACEHOLDER__xdtoken-value_i4e2nod7ss9d4cumhn2pah8b",
+    "ct_id": "i4e2nod7ss9d4cumhn2pah8b",
+    "adapter_ctid": "dlu1btnja2h37jfx3vj694rv",
+    "element_name": "xdtoken-value",
+    "type": "XdToken",
+    "label": "PROV Entity Type"
+  },
+  "yk5nrxndulhebpi3hiywk8u8": {
+    "placeholder": "__PLACEHOLDER__xdtemporal-value_yk5nrxndulhebpi3hiywk8u8",
+    "ct_id": "yk5nrxndulhebpi3hiywk8u8",
+    "adapter_ctid": "n6j7bwq9qmuzzf8w89gwxeml",
+    "element_name": "xdtemporal-value",
+    "type": "XdTemporal",
+    "label": "Generated At"
+  },
+  "hswapeutuik067dokidnbv88": {
+    "placeholder": "__PLACEHOLDER__xdtemporal-value_hswapeutuik067dokidnbv88",
+    "ct_id": "hswapeutuik067dokidnbv88",
+    "adapter_ctid": "uc64yt3ys0s0xrj51rue2ofb",
+    "element_name": "xdtemporal-value",
+    "type": "XdTemporal",
+    "label": "Invalidated At"
+  },
+  "q6n61ognf4b5e9dur9r6o26y": {
+    "placeholder": "__PLACEHOLDER__xdstring-value_q6n61ognf4b5e9dur9r6o26y",
+    "ct_id": "q6n61ognf4b5e9dur9r6o26y",
+    "adapter_ctid": null,
+    "element_name": "xdstring-value",
+    "type": "XdString",
+    "label": "Business Document Translator Identifier"
+  },
+  "r3ptl4b9w3uoeryziruyyr0g": {
+    "placeholder": "__PLACEHOLDER__xdordinal-value_r3ptl4b9w3uoeryziruyyr0g",
+    "ct_id": "r3ptl4b9w3uoeryziruyyr0g",
+    "adapter_ctid": "unodm5dbms8i6d84w0t7sj5d",
+    "element_name": "xdordinal-value",
+    "type": "XdOrdinal",
+    "label": "Order: Main path states"
+  },
+  "nwm9jgu4xn7k4de1ccvi0ls9": {
+    "placeholder": "__PLACEHOLDER__xdordinal-value_nwm9jgu4xn7k4de1ccvi0ls9",
+    "ct_id": "nwm9jgu4xn7k4de1ccvi0ls9",
+    "adapter_ctid": "n4du06vuaghzb0of3o012r2l",
+    "element_name": "xdordinal-value",
+    "type": "XdOrdinal",
+    "label": "Order: orderdelivered orderreturned states"
+  },
+  "kk7748z9xt41jyg406y8qr73": {
+    "placeholder": "__PLACEHOLDER__xdordinal-value_kk7748z9xt41jyg406y8qr73",
+    "ct_id": "kk7748z9xt41jyg406y8qr73",
+    "adapter_ctid": "e4ykcslpzsuu0eabcq6wzebx",
+    "element_name": "xdordinal-value",
+    "type": "XdOrdinal",
+    "label": "Order: orderintransit orderproblem states"
+  },
+  "i73y73c1wb9rleqbf86olf8w": {
+    "placeholder": "__PLACEHOLDER__xdordinal-value_i73y73c1wb9rleqbf86olf8w",
+    "ct_id": "i73y73c1wb9rleqbf86olf8w",
+    "adapter_ctid": "zlcvuaslnzclpggfk552y8au",
+    "element_name": "xdordinal-value",
+    "type": "XdOrdinal",
+    "label": "Order: orderpaymentdue ordercancelled states"
+  },
+  "wchjtpjshozfm3pwzpp4lu5s": {
+    "placeholder": "__PLACEHOLDER__xdordinal-value_wchjtpjshozfm3pwzpp4lu5s",
+    "ct_id": "wchjtpjshozfm3pwzpp4lu5s",
+    "adapter_ctid": "u6z44akp38faamrwk7ltt1l6",
+    "element_name": "xdordinal-value",
+    "type": "XdOrdinal",
+    "label": "Order: orderproblem orderprocessing states"
+  },
+  "ljk2wd9f30r9oftbcilg32ur": {
+    "placeholder": "__PLACEHOLDER__xdordinal-value_ljk2wd9f30r9oftbcilg32ur",
+    "ct_id": "ljk2wd9f30r9oftbcilg32ur",
+    "adapter_ctid": "lrni37b5eyf7bwlldtr1ej6x",
+    "element_name": "xdordinal-value",
+    "type": "XdOrdinal",
+    "label": "Order: orderprocessing ordercancelled states"
+  },
+  "jbbwrh34rewkegfgw8w622o1": {
+    "placeholder": "__PLACEHOLDER__xdordinal-value_jbbwrh34rewkegfgw8w622o1",
+    "ct_id": "jbbwrh34rewkegfgw8w622o1",
+    "adapter_ctid": "a17lv0aeed8hkovpp3gihhib",
+    "element_name": "xdordinal-value",
+    "type": "XdOrdinal",
+    "label": "Order: orderprocessing orderproblem states"
+  },
+  "xgf58rmpjqu8obiclzadb7av": {
+    "placeholder": "__PLACEHOLDER__xdordinal-value_xgf58rmpjqu8obiclzadb7av",
+    "ct_id": "xgf58rmpjqu8obiclzadb7av",
+    "adapter_ctid": "laaua5r9fauq3luocivl79r1",
+    "element_name": "xdordinal-value",
+    "type": "XdOrdinal",
+    "label": "Order: Pickup states"
+  }
+}
