@@ -1,0 +1,47 @@
+{
+  "notice": "Release to transit",
+  "issued_by": "Torvale Markets, Inc.",
+  "to": "Halvorsen Foods, Inc.",
+  "order_id": "TV-PO-2026-000001",
+  "issued_on": "2026-11-20",
+  "profile": {
+    "model": "Torvale Order",
+    "model_ct": "cq1fjrvyn0fxl1kyk9y3kr1w",
+    "delivery_terms": "DDP",
+    "pack_specification_version": "TV-PACK-2026-01",
+    "delivery_window_days": {
+      "magnitude": "2",
+      "unit": "days"
+    },
+    "requires": [
+      {
+        "cluster": "Torvale Order",
+        "requires": [
+          "Order Document",
+          "Contract",
+          "Buyer Customer Party",
+          "Seller Supplier Party",
+          "Delivery",
+          "Torvale Delivery Terms",
+          "Torvale Order Requirements",
+          "Anticipated Monetary Total",
+          "Order Lines"
+        ]
+      },
+      {
+        "cluster": "Torvale Delivery Terms",
+        "requires": [
+          "Torvale Delivery Terms Code"
+        ]
+      },
+      {
+        "cluster": "Torvale Order Requirements",
+        "requires": [
+          "Torvale Pack Specification Version",
+          "Torvale Delivery Window Days"
+        ]
+      }
+    ]
+  },
+  "resolution": "The order is released to transit under Torvale's profile as the record carries it; the order moves from OrderProcessing to OrderInTransit."
+}

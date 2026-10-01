@@ -133,5 +133,24 @@
     "triggers": 2,
     "condition_file": "conditions/KM-RA-2027-000017.json",
     "settled_on": "2026-09-30"
+  },
+  {
+    "document_id": "TV-PO-2026-000001",
+    "model_ct": "cq1fjrvyn0fxl1kyk9y3kr1w",
+    "model": "Torvale Order",
+    "record_dir": "halvorsen/torvale_order",
+    "from_state": "OrderProcessing",
+    "order_id": "TV-PO-2026-000001",
+    "invoice_id": null,
+    "record_file": "torvale_order-tv-po-2026-000001.xml",
+    "record_sha256": "675e587737bfe156bacfe60083bac395e50a786b645ec03ebd7731a0c48dab49",
+    "condition_file": "conditions/TV-PO-2026-000001.json",
+    "kind": "permit",
+    "target_state": "OrderInTransit",
+    "receipt_id": "c5xx3x87h609sbwp2dn9gart",
+    "decision": "PERMIT",
+    "settleable": true,
+    "triggers": 2,
+    "settled_on": "2026-09-30"
   }
 ]

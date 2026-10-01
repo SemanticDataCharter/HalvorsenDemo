@@ -139,13 +139,14 @@ def deduction_notice(record_text: str) -> dict:
 def release_notice(record_text: str) -> dict:
     """The condition on a Torvale order: released to transit under the profile the record carries, and what that profile requires."""
     t = read_tree(record_text, Schema.for_dm(TORVALE.ct)).get(*TORVALE.root)
+    window = t.leaf("Torvale Order Requirements", "Torvale Delivery Window Days")
     return {
         "notice": "Release to transit", "issued_by": "Torvale Markets, Inc.", "to": "Halvorsen Foods, Inc.",
         "order_id": t.leaf("Order Document", "Order ID"), "issued_on": t.leaf("Order Document", "Issue Date"),
         "profile": {"model": "Torvale Order", "model_ct": TORVALE.ct,
                     "delivery_terms": t.leaf("Torvale Delivery Terms", "Torvale Delivery Terms Code"),
                     "pack_specification_version": t.leaf("Torvale Order Requirements", "Torvale Pack Specification Version"),
-                    "delivery_window_days": t.leaf("Torvale Order Requirements", "Torvale Delivery Window Days"),
+                    "delivery_window_days": {"magnitude": window.magnitude, "unit": window.unit},
                     "requires": requirements_of(TORVALE)},
         "resolution": "The order is released to transit under Torvale's profile as the record carries it; the order moves from OrderProcessing to OrderInTransit.",
     }
