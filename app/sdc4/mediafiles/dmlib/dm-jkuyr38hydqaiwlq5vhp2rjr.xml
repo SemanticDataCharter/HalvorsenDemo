@@ -1,0 +1,4200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdc4:dm-jkuyr38hydqaiwlq5vhp2rjr
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:sdc4="https://semanticdatacharter.com/ns/sdc4/"
+  xsi:schemaLocation="https://semanticdatacharter.com/ns/sdc4/ https://semanticdatacharter.com/dmlib/dm-jkuyr38hydqaiwlq5vhp2rjr.xsd">
+
+  <dm-label>Credit Note</dm-label>
+  <dm-language>en-US</dm-language>
+  <dm-encoding>utf-8</dm-encoding>
+  <creation_timestamp>_PH_</creation_timestamp>
+  <instance_id>nczdya72w4mmi22zib16b0iz</instance_id>
+  <instance_version>_PH_</instance_version>
+  <source_instance_id>_OPT_PH_</source_instance_id>
+  <source_version_id>_OPT_PH_</source_version_id>
+  <current-state>_OPT_PH_</current-state>
+  <sdc4:ms-eqika8chjyab0nbkqcoyrtce>
+    <label>Credit Note Governed Record</label>
+  <sdc4:ms-t2tvd3wylxrstdeu5aw6gkw1>
+    <label>Audit Event</label>
+  <sdc4:ms-hpkc8xrccpwc3shm4ubm5o47>
+    <sdc4:ms-dkc2ccj5te35z9gd4bu1blcq>
+      <label>Audit Agent Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-dkc2ccj5te35z9gd4bu1blcq>
+  </sdc4:ms-hpkc8xrccpwc3shm4ubm5o47>
+  <sdc4:ms-ynnnvgi8748h2d01z2gf4z8x>
+    <sdc4:ms-gcjyjrnp0wsfoelcp4m05c67>
+      <label>Audit Entity Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-gcjyjrnp0wsfoelcp4m05c67>
+  </sdc4:ms-ynnnvgi8748h2d01z2gf4z8x>
+  <sdc4:ms-uf11uwd9s5x5t9bw98z9dr5l>
+    <sdc4:ms-fjhgr5fyqxt2crmg2cb5c513>
+      <label>Audit Event Identifier</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-fjhgr5fyqxt2crmg2cb5c513>
+  </sdc4:ms-uf11uwd9s5x5t9bw98z9dr5l>
+  <sdc4:ms-jwpkqjchavj885uwt5v1jgid>
+    <sdc4:ms-sndpbhm3xbd6qtbyxmvh3i0e>
+      <label>Data Subject Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-sndpbhm3xbd6qtbyxmvh3i0e>
+  </sdc4:ms-jwpkqjchavj885uwt5v1jgid>
+  <sdc4:ms-lbor36zlwkf6u7yx9lgqfx0d>
+    <sdc4:ms-nf1air1zbj8v9w66jozdxmyl>
+      <label>On Behalf Of Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-nf1air1zbj8v9w66jozdxmyl>
+  </sdc4:ms-lbor36zlwkf6u7yx9lgqfx0d>
+  <sdc4:ms-yec6svv50u9d1tz9rp6kmv3v>
+    <sdc4:ms-h3kdbvdtyalpvik97saaf0an>
+      <label>System Identifier</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-h3kdbvdtyalpvik97saaf0an>
+  </sdc4:ms-yec6svv50u9d1tz9rp6kmv3v>
+  <sdc4:ms-r6x55vvha5ci3rl1o29adk03>
+    <sdc4:ms-ujir739mf1g8ajeczs9nzh9m>
+      <label>System Location Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-ujir739mf1g8ajeczs9nzh9m>
+  </sdc4:ms-r6x55vvha5ci3rl1o29adk03>
+  <sdc4:ms-lcsns9hrrzcg74jlit8srxgp>
+    <sdc4:ms-ce1c8sydkov8bkv4dgdmwe5x>
+      <label>Audit Event Action</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-ce1c8sydkov8bkv4dgdmwe5x>
+  </sdc4:ms-lcsns9hrrzcg74jlit8srxgp>
+  <sdc4:ms-wu8f1x11e6ihbltdd6w20rg5>
+    <sdc4:ms-rpz1czz06jhpahmfz30rblvp>
+      <label>Audit Event Outcome</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-rpz1czz06jhpahmfz30rblvp>
+  </sdc4:ms-wu8f1x11e6ihbltdd6w20rg5>
+  <sdc4:ms-kce8557jd9vg6ei59m7o1kc2>
+    <sdc4:ms-vbctgmdcwps5b3r3l6sboa6y>
+      <label>Confidentiality</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-vbctgmdcwps5b3r3l6sboa6y>
+  </sdc4:ms-kce8557jd9vg6ei59m7o1kc2>
+  <sdc4:ms-vgvl7vcmbiz2z7zn9v7ayc04>
+    <sdc4:ms-jujsdur1igws8orw6tvvlqco>
+      <label>Provenance Agent Type</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-jujsdur1igws8orw6tvvlqco>
+  </sdc4:ms-vgvl7vcmbiz2z7zn9v7ayc04>
+  <sdc4:ms-xcmayroyt4krhroimfb3e859>
+    <sdc4:ms-d1evlz8yvdlwt6ia9fjq4pgj>
+      <label>Purpose of Use</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-d1evlz8yvdlwt6ia9fjq4pgj>
+  </sdc4:ms-xcmayroyt4krhroimfb3e859>
+  <sdc4:ms-r5fply6fvzhg90zybxgdx5cb>
+    <sdc4:ms-uwiosm2q9ym3ewr4de910s70>
+      <label>Audit Recorded At</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-datetime>_PH_</xdtemporal-datetime>
+    </sdc4:ms-uwiosm2q9ym3ewr4de910s70>
+  </sdc4:ms-r5fply6fvzhg90zybxgdx5cb>
+  </sdc4:ms-t2tvd3wylxrstdeu5aw6gkw1>
+  <sdc4:ms-vkn71t5d3juhuwqg61cszc1m>
+    <label>Credit Note</label>
+  <sdc4:ms-iswfl2vzv0f9ctm5rjxa3ums>
+    <label>Accounting Customer Party</label>
+  <sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+    <label>Customer Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  <sdc4:ms-x4vy9z1ejuarhvnhcyc8cy8c>
+    <sdc4:ms-ncxxt7wgs7soxw7kbmapxvg3>
+      <label>Address (Line 1)</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-ncxxt7wgs7soxw7kbmapxvg3>
+  </sdc4:ms-x4vy9z1ejuarhvnhcyc8cy8c>
+  <sdc4:ms-fnh39fyrub04naiw1csr9rcu>
+    <sdc4:ms-sexw93x5276zwsn1qx15htpv>
+      <label>Address (Line 2)</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-sexw93x5276zwsn1qx15htpv>
+  </sdc4:ms-fnh39fyrub04naiw1csr9rcu>
+  <sdc4:ms-r81s8h0fj8tb56kdwj0az7bu>
+    <sdc4:ms-toysvef93azt57fgh8rwpd4b>
+      <label>City Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-toysvef93azt57fgh8rwpd4b>
+  </sdc4:ms-r81s8h0fj8tb56kdwj0az7bu>
+  <sdc4:ms-te0rs3ybu4espghrgec012cb>
+    <sdc4:ms-gf841eedvv6cjiegs934srai>
+      <label>Postal Code</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-gf841eedvv6cjiegs934srai>
+  </sdc4:ms-te0rs3ybu4espghrgec012cb>
+  <sdc4:ms-vezmaftdi44japrlpt07mp4l>
+    <sdc4:ms-jw1b9q6ulyte599sdsqp2mvp>
+      <label>Region Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-jw1b9q6ulyte599sdsqp2mvp>
+  </sdc4:ms-vezmaftdi44japrlpt07mp4l>
+  <sdc4:ms-x8d5ltgmjarqw07qli8ocwcu>
+    <sdc4:ms-b25dj42zxhm19pih328ga8pl>
+      <label>Address Use</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-b25dj42zxhm19pih328ga8pl>
+  </sdc4:ms-x8d5ltgmjarqw07qli8ocwcu>
+  <sdc4:ms-zyd1bdzhksql5z05sfip0m78>
+    <sdc4:ms-f2jicaigehz7xmwcp1gm5gh0>
+      <label>Country Code ISO 3166</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-f2jicaigehz7xmwcp1gm5gh0>
+  </sdc4:ms-zyd1bdzhksql5z05sfip0m78>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  <sdc4:ms-uikaaefutpxhmfraowwo28x4>
+    <sdc4:ms-wriny2gz8aqcvffmfpwbompk>
+      <label>Website URL</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <link>https://schema.org/url</link>
+      <relation>url</relation>
+      <relation-uri>https://schema.org/url</relation-uri>
+    </sdc4:ms-wriny2gz8aqcvffmfpwbompk>
+  </sdc4:ms-uikaaefutpxhmfraowwo28x4>
+  <sdc4:ms-rr45vpoto55jhvob6vtzsz27>
+    <sdc4:ms-q922mqaon3yn5zlwf2bszf28>
+      <label>Email Address</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-q922mqaon3yn5zlwf2bszf28>
+  </sdc4:ms-rr45vpoto55jhvob6vtzsz27>
+  <sdc4:ms-ogtraclb0bgvqgrhbyko69yh>
+    <sdc4:ms-ll6ltsnvakomixuitxkbkxfz>
+      <label>Fax Number</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-ll6ltsnvakomixuitxkbkxfz>
+  </sdc4:ms-ogtraclb0bgvqgrhbyko69yh>
+  <sdc4:ms-f2caqwqmsl0fnkscaz4uhrya>
+    <sdc4:ms-zpfwg52r88j6jdypj7rg71ke>
+      <label>Phone Number</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-zpfwg52r88j6jdypj7rg71ke>
+  </sdc4:ms-f2caqwqmsl0fnkscaz4uhrya>
+  <sdc4:ms-b31lflr8prid6hdega5v93zf>
+    <sdc4:ms-miqo30r5b554nyj7ubryw43x>
+      <label>Contact Method</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-miqo30r5b554nyj7ubryw43x>
+  </sdc4:ms-b31lflr8prid6hdega5v93zf>
+  <sdc4:ms-rv5pul6lm3ntpxynzxmkpeus>
+    <sdc4:ms-vmruk4j9y1orvvz8cwafrax5>
+      <label>Contact Use</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-vmruk4j9y1orvvz8cwafrax5>
+  </sdc4:ms-rv5pul6lm3ntpxynzxmkpeus>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  <sdc4:ms-pie59rwktjnrs9ryzkukigx3>
+    <sdc4:ms-bkw6awwe7kp01kowlwbgn21b>
+      <label>Contact Department</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-bkw6awwe7kp01kowlwbgn21b>
+  </sdc4:ms-pie59rwktjnrs9ryzkukigx3>
+  <sdc4:ms-jrvyn9tnjk1y9a4awn9luxi1>
+    <sdc4:ms-ozkpv9buivm77ozkybm0ww39>
+      <label>Contact Job Title</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-ozkpv9buivm77ozkybm0ww39>
+  </sdc4:ms-jrvyn9tnjk1y9a4awn9luxi1>
+  <sdc4:ms-ko9sky98bffl3rypvh072rwt>
+    <sdc4:ms-fp533gyfb6yatp6jgpg2emb2>
+      <label>Contact Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-fp533gyfb6yatp6jgpg2emb2>
+  </sdc4:ms-ko9sky98bffl3rypvh072rwt>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  <sdc4:ms-f6wumzzw4wb7itpz4lfmzifi>
+    <sdc4:ms-iwxh8exsn4qb6eyetfbwqvmj>
+      <label>Party Identification Value</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-iwxh8exsn4qb6eyetfbwqvmj>
+  </sdc4:ms-f6wumzzw4wb7itpz4lfmzifi>
+  <sdc4:ms-ldm5kmibox484imu15oomg42>
+    <sdc4:ms-c9v9nkkg6b8sixoaf55vyjrn>
+      <label>Party Identification Scheme</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-c9v9nkkg6b8sixoaf55vyjrn>
+  </sdc4:ms-ldm5kmibox484imu15oomg42>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  <sdc4:ms-xhhp4as6f4zy16ga4dhs95lq>
+    <sdc4:ms-axizk9c3k82w84p1t1wkwayu>
+      <label>Company ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-axizk9c3k82w84p1t1wkwayu>
+  </sdc4:ms-xhhp4as6f4zy16ga4dhs95lq>
+  <sdc4:ms-ke7bgbzgqairvtht2ahpqbv4>
+    <sdc4:ms-ev7lhh4t59tt8ot0tfoaztb6>
+      <label>Registration Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-ev7lhh4t59tt8ot0tfoaztb6>
+  </sdc4:ms-ke7bgbzgqairvtht2ahpqbv4>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  <sdc4:ms-vtl0hnkbu6vi871qrq2arr72>
+    <sdc4:ms-cjzq0xnrm0uu8p1h51koheoz>
+      <label>US ZIP Code</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-cjzq0xnrm0uu8p1h51koheoz>
+  </sdc4:ms-vtl0hnkbu6vi871qrq2arr72>
+  <sdc4:ms-zs08zf3rl2m68qsuso4cq5jx>
+    <sdc4:ms-k9tqm489kilg33mx4cibyto6>
+      <label>US State Code</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-k9tqm489kilg33mx4cibyto6>
+  </sdc4:ms-zs08zf3rl2m68qsuso4cq5jx>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  <sdc4:ms-o7k32jjcoq56jts8buzz4gxd>
+    <sdc4:ms-fpb149j9um0l676icmhyp56d>
+      <label>Endpoint ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-fpb149j9um0l676icmhyp56d>
+  </sdc4:ms-o7k32jjcoq56jts8buzz4gxd>
+  <sdc4:ms-mpweekufi4296o2qdi0wfd9a>
+    <sdc4:ms-xcn8r67fg7soty17homzok44>
+      <label>Organization Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-xcn8r67fg7soty17homzok44>
+  </sdc4:ms-mpweekufi4296o2qdi0wfd9a>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  <sdc4:ms-v8os8mvqm7xtuix2azpc61nq>
+    <sdc4:ms-ybdlctks32zkkteycr5y1eq8>
+      <label>Customer Assigned Account ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-ybdlctks32zkkteycr5y1eq8>
+  </sdc4:ms-v8os8mvqm7xtuix2azpc61nq>
+  <sdc4:ms-vxq98yo8545y4x4jjam1lebt>
+    <sdc4:ms-nhvx21mf5ac81670xyrpwbaz>
+      <label>Supplier Assigned Account ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-nhvx21mf5ac81670xyrpwbaz>
+  </sdc4:ms-vxq98yo8545y4x4jjam1lebt>
+  </sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+  </sdc4:ms-iswfl2vzv0f9ctm5rjxa3ums>
+  <sdc4:ms-f3duci830odmou614vn1rpgu>
+    <label>Accounting Supplier Party</label>
+  <sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+    <label>Supplier Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+  </sdc4:ms-f3duci830odmou614vn1rpgu>
+  <sdc4:ms-m1cppki3rm9et0bhz1lej8l7>
+    <label>Additional Document Reference</label>
+  <sdc4:ms-uk03ahua6zv9d0i5tqq5qzmh>
+    <label>Document Reference</label>
+  <sdc4:ms-jl90imb6cjrpdgipixlh07hf>
+    <sdc4:ms-z181ta9jftxc7k63rv4nz1zv>
+      <label>Document Description</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-z181ta9jftxc7k63rv4nz1zv>
+  </sdc4:ms-jl90imb6cjrpdgipixlh07hf>
+  <sdc4:ms-xkrijnxj470ojec234gx70uv>
+    <sdc4:ms-k153quyn7i9ravd1b3c61ad9>
+      <label>Document Reference ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-k153quyn7i9ravd1b3c61ad9>
+  </sdc4:ms-xkrijnxj470ojec234gx70uv>
+  <sdc4:ms-sb6fbrfwk4ej0ct2dlxj7kyu>
+    <sdc4:ms-hyw1higymybzar9tv2ze77xa>
+      <label>Document Type</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-hyw1higymybzar9tv2ze77xa>
+  </sdc4:ms-sb6fbrfwk4ej0ct2dlxj7kyu>
+  <sdc4:ms-pbt46pibez5c5hihmqv8dgni>
+    <sdc4:ms-ncxchb14dkm790w4rnuzafju>
+      <label>Document Reference Issue Date</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-date>_PH_</xdtemporal-date>
+    </sdc4:ms-ncxchb14dkm790w4rnuzafju>
+  </sdc4:ms-pbt46pibez5c5hihmqv8dgni>
+  </sdc4:ms-uk03ahua6zv9d0i5tqq5qzmh>
+  </sdc4:ms-m1cppki3rm9et0bhz1lej8l7>
+  <sdc4:ms-gp9qg9erknbjn0quld92syla>
+    <label>Allowance Charge</label>
+  <sdc4:ms-w3u4gwyovzufkyqgoh6wr7vy>
+    <sdc4:ms-wf9pzmcdm06vu2l3usnfkdp0>
+      <label>Charge Indicator</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <true-value>true</true-value>
+    </sdc4:ms-wf9pzmcdm06vu2l3usnfkdp0>
+  </sdc4:ms-w3u4gwyovzufkyqgoh6wr7vy>
+  <sdc4:ms-x6nm0c0y6b44q657aje9ttdc>
+    <sdc4:ms-n3v2ahdss6egqpmdmgd77de8>
+      <label>Allowance Charge Reason Text</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-n3v2ahdss6egqpmdmgd77de8>
+  </sdc4:ms-x6nm0c0y6b44q657aje9ttdc>
+  <sdc4:ms-jzrn01gubpzmyipx4ek1iizr>
+    <sdc4:ms-dmk3uu59n8dpdso1vw6jhif5>
+      <label>Allowance Charge Reason</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-dmk3uu59n8dpdso1vw6jhif5>
+  </sdc4:ms-jzrn01gubpzmyipx4ek1iizr>
+  <sdc4:ms-na43l6izmnhmmptegwyd0fqq>
+    <sdc4:ms-mlog5q5v5rmcnry4n07m63m6>
+      <label>Allowance Charge Amount</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Currency</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-mlog5q5v5rmcnry4n07m63m6>
+  </sdc4:ms-na43l6izmnhmmptegwyd0fqq>
+  <sdc4:ms-bollrm0ski4wuec8dn5gxmce>
+    <sdc4:ms-qosequlh47qfvr6d5nzn9gh8>
+      <label>Base Amount</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Currency</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-qosequlh47qfvr6d5nzn9gh8>
+  </sdc4:ms-bollrm0ski4wuec8dn5gxmce>
+  <sdc4:ms-fhu8x62kdqlohl6fc5qbelck>
+    <sdc4:ms-ak6fih808akzuax3o6btb8lz>
+      <label>Multiplier Factor</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Unitless</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-ak6fih808akzuax3o6btb8lz>
+  </sdc4:ms-fhu8x62kdqlohl6fc5qbelck>
+  </sdc4:ms-gp9qg9erknbjn0quld92syla>
+  <sdc4:ms-c9trmbywa8czks1lo7tl6wf4>
+    <label>Billing Reference</label>
+  <sdc4:ms-nfzgoofnuo7i47mo0pv6180n>
+    <label>Invoice Document Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  <sdc4:ms-vpo48n3msqtdb8gocy0e32hg>
+    <sdc4:ms-arra8d8x6kv6l5mluiomye3t>
+      <label>Document Type</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-arra8d8x6kv6l5mluiomye3t>
+  </sdc4:ms-vpo48n3msqtdb8gocy0e32hg>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-nfzgoofnuo7i47mo0pv6180n>
+  </sdc4:ms-c9trmbywa8czks1lo7tl6wf4>
+  <sdc4:ms-nylve3b8ss572vh8zso2u4l7>
+    <label>Buyer Customer Party</label>
+  <sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+    <label>Customer Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+  </sdc4:ms-nylve3b8ss572vh8zso2u4l7>
+  <sdc4:ms-t2n35sdg0xy8ria7ixcb464z>
+    <label>Contract</label>
+  <sdc4:ms-ecbrot5hf4phkputnnjlnx82>
+    <sdc4:ms-ksr1tl7okjcyf18nprakncw7>
+      <label>Contract ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-ksr1tl7okjcyf18nprakncw7>
+  </sdc4:ms-ecbrot5hf4phkputnnjlnx82>
+  <sdc4:ms-y4599g260rbzt6sl2c2a9kay>
+    <sdc4:ms-r4yktyzzaxury9xsfdw788tj>
+      <label>Contract Type</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-r4yktyzzaxury9xsfdw788tj>
+  </sdc4:ms-y4599g260rbzt6sl2c2a9kay>
+  <sdc4:ms-trtpz4evvkp1x18yd851idkq>
+    <sdc4:ms-nvna1bzcdyspz7k40coxn5y7>
+      <label>Contract Issue Date</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-date>_PH_</xdtemporal-date>
+    </sdc4:ms-nvna1bzcdyspz7k40coxn5y7>
+  </sdc4:ms-trtpz4evvkp1x18yd851idkq>
+  </sdc4:ms-t2n35sdg0xy8ria7ixcb464z>
+  <sdc4:ms-cu806puv1eksttp9z2wy3ytd>
+    <label>Credit Note Document</label>
+  <sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+    <label>Invoice Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  <sdc4:ms-jvr16i2xcvgkoeu0fb0foyf9>
+    <sdc4:ms-moo2lije2b05ylq8q4t52lcb>
+      <label>Date Range End</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-date>_PH_</xdtemporal-date>
+    </sdc4:ms-moo2lije2b05ylq8q4t52lcb>
+  </sdc4:ms-jvr16i2xcvgkoeu0fb0foyf9>
+  <sdc4:ms-qmsn5fmk6j41d2nvl7h4dsqr>
+    <sdc4:ms-bcyjfdwobh9q60umle1amw0w>
+      <label>Date Range Start</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-date>_PH_</xdtemporal-date>
+    </sdc4:ms-bcyjfdwobh9q60umle1amw0w>
+  </sdc4:ms-qmsn5fmk6j41d2nvl7h4dsqr>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+  <sdc4:ms-kq1axd3psm1tsnz26dtvpzb3>
+    <sdc4:ms-nsv2eblxq8s0vk28ue2vh1fl>
+      <label>Copy Indicator</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <true-value>true</true-value>
+    </sdc4:ms-nsv2eblxq8s0vk28ue2vh1fl>
+  </sdc4:ms-kq1axd3psm1tsnz26dtvpzb3>
+  <sdc4:ms-munudzn7vrlq8sgk6lxmgjid>
+    <sdc4:ms-jy2iyemtj9qmi8rvmzu1xw2f>
+      <label>Accounting Cost</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-jy2iyemtj9qmi8rvmzu1xw2f>
+  </sdc4:ms-munudzn7vrlq8sgk6lxmgjid>
+  <sdc4:ms-nva2k6r3vjrvugvsi4hc70gf>
+    <sdc4:ms-yzdm2ldib2w5nqattpealocf>
+      <label>Buyer Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-yzdm2ldib2w5nqattpealocf>
+  </sdc4:ms-nva2k6r3vjrvugvsi4hc70gf>
+  <sdc4:ms-ug28kcg7zjyz3ivkul6azn1f>
+    <sdc4:ms-tnapfsz8ytrxb7oqk54ju0r7>
+      <label>Credit Note ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-tnapfsz8ytrxb7oqk54ju0r7>
+  </sdc4:ms-ug28kcg7zjyz3ivkul6azn1f>
+  <sdc4:ms-haiqjii7v81fewii6c47rrig>
+    <sdc4:ms-rgnvj03kjtej1s8brdeil4kq>
+      <label>Customization ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-rgnvj03kjtej1s8brdeil4kq>
+  </sdc4:ms-haiqjii7v81fewii6c47rrig>
+  <sdc4:ms-sl8a87bqrctj0rrfmrs0gtp0>
+    <sdc4:ms-xywkj11p7u8jhjaiim3h3gyp>
+      <label>Document Currency</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-xywkj11p7u8jhjaiim3h3gyp>
+  </sdc4:ms-sl8a87bqrctj0rrfmrs0gtp0>
+  <sdc4:ms-xabobrcq23y1c3c52z7lox5x>
+    <sdc4:ms-wa674d96vzd8um4nwbtjrorz>
+      <label>Document UUID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-wa674d96vzd8um4nwbtjrorz>
+  </sdc4:ms-xabobrcq23y1c3c52z7lox5x>
+  <sdc4:ms-vol3insgqgbp5qju88w79u83>
+    <sdc4:ms-dke6vuqm4c79e6hlnqo9kz6k>
+      <label>Payment Currency</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-dke6vuqm4c79e6hlnqo9kz6k>
+  </sdc4:ms-vol3insgqgbp5qju88w79u83>
+  <sdc4:ms-y5y9hx86tp826k3z9n2pc64g>
+    <sdc4:ms-a3o0vyby3nousr4jhtlsddn9>
+      <label>Pricing Currency</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-a3o0vyby3nousr4jhtlsddn9>
+  </sdc4:ms-y5y9hx86tp826k3z9n2pc64g>
+  <sdc4:ms-vu57v4kyp5ngwq8r8jdwfvd8>
+    <sdc4:ms-blz32vkqw11awazaklpdih7b>
+      <label>Profile Execution ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-blz32vkqw11awazaklpdih7b>
+  </sdc4:ms-vu57v4kyp5ngwq8r8jdwfvd8>
+  <sdc4:ms-v3muwa45bsb1zv8ymshfzae0>
+    <sdc4:ms-ato2r6lpk92i9e5djcwrna74>
+      <label>Profile ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-ato2r6lpk92i9e5djcwrna74>
+  </sdc4:ms-v3muwa45bsb1zv8ymshfzae0>
+  <sdc4:ms-uyswea4yx23x4okyi2mqs1ia>
+    <sdc4:ms-ftby5cu9ote7glq4chdq7iml>
+      <label>Tax Currency</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-ftby5cu9ote7glq4chdq7iml>
+  </sdc4:ms-uyswea4yx23x4okyi2mqs1ia>
+  <sdc4:ms-tn1sbi0vbjvrlyhl1faun9wu>
+    <sdc4:ms-zvkk8ztob9gmrvvkzyibyrzk>
+      <label>Note</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-zvkk8ztob9gmrvvkzyibyrzk>
+  </sdc4:ms-tn1sbi0vbjvrlyhl1faun9wu>
+  <sdc4:ms-xvda5uvzgqw42f96ddfbb8vs>
+    <sdc4:ms-quhtguex1ms7x4ghlg0ellk3>
+      <label>Credit Note Type</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-quhtguex1ms7x4ghlg0ellk3>
+  </sdc4:ms-xvda5uvzgqw42f96ddfbb8vs>
+  <sdc4:ms-epmd1tsidl9d5inpx6bzgj97>
+    <sdc4:ms-mnuyvuxqsy0qskx8hiy6epff>
+      <label>Document Status</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-mnuyvuxqsy0qskx8hiy6epff>
+  </sdc4:ms-epmd1tsidl9d5inpx6bzgj97>
+  <sdc4:ms-uhrr3e2qzx8yyt0rnnrtz4t9>
+    <sdc4:ms-c1c7iydc13os47ppwwtwsnum>
+      <label>Line Count</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdcount-value>_PH_</xdcount-value>
+      <xdcount-units>
+        <label>Items</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdcount-units>
+    </sdc4:ms-c1c7iydc13os47ppwwtwsnum>
+  </sdc4:ms-uhrr3e2qzx8yyt0rnnrtz4t9>
+  <sdc4:ms-ifusbvm5bsy2sr827nb50cd7>
+    <sdc4:ms-izmk5n12dei1ocsv7dms9i99>
+      <label>Due Date</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-date>_PH_</xdtemporal-date>
+    </sdc4:ms-izmk5n12dei1ocsv7dms9i99>
+  </sdc4:ms-ifusbvm5bsy2sr827nb50cd7>
+  <sdc4:ms-s7avc24uiao7vsqvjoc2xxq0>
+    <sdc4:ms-tkd16hhh9wbn0qya2ykm0552>
+      <label>Issue Date</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-date>_PH_</xdtemporal-date>
+    </sdc4:ms-tkd16hhh9wbn0qya2ykm0552>
+  </sdc4:ms-s7avc24uiao7vsqvjoc2xxq0>
+  <sdc4:ms-q1u1nttzsb9blnszjdzpgd78>
+    <sdc4:ms-oybfzltffyfioix1zdblxcp3>
+      <label>Issue Time</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-time>_PH_</xdtemporal-time>
+    </sdc4:ms-oybfzltffyfioix1zdblxcp3>
+  </sdc4:ms-q1u1nttzsb9blnszjdzpgd78>
+  <sdc4:ms-y5jn0xguaonwprzdi6iqi8u7>
+    <sdc4:ms-wc6bib746nf7du213xlzousz>
+      <label>Tax Point Date</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-date>_PH_</xdtemporal-date>
+    </sdc4:ms-wc6bib746nf7du213xlzousz>
+  </sdc4:ms-y5jn0xguaonwprzdi6iqi8u7>
+  </sdc4:ms-cu806puv1eksttp9z2wy3ytd>
+  <sdc4:ms-gxndnrq7p8irahxlef9ytakb>
+    <label>Credit Note Lines</label>
+  <sdc4:ms-yko4thjau27yl7bjicqa8hzk>
+    <label>Credit Note Line 1</label>
+  <sdc4:ms-ilnb30g9dumsn2peazfupz95>
+    <label>Credit Note Line</label>
+  <sdc4:ms-gp9qg9erknbjn0quld92syla>
+    <label>Allowance Charge</label>
+  </sdc4:ms-gp9qg9erknbjn0quld92syla>
+  <sdc4:ms-c9trmbywa8czks1lo7tl6wf4>
+    <label>Billing Reference</label>
+  <sdc4:ms-nfzgoofnuo7i47mo0pv6180n>
+    <label>Invoice Document Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-nfzgoofnuo7i47mo0pv6180n>
+  </sdc4:ms-c9trmbywa8czks1lo7tl6wf4>
+  <sdc4:ms-l1irc9h6y2rjq65ayrg1v62o>
+    <label>Despatch Line Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  <sdc4:ms-sy20cw9fbqms6s27gbtlihuz>
+    <sdc4:ms-qnymhn26y7zfy7jav1pi3dqi>
+      <label>Line ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-qnymhn26y7zfy7jav1pi3dqi>
+  </sdc4:ms-sy20cw9fbqms6s27gbtlihuz>
+  <sdc4:ms-f4e2el4je70wv8vjqg50cery>
+    <sdc4:ms-sb5gat3jakjg1j6m78nq79in>
+      <label>Line Status</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-sb5gat3jakjg1j6m78nq79in>
+  </sdc4:ms-f4e2el4je70wv8vjqg50cery>
+  </sdc4:ms-l1irc9h6y2rjq65ayrg1v62o>
+  <sdc4:ms-k6uz3epl9cx9qi82wvqy2x62>
+    <label>Discrepancy Response</label>
+  <sdc4:ms-cffun9m8vxe9x0tpwcaq7th3>
+    <sdc4:ms-bwe98nxxki0ubggnyocrbf81>
+      <label>Discrepancy Description</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-bwe98nxxki0ubggnyocrbf81>
+  </sdc4:ms-cffun9m8vxe9x0tpwcaq7th3>
+  <sdc4:ms-l7txzsc6negljo7vx8r0que7>
+    <sdc4:ms-wqofh61h0u2y7hbh1ago8p0x>
+      <label>Discrepancy Reference ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-wqofh61h0u2y7hbh1ago8p0x>
+  </sdc4:ms-l7txzsc6negljo7vx8r0que7>
+  <sdc4:ms-mleu1ddxfdqvacxo7sk8u6ke>
+    <sdc4:ms-o5flyzualxgjq0t6ohcreefx>
+      <label>Discrepancy Response Code</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-o5flyzualxgjq0t6ohcreefx>
+  </sdc4:ms-mleu1ddxfdqvacxo7sk8u6ke>
+  <sdc4:ms-svbweotwdgoof15q8p4lzbvj>
+    <sdc4:ms-lobcz6jauu9a06dcu09holtm>
+      <label>Discrepancy Effective Date</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-date>_PH_</xdtemporal-date>
+    </sdc4:ms-lobcz6jauu9a06dcu09holtm>
+  </sdc4:ms-svbweotwdgoof15q8p4lzbvj>
+  </sdc4:ms-k6uz3epl9cx9qi82wvqy2x62>
+  <sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+    <label>Invoice Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+  <sdc4:ms-g1mdkay36qkfgmtv4lvsqe4x>
+    <label>Item</label>
+  <sdc4:ms-a80v6wq587y2fbws71tku996>
+    <label>Buyer</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  <sdc4:ms-omtwbnb6cikriuep995i3svd>
+    <sdc4:ms-span8j8v0dghr4rjnit4s5uh>
+      <label>Item Extended ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-span8j8v0dghr4rjnit4s5uh>
+  </sdc4:ms-omtwbnb6cikriuep995i3svd>
+  <sdc4:ms-tqc6djid52nj8j3efiw52q94>
+    <sdc4:ms-db1bt3xlh3m1jpvnmesx480v>
+      <label>Item Identification Value</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-db1bt3xlh3m1jpvnmesx480v>
+  </sdc4:ms-tqc6djid52nj8j3efiw52q94>
+  <sdc4:ms-vl5ouc8p84o6b1mfd3fqvrr2>
+    <sdc4:ms-k84kh4trdynaoi242c268lat>
+      <label>Item Identification Scheme</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-k84kh4trdynaoi242c268lat>
+  </sdc4:ms-vl5ouc8p84o6b1mfd3fqvrr2>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-a80v6wq587y2fbws71tku996>
+  <sdc4:ms-ku29eiis39dbz3td95f2x5ng>
+    <label>Commodity Classification</label>
+  <sdc4:ms-ow1pr8apiyqy2c06ie1hu2ni>
+    <sdc4:ms-lx0s1wl1avkrf61p5j3135bn>
+      <label>Commodity Code</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-lx0s1wl1avkrf61p5j3135bn>
+  </sdc4:ms-ow1pr8apiyqy2c06ie1hu2ni>
+  <sdc4:ms-ebi3f0dokfwun1hwqfnqtdn8>
+    <sdc4:ms-aeu7ruba5it242eejjc653r9>
+      <label>Item Classification Code</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-aeu7ruba5it242eejjc653r9>
+  </sdc4:ms-ebi3f0dokfwun1hwqfnqtdn8>
+  </sdc4:ms-ku29eiis39dbz3td95f2x5ng>
+  <sdc4:ms-mnrjznltm3hkmgtepxraj8ix>
+    <label>Item Dimensions</label>
+  <sdc4:ms-u8me7r8qis816xsxto7m61cc>
+    <sdc4:ms-vl0xhkn7z4gkgq5j2psifiil>
+      <label>Length/Distance</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Length/Distance (SI - Metric)</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-vl0xhkn7z4gkgq5j2psifiil>
+  </sdc4:ms-u8me7r8qis816xsxto7m61cc>
+  <sdc4:ms-m2xcr9r902blg9kzgx703dqp>
+    <sdc4:ms-pkye7oq6g55daxxjtbiwe7uv>
+      <label>Volume</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Volume/Liquid Capacity (SI - Metric)</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-pkye7oq6g55daxxjtbiwe7uv>
+  </sdc4:ms-m2xcr9r902blg9kzgx703dqp>
+  <sdc4:ms-fd49d06mnxni7cpwpil6m1dy>
+    <sdc4:ms-cc2p4vt57qgbdttxkngwhv93>
+      <label>Weight</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Mass/Weight (SI - Metric)</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-cc2p4vt57qgbdttxkngwhv93>
+  </sdc4:ms-fd49d06mnxni7cpwpil6m1dy>
+  </sdc4:ms-mnrjznltm3hkmgtepxraj8ix>
+  <sdc4:ms-u7d337s016i2dotve10nec4c>
+    <label>Manufacturer</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-u7d337s016i2dotve10nec4c>
+  <sdc4:ms-q597i0tjhythg66t0hrgzuny>
+    <label>Seller</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-q597i0tjhythg66t0hrgzuny>
+  <sdc4:ms-y4wy0qhkvx503a4llnzx1fg2>
+    <label>Standard Item Identification</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-y4wy0qhkvx503a4llnzx1fg2>
+  <sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+    <label>Tax Category</label>
+  <sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+    <label>Tax Scheme</label>
+  <sdc4:ms-pws7nq68fp2xy8pjvhtqc2s3>
+    <sdc4:ms-mexx9mfi4rglmgi71nqf37ux>
+      <label>Tax Scheme ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-mexx9mfi4rglmgi71nqf37ux>
+  </sdc4:ms-pws7nq68fp2xy8pjvhtqc2s3>
+  <sdc4:ms-cu10je9x3ad1ip3v8jwfr6aq>
+    <sdc4:ms-g7952fbwz8uh2ig9uidu9877>
+      <label>Tax Scheme Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-g7952fbwz8uh2ig9uidu9877>
+  </sdc4:ms-cu10je9x3ad1ip3v8jwfr6aq>
+  </sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+  <sdc4:ms-djtvfcxu7bigwbv7eznl1y0w>
+    <sdc4:ms-p6c7q343dafqwvcq6m1ffz5i>
+      <label>Tax Category ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-p6c7q343dafqwvcq6m1ffz5i>
+  </sdc4:ms-djtvfcxu7bigwbv7eznl1y0w>
+  <sdc4:ms-t37p0g2cgueam6ywe2zp8iqd>
+    <sdc4:ms-ehh24wvyu4fsa3rbeheft3kj>
+      <label>Tax Category Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-ehh24wvyu4fsa3rbeheft3kj>
+  </sdc4:ms-t37p0g2cgueam6ywe2zp8iqd>
+  <sdc4:ms-l3ue9scta9uq277rtu869kag>
+    <sdc4:ms-v4zn5xtqlkni8qr3ly7e2j1a>
+      <label>Tax Percent</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Percentage</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-v4zn5xtqlkni8qr3ly7e2j1a>
+  </sdc4:ms-l3ue9scta9uq277rtu869kag>
+  </sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+  <sdc4:ms-tk64uu24ea7nmgyyo7bzfntr>
+    <sdc4:ms-z2hiu8mpip80cq23km4fggwr>
+      <label>Brand Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-z2hiu8mpip80cq23km4fggwr>
+  </sdc4:ms-tk64uu24ea7nmgyyo7bzfntr>
+  <sdc4:ms-iyaota3iyct4046302051nzs>
+    <sdc4:ms-k0n1pwt88vd4e97alxtobizg>
+      <label>Item Description</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-k0n1pwt88vd4e97alxtobizg>
+  </sdc4:ms-iyaota3iyct4046302051nzs>
+  <sdc4:ms-wt0e63gbiuwlnp8i57tlxz9i>
+    <sdc4:ms-iz74r6dn6ud4wqb2jsr8b82y>
+      <label>Item Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-iz74r6dn6ud4wqb2jsr8b82y>
+  </sdc4:ms-wt0e63gbiuwlnp8i57tlxz9i>
+  <sdc4:ms-hxcl2rrjrdth6c39alfo7dyz>
+    <sdc4:ms-lgcfrui3pdx1rhceu488rxyy>
+      <label>Model Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-lgcfrui3pdx1rhceu488rxyy>
+  </sdc4:ms-hxcl2rrjrdth6c39alfo7dyz>
+  <sdc4:ms-scahu6mweyw2locx0u6yft5l>
+    <sdc4:ms-reydo3ozx3ie5sit1rfwsoc4>
+      <label>Pack Quantity</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdcount-value>_PH_</xdcount-value>
+      <xdcount-units>
+        <label>Items</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdcount-units>
+    </sdc4:ms-reydo3ozx3ie5sit1rfwsoc4>
+  </sdc4:ms-scahu6mweyw2locx0u6yft5l>
+  <sdc4:ms-otiz3o781jcgcsphq36q6pwv>
+    <sdc4:ms-zf1gwuh6jx7iyy2w0aam4plx>
+      <label>Pack Size</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdcount-value>_PH_</xdcount-value>
+      <xdcount-units>
+        <label>Items</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdcount-units>
+    </sdc4:ms-zf1gwuh6jx7iyy2w0aam4plx>
+  </sdc4:ms-otiz3o781jcgcsphq36q6pwv>
+  </sdc4:ms-g1mdkay36qkfgmtv4lvsqe4x>
+  <sdc4:ms-ed2ps98xb93s24el1z94lx7x>
+    <label>Line Document Reference</label>
+  <sdc4:ms-uk03ahua6zv9d0i5tqq5qzmh>
+    <label>Document Reference</label>
+  </sdc4:ms-uk03ahua6zv9d0i5tqq5qzmh>
+  </sdc4:ms-ed2ps98xb93s24el1z94lx7x>
+  <sdc4:ms-c3qfzlybvce95akizb8gcbtw>
+    <label>Order Line Reference</label>
+  <sdc4:ms-y3yfc0wa2uhywxg9h4ehus1z>
+    <sdc4:ms-vzzejwis0nptpcqf5t5rb9sl>
+      <label>Sales Order Line ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-vzzejwis0nptpcqf5t5rb9sl>
+  </sdc4:ms-y3yfc0wa2uhywxg9h4ehus1z>
+  </sdc4:ms-c3qfzlybvce95akizb8gcbtw>
+  <sdc4:ms-cfyo90kf2i12yi4q6tfz096p>
+    <label>Price</label>
+  <sdc4:ms-nf09mmhkifwsik543zulj8b0>
+    <label>Price Validity Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-nf09mmhkifwsik543zulj8b0>
+  <sdc4:ms-f3mjcwiptd801n8nf434qqxm>
+    <sdc4:ms-n2bk18wxzh5oggb19qgrbo3t>
+      <label>Price Type</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-n2bk18wxzh5oggb19qgrbo3t>
+  </sdc4:ms-f3mjcwiptd801n8nf434qqxm>
+  <sdc4:ms-bg61jdtt3gfwgptnh8l4n2qh>
+    <sdc4:ms-ivmsm0wfok9g4chzb0gryzqy>
+      <label>Base Quantity</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Trade Units</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-ivmsm0wfok9g4chzb0gryzqy>
+  </sdc4:ms-bg61jdtt3gfwgptnh8l4n2qh>
+  <sdc4:ms-s141aty6wckrzmyirh5i0n2h>
+    <sdc4:ms-xmhraye8g23oss82ihfmwjkd>
+      <label>Price Amount</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Currency</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-xmhraye8g23oss82ihfmwjkd>
+  </sdc4:ms-s141aty6wckrzmyirh5i0n2h>
+  </sdc4:ms-cfyo90kf2i12yi4q6tfz096p>
+  <sdc4:ms-wxur4evykjxss5wlhc0pa32e>
+    <label>Receipt Line Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-wxur4evykjxss5wlhc0pa32e>
+  <sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+    <label>Tax Total</label>
+  <sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+    <label>Tax Subtotal</label>
+  <sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+    <label>Tax Category</label>
+  <sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+    <label>Tax Scheme</label>
+  </sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+  </sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+  <sdc4:ms-mn3h6pcpnblaif2eocrytzip>
+    <sdc4:ms-cx5gdd7pofanddbh9yaf53xl>
+      <label>Taxable Amount</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Currency</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-cx5gdd7pofanddbh9yaf53xl>
+  </sdc4:ms-mn3h6pcpnblaif2eocrytzip>
+  <sdc4:ms-kffezf2yyrd2hi9azksuxy23>
+    <sdc4:ms-gi49b158luigt4x2bhhbnux0>
+      <label>Tax Amount</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Currency</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-gi49b158luigt4x2bhhbnux0>
+  </sdc4:ms-kffezf2yyrd2hi9azksuxy23>
+  </sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+  </sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+  <sdc4:ms-a1qkcm070dtnidjc37266k59>
+    <sdc4:ms-ko11zu0n8anavb1ovyib9xyf>
+      <label>Free of Charge</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <true-value>true</true-value>
+    </sdc4:ms-ko11zu0n8anavb1ovyib9xyf>
+  </sdc4:ms-a1qkcm070dtnidjc37266k59>
+  <sdc4:ms-ogfdzhgb0gekfyiu03r69dfc>
+    <sdc4:ms-fyv04qqt334geqxungef4kfi>
+      <label>Credited Quantity</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Trade Units</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-fyv04qqt334geqxungef4kfi>
+  </sdc4:ms-ogfdzhgb0gekfyiu03r69dfc>
+  <sdc4:ms-wgwl9zc7dlwq1i9c74z2c0ck>
+    <sdc4:ms-q2fgdapi4r5d406rbiuuwomp>
+      <label>Line Extension Amount</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Currency</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-q2fgdapi4r5d406rbiuuwomp>
+  </sdc4:ms-wgwl9zc7dlwq1i9c74z2c0ck>
+  <sdc4:ms-zcqbysxum54fjw8flibnlghe>
+    <sdc4:ms-dzsmbbloyp19dbgy6j1maz1q>
+      <label>Tax Inclusive Line Extension Amount</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Currency</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-dzsmbbloyp19dbgy6j1maz1q>
+  </sdc4:ms-zcqbysxum54fjw8flibnlghe>
+  </sdc4:ms-ilnb30g9dumsn2peazfupz95>
+  </sdc4:ms-yko4thjau27yl7bjicqa8hzk>
+  <sdc4:ms-ig8fnfz3voa7pso5x3hyofec>
+    <label>Credit Note Line 10</label>
+  <sdc4:ms-ilnb30g9dumsn2peazfupz95>
+    <label>Credit Note Line</label>
+  <sdc4:ms-gp9qg9erknbjn0quld92syla>
+    <label>Allowance Charge</label>
+  </sdc4:ms-gp9qg9erknbjn0quld92syla>
+  <sdc4:ms-c9trmbywa8czks1lo7tl6wf4>
+    <label>Billing Reference</label>
+  <sdc4:ms-nfzgoofnuo7i47mo0pv6180n>
+    <label>Invoice Document Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-nfzgoofnuo7i47mo0pv6180n>
+  </sdc4:ms-c9trmbywa8czks1lo7tl6wf4>
+  <sdc4:ms-l1irc9h6y2rjq65ayrg1v62o>
+    <label>Despatch Line Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-l1irc9h6y2rjq65ayrg1v62o>
+  <sdc4:ms-k6uz3epl9cx9qi82wvqy2x62>
+    <label>Discrepancy Response</label>
+  </sdc4:ms-k6uz3epl9cx9qi82wvqy2x62>
+  <sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+    <label>Invoice Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+  <sdc4:ms-g1mdkay36qkfgmtv4lvsqe4x>
+    <label>Item</label>
+  <sdc4:ms-a80v6wq587y2fbws71tku996>
+    <label>Buyer</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-a80v6wq587y2fbws71tku996>
+  <sdc4:ms-ku29eiis39dbz3td95f2x5ng>
+    <label>Commodity Classification</label>
+  </sdc4:ms-ku29eiis39dbz3td95f2x5ng>
+  <sdc4:ms-mnrjznltm3hkmgtepxraj8ix>
+    <label>Item Dimensions</label>
+  </sdc4:ms-mnrjznltm3hkmgtepxraj8ix>
+  <sdc4:ms-u7d337s016i2dotve10nec4c>
+    <label>Manufacturer</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-u7d337s016i2dotve10nec4c>
+  <sdc4:ms-q597i0tjhythg66t0hrgzuny>
+    <label>Seller</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-q597i0tjhythg66t0hrgzuny>
+  <sdc4:ms-y4wy0qhkvx503a4llnzx1fg2>
+    <label>Standard Item Identification</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-y4wy0qhkvx503a4llnzx1fg2>
+  <sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+    <label>Tax Category</label>
+  <sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+    <label>Tax Scheme</label>
+  </sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+  </sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+  </sdc4:ms-g1mdkay36qkfgmtv4lvsqe4x>
+  <sdc4:ms-ed2ps98xb93s24el1z94lx7x>
+    <label>Line Document Reference</label>
+  <sdc4:ms-uk03ahua6zv9d0i5tqq5qzmh>
+    <label>Document Reference</label>
+  </sdc4:ms-uk03ahua6zv9d0i5tqq5qzmh>
+  </sdc4:ms-ed2ps98xb93s24el1z94lx7x>
+  <sdc4:ms-c3qfzlybvce95akizb8gcbtw>
+    <label>Order Line Reference</label>
+  </sdc4:ms-c3qfzlybvce95akizb8gcbtw>
+  <sdc4:ms-cfyo90kf2i12yi4q6tfz096p>
+    <label>Price</label>
+  <sdc4:ms-nf09mmhkifwsik543zulj8b0>
+    <label>Price Validity Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-nf09mmhkifwsik543zulj8b0>
+  </sdc4:ms-cfyo90kf2i12yi4q6tfz096p>
+  <sdc4:ms-wxur4evykjxss5wlhc0pa32e>
+    <label>Receipt Line Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-wxur4evykjxss5wlhc0pa32e>
+  <sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+    <label>Tax Total</label>
+  <sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+    <label>Tax Subtotal</label>
+  <sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+    <label>Tax Category</label>
+  <sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+    <label>Tax Scheme</label>
+  </sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+  </sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+  </sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+  </sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+  </sdc4:ms-ilnb30g9dumsn2peazfupz95>
+  </sdc4:ms-ig8fnfz3voa7pso5x3hyofec>
+  <sdc4:ms-fuv8wp3wcvj3rz8g10p2n81c>
+    <label>Credit Note Line 2</label>
+  <sdc4:ms-ilnb30g9dumsn2peazfupz95>
+    <label>Credit Note Line</label>
+  <sdc4:ms-gp9qg9erknbjn0quld92syla>
+    <label>Allowance Charge</label>
+  </sdc4:ms-gp9qg9erknbjn0quld92syla>
+  <sdc4:ms-c9trmbywa8czks1lo7tl6wf4>
+    <label>Billing Reference</label>
+  <sdc4:ms-nfzgoofnuo7i47mo0pv6180n>
+    <label>Invoice Document Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-nfzgoofnuo7i47mo0pv6180n>
+  </sdc4:ms-c9trmbywa8czks1lo7tl6wf4>
+  <sdc4:ms-l1irc9h6y2rjq65ayrg1v62o>
+    <label>Despatch Line Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-l1irc9h6y2rjq65ayrg1v62o>
+  <sdc4:ms-k6uz3epl9cx9qi82wvqy2x62>
+    <label>Discrepancy Response</label>
+  </sdc4:ms-k6uz3epl9cx9qi82wvqy2x62>
+  <sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+    <label>Invoice Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+  <sdc4:ms-g1mdkay36qkfgmtv4lvsqe4x>
+    <label>Item</label>
+  <sdc4:ms-a80v6wq587y2fbws71tku996>
+    <label>Buyer</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-a80v6wq587y2fbws71tku996>
+  <sdc4:ms-ku29eiis39dbz3td95f2x5ng>
+    <label>Commodity Classification</label>
+  </sdc4:ms-ku29eiis39dbz3td95f2x5ng>
+  <sdc4:ms-mnrjznltm3hkmgtepxraj8ix>
+    <label>Item Dimensions</label>
+  </sdc4:ms-mnrjznltm3hkmgtepxraj8ix>
+  <sdc4:ms-u7d337s016i2dotve10nec4c>
+    <label>Manufacturer</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-u7d337s016i2dotve10nec4c>
+  <sdc4:ms-q597i0tjhythg66t0hrgzuny>
+    <label>Seller</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-q597i0tjhythg66t0hrgzuny>
+  <sdc4:ms-y4wy0qhkvx503a4llnzx1fg2>
+    <label>Standard Item Identification</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-y4wy0qhkvx503a4llnzx1fg2>
+  <sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+    <label>Tax Category</label>
+  <sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+    <label>Tax Scheme</label>
+  </sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+  </sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+  </sdc4:ms-g1mdkay36qkfgmtv4lvsqe4x>
+  <sdc4:ms-ed2ps98xb93s24el1z94lx7x>
+    <label>Line Document Reference</label>
+  <sdc4:ms-uk03ahua6zv9d0i5tqq5qzmh>
+    <label>Document Reference</label>
+  </sdc4:ms-uk03ahua6zv9d0i5tqq5qzmh>
+  </sdc4:ms-ed2ps98xb93s24el1z94lx7x>
+  <sdc4:ms-c3qfzlybvce95akizb8gcbtw>
+    <label>Order Line Reference</label>
+  </sdc4:ms-c3qfzlybvce95akizb8gcbtw>
+  <sdc4:ms-cfyo90kf2i12yi4q6tfz096p>
+    <label>Price</label>
+  <sdc4:ms-nf09mmhkifwsik543zulj8b0>
+    <label>Price Validity Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-nf09mmhkifwsik543zulj8b0>
+  </sdc4:ms-cfyo90kf2i12yi4q6tfz096p>
+  <sdc4:ms-wxur4evykjxss5wlhc0pa32e>
+    <label>Receipt Line Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-wxur4evykjxss5wlhc0pa32e>
+  <sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+    <label>Tax Total</label>
+  <sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+    <label>Tax Subtotal</label>
+  <sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+    <label>Tax Category</label>
+  <sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+    <label>Tax Scheme</label>
+  </sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+  </sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+  </sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+  </sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+  </sdc4:ms-ilnb30g9dumsn2peazfupz95>
+  </sdc4:ms-fuv8wp3wcvj3rz8g10p2n81c>
+  <sdc4:ms-n537oz6ujpxcimscrs14x6oo>
+    <label>Credit Note Line 3</label>
+  <sdc4:ms-ilnb30g9dumsn2peazfupz95>
+    <label>Credit Note Line</label>
+  <sdc4:ms-gp9qg9erknbjn0quld92syla>
+    <label>Allowance Charge</label>
+  </sdc4:ms-gp9qg9erknbjn0quld92syla>
+  <sdc4:ms-c9trmbywa8czks1lo7tl6wf4>
+    <label>Billing Reference</label>
+  <sdc4:ms-nfzgoofnuo7i47mo0pv6180n>
+    <label>Invoice Document Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-nfzgoofnuo7i47mo0pv6180n>
+  </sdc4:ms-c9trmbywa8czks1lo7tl6wf4>
+  <sdc4:ms-l1irc9h6y2rjq65ayrg1v62o>
+    <label>Despatch Line Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-l1irc9h6y2rjq65ayrg1v62o>
+  <sdc4:ms-k6uz3epl9cx9qi82wvqy2x62>
+    <label>Discrepancy Response</label>
+  </sdc4:ms-k6uz3epl9cx9qi82wvqy2x62>
+  <sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+    <label>Invoice Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+  <sdc4:ms-g1mdkay36qkfgmtv4lvsqe4x>
+    <label>Item</label>
+  <sdc4:ms-a80v6wq587y2fbws71tku996>
+    <label>Buyer</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-a80v6wq587y2fbws71tku996>
+  <sdc4:ms-ku29eiis39dbz3td95f2x5ng>
+    <label>Commodity Classification</label>
+  </sdc4:ms-ku29eiis39dbz3td95f2x5ng>
+  <sdc4:ms-mnrjznltm3hkmgtepxraj8ix>
+    <label>Item Dimensions</label>
+  </sdc4:ms-mnrjznltm3hkmgtepxraj8ix>
+  <sdc4:ms-u7d337s016i2dotve10nec4c>
+    <label>Manufacturer</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-u7d337s016i2dotve10nec4c>
+  <sdc4:ms-q597i0tjhythg66t0hrgzuny>
+    <label>Seller</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-q597i0tjhythg66t0hrgzuny>
+  <sdc4:ms-y4wy0qhkvx503a4llnzx1fg2>
+    <label>Standard Item Identification</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-y4wy0qhkvx503a4llnzx1fg2>
+  <sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+    <label>Tax Category</label>
+  <sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+    <label>Tax Scheme</label>
+  </sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+  </sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+  </sdc4:ms-g1mdkay36qkfgmtv4lvsqe4x>
+  <sdc4:ms-ed2ps98xb93s24el1z94lx7x>
+    <label>Line Document Reference</label>
+  <sdc4:ms-uk03ahua6zv9d0i5tqq5qzmh>
+    <label>Document Reference</label>
+  </sdc4:ms-uk03ahua6zv9d0i5tqq5qzmh>
+  </sdc4:ms-ed2ps98xb93s24el1z94lx7x>
+  <sdc4:ms-c3qfzlybvce95akizb8gcbtw>
+    <label>Order Line Reference</label>
+  </sdc4:ms-c3qfzlybvce95akizb8gcbtw>
+  <sdc4:ms-cfyo90kf2i12yi4q6tfz096p>
+    <label>Price</label>
+  <sdc4:ms-nf09mmhkifwsik543zulj8b0>
+    <label>Price Validity Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-nf09mmhkifwsik543zulj8b0>
+  </sdc4:ms-cfyo90kf2i12yi4q6tfz096p>
+  <sdc4:ms-wxur4evykjxss5wlhc0pa32e>
+    <label>Receipt Line Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-wxur4evykjxss5wlhc0pa32e>
+  <sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+    <label>Tax Total</label>
+  <sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+    <label>Tax Subtotal</label>
+  <sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+    <label>Tax Category</label>
+  <sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+    <label>Tax Scheme</label>
+  </sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+  </sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+  </sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+  </sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+  </sdc4:ms-ilnb30g9dumsn2peazfupz95>
+  </sdc4:ms-n537oz6ujpxcimscrs14x6oo>
+  <sdc4:ms-te7535l36ak3s8dod85ra7kn>
+    <label>Credit Note Line 4</label>
+  <sdc4:ms-ilnb30g9dumsn2peazfupz95>
+    <label>Credit Note Line</label>
+  <sdc4:ms-gp9qg9erknbjn0quld92syla>
+    <label>Allowance Charge</label>
+  </sdc4:ms-gp9qg9erknbjn0quld92syla>
+  <sdc4:ms-c9trmbywa8czks1lo7tl6wf4>
+    <label>Billing Reference</label>
+  <sdc4:ms-nfzgoofnuo7i47mo0pv6180n>
+    <label>Invoice Document Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-nfzgoofnuo7i47mo0pv6180n>
+  </sdc4:ms-c9trmbywa8czks1lo7tl6wf4>
+  <sdc4:ms-l1irc9h6y2rjq65ayrg1v62o>
+    <label>Despatch Line Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-l1irc9h6y2rjq65ayrg1v62o>
+  <sdc4:ms-k6uz3epl9cx9qi82wvqy2x62>
+    <label>Discrepancy Response</label>
+  </sdc4:ms-k6uz3epl9cx9qi82wvqy2x62>
+  <sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+    <label>Invoice Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+  <sdc4:ms-g1mdkay36qkfgmtv4lvsqe4x>
+    <label>Item</label>
+  <sdc4:ms-a80v6wq587y2fbws71tku996>
+    <label>Buyer</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-a80v6wq587y2fbws71tku996>
+  <sdc4:ms-ku29eiis39dbz3td95f2x5ng>
+    <label>Commodity Classification</label>
+  </sdc4:ms-ku29eiis39dbz3td95f2x5ng>
+  <sdc4:ms-mnrjznltm3hkmgtepxraj8ix>
+    <label>Item Dimensions</label>
+  </sdc4:ms-mnrjznltm3hkmgtepxraj8ix>
+  <sdc4:ms-u7d337s016i2dotve10nec4c>
+    <label>Manufacturer</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-u7d337s016i2dotve10nec4c>
+  <sdc4:ms-q597i0tjhythg66t0hrgzuny>
+    <label>Seller</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-q597i0tjhythg66t0hrgzuny>
+  <sdc4:ms-y4wy0qhkvx503a4llnzx1fg2>
+    <label>Standard Item Identification</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-y4wy0qhkvx503a4llnzx1fg2>
+  <sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+    <label>Tax Category</label>
+  <sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+    <label>Tax Scheme</label>
+  </sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+  </sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+  </sdc4:ms-g1mdkay36qkfgmtv4lvsqe4x>
+  <sdc4:ms-ed2ps98xb93s24el1z94lx7x>
+    <label>Line Document Reference</label>
+  <sdc4:ms-uk03ahua6zv9d0i5tqq5qzmh>
+    <label>Document Reference</label>
+  </sdc4:ms-uk03ahua6zv9d0i5tqq5qzmh>
+  </sdc4:ms-ed2ps98xb93s24el1z94lx7x>
+  <sdc4:ms-c3qfzlybvce95akizb8gcbtw>
+    <label>Order Line Reference</label>
+  </sdc4:ms-c3qfzlybvce95akizb8gcbtw>
+  <sdc4:ms-cfyo90kf2i12yi4q6tfz096p>
+    <label>Price</label>
+  <sdc4:ms-nf09mmhkifwsik543zulj8b0>
+    <label>Price Validity Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-nf09mmhkifwsik543zulj8b0>
+  </sdc4:ms-cfyo90kf2i12yi4q6tfz096p>
+  <sdc4:ms-wxur4evykjxss5wlhc0pa32e>
+    <label>Receipt Line Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-wxur4evykjxss5wlhc0pa32e>
+  <sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+    <label>Tax Total</label>
+  <sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+    <label>Tax Subtotal</label>
+  <sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+    <label>Tax Category</label>
+  <sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+    <label>Tax Scheme</label>
+  </sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+  </sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+  </sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+  </sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+  </sdc4:ms-ilnb30g9dumsn2peazfupz95>
+  </sdc4:ms-te7535l36ak3s8dod85ra7kn>
+  <sdc4:ms-tm2e57ifq68bgq830ds4mm30>
+    <label>Credit Note Line 5</label>
+  <sdc4:ms-ilnb30g9dumsn2peazfupz95>
+    <label>Credit Note Line</label>
+  <sdc4:ms-gp9qg9erknbjn0quld92syla>
+    <label>Allowance Charge</label>
+  </sdc4:ms-gp9qg9erknbjn0quld92syla>
+  <sdc4:ms-c9trmbywa8czks1lo7tl6wf4>
+    <label>Billing Reference</label>
+  <sdc4:ms-nfzgoofnuo7i47mo0pv6180n>
+    <label>Invoice Document Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-nfzgoofnuo7i47mo0pv6180n>
+  </sdc4:ms-c9trmbywa8czks1lo7tl6wf4>
+  <sdc4:ms-l1irc9h6y2rjq65ayrg1v62o>
+    <label>Despatch Line Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-l1irc9h6y2rjq65ayrg1v62o>
+  <sdc4:ms-k6uz3epl9cx9qi82wvqy2x62>
+    <label>Discrepancy Response</label>
+  </sdc4:ms-k6uz3epl9cx9qi82wvqy2x62>
+  <sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+    <label>Invoice Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+  <sdc4:ms-g1mdkay36qkfgmtv4lvsqe4x>
+    <label>Item</label>
+  <sdc4:ms-a80v6wq587y2fbws71tku996>
+    <label>Buyer</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-a80v6wq587y2fbws71tku996>
+  <sdc4:ms-ku29eiis39dbz3td95f2x5ng>
+    <label>Commodity Classification</label>
+  </sdc4:ms-ku29eiis39dbz3td95f2x5ng>
+  <sdc4:ms-mnrjznltm3hkmgtepxraj8ix>
+    <label>Item Dimensions</label>
+  </sdc4:ms-mnrjznltm3hkmgtepxraj8ix>
+  <sdc4:ms-u7d337s016i2dotve10nec4c>
+    <label>Manufacturer</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-u7d337s016i2dotve10nec4c>
+  <sdc4:ms-q597i0tjhythg66t0hrgzuny>
+    <label>Seller</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-q597i0tjhythg66t0hrgzuny>
+  <sdc4:ms-y4wy0qhkvx503a4llnzx1fg2>
+    <label>Standard Item Identification</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-y4wy0qhkvx503a4llnzx1fg2>
+  <sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+    <label>Tax Category</label>
+  <sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+    <label>Tax Scheme</label>
+  </sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+  </sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+  </sdc4:ms-g1mdkay36qkfgmtv4lvsqe4x>
+  <sdc4:ms-ed2ps98xb93s24el1z94lx7x>
+    <label>Line Document Reference</label>
+  <sdc4:ms-uk03ahua6zv9d0i5tqq5qzmh>
+    <label>Document Reference</label>
+  </sdc4:ms-uk03ahua6zv9d0i5tqq5qzmh>
+  </sdc4:ms-ed2ps98xb93s24el1z94lx7x>
+  <sdc4:ms-c3qfzlybvce95akizb8gcbtw>
+    <label>Order Line Reference</label>
+  </sdc4:ms-c3qfzlybvce95akizb8gcbtw>
+  <sdc4:ms-cfyo90kf2i12yi4q6tfz096p>
+    <label>Price</label>
+  <sdc4:ms-nf09mmhkifwsik543zulj8b0>
+    <label>Price Validity Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-nf09mmhkifwsik543zulj8b0>
+  </sdc4:ms-cfyo90kf2i12yi4q6tfz096p>
+  <sdc4:ms-wxur4evykjxss5wlhc0pa32e>
+    <label>Receipt Line Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-wxur4evykjxss5wlhc0pa32e>
+  <sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+    <label>Tax Total</label>
+  <sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+    <label>Tax Subtotal</label>
+  <sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+    <label>Tax Category</label>
+  <sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+    <label>Tax Scheme</label>
+  </sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+  </sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+  </sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+  </sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+  </sdc4:ms-ilnb30g9dumsn2peazfupz95>
+  </sdc4:ms-tm2e57ifq68bgq830ds4mm30>
+  <sdc4:ms-v3x938geu5m2m23ve0tayl44>
+    <label>Credit Note Line 6</label>
+  <sdc4:ms-ilnb30g9dumsn2peazfupz95>
+    <label>Credit Note Line</label>
+  <sdc4:ms-gp9qg9erknbjn0quld92syla>
+    <label>Allowance Charge</label>
+  </sdc4:ms-gp9qg9erknbjn0quld92syla>
+  <sdc4:ms-c9trmbywa8czks1lo7tl6wf4>
+    <label>Billing Reference</label>
+  <sdc4:ms-nfzgoofnuo7i47mo0pv6180n>
+    <label>Invoice Document Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-nfzgoofnuo7i47mo0pv6180n>
+  </sdc4:ms-c9trmbywa8czks1lo7tl6wf4>
+  <sdc4:ms-l1irc9h6y2rjq65ayrg1v62o>
+    <label>Despatch Line Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-l1irc9h6y2rjq65ayrg1v62o>
+  <sdc4:ms-k6uz3epl9cx9qi82wvqy2x62>
+    <label>Discrepancy Response</label>
+  </sdc4:ms-k6uz3epl9cx9qi82wvqy2x62>
+  <sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+    <label>Invoice Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+  <sdc4:ms-g1mdkay36qkfgmtv4lvsqe4x>
+    <label>Item</label>
+  <sdc4:ms-a80v6wq587y2fbws71tku996>
+    <label>Buyer</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-a80v6wq587y2fbws71tku996>
+  <sdc4:ms-ku29eiis39dbz3td95f2x5ng>
+    <label>Commodity Classification</label>
+  </sdc4:ms-ku29eiis39dbz3td95f2x5ng>
+  <sdc4:ms-mnrjznltm3hkmgtepxraj8ix>
+    <label>Item Dimensions</label>
+  </sdc4:ms-mnrjznltm3hkmgtepxraj8ix>
+  <sdc4:ms-u7d337s016i2dotve10nec4c>
+    <label>Manufacturer</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-u7d337s016i2dotve10nec4c>
+  <sdc4:ms-q597i0tjhythg66t0hrgzuny>
+    <label>Seller</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-q597i0tjhythg66t0hrgzuny>
+  <sdc4:ms-y4wy0qhkvx503a4llnzx1fg2>
+    <label>Standard Item Identification</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-y4wy0qhkvx503a4llnzx1fg2>
+  <sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+    <label>Tax Category</label>
+  <sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+    <label>Tax Scheme</label>
+  </sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+  </sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+  </sdc4:ms-g1mdkay36qkfgmtv4lvsqe4x>
+  <sdc4:ms-ed2ps98xb93s24el1z94lx7x>
+    <label>Line Document Reference</label>
+  <sdc4:ms-uk03ahua6zv9d0i5tqq5qzmh>
+    <label>Document Reference</label>
+  </sdc4:ms-uk03ahua6zv9d0i5tqq5qzmh>
+  </sdc4:ms-ed2ps98xb93s24el1z94lx7x>
+  <sdc4:ms-c3qfzlybvce95akizb8gcbtw>
+    <label>Order Line Reference</label>
+  </sdc4:ms-c3qfzlybvce95akizb8gcbtw>
+  <sdc4:ms-cfyo90kf2i12yi4q6tfz096p>
+    <label>Price</label>
+  <sdc4:ms-nf09mmhkifwsik543zulj8b0>
+    <label>Price Validity Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-nf09mmhkifwsik543zulj8b0>
+  </sdc4:ms-cfyo90kf2i12yi4q6tfz096p>
+  <sdc4:ms-wxur4evykjxss5wlhc0pa32e>
+    <label>Receipt Line Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-wxur4evykjxss5wlhc0pa32e>
+  <sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+    <label>Tax Total</label>
+  <sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+    <label>Tax Subtotal</label>
+  <sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+    <label>Tax Category</label>
+  <sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+    <label>Tax Scheme</label>
+  </sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+  </sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+  </sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+  </sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+  </sdc4:ms-ilnb30g9dumsn2peazfupz95>
+  </sdc4:ms-v3x938geu5m2m23ve0tayl44>
+  <sdc4:ms-ygxs4x747fplwzv0ecvtitl3>
+    <label>Credit Note Line 7</label>
+  <sdc4:ms-ilnb30g9dumsn2peazfupz95>
+    <label>Credit Note Line</label>
+  <sdc4:ms-gp9qg9erknbjn0quld92syla>
+    <label>Allowance Charge</label>
+  </sdc4:ms-gp9qg9erknbjn0quld92syla>
+  <sdc4:ms-c9trmbywa8czks1lo7tl6wf4>
+    <label>Billing Reference</label>
+  <sdc4:ms-nfzgoofnuo7i47mo0pv6180n>
+    <label>Invoice Document Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-nfzgoofnuo7i47mo0pv6180n>
+  </sdc4:ms-c9trmbywa8czks1lo7tl6wf4>
+  <sdc4:ms-l1irc9h6y2rjq65ayrg1v62o>
+    <label>Despatch Line Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-l1irc9h6y2rjq65ayrg1v62o>
+  <sdc4:ms-k6uz3epl9cx9qi82wvqy2x62>
+    <label>Discrepancy Response</label>
+  </sdc4:ms-k6uz3epl9cx9qi82wvqy2x62>
+  <sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+    <label>Invoice Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+  <sdc4:ms-g1mdkay36qkfgmtv4lvsqe4x>
+    <label>Item</label>
+  <sdc4:ms-a80v6wq587y2fbws71tku996>
+    <label>Buyer</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-a80v6wq587y2fbws71tku996>
+  <sdc4:ms-ku29eiis39dbz3td95f2x5ng>
+    <label>Commodity Classification</label>
+  </sdc4:ms-ku29eiis39dbz3td95f2x5ng>
+  <sdc4:ms-mnrjznltm3hkmgtepxraj8ix>
+    <label>Item Dimensions</label>
+  </sdc4:ms-mnrjznltm3hkmgtepxraj8ix>
+  <sdc4:ms-u7d337s016i2dotve10nec4c>
+    <label>Manufacturer</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-u7d337s016i2dotve10nec4c>
+  <sdc4:ms-q597i0tjhythg66t0hrgzuny>
+    <label>Seller</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-q597i0tjhythg66t0hrgzuny>
+  <sdc4:ms-y4wy0qhkvx503a4llnzx1fg2>
+    <label>Standard Item Identification</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-y4wy0qhkvx503a4llnzx1fg2>
+  <sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+    <label>Tax Category</label>
+  <sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+    <label>Tax Scheme</label>
+  </sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+  </sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+  </sdc4:ms-g1mdkay36qkfgmtv4lvsqe4x>
+  <sdc4:ms-ed2ps98xb93s24el1z94lx7x>
+    <label>Line Document Reference</label>
+  <sdc4:ms-uk03ahua6zv9d0i5tqq5qzmh>
+    <label>Document Reference</label>
+  </sdc4:ms-uk03ahua6zv9d0i5tqq5qzmh>
+  </sdc4:ms-ed2ps98xb93s24el1z94lx7x>
+  <sdc4:ms-c3qfzlybvce95akizb8gcbtw>
+    <label>Order Line Reference</label>
+  </sdc4:ms-c3qfzlybvce95akizb8gcbtw>
+  <sdc4:ms-cfyo90kf2i12yi4q6tfz096p>
+    <label>Price</label>
+  <sdc4:ms-nf09mmhkifwsik543zulj8b0>
+    <label>Price Validity Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-nf09mmhkifwsik543zulj8b0>
+  </sdc4:ms-cfyo90kf2i12yi4q6tfz096p>
+  <sdc4:ms-wxur4evykjxss5wlhc0pa32e>
+    <label>Receipt Line Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-wxur4evykjxss5wlhc0pa32e>
+  <sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+    <label>Tax Total</label>
+  <sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+    <label>Tax Subtotal</label>
+  <sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+    <label>Tax Category</label>
+  <sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+    <label>Tax Scheme</label>
+  </sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+  </sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+  </sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+  </sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+  </sdc4:ms-ilnb30g9dumsn2peazfupz95>
+  </sdc4:ms-ygxs4x747fplwzv0ecvtitl3>
+  <sdc4:ms-lkmt38ckbokv2ihxn7gn4h2y>
+    <label>Credit Note Line 8</label>
+  <sdc4:ms-ilnb30g9dumsn2peazfupz95>
+    <label>Credit Note Line</label>
+  <sdc4:ms-gp9qg9erknbjn0quld92syla>
+    <label>Allowance Charge</label>
+  </sdc4:ms-gp9qg9erknbjn0quld92syla>
+  <sdc4:ms-c9trmbywa8czks1lo7tl6wf4>
+    <label>Billing Reference</label>
+  <sdc4:ms-nfzgoofnuo7i47mo0pv6180n>
+    <label>Invoice Document Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-nfzgoofnuo7i47mo0pv6180n>
+  </sdc4:ms-c9trmbywa8czks1lo7tl6wf4>
+  <sdc4:ms-l1irc9h6y2rjq65ayrg1v62o>
+    <label>Despatch Line Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-l1irc9h6y2rjq65ayrg1v62o>
+  <sdc4:ms-k6uz3epl9cx9qi82wvqy2x62>
+    <label>Discrepancy Response</label>
+  </sdc4:ms-k6uz3epl9cx9qi82wvqy2x62>
+  <sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+    <label>Invoice Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+  <sdc4:ms-g1mdkay36qkfgmtv4lvsqe4x>
+    <label>Item</label>
+  <sdc4:ms-a80v6wq587y2fbws71tku996>
+    <label>Buyer</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-a80v6wq587y2fbws71tku996>
+  <sdc4:ms-ku29eiis39dbz3td95f2x5ng>
+    <label>Commodity Classification</label>
+  </sdc4:ms-ku29eiis39dbz3td95f2x5ng>
+  <sdc4:ms-mnrjznltm3hkmgtepxraj8ix>
+    <label>Item Dimensions</label>
+  </sdc4:ms-mnrjznltm3hkmgtepxraj8ix>
+  <sdc4:ms-u7d337s016i2dotve10nec4c>
+    <label>Manufacturer</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-u7d337s016i2dotve10nec4c>
+  <sdc4:ms-q597i0tjhythg66t0hrgzuny>
+    <label>Seller</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-q597i0tjhythg66t0hrgzuny>
+  <sdc4:ms-y4wy0qhkvx503a4llnzx1fg2>
+    <label>Standard Item Identification</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-y4wy0qhkvx503a4llnzx1fg2>
+  <sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+    <label>Tax Category</label>
+  <sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+    <label>Tax Scheme</label>
+  </sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+  </sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+  </sdc4:ms-g1mdkay36qkfgmtv4lvsqe4x>
+  <sdc4:ms-ed2ps98xb93s24el1z94lx7x>
+    <label>Line Document Reference</label>
+  <sdc4:ms-uk03ahua6zv9d0i5tqq5qzmh>
+    <label>Document Reference</label>
+  </sdc4:ms-uk03ahua6zv9d0i5tqq5qzmh>
+  </sdc4:ms-ed2ps98xb93s24el1z94lx7x>
+  <sdc4:ms-c3qfzlybvce95akizb8gcbtw>
+    <label>Order Line Reference</label>
+  </sdc4:ms-c3qfzlybvce95akizb8gcbtw>
+  <sdc4:ms-cfyo90kf2i12yi4q6tfz096p>
+    <label>Price</label>
+  <sdc4:ms-nf09mmhkifwsik543zulj8b0>
+    <label>Price Validity Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-nf09mmhkifwsik543zulj8b0>
+  </sdc4:ms-cfyo90kf2i12yi4q6tfz096p>
+  <sdc4:ms-wxur4evykjxss5wlhc0pa32e>
+    <label>Receipt Line Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-wxur4evykjxss5wlhc0pa32e>
+  <sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+    <label>Tax Total</label>
+  <sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+    <label>Tax Subtotal</label>
+  <sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+    <label>Tax Category</label>
+  <sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+    <label>Tax Scheme</label>
+  </sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+  </sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+  </sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+  </sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+  </sdc4:ms-ilnb30g9dumsn2peazfupz95>
+  </sdc4:ms-lkmt38ckbokv2ihxn7gn4h2y>
+  <sdc4:ms-w6n9k323img7a2n6a9pwki96>
+    <label>Credit Note Line 9</label>
+  <sdc4:ms-ilnb30g9dumsn2peazfupz95>
+    <label>Credit Note Line</label>
+  <sdc4:ms-gp9qg9erknbjn0quld92syla>
+    <label>Allowance Charge</label>
+  </sdc4:ms-gp9qg9erknbjn0quld92syla>
+  <sdc4:ms-c9trmbywa8czks1lo7tl6wf4>
+    <label>Billing Reference</label>
+  <sdc4:ms-nfzgoofnuo7i47mo0pv6180n>
+    <label>Invoice Document Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-nfzgoofnuo7i47mo0pv6180n>
+  </sdc4:ms-c9trmbywa8czks1lo7tl6wf4>
+  <sdc4:ms-l1irc9h6y2rjq65ayrg1v62o>
+    <label>Despatch Line Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-l1irc9h6y2rjq65ayrg1v62o>
+  <sdc4:ms-k6uz3epl9cx9qi82wvqy2x62>
+    <label>Discrepancy Response</label>
+  </sdc4:ms-k6uz3epl9cx9qi82wvqy2x62>
+  <sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+    <label>Invoice Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+  <sdc4:ms-g1mdkay36qkfgmtv4lvsqe4x>
+    <label>Item</label>
+  <sdc4:ms-a80v6wq587y2fbws71tku996>
+    <label>Buyer</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-a80v6wq587y2fbws71tku996>
+  <sdc4:ms-ku29eiis39dbz3td95f2x5ng>
+    <label>Commodity Classification</label>
+  </sdc4:ms-ku29eiis39dbz3td95f2x5ng>
+  <sdc4:ms-mnrjznltm3hkmgtepxraj8ix>
+    <label>Item Dimensions</label>
+  </sdc4:ms-mnrjznltm3hkmgtepxraj8ix>
+  <sdc4:ms-u7d337s016i2dotve10nec4c>
+    <label>Manufacturer</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-u7d337s016i2dotve10nec4c>
+  <sdc4:ms-q597i0tjhythg66t0hrgzuny>
+    <label>Seller</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-q597i0tjhythg66t0hrgzuny>
+  <sdc4:ms-y4wy0qhkvx503a4llnzx1fg2>
+    <label>Standard Item Identification</label>
+  <sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+    <label>Item Identification</label>
+  </sdc4:ms-cqqaghmjayj4vo9qv1xv2ezv>
+  </sdc4:ms-y4wy0qhkvx503a4llnzx1fg2>
+  <sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+    <label>Tax Category</label>
+  <sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+    <label>Tax Scheme</label>
+  </sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+  </sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+  </sdc4:ms-g1mdkay36qkfgmtv4lvsqe4x>
+  <sdc4:ms-ed2ps98xb93s24el1z94lx7x>
+    <label>Line Document Reference</label>
+  <sdc4:ms-uk03ahua6zv9d0i5tqq5qzmh>
+    <label>Document Reference</label>
+  </sdc4:ms-uk03ahua6zv9d0i5tqq5qzmh>
+  </sdc4:ms-ed2ps98xb93s24el1z94lx7x>
+  <sdc4:ms-c3qfzlybvce95akizb8gcbtw>
+    <label>Order Line Reference</label>
+  </sdc4:ms-c3qfzlybvce95akizb8gcbtw>
+  <sdc4:ms-cfyo90kf2i12yi4q6tfz096p>
+    <label>Price</label>
+  <sdc4:ms-nf09mmhkifwsik543zulj8b0>
+    <label>Price Validity Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-nf09mmhkifwsik543zulj8b0>
+  </sdc4:ms-cfyo90kf2i12yi4q6tfz096p>
+  <sdc4:ms-wxur4evykjxss5wlhc0pa32e>
+    <label>Receipt Line Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-wxur4evykjxss5wlhc0pa32e>
+  <sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+    <label>Tax Total</label>
+  <sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+    <label>Tax Subtotal</label>
+  <sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+    <label>Tax Category</label>
+  <sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+    <label>Tax Scheme</label>
+  </sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+  </sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+  </sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+  </sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+  </sdc4:ms-ilnb30g9dumsn2peazfupz95>
+  </sdc4:ms-w6n9k323img7a2n6a9pwki96>
+  </sdc4:ms-gxndnrq7p8irahxlef9ytakb>
+  <sdc4:ms-sy3rqkwaui6b7gfjbqxb15wt>
+    <label>Delivery</label>
+  <sdc4:ms-p4s8c066xzhex2ibiy6nwv4r>
+    <label>Delivery Location</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  <sdc4:ms-ssorswtsz2g7zfvoob75ksza>
+    <sdc4:ms-lpixlk20bads9j3ggtte22px>
+      <label>Delivery Location ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-lpixlk20bads9j3ggtte22px>
+  </sdc4:ms-ssorswtsz2g7zfvoob75ksza>
+  <sdc4:ms-nwwuwlyygva4raa115o48vjo>
+    <sdc4:ms-ude1r385xvd2002r5h851vwk>
+      <label>Delivery Location Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-ude1r385xvd2002r5h851vwk>
+  </sdc4:ms-nwwuwlyygva4raa115o48vjo>
+  </sdc4:ms-p4s8c066xzhex2ibiy6nwv4r>
+  <sdc4:ms-j5s0gw9dabkpb7hc8r0wiu8o>
+    <label>Delivery Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-j5s0gw9dabkpb7hc8r0wiu8o>
+  <sdc4:ms-oyxla2t2d4hxnbqwhchvjcyf>
+    <label>Requested Delivery Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-oyxla2t2d4hxnbqwhchvjcyf>
+  <sdc4:ms-smz7muy7l3ffwcgvd0zcmedu>
+    <sdc4:ms-xxnvc50tm2l6hqejitd5lalh>
+      <label>Delivery ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-xxnvc50tm2l6hqejitd5lalh>
+  </sdc4:ms-smz7muy7l3ffwcgvd0zcmedu>
+  <sdc4:ms-wctakdib938yao66p1qmn5e7>
+    <sdc4:ms-mgt29p1un237uma77q8ay8or>
+      <label>Delivery Quantity</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Trade Units</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-mgt29p1un237uma77q8ay8or>
+  </sdc4:ms-wctakdib938yao66p1qmn5e7>
+  <sdc4:ms-die5dtjctbn0x6me70fhtxmq>
+    <sdc4:ms-z180eu0o81qv2cfgjejo5unw>
+      <label>Latest Delivery Date</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-date>_PH_</xdtemporal-date>
+    </sdc4:ms-z180eu0o81qv2cfgjejo5unw>
+  </sdc4:ms-die5dtjctbn0x6me70fhtxmq>
+  </sdc4:ms-sy3rqkwaui6b7gfjbqxb15wt>
+  <sdc4:ms-u9i76tpl2wkhlbncvcayuo1r>
+    <label>Delivery Terms</label>
+  <sdc4:ms-p4s8c066xzhex2ibiy6nwv4r>
+    <label>Delivery Location</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-p4s8c066xzhex2ibiy6nwv4r>
+  <sdc4:ms-gwe7rso7y1n3hm8n2dvd0yjz>
+    <sdc4:ms-pfag6soto6wul7frsg8bt8rv>
+      <label>Delivery Special Terms</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-pfag6soto6wul7frsg8bt8rv>
+  </sdc4:ms-gwe7rso7y1n3hm8n2dvd0yjz>
+  <sdc4:ms-niieu8fdv2i2qh4y90bo6twd>
+    <sdc4:ms-w8xglen3ypxximnzzjzsvm5u>
+      <label>Delivery Terms Code</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-w8xglen3ypxximnzzjzsvm5u>
+  </sdc4:ms-niieu8fdv2i2qh4y90bo6twd>
+  </sdc4:ms-u9i76tpl2wkhlbncvcayuo1r>
+  <sdc4:ms-ulo971f5gnqane7k9pd5iog3>
+    <label>Despatch Document Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-ulo971f5gnqane7k9pd5iog3>
+  <sdc4:ms-k6uz3epl9cx9qi82wvqy2x62>
+    <label>Discrepancy Response</label>
+  </sdc4:ms-k6uz3epl9cx9qi82wvqy2x62>
+  <sdc4:ms-aqajprszm8ykn1u919442rpw>
+    <label>Legal Monetary Total</label>
+  <sdc4:ms-vpnbpfs1t6vezvmlt00ctmxm>
+    <sdc4:ms-imolx6ui92t4lv1ise4tue7b>
+      <label>Allowance Total Amount</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Currency</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-imolx6ui92t4lv1ise4tue7b>
+  </sdc4:ms-vpnbpfs1t6vezvmlt00ctmxm>
+  <sdc4:ms-esdocm44afng4qn0dzy97v92>
+    <sdc4:ms-akme82vh7v2fvgnrht228b5h>
+      <label>Charge Total Amount</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Currency</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-akme82vh7v2fvgnrht228b5h>
+  </sdc4:ms-esdocm44afng4qn0dzy97v92>
+  <sdc4:ms-ewlm2n408m8kxmwzhf5d1he2>
+    <sdc4:ms-zoqvpnsbbfcs2ma5ah6srf27>
+      <label>Line Extension Total Amount</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Currency</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-zoqvpnsbbfcs2ma5ah6srf27>
+  </sdc4:ms-ewlm2n408m8kxmwzhf5d1he2>
+  <sdc4:ms-aj0uh7ma0349wlymsxkateh7>
+    <sdc4:ms-axifzu4nt8m8n4qpfn838yy8>
+      <label>Payable Amount</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Currency</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-axifzu4nt8m8n4qpfn838yy8>
+  </sdc4:ms-aj0uh7ma0349wlymsxkateh7>
+  <sdc4:ms-no1rbnm9fucazjsff73a9n76>
+    <sdc4:ms-dj7znans3l4hdl28mux0vc5s>
+      <label>Payable Rounding Amount</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Currency</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-dj7znans3l4hdl28mux0vc5s>
+  </sdc4:ms-no1rbnm9fucazjsff73a9n76>
+  <sdc4:ms-pgmsi0b38zfwjf18sd7avk71>
+    <sdc4:ms-oeoory19276gd0hy5m521d8p>
+      <label>Prepaid Amount</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Currency</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-oeoory19276gd0hy5m521d8p>
+  </sdc4:ms-pgmsi0b38zfwjf18sd7avk71>
+  <sdc4:ms-k2unnu8h69lwm1kqedhalhu5>
+    <sdc4:ms-fddz3gxz8pjvgxmymmma54jp>
+      <label>Tax Exclusive Amount</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Currency</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-fddz3gxz8pjvgxmymmma54jp>
+  </sdc4:ms-k2unnu8h69lwm1kqedhalhu5>
+  <sdc4:ms-rm74febcvxr2pr0j5u5yvaow>
+    <sdc4:ms-oqk5mad2efz8sg444h8pis0e>
+      <label>Tax Inclusive Amount</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Currency</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-oqk5mad2efz8sg444h8pis0e>
+  </sdc4:ms-rm74febcvxr2pr0j5u5yvaow>
+  </sdc4:ms-aqajprszm8ykn1u919442rpw>
+  <sdc4:ms-zj2hjn6wx3dfa0h5vlzeexhw>
+    <label>Order Reference</label>
+  <sdc4:ms-jt0sjviikpk1shux6xsq839c>
+    <sdc4:ms-wtnd4hzyrntlwtp4z3l1gcpr>
+      <label>Order ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-wtnd4hzyrntlwtp4z3l1gcpr>
+  </sdc4:ms-jt0sjviikpk1shux6xsq839c>
+  <sdc4:ms-yawjqsq0umyk2jmfxbnb4w19>
+    <sdc4:ms-mllhwxhu0zvxhwt32em2t821>
+      <label>Sales Order ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-mllhwxhu0zvxhwt32em2t821>
+  </sdc4:ms-yawjqsq0umyk2jmfxbnb4w19>
+  <sdc4:ms-nrof7p2oc3pzwuimxznlbh1f>
+    <sdc4:ms-q9k20amngqerxvhpvhwn9t3q>
+      <label>Order Type</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-q9k20amngqerxvhpvhwn9t3q>
+  </sdc4:ms-nrof7p2oc3pzwuimxznlbh1f>
+  </sdc4:ms-zj2hjn6wx3dfa0h5vlzeexhw>
+  <sdc4:ms-fzqzhzcv7z3plh5c3n90m4e9>
+    <label>Originator Document Reference</label>
+  <sdc4:ms-uk03ahua6zv9d0i5tqq5qzmh>
+    <label>Document Reference</label>
+  </sdc4:ms-uk03ahua6zv9d0i5tqq5qzmh>
+  </sdc4:ms-fzqzhzcv7z3plh5c3n90m4e9>
+  <sdc4:ms-anpufgp9b2pqetblqffkfggy>
+    <label>Payee Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-anpufgp9b2pqetblqffkfggy>
+  <sdc4:ms-pnpbq6767i7i05afp648yhdd>
+    <label>Payment Means Instruction</label>
+  <sdc4:ms-eypy118xrs2j6i6a9x7ox6x1>
+    <sdc4:ms-pv15bnowaxjtczx4wx4vit4d>
+      <label>Payment Means</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-pv15bnowaxjtczx4wx4vit4d>
+  </sdc4:ms-eypy118xrs2j6i6a9x7ox6x1>
+  <sdc4:ms-vft2wpeny3khc2whtji4qve5>
+    <sdc4:ms-iw79shpxfxnmiueutlhubpr2>
+      <label>Payment Due Date</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-date>_PH_</xdtemporal-date>
+    </sdc4:ms-iw79shpxfxnmiueutlhubpr2>
+  </sdc4:ms-vft2wpeny3khc2whtji4qve5>
+  </sdc4:ms-pnpbq6767i7i05afp648yhdd>
+  <sdc4:ms-jje6lh4symzgvm04292t44o2>
+    <label>Payment Terms</label>
+  <sdc4:ms-e01bi01ugxeef1gqc5litkki>
+    <label>Settlement Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-e01bi01ugxeef1gqc5litkki>
+  <sdc4:ms-anqkfbafiy7an37fug3a2n2p>
+    <sdc4:ms-q439xnetx63djdu56tw5e0jm>
+      <label>Payment Terms ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-q439xnetx63djdu56tw5e0jm>
+  </sdc4:ms-anqkfbafiy7an37fug3a2n2p>
+  <sdc4:ms-y6dnrrmhqbupqz57myt0pxnu>
+    <sdc4:ms-erekzvcx8ierm1tneaiuv109>
+      <label>Penalty Surcharge Percent</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Percentage</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-erekzvcx8ierm1tneaiuv109>
+  </sdc4:ms-y6dnrrmhqbupqz57myt0pxnu>
+  <sdc4:ms-wb1hkrbvvn000c63be4x9ww4>
+    <sdc4:ms-ng30ck36wgei6bmx79qxy3xm>
+      <label>Settlement Discount Percent</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Percentage</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-ng30ck36wgei6bmx79qxy3xm>
+  </sdc4:ms-wb1hkrbvvn000c63be4x9ww4>
+  </sdc4:ms-jje6lh4symzgvm04292t44o2>
+  <sdc4:ms-qhpvwltqz9t7ruv372qp7u5o>
+    <label>Receipt Document Reference</label>
+  <sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+    <label>Document Reference</label>
+  </sdc4:ms-ouhl662e9dzv99ng02kotdsx>
+  </sdc4:ms-qhpvwltqz9t7ruv372qp7u5o>
+  <sdc4:ms-xkkk5vyegpy4xdig8vnabstc>
+    <label>Seller Supplier Party</label>
+  <sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+    <label>Supplier Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+  </sdc4:ms-xkkk5vyegpy4xdig8vnabstc>
+  <sdc4:ms-fmybhv0a3jnnca8z2z73yuoq>
+    <label>Tax Representative Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-fmybhv0a3jnnca8z2z73yuoq>
+  <sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+    <label>Tax Total</label>
+  <sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+    <label>Tax Subtotal</label>
+  <sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+    <label>Tax Category</label>
+  <sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+    <label>Tax Scheme</label>
+  </sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+  </sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+  </sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+  </sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+  <sdc4:ms-vbhwnih68qljrm0xff5cm6b5>
+    <label>Withholding Tax Total</label>
+  <sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+    <label>Tax Total</label>
+  <sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+    <label>Tax Subtotal</label>
+  <sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+    <label>Tax Category</label>
+  <sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+    <label>Tax Scheme</label>
+  </sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+  </sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+  </sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+  </sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+  </sdc4:ms-vbhwnih68qljrm0xff5cm6b5>
+  </sdc4:ms-vkn71t5d3juhuwqg61cszc1m>
+  <sdc4:ms-vmikfu0irht9fmq7q02t3oqs>
+    <label>PROV Activity</label>
+  <sdc4:ms-vycps7awt38y25jhnrr4okxt>
+    <sdc4:ms-hhusuzzig19rs46ngz23k5g7>
+      <label>Activity Description</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-hhusuzzig19rs46ngz23k5g7>
+  </sdc4:ms-vycps7awt38y25jhnrr4okxt>
+  <sdc4:ms-o9p6k7c9ie20j5du0jmd3749>
+    <sdc4:ms-wr06h54xqqw2q9id8i9673jy>
+      <label>Activity Identifier</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-wr06h54xqqw2q9id8i9673jy>
+  </sdc4:ms-o9p6k7c9ie20j5du0jmd3749>
+  <sdc4:ms-o0qu77y6w4lwvu2qhms3ilbw>
+    <sdc4:ms-r6hkunjm2q0hlxiknlc9ljix>
+      <label>Activity Label</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-r6hkunjm2q0hlxiknlc9ljix>
+  </sdc4:ms-o0qu77y6w4lwvu2qhms3ilbw>
+  <sdc4:ms-rat798vb1tfxjuf56sqrvtty>
+    <sdc4:ms-uzai5uey5p1fnn9ezj9u6vor>
+      <label>Activity Location</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-uzai5uey5p1fnn9ezj9u6vor>
+  </sdc4:ms-rat798vb1tfxjuf56sqrvtty>
+  <sdc4:ms-qeu9jq1owxxh2woqo1f7m8jk>
+    <sdc4:ms-jjzmhdxvbt97pq81iwqubtxk>
+      <label>Activity Type</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-jjzmhdxvbt97pq81iwqubtxk>
+  </sdc4:ms-qeu9jq1owxxh2woqo1f7m8jk>
+  <sdc4:ms-jwvcklvakotmdztpikyodwkx>
+    <sdc4:ms-xlgjqdpwdbn2re3mdh5yy2rk>
+      <label>Error Message</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-xlgjqdpwdbn2re3mdh5yy2rk>
+  </sdc4:ms-jwvcklvakotmdztpikyodwkx>
+  <sdc4:ms-r48fyfvuhl62i5yihku0hws1>
+    <sdc4:ms-vhezo2cckpe92x4c3j2memeh>
+      <label>Had Plan Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-vhezo2cckpe92x4c3j2memeh>
+  </sdc4:ms-r48fyfvuhl62i5yihku0hws1>
+  <sdc4:ms-mjj6mlhqgzcprfwuwnhu5npz>
+    <sdc4:ms-t0whhrqtnb54te4mk48i1ooj>
+      <label>Used Entity Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-t0whhrqtnb54te4mk48i1ooj>
+  </sdc4:ms-mjj6mlhqgzcprfwuwnhu5npz>
+  <sdc4:ms-in4ct2aoguzdvzg4mlsmsxfd>
+    <sdc4:ms-r48alj7hc3797qfjnf2uj71n>
+      <label>Was Associated With Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-r48alj7hc3797qfjnf2uj71n>
+  </sdc4:ms-in4ct2aoguzdvzg4mlsmsxfd>
+  <sdc4:ms-k87dda72y8upko7dnrcs425s>
+    <sdc4:ms-ueb5g1ojzlwwt0mnds5zb6wl>
+      <label>Was Ended By Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-ueb5g1ojzlwwt0mnds5zb6wl>
+  </sdc4:ms-k87dda72y8upko7dnrcs425s>
+  <sdc4:ms-eeyxfka9q0b81swhc0cpvd1l>
+    <sdc4:ms-qh84jdzp1kxt85aq4ilo0svk>
+      <label>Was Informed By Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-qh84jdzp1kxt85aq4ilo0svk>
+  </sdc4:ms-eeyxfka9q0b81swhc0cpvd1l>
+  <sdc4:ms-vmiyaznvvl2jw19cyv414jj3>
+    <sdc4:ms-ginfqbk7q59ld2r4us8sjnv1>
+      <label>Was Started By Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-ginfqbk7q59ld2r4us8sjnv1>
+  </sdc4:ms-vmiyaznvvl2jw19cyv414jj3>
+  <sdc4:ms-q4rwxzoldz452g7rbii2an1h>
+    <sdc4:ms-wl6j4ekcmu4hvt2m12zw4zp8>
+      <label>Activity Status</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-wl6j4ekcmu4hvt2m12zw4zp8>
+  </sdc4:ms-q4rwxzoldz452g7rbii2an1h>
+  <sdc4:ms-xiy4gn6vievei3614sso5vmk>
+    <sdc4:ms-a5scyosu6j84vz350mqyrzl2>
+      <label>Ended At</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-datetime>_PH_</xdtemporal-datetime>
+    </sdc4:ms-a5scyosu6j84vz350mqyrzl2>
+  </sdc4:ms-xiy4gn6vievei3614sso5vmk>
+  <sdc4:ms-vzyuqpkegby4er3pw12gxw2c>
+    <sdc4:ms-sa4nl1kbpdr842fkucvfjkpq>
+      <label>Started At</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-datetime>_PH_</xdtemporal-datetime>
+    </sdc4:ms-sa4nl1kbpdr842fkucvfjkpq>
+  </sdc4:ms-vzyuqpkegby4er3pw12gxw2c>
+  </sdc4:ms-vmikfu0irht9fmq7q02t3oqs>
+  <sdc4:ms-c179ilk2ns15cd5rzzdfd6f6>
+    <label>PROV Agent</label>
+  <sdc4:ms-j9gccgohqlb59l1t37doseiq>
+    <sdc4:ms-og08xf6bu928uuz6t3y0e23f>
+      <label>Acted On Behalf Of Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-og08xf6bu928uuz6t3y0e23f>
+  </sdc4:ms-j9gccgohqlb59l1t37doseiq>
+  <sdc4:ms-px1s852i5pfng3v0ikk6fw4m>
+    <sdc4:ms-gb78cmuyo72hqs5apymdki7l>
+      <label>Agent Description</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-gb78cmuyo72hqs5apymdki7l>
+  </sdc4:ms-px1s852i5pfng3v0ikk6fw4m>
+  <sdc4:ms-wi324lr48j1pzugpnw17p87m>
+    <sdc4:ms-qb90a0sp9vvb6c5cbcf236ys>
+      <label>Agent Email</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-qb90a0sp9vvb6c5cbcf236ys>
+  </sdc4:ms-wi324lr48j1pzugpnw17p87m>
+  <sdc4:ms-qfmes86biux1nl7gbaowsgc4>
+    <sdc4:ms-w2ruemcfy35rw60jl1t9dew2>
+      <label>Agent Identifier</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-w2ruemcfy35rw60jl1t9dew2>
+  </sdc4:ms-qfmes86biux1nl7gbaowsgc4>
+  <sdc4:ms-ljldab8e1bjizncv01akb0n5>
+    <sdc4:ms-xxe21o9ojzmy9wxxky1tnmog>
+      <label>Agent Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-xxe21o9ojzmy9wxxky1tnmog>
+  </sdc4:ms-ljldab8e1bjizncv01akb0n5>
+  <sdc4:ms-f6z431hl60ra8eqbrcyrsvji>
+    <sdc4:ms-eftvwi5byq6cdtd931qyxzw0>
+      <label>Agent Organization Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-eftvwi5byq6cdtd931qyxzw0>
+  </sdc4:ms-f6z431hl60ra8eqbrcyrsvji>
+  <sdc4:ms-cpaj0unbnudntl1brmdnuqhu>
+    <sdc4:ms-aa663ivutjf2fs4757t0bbzy>
+      <label>Software Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-aa663ivutjf2fs4757t0bbzy>
+  </sdc4:ms-cpaj0unbnudntl1brmdnuqhu>
+  <sdc4:ms-ebn1a6s1d1dy724l4y692qsl>
+    <sdc4:ms-x0lebwtobgaelj5pev3258sd>
+      <label>Software Version</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-x0lebwtobgaelj5pev3258sd>
+  </sdc4:ms-ebn1a6s1d1dy724l4y692qsl>
+  <sdc4:ms-y1u3ladafqtryhgyetpn5ild>
+    <sdc4:ms-i16vqj89it3db7d3c5qjko9p>
+      <label>PROV Agent Type</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-i16vqj89it3db7d3c5qjko9p>
+  </sdc4:ms-y1u3ladafqtryhgyetpn5ild>
+  </sdc4:ms-c179ilk2ns15cd5rzzdfd6f6>
+  <sdc4:ms-q0ckidtsg1x3iav6nrt8fo0l>
+    <label>PROV Entity</label>
+  <sdc4:ms-wy38zv02dmcp5gjul57yejmk>
+    <sdc4:ms-abub2eah26yd2uzni3p9l58i>
+      <label>Entity Description</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-abub2eah26yd2uzni3p9l58i>
+  </sdc4:ms-wy38zv02dmcp5gjul57yejmk>
+  <sdc4:ms-gujvcggdotm3z1hmygdrey09>
+    <sdc4:ms-i1defiugxfdcwfb9rqv4p5tz>
+      <label>Entity Identifier</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-i1defiugxfdcwfb9rqv4p5tz>
+  </sdc4:ms-gujvcggdotm3z1hmygdrey09>
+  <sdc4:ms-s0xrd3gbobtgtexdxkxcor3l>
+    <sdc4:ms-m9minyaug6ypyzt52zfxlyyi>
+      <label>Entity Label</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-m9minyaug6ypyzt52zfxlyyi>
+  </sdc4:ms-s0xrd3gbobtgtexdxkxcor3l>
+  <sdc4:ms-jdugzq309qlimui7675txmyi>
+    <sdc4:ms-wn77qo3b1xjwc4dudtyme2io>
+      <label>Entity Location</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-wn77qo3b1xjwc4dudtyme2io>
+  </sdc4:ms-jdugzq309qlimui7675txmyi>
+  <sdc4:ms-bk8actrinati1b6smyypwj6m>
+    <sdc4:ms-kmcck093437mfdlnxnrzm0xw>
+      <label>Entity Value</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-kmcck093437mfdlnxnrzm0xw>
+  </sdc4:ms-bk8actrinati1b6smyypwj6m>
+  <sdc4:ms-fti6dssqpaatbprjx0mqu2mj>
+    <sdc4:ms-phus5105uw30xejqs7baamyx>
+      <label>Had Primary Source Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-phus5105uw30xejqs7baamyx>
+  </sdc4:ms-fti6dssqpaatbprjx0mqu2mj>
+  <sdc4:ms-hj4gt95jsr6xvywruyi9ip51>
+    <sdc4:ms-kqlatg3rz00z58muv7j8toyl>
+      <label>Was Attributed To Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-kqlatg3rz00z58muv7j8toyl>
+  </sdc4:ms-hj4gt95jsr6xvywruyi9ip51>
+  <sdc4:ms-e793unvukokgt3c5y0kilui1>
+    <sdc4:ms-credrxhz4hg4c42sihm0wb6s>
+      <label>Was Derived From Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-credrxhz4hg4c42sihm0wb6s>
+  </sdc4:ms-e793unvukokgt3c5y0kilui1>
+  <sdc4:ms-vsnnmsojiqwcx33jeavt4bkf>
+    <sdc4:ms-bfn83x3fw1cyuqriuoquu9t1>
+      <label>Was Generated By Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-bfn83x3fw1cyuqriuoquu9t1>
+  </sdc4:ms-vsnnmsojiqwcx33jeavt4bkf>
+  <sdc4:ms-o31fztf2l2gj0nuljugpl1s9>
+    <sdc4:ms-h1vwqq8ulrb27qpl6zuzppnf>
+      <label>Was Invalidated By Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-h1vwqq8ulrb27qpl6zuzppnf>
+  </sdc4:ms-o31fztf2l2gj0nuljugpl1s9>
+  <sdc4:ms-bh5kiii8wc47sp8hibxv9qtk>
+    <sdc4:ms-mjl0vv39zsbigqiuyqm66fkv>
+      <label>Was Quoted From Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-mjl0vv39zsbigqiuyqm66fkv>
+  </sdc4:ms-bh5kiii8wc47sp8hibxv9qtk>
+  <sdc4:ms-an1yte2y7kubvf64ao70apuu>
+    <sdc4:ms-lghqkvp7vapqk10l248kzqs8>
+      <label>Was Revision Of Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-lghqkvp7vapqk10l248kzqs8>
+  </sdc4:ms-an1yte2y7kubvf64ao70apuu>
+  <sdc4:ms-p5zjm3c1d2x9jxc2n3wyzbth>
+    <sdc4:ms-g2xnh3uhnlrnqlo7ki2s0fs3>
+      <label>PROV Derivation Type</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-g2xnh3uhnlrnqlo7ki2s0fs3>
+  </sdc4:ms-p5zjm3c1d2x9jxc2n3wyzbth>
+  <sdc4:ms-dlu1btnja2h37jfx3vj694rv>
+    <sdc4:ms-i4e2nod7ss9d4cumhn2pah8b>
+      <label>PROV Entity Type</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-i4e2nod7ss9d4cumhn2pah8b>
+  </sdc4:ms-dlu1btnja2h37jfx3vj694rv>
+  <sdc4:ms-n6j7bwq9qmuzzf8w89gwxeml>
+    <sdc4:ms-yk5nrxndulhebpi3hiywk8u8>
+      <label>Generated At</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-datetime>_PH_</xdtemporal-datetime>
+    </sdc4:ms-yk5nrxndulhebpi3hiywk8u8>
+  </sdc4:ms-n6j7bwq9qmuzzf8w89gwxeml>
+  <sdc4:ms-uc64yt3ys0s0xrj51rue2ofb>
+    <sdc4:ms-hswapeutuik067dokidnbv88>
+      <label>Invalidated At</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-datetime>_PH_</xdtemporal-datetime>
+    </sdc4:ms-hswapeutuik067dokidnbv88>
+  </sdc4:ms-uc64yt3ys0s0xrj51rue2ofb>
+  </sdc4:ms-q0ckidtsg1x3iav6nrt8fo0l>
+  </sdc4:ms-eqika8chjyab0nbkqcoyrtce>
+  <workflow>
+    <label>Order Workflow</label>
+  <sdc4:ms-fxbfxh70zibln9vuiuxdvuh5>
+    <label>Order: Main path</label>
+  <sdc4:ms-unodm5dbms8i6d84w0t7sj5d>
+    <sdc4:ms-r3ptl4b9w3uoeryziruyyr0g>
+      <label>Order: Main path states</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <ordinal>0</ordinal>
+      <symbol>OrderPaymentDue</symbol>
+    </sdc4:ms-r3ptl4b9w3uoeryziruyyr0g>
+  </sdc4:ms-unodm5dbms8i6d84w0t7sj5d>
+  </sdc4:ms-fxbfxh70zibln9vuiuxdvuh5>
+  <sdc4:ms-yandfsildrgawqjm1npmemmx>
+    <label>Order: orderdelivered orderreturned</label>
+  <sdc4:ms-n4du06vuaghzb0of3o012r2l>
+    <sdc4:ms-nwm9jgu4xn7k4de1ccvi0ls9>
+      <label>Order: orderdelivered orderreturned states</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <ordinal>0</ordinal>
+      <symbol>OrderDelivered</symbol>
+    </sdc4:ms-nwm9jgu4xn7k4de1ccvi0ls9>
+  </sdc4:ms-n4du06vuaghzb0of3o012r2l>
+  </sdc4:ms-yandfsildrgawqjm1npmemmx>
+  <sdc4:ms-pgqxbcws0w8wgdkf5wyzhq58>
+    <label>Order: orderintransit orderproblem</label>
+  <sdc4:ms-e4ykcslpzsuu0eabcq6wzebx>
+    <sdc4:ms-kk7748z9xt41jyg406y8qr73>
+      <label>Order: orderintransit orderproblem states</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <ordinal>0</ordinal>
+      <symbol>OrderInTransit</symbol>
+    </sdc4:ms-kk7748z9xt41jyg406y8qr73>
+  </sdc4:ms-e4ykcslpzsuu0eabcq6wzebx>
+  </sdc4:ms-pgqxbcws0w8wgdkf5wyzhq58>
+  <sdc4:ms-eh4r815gdqgu1xz6a3efcq2f>
+    <label>Order: orderpaymentdue ordercancelled</label>
+  <sdc4:ms-zlcvuaslnzclpggfk552y8au>
+    <sdc4:ms-i73y73c1wb9rleqbf86olf8w>
+      <label>Order: orderpaymentdue ordercancelled states</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <ordinal>0</ordinal>
+      <symbol>OrderPaymentDue</symbol>
+    </sdc4:ms-i73y73c1wb9rleqbf86olf8w>
+  </sdc4:ms-zlcvuaslnzclpggfk552y8au>
+  </sdc4:ms-eh4r815gdqgu1xz6a3efcq2f>
+  <sdc4:ms-xr701u7jj2okhapf8bazq3i6>
+    <label>Order: orderproblem orderprocessing</label>
+  <sdc4:ms-u6z44akp38faamrwk7ltt1l6>
+    <sdc4:ms-wchjtpjshozfm3pwzpp4lu5s>
+      <label>Order: orderproblem orderprocessing states</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <ordinal>0</ordinal>
+      <symbol>OrderProblem</symbol>
+    </sdc4:ms-wchjtpjshozfm3pwzpp4lu5s>
+  </sdc4:ms-u6z44akp38faamrwk7ltt1l6>
+  </sdc4:ms-xr701u7jj2okhapf8bazq3i6>
+  <sdc4:ms-ex5tr4g87ozr4yll9gpv0wdr>
+    <label>Order: orderprocessing ordercancelled</label>
+  <sdc4:ms-lrni37b5eyf7bwlldtr1ej6x>
+    <sdc4:ms-ljk2wd9f30r9oftbcilg32ur>
+      <label>Order: orderprocessing ordercancelled states</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <ordinal>0</ordinal>
+      <symbol>OrderProcessing</symbol>
+    </sdc4:ms-ljk2wd9f30r9oftbcilg32ur>
+  </sdc4:ms-lrni37b5eyf7bwlldtr1ej6x>
+  </sdc4:ms-ex5tr4g87ozr4yll9gpv0wdr>
+  <sdc4:ms-yqcnjxce4q5k7w2os0ihi4cd>
+    <label>Order: orderprocessing orderproblem</label>
+  <sdc4:ms-a17lv0aeed8hkovpp3gihhib>
+    <sdc4:ms-jbbwrh34rewkegfgw8w622o1>
+      <label>Order: orderprocessing orderproblem states</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <ordinal>0</ordinal>
+      <symbol>OrderProcessing</symbol>
+    </sdc4:ms-jbbwrh34rewkegfgw8w622o1>
+  </sdc4:ms-a17lv0aeed8hkovpp3gihhib>
+  </sdc4:ms-yqcnjxce4q5k7w2os0ihi4cd>
+  <sdc4:ms-ooyaee7dyvrevmt55ry4tzyo>
+    <label>Order: Pickup</label>
+  <sdc4:ms-laaua5r9fauq3luocivl79r1>
+    <sdc4:ms-xgf58rmpjqu8obiclzadb7av>
+      <label>Order: Pickup states</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <ordinal>0</ordinal>
+      <symbol>OrderProcessing</symbol>
+    </sdc4:ms-xgf58rmpjqu8obiclzadb7av>
+  </sdc4:ms-laaua5r9fauq3luocivl79r1>
+  </sdc4:ms-ooyaee7dyvrevmt55ry4tzyo>
+  </workflow>
+  <sdc4:ms-vjsb1sede0row0dzz9hobson>
+    <label>Business Document Audit</label>
+    <system-id>
+      <label>Business Document Translator Identifier</label>
+      <xdstring-value>_PH_</xdstring-value>
+    </system-id>
+    <system-user>
+      <label>Business Document Translator User</label>
+    </system-user>
+    <location>
+      <label>Business Document Source</label>
+    </location>
+    <timestamp>2024-01-01T00:00:00</timestamp>
+  </sdc4:ms-vjsb1sede0row0dzz9hobson>
+</sdc4:dm-jkuyr38hydqaiwlq5vhp2rjr>

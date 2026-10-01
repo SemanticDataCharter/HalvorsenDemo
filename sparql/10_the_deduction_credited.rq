@@ -1,0 +1,29 @@
+# Beat 10: the deduction, credited. Each credit note joined to the invoice it credits and to the receipt advice whose
+# deduction it settles, both picked out of the credit note's several document references (the invoice, the dispatch
+# advice, the receipt advice share the one Document Reference ID component) by joining to the Invoice ID and the
+# Receipt Advice ID: the amount the invoice made payable, the amount credited, the discrepancy as the credit note
+# states it, and the Settlement Receipt that permitted the deduction. Which record names the Receipt depends on the
+# stack: on the supplier's the credit note's own provenance names it (the entity its activity used); on the
+# retailer's the credit note was read from a document and names the document, and the settled receipt advice names
+# the Receipt. The query takes it from whichever record holds it. The discrepancy is stated at the document and on
+# the line, so the longer is taken; the receipt advice is in the store twice where it was settled, so the two are
+# grouped. Every component bound.
+PREFIX sdc4: <https://semanticdatacharter.com/ns/sdc4/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?credit_note_id ?invoice_id ?receipt_id ?payable ?credited (MAX(COALESCE(?used, ?named)) AS ?settlement_receipt) (MAX(?discrepancy) AS ?discrepancy_stated) ?inst ?inst_2 (MIN(?inst_3) AS ?inst_receipt) WHERE {
+  ?c rdfs:label "Credit Note ID" ; sdc4:inInstance ?inst ; sdc4:inDataModel sdc4:dm-jkuyr38hydqaiwlq5vhp2rjr ; rdf:reifies <<sdc4:mc-tnapfsz8ytrxb7oqk54ju0r7 ?p1 ?credit_note_id>> .
+  ?a rdfs:label "Payable Amount" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-axifzu4nt8m8n4qpfn838yy8 ?p2 ?credited>> .
+  ?x rdfs:label "Discrepancy Description" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-bwe98nxxki0ubggnyocrbf81 ?p3 ?discrepancy>> .
+  ?d rdfs:label "Document Reference ID" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-k153quyn7i9ravd1b3c61ad9 ?p4 ?invoice_id>> .
+  ?i rdfs:label "Invoice ID" ; sdc4:inInstance ?inst_2 ; sdc4:inDataModel sdc4:dm-u19w614300a8ot4a7qnn2o1c ; rdf:reifies <<sdc4:mc-jjrdrfy8mwl5mrhknuj91xnl ?p5 ?invoice_id>> .
+  ?b rdfs:label "Payable Amount" ; sdc4:inInstance ?inst_2 ; rdf:reifies <<sdc4:mc-axifzu4nt8m8n4qpfn838yy8 ?p6 ?payable>> .
+  ?d2 rdfs:label "Document Reference ID" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-k153quyn7i9ravd1b3c61ad9 ?p7 ?receipt_id>> .
+  ?k rdfs:label "Receipt Advice ID" ; sdc4:inInstance ?inst_3 ; sdc4:inDataModel sdc4:dm-tog0v0p1zit1xwpxysxwpf3d ; rdf:reifies <<sdc4:mc-n8ktn56c09i6kzy6kxzqs53j ?p8 ?receipt_id>> .
+  OPTIONAL { ?e rdfs:label "Entity Identifier" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-i1defiugxfdcwfb9rqv4p5tz ?p9 ?used>> . FILTER(STRSTARTS(STR(?used), "urn:vsl:receipt:")) }
+  OPTIONAL { ?s rdfs:label "Entity Identifier" ; sdc4:inInstance ?inst_3 ; rdf:reifies <<sdc4:mc-i1defiugxfdcwfb9rqv4p5tz ?p10 ?named>> . FILTER(STRSTARTS(STR(?named), "urn:vsl:receipt:")) }
+}
+GROUP BY ?credit_note_id ?invoice_id ?receipt_id ?payable ?credited ?inst ?inst_2
+ORDER BY ?credit_note_id
+LIMIT 200

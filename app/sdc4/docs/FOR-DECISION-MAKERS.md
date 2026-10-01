@@ -2,7 +2,7 @@
 
 Halvorsen Foods is fictitious. It shipped a mixed pallet to a large retailer and took a three percent deduction for a non-compliant advance ship notice. Eleven days of reconstruction found no mistake: the retailer's rule had changed on a date the notice did not carry, and the pallet identifier had stopped being valid on a date the notice also did not carry. Two correct systems, one working integration, a verdict nobody could examine.
 
-This demonstration is built so the verdict survives a question. This release runs all nine beats, on the purchase order, the supplier's response, the dispatch advice, the receipt, the invoice, the settlement of the deduction, and a second retailer's profile.
+This demonstration is built so the verdict survives a question. This release runs ten beats, on the purchase order, the supplier's response, the dispatch advice, the receipt, the invoice, the settlement of the deduction, a second retailer's profile, and the credit note. Each beat takes one step: one document, or one idea, so the walk-through can be read as a tutorial and stopped after any beat.
 
 ## What you are looking at
 
@@ -30,9 +30,11 @@ Open the same order on both sides. The values are the same. What differs is the 
 
 9. **Two profiles.** A second retailer, Torvale Markets, buys from the same supplier with its own rules: one delivery term, a pack specification version and a delivery window on every order. In the usual arrangement those rules live in a trading-partner document beside the standard, and each side's staff keep their own copy. Here Torvale publishes them as a model on the same components Kestrel's order uses, and the rules are in the model's own schema: an order without them is not a valid Torvale order at all. The supplier's translator reads each Torvale order into that model, beside Kestrel's. Put one order of each retailer under both models and each model says what it refuses, value by value: Kestrel's terms are not Torvale's, Torvale's pack version is a kind of reference Kestrel's model does not know. One Torvale order was released to transit on a Settlement Receipt, and that Receipt names Torvale's model by the hash of its schema, so the verdict says which profile governed. Nothing was replaced; the two profiles are two models on one library, and a partner's format is a projection of the record.
 
+10. **The deduction, credited.** The deduction was agreed on a Settlement Receipt; now the supplier credits it. For each receipt advice the Receipt moved out of its problem state, the billing system issues a credit note against the invoice: three percent of what was payable, one line, the discrepancy stated in the receiver's own words from the receipt advice. The credit note's provenance names the Receipt as the thing its activity used, the same Receipt the settled receipt advice names, so the three records of one deduction meet on it: the receipt advice settled, the invoice, the credit. It goes to the retailer as a standard credit note and is read back into the same model. Ask the store and it puts the bill, the credit and the Receipt that permitted it in one row.
+
 ## What comes next
 
-The plan's nine beats all run. What follows is the remaining documents of the exchange (the credit note, the remittance advice) on the same components.
+The remittance advice, the retailer's statement of what it paid against which invoices and credits, on the same components.
 
 ## What this is not
 
