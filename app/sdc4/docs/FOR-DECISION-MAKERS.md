@@ -2,7 +2,7 @@
 
 Halvorsen Foods is fictitious. It shipped a mixed pallet to a large retailer and took a three percent deduction for a non-compliant advance ship notice. Eleven days of reconstruction found no mistake: the retailer's rule had changed on a date the notice did not carry, and the pallet identifier had stopped being valid on a date the notice also did not carry. Two correct systems, one working integration, a verdict nobody could examine.
 
-This demonstration is built so the verdict survives a question. This release runs ten beats, on the purchase order, the supplier's response, the dispatch advice, the receipt, the invoice, the settlement of the deduction, a second retailer's profile, and the credit note. Each beat takes one step: one document, or one idea, so the walk-through can be read as a tutorial and stopped after any beat.
+This demonstration is built so the verdict survives a question. This release runs eleven beats, on the purchase order, the supplier's response, the dispatch advice, the receipt, the invoice, the settlement of the deduction, a second retailer's profile, the credit note and the payment. Each beat takes one step: one document, or one idea, so the walk-through can be read as a tutorial and stopped after any beat.
 
 ## What you are looking at
 
@@ -32,9 +32,11 @@ Open the same order on both sides. The values are the same. What differs is the 
 
 10. **The deduction, credited.** The deduction was agreed on a Settlement Receipt; now the supplier credits it. For each receipt advice the Receipt moved out of its problem state, the billing system issues a credit note against the invoice: three percent of what was payable, one line, the discrepancy stated in the receiver's own words from the receipt advice. The credit note's provenance names the Receipt as the thing its activity used, the same Receipt the settled receipt advice names, so the three records of one deduction meet on it: the receipt advice settled, the invoice, the credit. It goes to the retailer as a standard credit note and is read back into the same model. Ask the store and it puts the bill, the credit and the Receipt that permitted it in one row.
 
+11. **The payment, stated.** The retailer pays in monthly runs: every invoice due in the month, on its last day, in one remittance advice, one line an invoice, each the invoice less the credit note issued against it. The line names both documents, and names them as what they are: the library's list of document kinds was extended for this document, and the models published before it keep the list each was published with, which is how a library changes without changing what was already true. The remittance goes to the supplier as a standard document and is read back into the same model. Ask the store for the payment runs and it lists each with what it paid, the invoices it settled and the credits it took into account. The chain is complete: order, response, dispatch, receipt, invoice, deduction, settlement, credit, payment, every link a governed record on one set of components, every exchange a standard document, every verdict verifiable with nothing from anyone.
+
 ## What comes next
 
-The remittance advice, the retailer's statement of what it paid against which invoices and credits, on the same components.
+The plan's documents all run. What follows is the piece that tells one story in three dialects, and the demonstration shown.
 
 ## What this is not
 

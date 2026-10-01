@@ -70,6 +70,12 @@ QUERY_CATALOG = {
         'description': 'Each credit note joined to the invoice it credits and the receipt advice whose deduction it settles: the amount payable, the amount credited, the discrepancy stated, and the Settlement Receipt that permitted the deduction, from whichever record names it in this stack.',
         'domains': ['Credit Note', 'Invoice', 'Receipt Advice'],
     },
+    11: {
+        'file': '11_the_payment_stated.rq',
+        'title': 'The payment, stated',
+        'description': 'Each payment run: the day paid, the totals debited, credited and paid, the invoices it settled and the credit notes it took into account, joined on their identifiers.',
+        'domains': ['Remittance Advice', 'Invoice', 'Credit Note'],
+    },
 }
 
 

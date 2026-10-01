@@ -78,6 +78,6 @@ class WalkThroughTests(SimpleTestCase):
             entry = QUERY_CATALOG[beat['query_number']]
             self.assertTrue((SPARQL_DIR / entry['file']).exists(), entry['file'])
 
-    def test_the_beats_and_the_ones_to_come_make_ten(self):
-        self.assertEqual(len(BEATS) + len(COMING), 10)   # the plan's nine, and the credit note as the tenth: one document a beat
+    def test_the_beats_and_the_ones_to_come_make_eleven(self):
+        self.assertEqual(len(BEATS) + len(COMING), 11)   # the plan's nine, the credit note and the remittance advice: one document a beat
         self.assertEqual(COMING, [])   # every beat runs since 4.1.7

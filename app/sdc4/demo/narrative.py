@@ -1,9 +1,9 @@
 """
 The walk-through: the order as a governed record, the document as its projection.
 
-All ten beats run in this release: on the Order, the Order Response, the Despatch Advice, the
+All eleven beats run in this release: on the Order, the Order Response, the Despatch Advice, the
 Receipt Advice, the Invoice, the Settlement Receipts held in settlement/, the second retailer's
-order profile, and the Credit Note. Nothing is listed as what comes.
+order profile, the Credit Note and the Remittance Advice. Nothing is listed as what comes.
 """
 
 BEATS = [
@@ -182,7 +182,27 @@ BEATS = [
         ),
         'query_label': 'Show the deductions credited',
     },
+    {
+        'number': 11,
+        'title': 'The payment, stated',
+        'query_number': 11,
+        'icon': 'bi-cash-stack',
+        'color': 'dark',
+        'narrative': (
+            'The retailer pays in monthly runs: every invoice due in a month, on its last day, in one remittance advice, '
+            'one line an invoice, each the invoice\'s payable less the credit note issued against it. The line names '
+            'both documents as billing references, and names them as what they are: the list of document kinds was '
+            'revised for this document to say invoice, credit note and remittance advice, and the published models '
+            'keep the list each was published with. It goes to the supplier as a UBL 2.3 RemittanceAdvice and is read '
+            'back into the same model. The query lists each payment run with what it paid, the invoices it settled '
+            'and the credit notes it took into account; which line paid which invoice is the record\'s, on its Table '
+            'pane, since the ten lines of one run share their components in the graph. Order, response, dispatch, '
+            'receipt, invoice, deduction, settlement, credit, payment: the chain is complete, and every link is a '
+            'governed record on one set of components.'
+        ),
+        'query_label': 'Show the payment runs',
+    },
 ]
 
 #: The beats the next releases add, in the order the documents arrive.
-COMING = []   # every beat runs; the plan's nine, and the credit note as the tenth (the demo is a tutorial: one document a beat)
+COMING = []   # every beat runs; the plan's nine, the credit note and the remittance advice (the demo is a tutorial: one document a beat)
