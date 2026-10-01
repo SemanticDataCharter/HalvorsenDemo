@@ -39,6 +39,7 @@ RETAILER_TRANSLATOR = (f"urn:kestrel:translator:{LIBRARY_VERSION}", "Kestrel Mer
 SUPPLIER_WAREHOUSE = (f"urn:halvorsen:warehouse-system:{LIBRARY_VERSION}", "Halvorsen Foods warehouse system", "Generated")
 RETAILER_RECEIVING = (f"urn:kestrel:receiving-system:{LIBRARY_VERSION}", "Kestrel Mercantile receiving system", "Generated")
 SUPPLIER_BILLING = (f"urn:halvorsen:billing-system:{LIBRARY_VERSION}", "Halvorsen Foods billing system", "Generated")
+RETAILER_PAYMENTS = (f"urn:kestrel:payment-system:{LIBRARY_VERSION}", "Kestrel Mercantile payment system", "Generated")
 RETAILER2_SYSTEM = (f"urn:torvale:order-system:{LIBRARY_VERSION}", "Torvale Markets order system", "Generated")
 _ID_ALPHABET = "abcdefghijklmnopqrstuvwxyz0123456789"
 
@@ -127,7 +128,7 @@ def record(title: str, values: dict, *, document_id: str, buyer: str, source: tu
         "Audit Event/System Location Name": "Duluth, Minnesota" if verb == "Read" else "Chicago, Illinois",
     }.items()})
     return t.instance(vals, instance_id=instance_id or cuid_generator(rng), current_state=current_state, timestamp=when,
-                      subject=(title, document_id), provider=("Buyer" if title in ("Order", "Torvale Order", "Receipt Advice") else "Seller", buyer),
+                      subject=(title, document_id), provider=("Buyer" if title in ("Order", "Torvale Order", "Receipt Advice", "Remittance Advice") else "Seller", buyer),
                       audit={"system_id": agent_id, "user": agent_name, "timestamp": when,
                              "values": {"Business Document Audit/PROV Entity/Entity Identifier": src_id, "Business Document Audit/PROV Entity/Entity Label": src_label,
                                         "Business Document Audit/PROV Entity/Entity Description": src_desc}},

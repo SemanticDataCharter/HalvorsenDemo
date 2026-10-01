@@ -1,0 +1,2081 @@
+{
+  "@context": "https://semanticdatacharter.com/ns/sdc4/",
+  "dm_id": "fgtbf38cj0bwxppxn69etcci",
+  "dm_type": "dm-fgtbf38cj0bwxppxn69etcci",
+  "metadata": {
+    "dm_language": "en-US",
+    "dm_label": "Remittance Advice",
+    "dm_encoding": "utf-8",
+    "instance_id": "swsx7n9m987owyt8u82jvekc",
+    "instance_version": "1.0",
+    "creation_timestamp": "2026-10-01T13:20:40.723070",
+    "current_state": ""
+  },
+  "data": {
+    "component_id": "c58celu1ukeo9ntpzf25ewuk",
+    "label": "Remittance Advice Governed Record",
+    "type": "Cluster",
+    "description": "A remittance advice record. The governed record: the data cluster, the PROV activity and agent, the invoices paid as the PROV entity the activity used, and the audit event from the ProvGov library by identifier. Members: Remittance Advice; prov-activity (Provgov); prov-agent (Provgov); prov-entity (Provgov); audit-event (Provgov).",
+    "items": [
+      {
+        "component_id": "t2tvd3wylxrstdeu5aw6gkw1",
+        "label": "Audit Event",
+        "type": "Cluster",
+        "description": "A logged access or custody event as data: what was done, by whom, on what, with what outcome and for what purpose. The audit-only case of sdc5 issue 002; state-changing operations are workflow transitions.",
+        "items": [
+          {
+            "component_id": "dkc2ccj5te35z9gd4bu1blcq",
+            "label": "Audit Agent Reference",
+            "type": "XdString",
+            "description": "The acting agent (FHIR AuditEvent.agent.who). Holds the IRI of the referenced thing.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 2000
+            }
+          },
+          {
+            "component_id": "gcjyjrnp0wsfoelcp4m05c67",
+            "label": "Audit Entity Reference",
+            "type": "XdString",
+            "description": "The entity the event concerns (FHIR AuditEvent.entity.what). Holds the IRI of the referenced thing.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 2000
+            }
+          },
+          {
+            "component_id": "fjhgr5fyqxt2crmg2cb5c513",
+            "label": "Audit Event Identifier",
+            "type": "XdString",
+            "description": "The identifier of the audit event.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 255
+            }
+          },
+          {
+            "component_id": "sndpbhm3xbd6qtbyxmvh3i0e",
+            "label": "Data Subject Reference",
+            "type": "XdString",
+            "description": "The data subject or patient the event concerns (FHIR AuditEvent.patient; SDC DM.subject). Holds the IRI of the referenced thing.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 2000
+            }
+          },
+          {
+            "component_id": "nf1air1zbj8v9w66jozdxmyl",
+            "label": "On Behalf Of Reference",
+            "type": "XdString",
+            "description": "The party on whose behalf the agent acted (FHIR agent.onBehalfOf; prov:actedOnBehalfOf). Holds the IRI of the referenced thing.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 2000
+            }
+          },
+          {
+            "component_id": "h3kdbvdtyalpvik97saaf0an",
+            "label": "System Identifier",
+            "type": "XdString",
+            "description": "The system that handled the item (FHIR AuditEvent.source.observer; SDC AuditType.system-id).",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 255
+            }
+          },
+          {
+            "component_id": "ujir739mf1g8ajeczs9nzh9m",
+            "label": "System Location Name",
+            "type": "XdString",
+            "description": "The site or facility that handled the item (FHIR AuditEvent.agent.location; prov:atLocation).",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 255
+            }
+          },
+          {
+            "component_id": "ce1c8sydkov8bkv4dgdmwe5x",
+            "label": "Audit Event Action",
+            "type": "XdToken",
+            "description": "The operation performed in a logged access event (FHIR AuditEvent.action). Read and Execute change no state and are audit facts, not workflow moves.",
+            "value": "U",
+            "constraints": {
+              "enumerations": [
+                "C",
+                "R",
+                "U",
+                "D",
+                "E"
+              ]
+            }
+          },
+          {
+            "component_id": "rpz1czz06jhpahmfz30rblvp",
+            "label": "Audit Event Outcome",
+            "type": "XdToken",
+            "description": "The result of an audited event (FHIR AuditEvent.outcome).",
+            "value": "4",
+            "constraints": {
+              "enumerations": [
+                "0",
+                "4",
+                "8",
+                "12"
+              ]
+            }
+          },
+          {
+            "component_id": "vbctgmdcwps5b3r3l6sboa6y",
+            "label": "Confidentiality",
+            "type": "XdToken",
+            "description": "The level of protection the information requires (HL7 v3 Confidentiality). At assembly the value populates a component's act tag.",
+            "value": "M",
+            "constraints": {
+              "enumerations": [
+                "U",
+                "L",
+                "M",
+                "N",
+                "R",
+                "V"
+              ]
+            }
+          },
+          {
+            "component_id": "jujsdur1igws8orw6tvvlqco",
+            "label": "Provenance Agent Type",
+            "type": "XdToken",
+            "description": "The functional role of an agent in an activity (FHIR Provenance.agent.type).",
+            "value": "custodian",
+            "constraints": {
+              "enumerations": [
+                "enterer",
+                "performer",
+                "author",
+                "editor",
+                "verifier",
+                "legal",
+                "attester",
+                "informant",
+                "custodian",
+                "transmitter",
+                "assembler",
+                "transformer",
+                "composer"
+              ]
+            }
+          },
+          {
+            "component_id": "d1evlz8yvdlwt6ia9fjq4pgj",
+            "label": "Purpose of Use",
+            "type": "XdToken",
+            "description": "Why the information was used (HL7 v3 ActReason purpose of use). Activity context, not an access-control tag.",
+            "value": "CLINTRCH",
+            "constraints": {
+              "enumerations": [
+                "TREAT",
+                "ETREAT",
+                "COC",
+                "HPAYMT",
+                "HOPERAT",
+                "HRESCH",
+                "CLINTRCH",
+                "PUBHLTH",
+                "PATRQT",
+                "HLEGAL",
+                "HMARKT"
+              ]
+            }
+          },
+          {
+            "component_id": "uwiosm2q9ym3ewr4de910s70",
+            "label": "Audit Recorded At",
+            "type": "XdTemporal",
+            "description": "When the audit event was recorded (FHIR AuditEvent.recorded).",
+            "value": "2024-01-01T00:00:00"
+          }
+        ]
+      },
+      {
+        "component_id": "vmikfu0irht9fmq7q02t3oqs",
+        "label": "PROV Activity",
+        "type": "Cluster",
+        "description": "A PROV activity: what it was, when it ran, its status, and the entities, activities, agent and plan it relates to.",
+        "items": [
+          {
+            "component_id": "hhusuzzig19rs46ngz23k5g7",
+            "label": "Activity Description",
+            "type": "XdString",
+            "description": "A description of what the activity does and why.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 4000
+            }
+          },
+          {
+            "component_id": "wr06h54xqqw2q9id8i9673jy",
+            "label": "Activity Identifier",
+            "type": "XdString",
+            "description": "The identifier of a PROV activity: a URI or another globally unique identifier.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 255
+            }
+          },
+          {
+            "component_id": "r6hkunjm2q0hlxiknlc9ljix",
+            "label": "Activity Label",
+            "type": "XdString",
+            "description": "A human-readable label for a PROV activity.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 255
+            }
+          },
+          {
+            "component_id": "uzai5uey5p1fnn9ezj9u6vor",
+            "label": "Activity Location",
+            "type": "XdString",
+            "description": "Where the activity took place (prov:atLocation), as text.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 255
+            }
+          },
+          {
+            "component_id": "jjzmhdxvbt97pq81iwqubtxk",
+            "label": "Activity Type",
+            "type": "XdString",
+            "description": "The kind of activity, in the vocabulary of the domain (prov:type).",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 255
+            }
+          },
+          {
+            "component_id": "xlgjqdpwdbn2re3mdh5yy2rk",
+            "label": "Error Message",
+            "type": "XdString",
+            "description": "The error the activity reported, if it failed.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 4000
+            }
+          },
+          {
+            "component_id": "vhezo2cckpe92x4c3j2memeh",
+            "label": "Had Plan Reference",
+            "type": "XdString",
+            "description": "The plan the activity followed (prov:hadPlan). Holds the IRI of the referenced thing.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 2000
+            }
+          },
+          {
+            "component_id": "t0whhrqtnb54te4mk48i1ooj",
+            "label": "Used Entity Reference",
+            "type": "XdString",
+            "description": "An entity the activity used (prov:used). Holds the IRI of the referenced thing.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 2000
+            }
+          },
+          {
+            "component_id": "r48alj7hc3797qfjnf2uj71n",
+            "label": "Was Associated With Reference",
+            "type": "XdString",
+            "description": "The agent associated with the activity (prov:wasAssociatedWith). Holds the IRI of the referenced thing.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 2000
+            }
+          },
+          {
+            "component_id": "ueb5g1ojzlwwt0mnds5zb6wl",
+            "label": "Was Ended By Reference",
+            "type": "XdString",
+            "description": "The entity that ended the activity (prov:wasEndedBy). Holds the IRI of the referenced thing.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 2000
+            }
+          },
+          {
+            "component_id": "qh84jdzp1kxt85aq4ilo0svk",
+            "label": "Was Informed By Reference",
+            "type": "XdString",
+            "description": "An activity that informed this one (prov:wasInformedBy). Holds the IRI of the referenced thing.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 2000
+            }
+          },
+          {
+            "component_id": "ginfqbk7q59ld2r4us8sjnv1",
+            "label": "Was Started By Reference",
+            "type": "XdString",
+            "description": "The entity that started the activity (prov:wasStartedBy). Holds the IRI of the referenced thing.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 2000
+            }
+          },
+          {
+            "component_id": "wl6j4ekcmu4hvt2m12zw4zp8",
+            "label": "Activity Status",
+            "type": "XdToken",
+            "description": "The state of an activity, from the Data Privacy Vocabulary activity status concepts.",
+            "value": "ActivityNotCompleted",
+            "constraints": {
+              "enumerations": [
+                "ActivityProposed",
+                "ActivityPlanned",
+                "ActivityOngoing",
+                "ActivityHalted",
+                "ActivityCompleted",
+                "ActivityNotCompleted"
+              ]
+            }
+          },
+          {
+            "component_id": "a5scyosu6j84vz350mqyrzl2",
+            "label": "Ended At",
+            "type": "XdTemporal",
+            "description": "When the activity ended (prov:endedAtTime).",
+            "value": "2024-01-01T00:00:00"
+          },
+          {
+            "component_id": "sa4nl1kbpdr842fkucvfjkpq",
+            "label": "Started At",
+            "type": "XdTemporal",
+            "description": "When the activity started (prov:startedAtTime).",
+            "value": "2024-01-01T00:00:00"
+          }
+        ]
+      },
+      {
+        "component_id": "c179ilk2ns15cd5rzzdfd6f6",
+        "label": "PROV Agent",
+        "type": "Cluster",
+        "description": "A PROV agent: a person, organization or software agent, with its identity, contact and delegation.",
+        "items": [
+          {
+            "component_id": "og08xf6bu928uuz6t3y0e23f",
+            "label": "Acted On Behalf Of Reference",
+            "type": "XdString",
+            "description": "The agent on whose behalf this agent acted (prov:actedOnBehalfOf). Holds the IRI of the referenced thing.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 2000
+            }
+          },
+          {
+            "component_id": "gb78cmuyo72hqs5apymdki7l",
+            "label": "Agent Description",
+            "type": "XdString",
+            "description": "A description of the agent and its responsibilities.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 4000
+            }
+          },
+          {
+            "component_id": "qb90a0sp9vvb6c5cbcf236ys",
+            "label": "Agent Email",
+            "type": "XdString",
+            "description": "The agent's email address (foaf:mbox).",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 255
+            }
+          },
+          {
+            "component_id": "w2ruemcfy35rw60jl1t9dew2",
+            "label": "Agent Identifier",
+            "type": "XdString",
+            "description": "The identifier of a PROV agent: a URI or another globally unique identifier.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 255
+            }
+          },
+          {
+            "component_id": "xxe21o9ojzmy9wxxky1tnmog",
+            "label": "Agent Name",
+            "type": "XdString",
+            "description": "The name of the agent (foaf:name).",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 255
+            }
+          },
+          {
+            "component_id": "eftvwi5byq6cdtd931qyxzw0",
+            "label": "Agent Organization Name",
+            "type": "XdString",
+            "description": "The organization the agent belongs to or is.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 255
+            }
+          },
+          {
+            "component_id": "aa663ivutjf2fs4757t0bbzy",
+            "label": "Software Name",
+            "type": "XdString",
+            "description": "The name of a software agent.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 255
+            }
+          },
+          {
+            "component_id": "x0lebwtobgaelj5pev3258sd",
+            "label": "Software Version",
+            "type": "XdString",
+            "description": "The version of a software agent.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 60
+            }
+          },
+          {
+            "component_id": "i16vqj89it3db7d3c5qjko9p",
+            "label": "PROV Agent Type",
+            "type": "XdToken",
+            "description": "The kind of PROV agent: person, organization or software agent.",
+            "value": "Person",
+            "constraints": {
+              "enumerations": [
+                "Person",
+                "Organization",
+                "SoftwareAgent"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "component_id": "q0ckidtsg1x3iav6nrt8fo0l",
+        "label": "PROV Entity",
+        "type": "Cluster",
+        "description": "A PROV entity: what it is, its value and location, when it was generated and invalidated, and the entities, activity and agent it relates to.",
+        "items": [
+          {
+            "component_id": "abub2eah26yd2uzni3p9l58i",
+            "label": "Entity Description",
+            "type": "XdString",
+            "description": "A description of a PROV entity.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 4000
+            }
+          },
+          {
+            "component_id": "i1defiugxfdcwfb9rqv4p5tz",
+            "label": "Entity Identifier",
+            "type": "XdString",
+            "description": "The identifier of a PROV entity: a URI or another globally unique identifier.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 255
+            }
+          },
+          {
+            "component_id": "m9minyaug6ypyzt52zfxlyyi",
+            "label": "Entity Label",
+            "type": "XdString",
+            "description": "A human-readable label for a PROV entity.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 255
+            }
+          },
+          {
+            "component_id": "wn77qo3b1xjwc4dudtyme2io",
+            "label": "Entity Location",
+            "type": "XdString",
+            "description": "Where a PROV entity is (prov:atLocation), as text.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 255
+            }
+          },
+          {
+            "component_id": "kmcck093437mfdlnxnrzm0xw",
+            "label": "Entity Value",
+            "type": "XdString",
+            "description": "The value of a PROV entity, or a reference to where its content can be found (prov:value).",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 4000
+            }
+          },
+          {
+            "component_id": "phus5105uw30xejqs7baamyx",
+            "label": "Had Primary Source Reference",
+            "type": "XdString",
+            "description": "The primary source of this entity (prov:hadPrimarySource). Holds the IRI of the referenced thing.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 2000
+            }
+          },
+          {
+            "component_id": "kqlatg3rz00z58muv7j8toyl",
+            "label": "Was Attributed To Reference",
+            "type": "XdString",
+            "description": "The agent this entity is attributed to (prov:wasAttributedTo). Holds the IRI of the referenced thing.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 2000
+            }
+          },
+          {
+            "component_id": "credrxhz4hg4c42sihm0wb6s",
+            "label": "Was Derived From Reference",
+            "type": "XdString",
+            "description": "The entity this entity was derived from (prov:wasDerivedFrom). Holds the IRI of the referenced thing.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 2000
+            }
+          },
+          {
+            "component_id": "bfn83x3fw1cyuqriuoquu9t1",
+            "label": "Was Generated By Reference",
+            "type": "XdString",
+            "description": "The activity that generated this entity (prov:wasGeneratedBy). Holds the IRI of the referenced thing.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 2000
+            }
+          },
+          {
+            "component_id": "h1vwqq8ulrb27qpl6zuzppnf",
+            "label": "Was Invalidated By Reference",
+            "type": "XdString",
+            "description": "The activity that invalidated this entity (prov:wasInvalidatedBy). Holds the IRI of the referenced thing.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 2000
+            }
+          },
+          {
+            "component_id": "mjl0vv39zsbigqiuyqm66fkv",
+            "label": "Was Quoted From Reference",
+            "type": "XdString",
+            "description": "The entity this entity quotes (prov:wasQuotedFrom). Holds the IRI of the referenced thing.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 2000
+            }
+          },
+          {
+            "component_id": "lghqkvp7vapqk10l248kzqs8",
+            "label": "Was Revision Of Reference",
+            "type": "XdString",
+            "description": "The entity this entity revises (prov:wasRevisionOf). Holds the IRI of the referenced thing.",
+            "value": "DefaultString",
+            "constraints": {
+              "max_length": 2000
+            }
+          },
+          {
+            "component_id": "g2xnh3uhnlrnqlo7ki2s0fs3",
+            "label": "PROV Derivation Type",
+            "type": "XdToken",
+            "description": "How one entity was derived from another: a general derivation, a revision, a quotation or a primary source.",
+            "value": "Quotation",
+            "constraints": {
+              "enumerations": [
+                "Derivation",
+                "Revision",
+                "Quotation",
+                "PrimarySource"
+              ]
+            }
+          },
+          {
+            "component_id": "i4e2nod7ss9d4cumhn2pah8b",
+            "label": "PROV Entity Type",
+            "type": "XdToken",
+            "description": "The kind of PROV entity: a plain entity, a collection, an empty collection, a bundle or a plan.",
+            "value": "Plan",
+            "constraints": {
+              "enumerations": [
+                "Entity",
+                "Collection",
+                "EmptyCollection",
+                "Bundle",
+                "Plan"
+              ]
+            }
+          },
+          {
+            "component_id": "yk5nrxndulhebpi3hiywk8u8",
+            "label": "Generated At",
+            "type": "XdTemporal",
+            "description": "When the entity was generated (prov:generatedAtTime).",
+            "value": "2024-01-01T00:00:00"
+          },
+          {
+            "component_id": "hswapeutuik067dokidnbv88",
+            "label": "Invalidated At",
+            "type": "XdTemporal",
+            "description": "When the entity ceased to be usable (prov:invalidatedAtTime).",
+            "value": "2024-01-01T00:00:00"
+          }
+        ]
+      },
+      {
+        "component_id": "oyd0sik2krxuplyn3dbfafiv",
+        "label": "Remittance Advice",
+        "type": "Cluster",
+        "description": "A remittance advice as a governed record: the document header with its totals and the payer's references, the billing documents it refers to, any other document, the accounting parties and the payee, the payment means, the tax total, and the lines, each the balance of one invoice less the credit note taken into account. A conformant UBL RemittanceAdvice is a projection of this record. Members: Remittance Advice Document; Billing Reference; Additional Document Reference; Accounting Supplier Party; Accounting Customer Party; Payee Party; Payment Means Instruction; Tax Total; Remittance Advice Lines.",
+        "items": [
+          {
+            "component_id": "iswfl2vzv0f9ctm5rjxa3ums",
+            "label": "Accounting Customer Party",
+            "type": "Cluster",
+            "description": "The party the invoice for the order is to be sent to, when it is not the buyer. Members: Customer Party.",
+            "items": [
+              {
+                "component_id": "asbbdn0eof6713wx4y2e90c2",
+                "label": "Customer Party",
+                "type": "Cluster",
+                "description": "A party in the customer role: the account identifiers each side assigned, and the party itself. Members: Customer Assigned Account ID; Supplier Assigned Account ID; Party.",
+                "items": [
+                  {
+                    "component_id": "ybdlctks32zkkteycr5y1eq8",
+                    "label": "Customer Assigned Account ID",
+                    "type": "XdString",
+                    "description": "The identifier of the customer's account as the customer itself assigned it; on a supplier party, the identifier of the supplier as the customer assigned it.",
+                    "value": "DefaultString",
+                    "constraints": {
+                      "min_length": 1,
+                      "max_length": 100
+                    }
+                  },
+                  {
+                    "component_id": "nhvx21mf5ac81670xyrpwbaz",
+                    "label": "Supplier Assigned Account ID",
+                    "type": "XdString",
+                    "description": "The identifier of the customer's account as the supplier assigned it.",
+                    "value": "DefaultString",
+                    "constraints": {
+                      "min_length": 1,
+                      "max_length": 100
+                    }
+                  },
+                  {
+                    "component_id": "useph7s4ienfhwerqx2thedj",
+                    "label": "Party",
+                    "type": "Cluster",
+                    "description": "An organization fulfilling a role in the business process, one shape whatever the role: its endpoint, its identifiers with their schemes, its name and its postal address from the Default library (the same components a NIEM person's organization and a FHIR organization compose), its legal entity, and its contact. Members: Endpoint ID; Party Identification; organization-name (Default); us-address (Default); international-address (Default); Party Legal Entity; Party Contact.",
+                    "items": [
+                      {
+                        "component_id": "fpb149j9um0l676icmhyp56d",
+                        "label": "Endpoint ID",
+                        "type": "XdString",
+                        "description": "The identifier of the party's endpoint on the network the documents travel over, commonly a Global Location Number.",
+                        "value": "DefaultString",
+                        "constraints": {
+                          "min_length": 1,
+                          "max_length": 100
+                        }
+                      },
+                      {
+                        "component_id": "xcn8r67fg7soty17homzok44",
+                        "label": "Organization Name",
+                        "type": "XdString",
+                        "description": "The legal or registered name of an organization.",
+                        "value": "DefaultString",
+                        "constraints": {
+                          "min_length": 1,
+                          "max_length": 200
+                        }
+                      },
+                      {
+                        "component_id": "upawqojmcfg3qsf4ffzi47ho",
+                        "label": "International Address",
+                        "type": "Cluster",
+                        "description": "A mailing address in any country: street lines, city, region, postal code, country and use.",
+                        "items": [
+                          {
+                            "component_id": "ncxxt7wgs7soxw7kbmapxvg3",
+                            "label": "Address (Line 1)",
+                            "type": "XdString",
+                            "description": "The first line of a street address: street number and name, or a post office box.",
+                            "value": "DefaultString",
+                            "constraints": {
+                              "max_length": 200
+                            }
+                          },
+                          {
+                            "component_id": "sexw93x5276zwsn1qx15htpv",
+                            "label": "Address (Line 2)",
+                            "type": "XdString",
+                            "description": "The second line of a street address: apartment, suite, unit, building or floor, when the first line does not carry it.",
+                            "value": "DefaultString",
+                            "constraints": {
+                              "max_length": 200
+                            }
+                          },
+                          {
+                            "component_id": "toysvef93azt57fgh8rwpd4b",
+                            "label": "City Name",
+                            "type": "XdString",
+                            "description": "The name of the city, town or village in an address.",
+                            "value": "DefaultString",
+                            "constraints": {
+                              "max_length": 100
+                            }
+                          },
+                          {
+                            "component_id": "gf841eedvv6cjiegs934srai",
+                            "label": "Postal Code",
+                            "type": "XdString",
+                            "description": "The postal code of an address in any country, with no format constraint. Use US ZIP Code or Canada Postal Code where the format is known.",
+                            "value": "DefaultString",
+                            "constraints": {
+                              "max_length": 15
+                            }
+                          },
+                          {
+                            "component_id": "jw1b9q6ulyte599sdsqp2mvp",
+                            "label": "Region Name",
+                            "type": "XdString",
+                            "description": "The name of the state, province or other administrative region in an address, written out rather than coded.",
+                            "value": "DefaultString",
+                            "constraints": {
+                              "max_length": 100
+                            }
+                          },
+                          {
+                            "component_id": "b25dj42zxhm19pih328ga8pl",
+                            "label": "Address Use",
+                            "type": "XdToken",
+                            "description": "The purpose of an address.",
+                            "value": "billing",
+                            "constraints": {
+                              "enumerations": [
+                                "home",
+                                "work",
+                                "temp",
+                                "old",
+                                "billing"
+                              ]
+                            }
+                          },
+                          {
+                            "component_id": "f2jicaigehz7xmwcp1gm5gh0",
+                            "label": "Country Code ISO 3166",
+                            "type": "XdToken",
+                            "description": "The ISO 3166-1 alpha-2 code of a country or territory: the complete list of 249 officially assigned codes. Each value is defined by its Wikidata entity.",
+                            "value": "CI",
+                            "constraints": {
+                              "enumerations": [
+                                "AD",
+                                "AE",
+                                "AF",
+                                "AG",
+                                "AI",
+                                "AL",
+                                "AM",
+                                "AO",
+                                "AQ",
+                                "AR",
+                                "AS",
+                                "AT",
+                                "AU",
+                                "AW",
+                                "AX",
+                                "AZ",
+                                "BA",
+                                "BB",
+                                "BD",
+                                "BE",
+                                "BF",
+                                "BG",
+                                "BH",
+                                "BI",
+                                "BJ",
+                                "BL",
+                                "BM",
+                                "BN",
+                                "BO",
+                                "BQ",
+                                "BR",
+                                "BS",
+                                "BT",
+                                "BV",
+                                "BW",
+                                "BY",
+                                "BZ",
+                                "CA",
+                                "CC",
+                                "CD",
+                                "CF",
+                                "CG",
+                                "CH",
+                                "CI",
+                                "CK",
+                                "CL",
+                                "CM",
+                                "CN",
+                                "CO",
+                                "CR",
+                                "CU",
+                                "CV",
+                                "CW",
+                                "CX",
+                                "CY",
+                                "CZ",
+                                "DE",
+                                "DJ",
+                                "DK",
+                                "DM",
+                                "DO",
+                                "DZ",
+                                "EC",
+                                "EE",
+                                "EG",
+                                "EH",
+                                "ER",
+                                "ES",
+                                "ET",
+                                "FI",
+                                "FJ",
+                                "FK",
+                                "FM",
+                                "FO",
+                                "FR",
+                                "GA",
+                                "GB",
+                                "GD",
+                                "GE",
+                                "GF",
+                                "GG",
+                                "GH",
+                                "GI",
+                                "GL",
+                                "GM",
+                                "GN",
+                                "GP",
+                                "GQ",
+                                "GR",
+                                "GS",
+                                "GT",
+                                "GU",
+                                "GW",
+                                "GY",
+                                "HK",
+                                "HM",
+                                "HN",
+                                "HR",
+                                "HT",
+                                "HU",
+                                "ID",
+                                "IE",
+                                "IL",
+                                "IM",
+                                "IN",
+                                "IO",
+                                "IQ",
+                                "IR",
+                                "IS",
+                                "IT",
+                                "JE",
+                                "JM",
+                                "JO",
+                                "JP",
+                                "KE",
+                                "KG",
+                                "KH",
+                                "KI",
+                                "KM",
+                                "KN",
+                                "KP",
+                                "KR",
+                                "KW",
+                                "KY",
+                                "KZ",
+                                "LA",
+                                "LB",
+                                "LC",
+                                "LI",
+                                "LK",
+                                "LR",
+                                "LS",
+                                "LT",
+                                "LU",
+                                "LV",
+                                "LY",
+                                "MA",
+                                "MC",
+                                "MD",
+                                "ME",
+                                "MF",
+                                "MG",
+                                "MH",
+                                "MK",
+                                "ML",
+                                "MM",
+                                "MN",
+                                "MO",
+                                "MP",
+                                "MQ",
+                                "MR",
+                                "MS",
+                                "MT",
+                                "MU",
+                                "MV",
+                                "MW",
+                                "MX",
+                                "MY",
+                                "MZ",
+                                "NA",
+                                "NC",
+                                "NE",
+                                "NF",
+                                "NG",
+                                "NI",
+                                "NL",
+                                "NO",
+                                "NP",
+                                "NR",
+                                "NU",
+                                "NZ",
+                                "OM",
+                                "PA",
+                                "PE",
+                                "PF",
+                                "PG",
+                                "PH",
+                                "PK",
+                                "PL",
+                                "PM",
+                                "PN",
+                                "PR",
+                                "PS",
+                                "PT",
+                                "PW",
+                                "PY",
+                                "QA",
+                                "RE",
+                                "RO",
+                                "RS",
+                                "RU",
+                                "RW",
+                                "SA",
+                                "SB",
+                                "SC",
+                                "SD",
+                                "SE",
+                                "SG",
+                                "SH",
+                                "SI",
+                                "SJ",
+                                "SK",
+                                "SL",
+                                "SM",
+                                "SN",
+                                "SO",
+                                "SR",
+                                "SS",
+                                "ST",
+                                "SV",
+                                "SX",
+                                "SY",
+                                "SZ",
+                                "TC",
+                                "TD",
+                                "TF",
+                                "TG",
+                                "TH",
+                                "TJ",
+                                "TK",
+                                "TL",
+                                "TM",
+                                "TN",
+                                "TO",
+                                "TR",
+                                "TT",
+                                "TV",
+                                "TW",
+                                "TZ",
+                                "UA",
+                                "UG",
+                                "UM",
+                                "US",
+                                "UY",
+                                "UZ",
+                                "VA",
+                                "VC",
+                                "VE",
+                                "VG",
+                                "VI",
+                                "VN",
+                                "VU",
+                                "WF",
+                                "WS",
+                                "YE",
+                                "YT",
+                                "ZA",
+                                "ZM",
+                                "ZW"
+                              ]
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "component_id": "kibeh8vp79shumcdyj8xzqw1",
+                        "label": "Party Contact",
+                        "type": "Cluster",
+                        "description": "The contact at a party: its name, title and department, and the Default library's contact point (telephone, fax, email, website). Members: Contact Name; Contact Job Title; Contact Department; contact-point (Default).",
+                        "items": [
+                          {
+                            "component_id": "bkw6awwe7kp01kowlwbgn21b",
+                            "label": "Contact Department",
+                            "type": "XdString",
+                            "description": "The department the contact works in.",
+                            "value": "DefaultString",
+                            "constraints": {
+                              "min_length": 1,
+                              "max_length": 100
+                            }
+                          },
+                          {
+                            "component_id": "ozkpv9buivm77ozkybm0ww39",
+                            "label": "Contact Job Title",
+                            "type": "XdString",
+                            "description": "The job title or function of the contact.",
+                            "value": "DefaultString",
+                            "constraints": {
+                              "min_length": 1,
+                              "max_length": 100
+                            }
+                          },
+                          {
+                            "component_id": "fp533gyfb6yatp6jgpg2emb2",
+                            "label": "Contact Name",
+                            "type": "XdString",
+                            "description": "The name of the contact at the party, a functional name (a department, a desk) in preference to a personal one.",
+                            "value": "DefaultString",
+                            "constraints": {
+                              "min_length": 1,
+                              "max_length": 100
+                            }
+                          },
+                          {
+                            "component_id": "d2xwhnb2vqzxw70jcizj9csx",
+                            "label": "Contact Point",
+                            "type": "Cluster",
+                            "description": "Ways to reach a person or organization: phone, fax, email, website, and the method and use of the contact.",
+                            "items": [
+                              {
+                                "component_id": "wriny2gz8aqcvffmfpwbompk",
+                                "label": "Website URL",
+                                "type": "XdLink",
+                                "description": "The URL of a web page or online resource, such as an organization's website or a person's profile page.",
+                                "value": "http://example.org/resource"
+                              },
+                              {
+                                "component_id": "q922mqaon3yn5zlwf2bszf28",
+                                "label": "Email Address",
+                                "type": "XdString",
+                                "description": "An email address. The pattern requires a local part, an at sign and a domain with a dot; RFC 5321 limits the whole address to 254 characters.",
+                                "value": "DefaultString",
+                                "constraints": {
+                                  "max_length": 254
+                                }
+                              },
+                              {
+                                "component_id": "ll6ltsnvakomixuitxkbkxfz",
+                                "label": "Fax Number",
+                                "type": "XdString",
+                                "description": "A facsimile telephone number, optionally starting with a plus sign and country code, with digits, spaces, hyphens and parentheses allowed.",
+                                "value": "DefaultString",
+                                "constraints": {
+                                  "max_length": 20
+                                }
+                              },
+                              {
+                                "component_id": "zpfwg52r88j6jdypj7rg71ke",
+                                "label": "Phone Number",
+                                "type": "XdString",
+                                "description": "A telephone number, optionally starting with a plus sign and country code, with digits, spaces, hyphens and parentheses allowed.",
+                                "value": "DefaultString",
+                                "constraints": {
+                                  "max_length": 20
+                                }
+                              },
+                              {
+                                "component_id": "miqo30r5b554nyj7ubryw43x",
+                                "label": "Contact Method",
+                                "type": "XdToken",
+                                "description": "The communication channel of a contact point.",
+                                "value": "phone",
+                                "constraints": {
+                                  "enumerations": [
+                                    "phone",
+                                    "fax",
+                                    "email",
+                                    "pager",
+                                    "url",
+                                    "sms",
+                                    "other"
+                                  ]
+                                }
+                              },
+                              {
+                                "component_id": "vmruk4j9y1orvvz8cwafrax5",
+                                "label": "Contact Use",
+                                "type": "XdToken",
+                                "description": "The purpose of a contact point.",
+                                "value": "work",
+                                "constraints": {
+                                  "enumerations": [
+                                    "home",
+                                    "work",
+                                    "temp",
+                                    "old",
+                                    "mobile"
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "component_id": "z0gdpy67iot29gdc2zq2v1jj",
+                        "label": "Party Identification",
+                        "type": "Cluster",
+                        "description": "One identifier of a party: the scheme it belongs to and the value in it. Members: Party Identification Scheme; Party Identification Value.",
+                        "items": [
+                          {
+                            "component_id": "iwxh8exsn4qb6eyetfbwqvmj",
+                            "label": "Party Identification Value",
+                            "type": "XdString",
+                            "description": "The identifier of the party, in the scheme the record names.",
+                            "value": "DefaultString",
+                            "constraints": {
+                              "min_length": 1,
+                              "max_length": 100
+                            }
+                          },
+                          {
+                            "component_id": "c9v9nkkg6b8sixoaf55vyjrn",
+                            "label": "Party Identification Scheme",
+                            "type": "XdToken",
+                            "description": "The identification system a party's identifier belongs to: a GS1 Global Location Number, a DUNS number, a tax identifier, a company registration number, an identifier the buyer assigned, an identifier the seller assigned, or one the parties agreed between themselves. A GLN is GS1's and a buyer-assigned number is the buyer's; the record says which.",
+                            "value": "Assigned by the seller",
+                            "constraints": {
+                              "enumerations": [
+                                "Global Location Number (GS1)",
+                                "DUNS number",
+                                "Tax identifier",
+                                "Company registration number",
+                                "Assigned by the buyer",
+                                "Assigned by the seller",
+                                "Mutually agreed"
+                              ]
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "component_id": "cslzdtawth1xxjjslf1975qt",
+                        "label": "Party Legal Entity",
+                        "type": "Cluster",
+                        "description": "The party as a legal entity: its registered name and its company registration identifier. Members: Registration Name; Company ID.",
+                        "items": [
+                          {
+                            "component_id": "axizk9c3k82w84p1t1wkwayu",
+                            "label": "Company ID",
+                            "type": "XdString",
+                            "description": "The identifier of the party in a company registration scheme.",
+                            "value": "DefaultString",
+                            "constraints": {
+                              "min_length": 1,
+                              "max_length": 100
+                            }
+                          },
+                          {
+                            "component_id": "ev7lhh4t59tt8ot0tfoaztb6",
+                            "label": "Registration Name",
+                            "type": "XdString",
+                            "description": "The name of the party as registered with the relevant legal authority.",
+                            "value": "DefaultString",
+                            "constraints": {
+                              "min_length": 1,
+                              "max_length": 200
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "component_id": "jqgvof35d7y83wkfcgiic5em",
+                        "label": "US Address",
+                        "type": "Cluster",
+                        "description": "A United States mailing address: street lines, city, state, ZIP code, country and use.",
+                        "items": [
+                          {
+                            "component_id": "cjzq0xnrm0uu8p1h51koheoz",
+                            "label": "US ZIP Code",
+                            "type": "XdString",
+                            "description": "A United States ZIP Code in five-digit or ZIP+4 form, for example 12345 or 12345-6789.",
+                            "value": "DefaultString",
+                            "constraints": {
+                              "max_length": 10
+                            }
+                          },
+                          {
+                            "component_id": "k9tqm489kilg33mx4cibyto6",
+                            "label": "US State Code",
+                            "type": "XdToken",
+                            "description": "The two-letter USPS abbreviation of a US state, the District of Columbia or a US territory. The definition of each value is its ISO 3166-2:US entry.",
+                            "value": "ND",
+                            "constraints": {
+                              "enumerations": [
+                                "AL",
+                                "AK",
+                                "AZ",
+                                "AR",
+                                "CA",
+                                "CO",
+                                "CT",
+                                "DE",
+                                "FL",
+                                "GA",
+                                "HI",
+                                "ID",
+                                "IL",
+                                "IN",
+                                "IA",
+                                "KS",
+                                "KY",
+                                "LA",
+                                "ME",
+                                "MD",
+                                "MA",
+                                "MI",
+                                "MN",
+                                "MS",
+                                "MO",
+                                "MT",
+                                "NE",
+                                "NV",
+                                "NH",
+                                "NJ",
+                                "NM",
+                                "NY",
+                                "NC",
+                                "ND",
+                                "OH",
+                                "OK",
+                                "OR",
+                                "PA",
+                                "RI",
+                                "SC",
+                                "SD",
+                                "TN",
+                                "TX",
+                                "UT",
+                                "VT",
+                                "VA",
+                                "WA",
+                                "WV",
+                                "WI",
+                                "WY",
+                                "DC",
+                                "AS",
+                                "GU",
+                                "MP",
+                                "PR",
+                                "VI"
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component_id": "f3duci830odmou614vn1rpgu",
+            "label": "Accounting Supplier Party",
+            "type": "Cluster",
+            "description": "The party that issues the invoice for the order, when it is not the seller. Members: Supplier Party.",
+            "items": [
+              {
+                "component_id": "utcj07ovkb7ntkbq8ix0ro4l",
+                "label": "Supplier Party",
+                "type": "Cluster",
+                "description": "A party in the supplier role: the identifier the customer assigned it, and the party itself. Members: Customer Assigned Account ID; Party.",
+                "items": []
+              }
+            ]
+          },
+          {
+            "component_id": "ziv6gmpthgks5vkfsyx2ib4t",
+            "label": "Additional Document Reference",
+            "type": "Cluster",
+            "description": "Another document associated with the order. Members: Document Reference.",
+            "items": [
+              {
+                "component_id": "xex1p4pq2b1ezqzlam9n5sv7",
+                "label": "Document Reference",
+                "type": "Cluster",
+                "description": "A reference to another document: its identifier, its issue date, what kind of document it is, and a description. Members: Document Reference ID; Document Reference Issue Date; Document Type; Document Description.",
+                "items": [
+                  {
+                    "component_id": "z181ta9jftxc7k63rv4nz1zv",
+                    "label": "Document Description",
+                    "type": "XdString",
+                    "description": "Free text describing the referenced document for a reader.",
+                    "value": "DefaultString",
+                    "constraints": {
+                      "min_length": 1,
+                      "max_length": 500
+                    }
+                  },
+                  {
+                    "component_id": "k153quyn7i9ravd1b3c61ad9",
+                    "label": "Document Reference ID",
+                    "type": "XdString",
+                    "description": "The identifier of the referenced document.",
+                    "value": "DefaultString",
+                    "constraints": {
+                      "min_length": 1,
+                      "max_length": 100
+                    }
+                  },
+                  {
+                    "component_id": "ia7qf3je696yjjgzz4l5q0sp",
+                    "label": "Document Type",
+                    "type": "XdToken",
+                    "description": "What kind of document is referenced: a quotation, a contract, a catalogue, the originator's document, an earlier order, an order response, a despatch advice, a receipt advice, an invoice, a credit note, a remittance advice, or another document. Revised at the ReceiptAdvice release to name the documents of the chain and at the RemittanceAdvice release to name the billing documents; the published models keep composing the list each was published with.",
+                    "value": "Credit note",
+                    "constraints": {
+                      "enumerations": [
+                        "Quotation",
+                        "Contract",
+                        "Catalogue",
+                        "Originator document",
+                        "Order",
+                        "Order response",
+                        "Despatch advice",
+                        "Receipt advice",
+                        "Invoice",
+                        "Credit note",
+                        "Remittance advice",
+                        "Other document"
+                      ]
+                    }
+                  },
+                  {
+                    "component_id": "ncxchb14dkm790w4rnuzafju",
+                    "label": "Document Reference Issue Date",
+                    "type": "XdTemporal",
+                    "description": "The date the referenced document was issued, as its sender assigned it.",
+                    "value": "2024-01-01T00:00:00"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component_id": "wnpoc2q1z2vxw56658bb9ed4",
+            "label": "Billing Reference",
+            "type": "Cluster",
+            "description": "The billing documents this document refers to: the earlier invoice it corrects, credits or pays, and the credit note a payment takes into account. Members: Invoice Document Reference; Credit Note Document Reference.",
+            "items": [
+              {
+                "component_id": "znjvyfaljuuhab4hje617fyh",
+                "label": "Credit Note Document Reference",
+                "type": "Cluster",
+                "description": "A credit note this document refers to: the one a payment takes into account. Members: Document Reference.",
+                "items": []
+              },
+              {
+                "component_id": "gf1jjk07yakcdvlgwo8wozsy",
+                "label": "Invoice Document Reference",
+                "type": "Cluster",
+                "description": "An earlier invoice this one refers to: the one it corrects, or the one it credits, or the one a payment settles. Members: Document Reference.",
+                "items": []
+              }
+            ]
+          },
+          {
+            "component_id": "anpufgp9b2pqetblqffkfggy",
+            "label": "Payee Party",
+            "type": "Cluster",
+            "description": "The party to be paid, when it is not the seller. Members: Party.",
+            "items": []
+          },
+          {
+            "component_id": "pnpbq6767i7i05afp648yhdd",
+            "label": "Payment Means Instruction",
+            "type": "Cluster",
+            "description": "How the order is to be paid: the means, the date it is due, and any instruction. Members: Payment Means; Payment Due Date; note (Default).",
+            "items": [
+              {
+                "component_id": "zvkk8ztob9gmrvvkzyibyrzk",
+                "label": "Note",
+                "type": "XdString",
+                "description": "Free text: a comment, remark or note attached to a record, up to 4000 characters.",
+                "value": "DefaultString",
+                "constraints": {
+                  "max_length": 4000
+                }
+              },
+              {
+                "component_id": "pv15bnowaxjtczx4wx4vit4d",
+                "label": "Payment Means",
+                "type": "XdToken",
+                "description": "The means of payment agreed for the order, from the UN/ECE payment means list UBL carries as its default: the name of each means, defined by the list entry.",
+                "value": "Not transferable banker's draft",
+                "constraints": {
+                  "enumerations": [
+                    "Instrument not defined",
+                    "Automated clearing house credit",
+                    "Automated clearing house debit",
+                    "ACH demand debit reversal",
+                    "ACH demand credit reversal",
+                    "ACH demand credit",
+                    "ACH demand debit",
+                    "Hold",
+                    "National or regional clearing",
+                    "In cash",
+                    "ACH savings credit reversal",
+                    "ACH savings debit reversal",
+                    "ACH savings credit",
+                    "ACH savings debit",
+                    "Bookentry credit",
+                    "Bookentry debit",
+                    "ACH demand cash concentration/disbursement (CCD) credit",
+                    "ACH demand cash concentration/disbursement (CCD) debit",
+                    "ACH demand corporate trade payment (CTP) credit",
+                    "Cheque",
+                    "Banker's draft",
+                    "Certified banker's draft",
+                    "Bank cheque (issued by a banking or similar establishment)",
+                    "Bill of exchange awaiting acceptance",
+                    "Certified cheque",
+                    "Local cheque",
+                    "ACH demand corporate trade payment (CTP) debit",
+                    "ACH demand corporate trade exchange (CTX) credit",
+                    "ACH demand corporate trade exchange (CTX) debit",
+                    "Credit transfer",
+                    "Debit transfer",
+                    "ACH demand cash concentration/disbursement plus (CCD+)...",
+                    "ACH demand cash concentration/disbursement plus (CCD+) debit",
+                    "ACH prearranged payment and deposit (PPD)",
+                    "ACH savings cash concentration/disbursement (CCD) credit",
+                    "ACH savings cash concentration/disbursement (CCD) debit",
+                    "ACH savings corporate trade payment (CTP) credit",
+                    "ACH savings corporate trade payment (CTP) debit",
+                    "ACH savings corporate trade exchange (CTX) credit",
+                    "ACH savings corporate trade exchange (CTX) debit",
+                    "ACH savings cash concentration/disbursement plus (CCD+)...",
+                    "Payment to bank account",
+                    "ACH savings cash concentration/disbursement plus (CC (43)",
+                    "Accepted bill of exchange",
+                    "Referenced home-banking credit transfer",
+                    "Interbank debit transfer",
+                    "Home-banking debit transfer",
+                    "Bank card",
+                    "Direct debit",
+                    "Payment by postgiro",
+                    "FR, norme 6 97-Telereglement CFONB (French Organisation...",
+                    "Urgent commercial payment",
+                    "Urgent Treasury Payment",
+                    "Credit card",
+                    "Debit card",
+                    "Bankgiro",
+                    "Standing agreement",
+                    "SEPA credit transfer",
+                    "SEPA direct debit",
+                    "Promissory note",
+                    "Promissory note signed by the debtor",
+                    "Promissory note signed by the debtor and endorsed by a bank",
+                    "Promissory note signed by the debtor and endorsed by a...",
+                    "Promissory note signed by a bank",
+                    "Promissory note signed by a bank and endorsed by another...",
+                    "Promissory note signed by a third party",
+                    "Promissory note signed by a third party and endorsed by...",
+                    "Online payment service",
+                    "Bill drawn by the creditor on the debtor",
+                    "Bill drawn by the creditor on a bank",
+                    "Bill drawn by the creditor, endorsed by another bank",
+                    "Bill drawn by the creditor on a bank and endorsed by a...",
+                    "Bill drawn by the creditor on a third party",
+                    "Bill drawn by creditor on third party, accepted and...",
+                    "Not transferable banker's draft",
+                    "Not transferable local cheque",
+                    "Reference giro",
+                    "Urgent giro",
+                    "Free format giro",
+                    "Requested method for payment was not used",
+                    "Clearing between partners",
+                    "Mutually defined"
+                  ]
+                }
+              },
+              {
+                "component_id": "iw79shpxfxnmiueutlhubpr2",
+                "label": "Payment Due Date",
+                "type": "XdTemporal",
+                "description": "The date payment is due under these terms.",
+                "value": "2024-01-01T00:00:00"
+              }
+            ]
+          },
+          {
+            "component_id": "bkxu8lqco28bg8jn2te6n9hq",
+            "label": "Remittance Advice Document",
+            "type": "Cluster",
+            "description": "The header of a remittance advice: the customization and profile that govern it, its identifier, whether it is a copy, its UUID, when it was issued, its status, the note, the currency, the totals debited, credited and paid, the payer's references, the line count, and the period it covers. Members: Customization ID; Profile ID; Profile Execution ID; Remittance Advice ID; Copy Indicator; Document UUID; Issue Date; Issue Time; Document Status; note (Default); Document Currency; Total Debit Amount; Total Credit Amount; Total Payment Amount; Payment Order Reference; Payer Reference; Invoicing Party Reference; Line Count; Invoice Period.",
+            "items": [
+              {
+                "component_id": "nsv2eblxq8s0vk28ue2vh1fl",
+                "label": "Copy Indicator",
+                "type": "XdBoolean",
+                "description": "Whether this document is a copy of one sent before (true) or the original (false).",
+                "value": true,
+                "constraints": {
+                  "true_values": [
+                    "true"
+                  ],
+                  "false_values": [
+                    "false"
+                  ]
+                }
+              },
+              {
+                "component_id": "rgnvj03kjtej1s8brdeil4kq",
+                "label": "Customization ID",
+                "type": "XdString",
+                "description": "The identifier of the customization of the business document the sender applied: which published model governs this document. In this library a customization is a published model, immutable and versioned, not a rule set beside the schema.",
+                "value": "DefaultString",
+                "constraints": {
+                  "min_length": 1,
+                  "max_length": 100
+                }
+              },
+              {
+                "component_id": "xywkj11p7u8jhjaiim3h3gyp",
+                "label": "Document Currency",
+                "type": "XdString",
+                "description": "The ISO 4217 code of the default currency of the document; every amount carries its currency as its unit as well.",
+                "value": "DefaultString",
+                "constraints": {
+                  "min_length": 3,
+                  "max_length": 3
+                }
+              },
+              {
+                "component_id": "wa674d96vzd8um4nwbtjrorz",
+                "label": "Document UUID",
+                "type": "XdString",
+                "description": "A universally unique identifier of this instance of the document.",
+                "value": "DefaultString",
+                "constraints": {
+                  "min_length": 36,
+                  "max_length": 36
+                }
+              },
+              {
+                "component_id": "fgf5kn7bm9a9m4bxyqgw1c3r",
+                "label": "Invoicing Party Reference",
+                "type": "XdString",
+                "description": "The reference the invoicing party asked the payer to quote on the payment.",
+                "value": "DefaultString",
+                "constraints": {
+                  "min_length": 1,
+                  "max_length": 100
+                }
+              },
+              {
+                "component_id": "iawrqhchw4hnxvh58un6ry6d",
+                "label": "Payer Reference",
+                "type": "XdString",
+                "description": "The payer's internal reference for the payment.",
+                "value": "DefaultString",
+                "constraints": {
+                  "min_length": 1,
+                  "max_length": 100
+                }
+              },
+              {
+                "component_id": "yzc81fh1c7y80msj8fqm5tgn",
+                "label": "Payment Order Reference",
+                "type": "XdString",
+                "description": "The payer's reference to its order for payment to its bank.",
+                "value": "DefaultString",
+                "constraints": {
+                  "min_length": 1,
+                  "max_length": 100
+                }
+              },
+              {
+                "component_id": "blz32vkqw11awazaklpdih7b",
+                "label": "Profile Execution ID",
+                "type": "XdString",
+                "description": "The identifier of one execution of the profile, shared by every document in that collaboration, so the order, its response, the despatch advice and the invoice can be tied together.",
+                "value": "DefaultString",
+                "constraints": {
+                  "min_length": 1,
+                  "max_length": 100
+                }
+              },
+              {
+                "component_id": "ato2r6lpk92i9e5djcwrna74",
+                "label": "Profile ID",
+                "type": "XdString",
+                "description": "The identifier of the business process profile the document belongs to, when the parties agreed one.",
+                "value": "DefaultString",
+                "constraints": {
+                  "min_length": 1,
+                  "max_length": 100
+                }
+              },
+              {
+                "component_id": "qrlhu795tx4ktkczzwjgmex0",
+                "label": "Remittance Advice ID",
+                "type": "XdString",
+                "description": "The identifier of the remittance advice, assigned by the payer.",
+                "value": "DefaultString",
+                "constraints": {
+                  "min_length": 1,
+                  "max_length": 50
+                }
+              },
+              {
+                "component_id": "mnuyvuxqsy0qskx8hiy6epff",
+                "label": "Document Status",
+                "type": "XdToken",
+                "description": "The status of the document with respect to its original state: the original, a revision of it, or its cancellation. UBL leaves the status code to profiles; these are this library's values.",
+                "value": "Original",
+                "constraints": {
+                  "enumerations": [
+                    "Original",
+                    "Revised",
+                    "Cancelled"
+                  ]
+                }
+              },
+              {
+                "component_id": "c1c7iydc13os47ppwwtwsnum",
+                "label": "Line Count",
+                "type": "XdCount",
+                "description": "The number of order lines in the document, as the sender states it for the receiver to check against.",
+                "value": 33,
+                "units": {
+                  "label": "Items",
+                  "value": "Default : Items"
+                }
+              },
+              {
+                "component_id": "jce61gv76krf6vwk63ym367j",
+                "label": "Total Credit Amount",
+                "type": "XdQuantity",
+                "description": "The total of the credit amounts the remittance advice states, in its currency.",
+                "value": 76.5,
+                "magnitude": {
+                  "value": 76.5
+                },
+                "units": {
+                  "label": "Currency",
+                  "symbol": "%",
+                  "system": "ISO"
+                }
+              },
+              {
+                "component_id": "td3ikusqd8oil952mc5tshok",
+                "label": "Total Debit Amount",
+                "type": "XdQuantity",
+                "description": "The total of the debit amounts the remittance advice states, in its currency.",
+                "value": 32.7,
+                "magnitude": {
+                  "value": 32.7
+                },
+                "units": {
+                  "label": "Currency",
+                  "symbol": "%",
+                  "system": "ISO"
+                }
+              },
+              {
+                "component_id": "l41b25npnwox5z6ugjzctgus",
+                "label": "Total Payment Amount",
+                "type": "XdQuantity",
+                "description": "The amount paid under the remittance advice, in its currency; positive.",
+                "value": 54.9,
+                "magnitude": {
+                  "value": 54.9
+                },
+                "units": {
+                  "label": "Currency",
+                  "symbol": "%",
+                  "system": "ISO"
+                }
+              },
+              {
+                "component_id": "tkd16hhh9wbn0qya2ykm0552",
+                "label": "Issue Date",
+                "type": "XdTemporal",
+                "description": "The date the sender issued the document.",
+                "value": "2024-01-01T00:00:00"
+              },
+              {
+                "component_id": "oybfzltffyfioix1zdblxcp3",
+                "label": "Issue Time",
+                "type": "XdTemporal",
+                "description": "The time of day the sender issued the document.",
+                "value": "2024-01-01T00:00:00"
+              },
+              {
+                "component_id": "lxcfaaj41jaqhetpy8ekmvwj",
+                "label": "Invoice Period",
+                "type": "Cluster",
+                "description": "The period the invoice covers, as a start and an end date. Members: date-range (Default).",
+                "items": [
+                  {
+                    "component_id": "ru9u47yxhe337pslpxm6cflx",
+                    "label": "Date Range",
+                    "type": "Cluster",
+                    "description": "A period bounded by a start date and an end date.",
+                    "items": [
+                      {
+                        "component_id": "moo2lije2b05ylq8q4t52lcb",
+                        "label": "Date Range End",
+                        "type": "XdTemporal",
+                        "description": "The last date of a period.",
+                        "value": "2024-01-01T00:00:00"
+                      },
+                      {
+                        "component_id": "bcyjfdwobh9q60umle1amw0w",
+                        "label": "Date Range Start",
+                        "type": "XdTemporal",
+                        "description": "The first date of a period.",
+                        "value": "2024-01-01T00:00:00"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component_id": "tprxhij1vk093uyusb7rwyf0",
+            "label": "Remittance Advice Lines",
+            "type": "Cluster",
+            "description": "The lines of the remittance advice, up to ten. Members: Remittance Advice Line 1; Remittance Advice Line 2; Remittance Advice Line 3; Remittance Advice Line 4; Remittance Advice Line 5; Remittance Advice Line 6; Remittance Advice Line 7; Remittance Advice Line 8; Remittance Advice Line 9; Remittance Advice Line 10.",
+            "items": [
+              {
+                "component_id": "kqgm183nrh74w89gy4f3akv2",
+                "label": "Remittance Advice Line 1",
+                "type": "Cluster",
+                "description": "Line 1 of the remittance advice. Members: Remittance Advice Line.",
+                "items": [
+                  {
+                    "component_id": "q964qt4j2dtjvo06eea70en7",
+                    "label": "Remittance Advice Line",
+                    "type": "Cluster",
+                    "description": "One line of the remittance advice: its identifier and note, the amounts debited and credited and the balance settled, the payment's purpose, the invoicing party's reference, the period it covers, the invoice paid and the credit note taken into account as billing references, any other document it references, and the parties by role where they differ from the document's. Members: Line ID; note (Default); Debit Line Amount; Credit Line Amount; Balance Amount; Payment Purpose; Invoicing Party Reference; Invoice Period; Billing Reference; Line Document Reference; Accounting Supplier Party; Accounting Customer Party; Buyer Customer Party; Seller Supplier Party; Payee Party.",
+                    "items": [
+                      {
+                        "component_id": "qnymhn26y7zfy7jav1pi3dqi",
+                        "label": "Line ID",
+                        "type": "XdString",
+                        "description": "The identifier the buyer assigned to the line within the order.",
+                        "value": "DefaultString",
+                        "constraints": {
+                          "min_length": 1,
+                          "max_length": 50
+                        }
+                      },
+                      {
+                        "component_id": "xvv7o2f1hcgq54tmodaj5969",
+                        "label": "Payment Purpose",
+                        "type": "XdString",
+                        "description": "The business purpose of the payment, as the parties agreed to state it: UBL carries no default list.",
+                        "value": "DefaultString",
+                        "constraints": {
+                          "min_length": 1,
+                          "max_length": 60
+                        }
+                      },
+                      {
+                        "component_id": "x9eeu07d0se3zhqxe7jg2l83",
+                        "label": "Balance Amount",
+                        "type": "XdQuantity",
+                        "description": "The balance the line settles, in the document currency: the debit less the credit.",
+                        "value": 5.6,
+                        "magnitude": {
+                          "value": 5.6
+                        },
+                        "units": {
+                          "label": "Currency",
+                          "symbol": "%",
+                          "system": "ISO"
+                        }
+                      },
+                      {
+                        "component_id": "tmq39zrg2b2atrikdxx75mxk",
+                        "label": "Credit Line Amount",
+                        "type": "XdQuantity",
+                        "description": "The amount credited on the line, in the document currency: what a credit note or a prepayment took off.",
+                        "value": 13.1,
+                        "magnitude": {
+                          "value": 13.1
+                        },
+                        "units": {
+                          "label": "Currency",
+                          "symbol": "%",
+                          "system": "ISO"
+                        }
+                      },
+                      {
+                        "component_id": "b1vqdrgq824x3pcrfmhqzwfr",
+                        "label": "Debit Line Amount",
+                        "type": "XdQuantity",
+                        "description": "The amount debited on the line, in the document currency: what the invoice made payable.",
+                        "value": 58.6,
+                        "magnitude": {
+                          "value": 58.6
+                        },
+                        "units": {
+                          "label": "Currency",
+                          "symbol": "%",
+                          "system": "ISO"
+                        }
+                      },
+                      {
+                        "component_id": "nylve3b8ss572vh8zso2u4l7",
+                        "label": "Buyer Customer Party",
+                        "type": "Cluster",
+                        "description": "The party placing the order. Members: Customer Party.",
+                        "items": []
+                      },
+                      {
+                        "component_id": "zfqyw3u5kz7yxk8qgofj0dxj",
+                        "label": "Line Document Reference",
+                        "type": "Cluster",
+                        "description": "A document referenced by the line. Members: Document Reference.",
+                        "items": []
+                      },
+                      {
+                        "component_id": "xkkk5vyegpy4xdig8vnabstc",
+                        "label": "Seller Supplier Party",
+                        "type": "Cluster",
+                        "description": "The party the order is placed with. Members: Supplier Party.",
+                        "items": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "component_id": "gx3hb6dnaofj771kat2jysnw",
+                "label": "Remittance Advice Line 10",
+                "type": "Cluster",
+                "description": "Line 10 of the remittance advice. Members: Remittance Advice Line.",
+                "items": []
+              },
+              {
+                "component_id": "gq7zons1f95gn8x91w7yiez2",
+                "label": "Remittance Advice Line 2",
+                "type": "Cluster",
+                "description": "Line 2 of the remittance advice. Members: Remittance Advice Line.",
+                "items": []
+              },
+              {
+                "component_id": "j6u4eoiwb8dpxctwbd805eqd",
+                "label": "Remittance Advice Line 3",
+                "type": "Cluster",
+                "description": "Line 3 of the remittance advice. Members: Remittance Advice Line.",
+                "items": []
+              },
+              {
+                "component_id": "s4lfrqovarql7ecs9tf7js5l",
+                "label": "Remittance Advice Line 4",
+                "type": "Cluster",
+                "description": "Line 4 of the remittance advice. Members: Remittance Advice Line.",
+                "items": []
+              },
+              {
+                "component_id": "xu9shazwk3k2lysypuqpam9c",
+                "label": "Remittance Advice Line 5",
+                "type": "Cluster",
+                "description": "Line 5 of the remittance advice. Members: Remittance Advice Line.",
+                "items": []
+              },
+              {
+                "component_id": "jdpxmvin8qc86f0vi1x4hl2k",
+                "label": "Remittance Advice Line 6",
+                "type": "Cluster",
+                "description": "Line 6 of the remittance advice. Members: Remittance Advice Line.",
+                "items": []
+              },
+              {
+                "component_id": "f6ebrpydxag8xkknrry5iqil",
+                "label": "Remittance Advice Line 7",
+                "type": "Cluster",
+                "description": "Line 7 of the remittance advice. Members: Remittance Advice Line.",
+                "items": []
+              },
+              {
+                "component_id": "ockchs2y8ctrehqoqz9074o0",
+                "label": "Remittance Advice Line 8",
+                "type": "Cluster",
+                "description": "Line 8 of the remittance advice. Members: Remittance Advice Line.",
+                "items": []
+              },
+              {
+                "component_id": "ig9gi98729gio9k9z6b8sjt9",
+                "label": "Remittance Advice Line 9",
+                "type": "Cluster",
+                "description": "Line 9 of the remittance advice. Members: Remittance Advice Line.",
+                "items": []
+              }
+            ]
+          },
+          {
+            "component_id": "yat9nppabvpq1jrgpsi5g226",
+            "label": "Tax Total",
+            "type": "Cluster",
+            "description": "The total tax for one taxation scheme: its amount and the subtotals it is the sum of. Members: Tax Amount; Tax Subtotal.",
+            "items": [
+              {
+                "component_id": "gi49b158luigt4x2bhhbnux0",
+                "label": "Tax Amount",
+                "type": "XdQuantity",
+                "description": "The amount of tax, in the document currency.",
+                "value": 25.3,
+                "magnitude": {
+                  "value": 25.3
+                },
+                "units": {
+                  "label": "Currency",
+                  "symbol": "%",
+                  "system": "ISO"
+                }
+              },
+              {
+                "component_id": "w4pmewp5mgp43q2k0p4bmyfw",
+                "label": "Tax Subtotal",
+                "type": "Cluster",
+                "description": "The tax for one category within a scheme: the taxable amount, the tax amount, and the category. Members: Taxable Amount; Tax Amount; Tax Category.",
+                "items": [
+                  {
+                    "component_id": "cx5gdd7pofanddbh9yaf53xl",
+                    "label": "Taxable Amount",
+                    "type": "XdQuantity",
+                    "description": "The net amount the tax rate is applied to.",
+                    "value": 42.6,
+                    "magnitude": {
+                      "value": 42.6
+                    },
+                    "units": {
+                      "label": "Currency",
+                      "symbol": "%",
+                      "system": "ISO"
+                    }
+                  },
+                  {
+                    "component_id": "f3hxcmvvq1jtowruh5y3evhc",
+                    "label": "Tax Category",
+                    "type": "Cluster",
+                    "description": "One category within a taxation scheme: its identifier, name, rate, and the scheme. Members: Tax Category ID; Tax Category Name; Tax Percent; Tax Scheme.",
+                    "items": [
+                      {
+                        "component_id": "p6c7q343dafqwvcq6m1ffz5i",
+                        "label": "Tax Category ID",
+                        "type": "XdString",
+                        "description": "The identifier of the tax category within its scheme, as the jurisdiction codes it.",
+                        "value": "DefaultString",
+                        "constraints": {
+                          "min_length": 1,
+                          "max_length": 100
+                        }
+                      },
+                      {
+                        "component_id": "ehh24wvyu4fsa3rbeheft3kj",
+                        "label": "Tax Category Name",
+                        "type": "XdString",
+                        "description": "The name of the tax category.",
+                        "value": "DefaultString",
+                        "constraints": {
+                          "min_length": 1,
+                          "max_length": 100
+                        }
+                      },
+                      {
+                        "component_id": "v4zn5xtqlkni8qr3ly7e2j1a",
+                        "label": "Tax Percent",
+                        "type": "XdQuantity",
+                        "description": "The rate of the tax category, as a percentage.",
+                        "value": 30.5,
+                        "magnitude": {
+                          "value": 30.5,
+                          "min_inclusive": 0.0,
+                          "max_inclusive": 100.0
+                        },
+                        "units": {
+                          "label": "Percentage",
+                          "symbol": "%",
+                          "system": "ISO"
+                        }
+                      },
+                      {
+                        "component_id": "u23p2mgw0aw90lu5eh3o2ix0",
+                        "label": "Tax Scheme",
+                        "type": "Cluster",
+                        "description": "The taxation scheme a category belongs to: its identifier and name. Tax categories are domain content by jurisdiction, so the scheme is carried as an identified reference rather than an enumeration. Members: Tax Scheme ID; Tax Scheme Name.",
+                        "items": [
+                          {
+                            "component_id": "mexx9mfi4rglmgi71nqf37ux",
+                            "label": "Tax Scheme ID",
+                            "type": "XdString",
+                            "description": "The identifier of the taxation scheme, such as VAT, GST or a sales tax, as the parties' jurisdiction names it.",
+                            "value": "DefaultString",
+                            "constraints": {
+                              "min_length": 1,
+                              "max_length": 100
+                            }
+                          },
+                          {
+                            "component_id": "g7952fbwz8uh2ig9uidu9877",
+                            "label": "Tax Scheme Name",
+                            "type": "XdString",
+                            "description": "The name of the taxation scheme.",
+                            "value": "DefaultString",
+                            "constraints": {
+                              "min_length": 1,
+                              "max_length": 100
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

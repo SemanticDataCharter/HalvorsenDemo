@@ -41,6 +41,7 @@ from halvorsen_credit_notes import credit_note  # noqa: E402
 from halvorsen_dispatch import dispatch  # noqa: E402
 from halvorsen_invoices import invoice  # noqa: E402
 from halvorsen_receipts import receive  # noqa: E402
+from halvorsen_remittances import payment_runs, remittance  # noqa: E402
 from halvorsen_responses import respond  # noqa: E402
 from torvale import generate_torvale  # noqa: E402
 from credit_note import read_credit_note, validate_ubl_credit_note, write_credit_note  # noqa: E402
@@ -49,6 +50,7 @@ from order import TORVALE, read_order, validate_ubl, write_order  # noqa: E402
 from profiles import two_models  # noqa: E402
 from order_response import read_order_response, validate_ubl_response, write_order_response  # noqa: E402
 from receipt_advice import read_receipt_advice, validate_ubl_receipt, write_receipt_advice  # noqa: E402
+from remittance_advice import read_remittance_advice, validate_ubl_remittance_advice, write_remittance_advice  # noqa: E402
 from shared import IMPORT_ROOT, RETAILER_TRANSLATOR, SUPPLIER_TRANSLATOR, cuid_generator, record, write_record  # noqa: E402
 
 ORDERS = int(os.environ.get("HALVORSEN_ORDERS", "52"))
@@ -76,7 +78,8 @@ def main():
         "retailer_receipts": ("retailer", "receipt_advice"), "supplier_receipts": ("halvorsen", "receipt_advice"),
         "supplier_invoices": ("halvorsen", "invoice"), "retailer_invoices": ("retailer", "invoice"),
         "torvale_orders": ("torvale", "torvale_order"), "supplier_torvale_orders": ("halvorsen", "torvale_order"),
-        "supplier_credit_notes": ("halvorsen", "credit_note"), "retailer_credit_notes": ("retailer", "credit_note"), "exchange": ("exchange",)}.items()}
+        "supplier_credit_notes": ("halvorsen", "credit_note"), "retailer_credit_notes": ("retailer", "credit_note"),
+        "retailer_remittances": ("retailer", "remittance_advice"), "supplier_remittances": ("halvorsen", "remittance_advice"), "exchange": ("exchange",)}.items()}
     for d in dirs.values():
         os.makedirs(d, exist_ok=True)
         for f in glob.glob(os.path.join(d, "*.xml")):
@@ -90,9 +93,12 @@ def main():
     irng = random.Random(SEED + ":invoices")
     trng = random.Random(SEED + ":torvale")
     crng = random.Random(SEED + ":credit-notes")
+    rrng = random.Random(SEED + ":remittances")
     idrng = random.Random(SEED + ":instance-ids")   # the translated records' instance ids: a Receipt names a record by its bytes, so every byte must regenerate
     n = 0; lapsed = 0; stale = 0; problems = 0; deposits = 0
     by_receipt = {}   # what the credit note of a settled deduction is written from
+    invoices = []     # (invoice header, values) in order, for the payment runs
+    credit_by_invoice = {}
     for h, values, xml in generate(ORDERS, seed=SEED):
         # 1. the retailer's order, the system of record; written out as a UBL Order; read in by the supplier
         write_record(dirs["retailer_orders"], "order", xml, name=h["order_id"].lower())
@@ -145,6 +151,7 @@ def main():
         write_record(dirs["retailer_invoices"], "invoice", retailer_invoice, name=ih["invoice_id"].lower())
         lapsed += dh["pallet_lapses"]; stale += dh["pack_stale"]; problems += bool(kh["exceptions"]); deposits += ih["kind"] == "deposit"
         by_receipt[kh["receipt_id"]] = (ih, ivalues, kh, kvalues)
+        invoices.append((ih, ivalues))
         n += 1
     # 6. the second retailer: Torvale Markets orders monthly under its own profile of the same components; its record is written
     #    as a UBL 2.3 Order (the requirements in UBL's own places) and read by the supplier's translator into the Torvale Order model
@@ -190,10 +197,26 @@ def main():
                                       source=(f"urn:halvorsen:credit-note:{ch['credit_note_id']}:ubl", f"{ch['credit_note_id']}.xml", "The UBL 2.3 CreditNote received from Halvorsen Foods"),
                                       agent=RETAILER_TRANSLATOR, current_state="OrderPaymentDue")
         write_record(dirs["retailer_credit_notes"], "credit_note", retailer_credit_note, name=ch["credit_note_id"].lower())
+        credit_by_invoice[ch["invoice_id"]] = (ch, cv)
         credited += 1
+    # 10. the payment, stated: the retailer's payment system pays the invoices due in each month on its last day, each less the
+    #     credit note issued against it, one remittance advice a run; written as a UBL 2.3 RemittanceAdvice and read by the supplier's translator
+    pairs = [(ih, iv, *credit_by_invoice.get(ih["invoice_id"], (None, None))) for ih, iv in invoices]
+    runs = 0
+    for seq, (month, items) in enumerate(payment_runs(pairs), start=1):
+        mh, mv, mxml = remittance(month, items, seq, rrng)
+        write_record(dirs["retailer_remittances"], "remittance_advice", mxml, name=mh["remittance_id"].lower())
+        mubl = write_remittance_advice(mxml)
+        assert not validate_ubl_remittance_advice(mubl), (mh["remittance_id"], validate_ubl_remittance_advice(mubl)[:2])
+        mreceived = read_remittance_advice(exchange(dirs["exchange"], mh["remittance_id"], mubl))
+        supplier_remittance = record("Remittance Advice", mreceived, instance_id=cuid_generator(idrng), document_id=mh["remittance_id"], buyer=mh["payer"], when=f"{mh['paid_on']}T{rrng.randint(9, 17):02d}:{rrng.randint(0, 59):02d}:00",
+                                     source=(f"urn:kestrel:remittance:{mh['remittance_id']}:ubl", f"{mh['remittance_id']}.xml", "The UBL 2.3 RemittanceAdvice received from Kestrel Mercantile"),
+                                     agent=SUPPLIER_TRANSLATOR, current_state="OrderDelivered")
+        write_record(dirs["supplier_remittances"], "remittance_advice", supplier_remittance, name=mh["remittance_id"].lower())
+        runs += 1
     for name, d in dirs.items():
         print(f"  {name:<20} {len(glob.glob(os.path.join(d, '*.xml'))):>6,}   {d}")
-    print(f"  {n} orders; {lapsed} dispatches with a pallet identifier that lapses on the day of dispatch; {stale} packed to the replaced pack specification; {problems} receipts in OrderProblem; {deposits} invoices with a deposit deducted; {settled} settled records from the Receipts held ({unmatched} not matching); {TORVALE_ORDERS} Torvale orders under the second profile, the exhibit in profiles/exhibit.json; {credited} credit notes for the deductions the Receipts permitted")
+    print(f"  {n} orders; {lapsed} dispatches with a pallet identifier that lapses on the day of dispatch; {stale} packed to the replaced pack specification; {problems} receipts in OrderProblem; {deposits} invoices with a deposit deducted; {settled} settled records from the Receipts held ({unmatched} not matching); {TORVALE_ORDERS} Torvale orders under the second profile, the exhibit in profiles/exhibit.json; {credited} credit notes for the deductions the Receipts permitted; {runs} payment runs, every invoice paid less its credit note")
     print(f"Completed in {time.time() - t0:.1f}s")
 
 

@@ -1,0 +1,3679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdc4:dm-fgtbf38cj0bwxppxn69etcci
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:sdc4="https://semanticdatacharter.com/ns/sdc4/"
+  xsi:schemaLocation="https://semanticdatacharter.com/ns/sdc4/ https://semanticdatacharter.com/dmlib/dm-fgtbf38cj0bwxppxn69etcci.xsd">
+
+  <dm-label>Remittance Advice</dm-label>
+  <dm-language>en-US</dm-language>
+  <dm-encoding>utf-8</dm-encoding>
+  <creation_timestamp>_PH_</creation_timestamp>
+  <instance_id>swsx7n9m987owyt8u82jvekc</instance_id>
+  <instance_version>_PH_</instance_version>
+  <source_instance_id>_OPT_PH_</source_instance_id>
+  <source_version_id>_OPT_PH_</source_version_id>
+  <current-state>_OPT_PH_</current-state>
+  <sdc4:ms-c58celu1ukeo9ntpzf25ewuk>
+    <label>Remittance Advice Governed Record</label>
+  <sdc4:ms-t2tvd3wylxrstdeu5aw6gkw1>
+    <label>Audit Event</label>
+  <sdc4:ms-hpkc8xrccpwc3shm4ubm5o47>
+    <sdc4:ms-dkc2ccj5te35z9gd4bu1blcq>
+      <label>Audit Agent Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-dkc2ccj5te35z9gd4bu1blcq>
+  </sdc4:ms-hpkc8xrccpwc3shm4ubm5o47>
+  <sdc4:ms-ynnnvgi8748h2d01z2gf4z8x>
+    <sdc4:ms-gcjyjrnp0wsfoelcp4m05c67>
+      <label>Audit Entity Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-gcjyjrnp0wsfoelcp4m05c67>
+  </sdc4:ms-ynnnvgi8748h2d01z2gf4z8x>
+  <sdc4:ms-uf11uwd9s5x5t9bw98z9dr5l>
+    <sdc4:ms-fjhgr5fyqxt2crmg2cb5c513>
+      <label>Audit Event Identifier</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-fjhgr5fyqxt2crmg2cb5c513>
+  </sdc4:ms-uf11uwd9s5x5t9bw98z9dr5l>
+  <sdc4:ms-jwpkqjchavj885uwt5v1jgid>
+    <sdc4:ms-sndpbhm3xbd6qtbyxmvh3i0e>
+      <label>Data Subject Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-sndpbhm3xbd6qtbyxmvh3i0e>
+  </sdc4:ms-jwpkqjchavj885uwt5v1jgid>
+  <sdc4:ms-lbor36zlwkf6u7yx9lgqfx0d>
+    <sdc4:ms-nf1air1zbj8v9w66jozdxmyl>
+      <label>On Behalf Of Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-nf1air1zbj8v9w66jozdxmyl>
+  </sdc4:ms-lbor36zlwkf6u7yx9lgqfx0d>
+  <sdc4:ms-yec6svv50u9d1tz9rp6kmv3v>
+    <sdc4:ms-h3kdbvdtyalpvik97saaf0an>
+      <label>System Identifier</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-h3kdbvdtyalpvik97saaf0an>
+  </sdc4:ms-yec6svv50u9d1tz9rp6kmv3v>
+  <sdc4:ms-r6x55vvha5ci3rl1o29adk03>
+    <sdc4:ms-ujir739mf1g8ajeczs9nzh9m>
+      <label>System Location Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-ujir739mf1g8ajeczs9nzh9m>
+  </sdc4:ms-r6x55vvha5ci3rl1o29adk03>
+  <sdc4:ms-lcsns9hrrzcg74jlit8srxgp>
+    <sdc4:ms-ce1c8sydkov8bkv4dgdmwe5x>
+      <label>Audit Event Action</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-ce1c8sydkov8bkv4dgdmwe5x>
+  </sdc4:ms-lcsns9hrrzcg74jlit8srxgp>
+  <sdc4:ms-wu8f1x11e6ihbltdd6w20rg5>
+    <sdc4:ms-rpz1czz06jhpahmfz30rblvp>
+      <label>Audit Event Outcome</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-rpz1czz06jhpahmfz30rblvp>
+  </sdc4:ms-wu8f1x11e6ihbltdd6w20rg5>
+  <sdc4:ms-kce8557jd9vg6ei59m7o1kc2>
+    <sdc4:ms-vbctgmdcwps5b3r3l6sboa6y>
+      <label>Confidentiality</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-vbctgmdcwps5b3r3l6sboa6y>
+  </sdc4:ms-kce8557jd9vg6ei59m7o1kc2>
+  <sdc4:ms-vgvl7vcmbiz2z7zn9v7ayc04>
+    <sdc4:ms-jujsdur1igws8orw6tvvlqco>
+      <label>Provenance Agent Type</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-jujsdur1igws8orw6tvvlqco>
+  </sdc4:ms-vgvl7vcmbiz2z7zn9v7ayc04>
+  <sdc4:ms-xcmayroyt4krhroimfb3e859>
+    <sdc4:ms-d1evlz8yvdlwt6ia9fjq4pgj>
+      <label>Purpose of Use</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-d1evlz8yvdlwt6ia9fjq4pgj>
+  </sdc4:ms-xcmayroyt4krhroimfb3e859>
+  <sdc4:ms-r5fply6fvzhg90zybxgdx5cb>
+    <sdc4:ms-uwiosm2q9ym3ewr4de910s70>
+      <label>Audit Recorded At</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-datetime>_PH_</xdtemporal-datetime>
+    </sdc4:ms-uwiosm2q9ym3ewr4de910s70>
+  </sdc4:ms-r5fply6fvzhg90zybxgdx5cb>
+  </sdc4:ms-t2tvd3wylxrstdeu5aw6gkw1>
+  <sdc4:ms-vmikfu0irht9fmq7q02t3oqs>
+    <label>PROV Activity</label>
+  <sdc4:ms-vycps7awt38y25jhnrr4okxt>
+    <sdc4:ms-hhusuzzig19rs46ngz23k5g7>
+      <label>Activity Description</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-hhusuzzig19rs46ngz23k5g7>
+  </sdc4:ms-vycps7awt38y25jhnrr4okxt>
+  <sdc4:ms-o9p6k7c9ie20j5du0jmd3749>
+    <sdc4:ms-wr06h54xqqw2q9id8i9673jy>
+      <label>Activity Identifier</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-wr06h54xqqw2q9id8i9673jy>
+  </sdc4:ms-o9p6k7c9ie20j5du0jmd3749>
+  <sdc4:ms-o0qu77y6w4lwvu2qhms3ilbw>
+    <sdc4:ms-r6hkunjm2q0hlxiknlc9ljix>
+      <label>Activity Label</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-r6hkunjm2q0hlxiknlc9ljix>
+  </sdc4:ms-o0qu77y6w4lwvu2qhms3ilbw>
+  <sdc4:ms-rat798vb1tfxjuf56sqrvtty>
+    <sdc4:ms-uzai5uey5p1fnn9ezj9u6vor>
+      <label>Activity Location</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-uzai5uey5p1fnn9ezj9u6vor>
+  </sdc4:ms-rat798vb1tfxjuf56sqrvtty>
+  <sdc4:ms-qeu9jq1owxxh2woqo1f7m8jk>
+    <sdc4:ms-jjzmhdxvbt97pq81iwqubtxk>
+      <label>Activity Type</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-jjzmhdxvbt97pq81iwqubtxk>
+  </sdc4:ms-qeu9jq1owxxh2woqo1f7m8jk>
+  <sdc4:ms-jwvcklvakotmdztpikyodwkx>
+    <sdc4:ms-xlgjqdpwdbn2re3mdh5yy2rk>
+      <label>Error Message</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-xlgjqdpwdbn2re3mdh5yy2rk>
+  </sdc4:ms-jwvcklvakotmdztpikyodwkx>
+  <sdc4:ms-r48fyfvuhl62i5yihku0hws1>
+    <sdc4:ms-vhezo2cckpe92x4c3j2memeh>
+      <label>Had Plan Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-vhezo2cckpe92x4c3j2memeh>
+  </sdc4:ms-r48fyfvuhl62i5yihku0hws1>
+  <sdc4:ms-mjj6mlhqgzcprfwuwnhu5npz>
+    <sdc4:ms-t0whhrqtnb54te4mk48i1ooj>
+      <label>Used Entity Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-t0whhrqtnb54te4mk48i1ooj>
+  </sdc4:ms-mjj6mlhqgzcprfwuwnhu5npz>
+  <sdc4:ms-in4ct2aoguzdvzg4mlsmsxfd>
+    <sdc4:ms-r48alj7hc3797qfjnf2uj71n>
+      <label>Was Associated With Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-r48alj7hc3797qfjnf2uj71n>
+  </sdc4:ms-in4ct2aoguzdvzg4mlsmsxfd>
+  <sdc4:ms-k87dda72y8upko7dnrcs425s>
+    <sdc4:ms-ueb5g1ojzlwwt0mnds5zb6wl>
+      <label>Was Ended By Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-ueb5g1ojzlwwt0mnds5zb6wl>
+  </sdc4:ms-k87dda72y8upko7dnrcs425s>
+  <sdc4:ms-eeyxfka9q0b81swhc0cpvd1l>
+    <sdc4:ms-qh84jdzp1kxt85aq4ilo0svk>
+      <label>Was Informed By Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-qh84jdzp1kxt85aq4ilo0svk>
+  </sdc4:ms-eeyxfka9q0b81swhc0cpvd1l>
+  <sdc4:ms-vmiyaznvvl2jw19cyv414jj3>
+    <sdc4:ms-ginfqbk7q59ld2r4us8sjnv1>
+      <label>Was Started By Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-ginfqbk7q59ld2r4us8sjnv1>
+  </sdc4:ms-vmiyaznvvl2jw19cyv414jj3>
+  <sdc4:ms-q4rwxzoldz452g7rbii2an1h>
+    <sdc4:ms-wl6j4ekcmu4hvt2m12zw4zp8>
+      <label>Activity Status</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-wl6j4ekcmu4hvt2m12zw4zp8>
+  </sdc4:ms-q4rwxzoldz452g7rbii2an1h>
+  <sdc4:ms-xiy4gn6vievei3614sso5vmk>
+    <sdc4:ms-a5scyosu6j84vz350mqyrzl2>
+      <label>Ended At</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-datetime>_PH_</xdtemporal-datetime>
+    </sdc4:ms-a5scyosu6j84vz350mqyrzl2>
+  </sdc4:ms-xiy4gn6vievei3614sso5vmk>
+  <sdc4:ms-vzyuqpkegby4er3pw12gxw2c>
+    <sdc4:ms-sa4nl1kbpdr842fkucvfjkpq>
+      <label>Started At</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-datetime>_PH_</xdtemporal-datetime>
+    </sdc4:ms-sa4nl1kbpdr842fkucvfjkpq>
+  </sdc4:ms-vzyuqpkegby4er3pw12gxw2c>
+  </sdc4:ms-vmikfu0irht9fmq7q02t3oqs>
+  <sdc4:ms-c179ilk2ns15cd5rzzdfd6f6>
+    <label>PROV Agent</label>
+  <sdc4:ms-j9gccgohqlb59l1t37doseiq>
+    <sdc4:ms-og08xf6bu928uuz6t3y0e23f>
+      <label>Acted On Behalf Of Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-og08xf6bu928uuz6t3y0e23f>
+  </sdc4:ms-j9gccgohqlb59l1t37doseiq>
+  <sdc4:ms-px1s852i5pfng3v0ikk6fw4m>
+    <sdc4:ms-gb78cmuyo72hqs5apymdki7l>
+      <label>Agent Description</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-gb78cmuyo72hqs5apymdki7l>
+  </sdc4:ms-px1s852i5pfng3v0ikk6fw4m>
+  <sdc4:ms-wi324lr48j1pzugpnw17p87m>
+    <sdc4:ms-qb90a0sp9vvb6c5cbcf236ys>
+      <label>Agent Email</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-qb90a0sp9vvb6c5cbcf236ys>
+  </sdc4:ms-wi324lr48j1pzugpnw17p87m>
+  <sdc4:ms-qfmes86biux1nl7gbaowsgc4>
+    <sdc4:ms-w2ruemcfy35rw60jl1t9dew2>
+      <label>Agent Identifier</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-w2ruemcfy35rw60jl1t9dew2>
+  </sdc4:ms-qfmes86biux1nl7gbaowsgc4>
+  <sdc4:ms-ljldab8e1bjizncv01akb0n5>
+    <sdc4:ms-xxe21o9ojzmy9wxxky1tnmog>
+      <label>Agent Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-xxe21o9ojzmy9wxxky1tnmog>
+  </sdc4:ms-ljldab8e1bjizncv01akb0n5>
+  <sdc4:ms-f6z431hl60ra8eqbrcyrsvji>
+    <sdc4:ms-eftvwi5byq6cdtd931qyxzw0>
+      <label>Agent Organization Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-eftvwi5byq6cdtd931qyxzw0>
+  </sdc4:ms-f6z431hl60ra8eqbrcyrsvji>
+  <sdc4:ms-cpaj0unbnudntl1brmdnuqhu>
+    <sdc4:ms-aa663ivutjf2fs4757t0bbzy>
+      <label>Software Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-aa663ivutjf2fs4757t0bbzy>
+  </sdc4:ms-cpaj0unbnudntl1brmdnuqhu>
+  <sdc4:ms-ebn1a6s1d1dy724l4y692qsl>
+    <sdc4:ms-x0lebwtobgaelj5pev3258sd>
+      <label>Software Version</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-x0lebwtobgaelj5pev3258sd>
+  </sdc4:ms-ebn1a6s1d1dy724l4y692qsl>
+  <sdc4:ms-y1u3ladafqtryhgyetpn5ild>
+    <sdc4:ms-i16vqj89it3db7d3c5qjko9p>
+      <label>PROV Agent Type</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-i16vqj89it3db7d3c5qjko9p>
+  </sdc4:ms-y1u3ladafqtryhgyetpn5ild>
+  </sdc4:ms-c179ilk2ns15cd5rzzdfd6f6>
+  <sdc4:ms-q0ckidtsg1x3iav6nrt8fo0l>
+    <label>PROV Entity</label>
+  <sdc4:ms-wy38zv02dmcp5gjul57yejmk>
+    <sdc4:ms-abub2eah26yd2uzni3p9l58i>
+      <label>Entity Description</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-abub2eah26yd2uzni3p9l58i>
+  </sdc4:ms-wy38zv02dmcp5gjul57yejmk>
+  <sdc4:ms-gujvcggdotm3z1hmygdrey09>
+    <sdc4:ms-i1defiugxfdcwfb9rqv4p5tz>
+      <label>Entity Identifier</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-i1defiugxfdcwfb9rqv4p5tz>
+  </sdc4:ms-gujvcggdotm3z1hmygdrey09>
+  <sdc4:ms-s0xrd3gbobtgtexdxkxcor3l>
+    <sdc4:ms-m9minyaug6ypyzt52zfxlyyi>
+      <label>Entity Label</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-m9minyaug6ypyzt52zfxlyyi>
+  </sdc4:ms-s0xrd3gbobtgtexdxkxcor3l>
+  <sdc4:ms-jdugzq309qlimui7675txmyi>
+    <sdc4:ms-wn77qo3b1xjwc4dudtyme2io>
+      <label>Entity Location</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-wn77qo3b1xjwc4dudtyme2io>
+  </sdc4:ms-jdugzq309qlimui7675txmyi>
+  <sdc4:ms-bk8actrinati1b6smyypwj6m>
+    <sdc4:ms-kmcck093437mfdlnxnrzm0xw>
+      <label>Entity Value</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-kmcck093437mfdlnxnrzm0xw>
+  </sdc4:ms-bk8actrinati1b6smyypwj6m>
+  <sdc4:ms-fti6dssqpaatbprjx0mqu2mj>
+    <sdc4:ms-phus5105uw30xejqs7baamyx>
+      <label>Had Primary Source Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-phus5105uw30xejqs7baamyx>
+  </sdc4:ms-fti6dssqpaatbprjx0mqu2mj>
+  <sdc4:ms-hj4gt95jsr6xvywruyi9ip51>
+    <sdc4:ms-kqlatg3rz00z58muv7j8toyl>
+      <label>Was Attributed To Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-kqlatg3rz00z58muv7j8toyl>
+  </sdc4:ms-hj4gt95jsr6xvywruyi9ip51>
+  <sdc4:ms-e793unvukokgt3c5y0kilui1>
+    <sdc4:ms-credrxhz4hg4c42sihm0wb6s>
+      <label>Was Derived From Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-credrxhz4hg4c42sihm0wb6s>
+  </sdc4:ms-e793unvukokgt3c5y0kilui1>
+  <sdc4:ms-vsnnmsojiqwcx33jeavt4bkf>
+    <sdc4:ms-bfn83x3fw1cyuqriuoquu9t1>
+      <label>Was Generated By Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-bfn83x3fw1cyuqriuoquu9t1>
+  </sdc4:ms-vsnnmsojiqwcx33jeavt4bkf>
+  <sdc4:ms-o31fztf2l2gj0nuljugpl1s9>
+    <sdc4:ms-h1vwqq8ulrb27qpl6zuzppnf>
+      <label>Was Invalidated By Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-h1vwqq8ulrb27qpl6zuzppnf>
+  </sdc4:ms-o31fztf2l2gj0nuljugpl1s9>
+  <sdc4:ms-bh5kiii8wc47sp8hibxv9qtk>
+    <sdc4:ms-mjl0vv39zsbigqiuyqm66fkv>
+      <label>Was Quoted From Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-mjl0vv39zsbigqiuyqm66fkv>
+  </sdc4:ms-bh5kiii8wc47sp8hibxv9qtk>
+  <sdc4:ms-an1yte2y7kubvf64ao70apuu>
+    <sdc4:ms-lghqkvp7vapqk10l248kzqs8>
+      <label>Was Revision Of Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-lghqkvp7vapqk10l248kzqs8>
+  </sdc4:ms-an1yte2y7kubvf64ao70apuu>
+  <sdc4:ms-p5zjm3c1d2x9jxc2n3wyzbth>
+    <sdc4:ms-g2xnh3uhnlrnqlo7ki2s0fs3>
+      <label>PROV Derivation Type</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-g2xnh3uhnlrnqlo7ki2s0fs3>
+  </sdc4:ms-p5zjm3c1d2x9jxc2n3wyzbth>
+  <sdc4:ms-dlu1btnja2h37jfx3vj694rv>
+    <sdc4:ms-i4e2nod7ss9d4cumhn2pah8b>
+      <label>PROV Entity Type</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-i4e2nod7ss9d4cumhn2pah8b>
+  </sdc4:ms-dlu1btnja2h37jfx3vj694rv>
+  <sdc4:ms-n6j7bwq9qmuzzf8w89gwxeml>
+    <sdc4:ms-yk5nrxndulhebpi3hiywk8u8>
+      <label>Generated At</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-datetime>_PH_</xdtemporal-datetime>
+    </sdc4:ms-yk5nrxndulhebpi3hiywk8u8>
+  </sdc4:ms-n6j7bwq9qmuzzf8w89gwxeml>
+  <sdc4:ms-uc64yt3ys0s0xrj51rue2ofb>
+    <sdc4:ms-hswapeutuik067dokidnbv88>
+      <label>Invalidated At</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-datetime>_PH_</xdtemporal-datetime>
+    </sdc4:ms-hswapeutuik067dokidnbv88>
+  </sdc4:ms-uc64yt3ys0s0xrj51rue2ofb>
+  </sdc4:ms-q0ckidtsg1x3iav6nrt8fo0l>
+  <sdc4:ms-oyd0sik2krxuplyn3dbfafiv>
+    <label>Remittance Advice</label>
+  <sdc4:ms-iswfl2vzv0f9ctm5rjxa3ums>
+    <label>Accounting Customer Party</label>
+  <sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+    <label>Customer Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  <sdc4:ms-x4vy9z1ejuarhvnhcyc8cy8c>
+    <sdc4:ms-ncxxt7wgs7soxw7kbmapxvg3>
+      <label>Address (Line 1)</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-ncxxt7wgs7soxw7kbmapxvg3>
+  </sdc4:ms-x4vy9z1ejuarhvnhcyc8cy8c>
+  <sdc4:ms-fnh39fyrub04naiw1csr9rcu>
+    <sdc4:ms-sexw93x5276zwsn1qx15htpv>
+      <label>Address (Line 2)</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-sexw93x5276zwsn1qx15htpv>
+  </sdc4:ms-fnh39fyrub04naiw1csr9rcu>
+  <sdc4:ms-r81s8h0fj8tb56kdwj0az7bu>
+    <sdc4:ms-toysvef93azt57fgh8rwpd4b>
+      <label>City Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-toysvef93azt57fgh8rwpd4b>
+  </sdc4:ms-r81s8h0fj8tb56kdwj0az7bu>
+  <sdc4:ms-te0rs3ybu4espghrgec012cb>
+    <sdc4:ms-gf841eedvv6cjiegs934srai>
+      <label>Postal Code</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-gf841eedvv6cjiegs934srai>
+  </sdc4:ms-te0rs3ybu4espghrgec012cb>
+  <sdc4:ms-vezmaftdi44japrlpt07mp4l>
+    <sdc4:ms-jw1b9q6ulyte599sdsqp2mvp>
+      <label>Region Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-jw1b9q6ulyte599sdsqp2mvp>
+  </sdc4:ms-vezmaftdi44japrlpt07mp4l>
+  <sdc4:ms-x8d5ltgmjarqw07qli8ocwcu>
+    <sdc4:ms-b25dj42zxhm19pih328ga8pl>
+      <label>Address Use</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-b25dj42zxhm19pih328ga8pl>
+  </sdc4:ms-x8d5ltgmjarqw07qli8ocwcu>
+  <sdc4:ms-zyd1bdzhksql5z05sfip0m78>
+    <sdc4:ms-f2jicaigehz7xmwcp1gm5gh0>
+      <label>Country Code ISO 3166</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-f2jicaigehz7xmwcp1gm5gh0>
+  </sdc4:ms-zyd1bdzhksql5z05sfip0m78>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  <sdc4:ms-uikaaefutpxhmfraowwo28x4>
+    <sdc4:ms-wriny2gz8aqcvffmfpwbompk>
+      <label>Website URL</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <link>https://schema.org/url</link>
+      <relation>url</relation>
+      <relation-uri>https://schema.org/url</relation-uri>
+    </sdc4:ms-wriny2gz8aqcvffmfpwbompk>
+  </sdc4:ms-uikaaefutpxhmfraowwo28x4>
+  <sdc4:ms-rr45vpoto55jhvob6vtzsz27>
+    <sdc4:ms-q922mqaon3yn5zlwf2bszf28>
+      <label>Email Address</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-q922mqaon3yn5zlwf2bszf28>
+  </sdc4:ms-rr45vpoto55jhvob6vtzsz27>
+  <sdc4:ms-ogtraclb0bgvqgrhbyko69yh>
+    <sdc4:ms-ll6ltsnvakomixuitxkbkxfz>
+      <label>Fax Number</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-ll6ltsnvakomixuitxkbkxfz>
+  </sdc4:ms-ogtraclb0bgvqgrhbyko69yh>
+  <sdc4:ms-f2caqwqmsl0fnkscaz4uhrya>
+    <sdc4:ms-zpfwg52r88j6jdypj7rg71ke>
+      <label>Phone Number</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-zpfwg52r88j6jdypj7rg71ke>
+  </sdc4:ms-f2caqwqmsl0fnkscaz4uhrya>
+  <sdc4:ms-b31lflr8prid6hdega5v93zf>
+    <sdc4:ms-miqo30r5b554nyj7ubryw43x>
+      <label>Contact Method</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-miqo30r5b554nyj7ubryw43x>
+  </sdc4:ms-b31lflr8prid6hdega5v93zf>
+  <sdc4:ms-rv5pul6lm3ntpxynzxmkpeus>
+    <sdc4:ms-vmruk4j9y1orvvz8cwafrax5>
+      <label>Contact Use</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-vmruk4j9y1orvvz8cwafrax5>
+  </sdc4:ms-rv5pul6lm3ntpxynzxmkpeus>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  <sdc4:ms-pie59rwktjnrs9ryzkukigx3>
+    <sdc4:ms-bkw6awwe7kp01kowlwbgn21b>
+      <label>Contact Department</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-bkw6awwe7kp01kowlwbgn21b>
+  </sdc4:ms-pie59rwktjnrs9ryzkukigx3>
+  <sdc4:ms-jrvyn9tnjk1y9a4awn9luxi1>
+    <sdc4:ms-ozkpv9buivm77ozkybm0ww39>
+      <label>Contact Job Title</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-ozkpv9buivm77ozkybm0ww39>
+  </sdc4:ms-jrvyn9tnjk1y9a4awn9luxi1>
+  <sdc4:ms-ko9sky98bffl3rypvh072rwt>
+    <sdc4:ms-fp533gyfb6yatp6jgpg2emb2>
+      <label>Contact Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-fp533gyfb6yatp6jgpg2emb2>
+  </sdc4:ms-ko9sky98bffl3rypvh072rwt>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  <sdc4:ms-f6wumzzw4wb7itpz4lfmzifi>
+    <sdc4:ms-iwxh8exsn4qb6eyetfbwqvmj>
+      <label>Party Identification Value</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-iwxh8exsn4qb6eyetfbwqvmj>
+  </sdc4:ms-f6wumzzw4wb7itpz4lfmzifi>
+  <sdc4:ms-ldm5kmibox484imu15oomg42>
+    <sdc4:ms-c9v9nkkg6b8sixoaf55vyjrn>
+      <label>Party Identification Scheme</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-c9v9nkkg6b8sixoaf55vyjrn>
+  </sdc4:ms-ldm5kmibox484imu15oomg42>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  <sdc4:ms-xhhp4as6f4zy16ga4dhs95lq>
+    <sdc4:ms-axizk9c3k82w84p1t1wkwayu>
+      <label>Company ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-axizk9c3k82w84p1t1wkwayu>
+  </sdc4:ms-xhhp4as6f4zy16ga4dhs95lq>
+  <sdc4:ms-ke7bgbzgqairvtht2ahpqbv4>
+    <sdc4:ms-ev7lhh4t59tt8ot0tfoaztb6>
+      <label>Registration Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-ev7lhh4t59tt8ot0tfoaztb6>
+  </sdc4:ms-ke7bgbzgqairvtht2ahpqbv4>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  <sdc4:ms-vtl0hnkbu6vi871qrq2arr72>
+    <sdc4:ms-cjzq0xnrm0uu8p1h51koheoz>
+      <label>US ZIP Code</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-cjzq0xnrm0uu8p1h51koheoz>
+  </sdc4:ms-vtl0hnkbu6vi871qrq2arr72>
+  <sdc4:ms-zs08zf3rl2m68qsuso4cq5jx>
+    <sdc4:ms-k9tqm489kilg33mx4cibyto6>
+      <label>US State Code</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-k9tqm489kilg33mx4cibyto6>
+  </sdc4:ms-zs08zf3rl2m68qsuso4cq5jx>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  <sdc4:ms-o7k32jjcoq56jts8buzz4gxd>
+    <sdc4:ms-fpb149j9um0l676icmhyp56d>
+      <label>Endpoint ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-fpb149j9um0l676icmhyp56d>
+  </sdc4:ms-o7k32jjcoq56jts8buzz4gxd>
+  <sdc4:ms-mpweekufi4296o2qdi0wfd9a>
+    <sdc4:ms-xcn8r67fg7soty17homzok44>
+      <label>Organization Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-xcn8r67fg7soty17homzok44>
+  </sdc4:ms-mpweekufi4296o2qdi0wfd9a>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  <sdc4:ms-v8os8mvqm7xtuix2azpc61nq>
+    <sdc4:ms-ybdlctks32zkkteycr5y1eq8>
+      <label>Customer Assigned Account ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-ybdlctks32zkkteycr5y1eq8>
+  </sdc4:ms-v8os8mvqm7xtuix2azpc61nq>
+  <sdc4:ms-vxq98yo8545y4x4jjam1lebt>
+    <sdc4:ms-nhvx21mf5ac81670xyrpwbaz>
+      <label>Supplier Assigned Account ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-nhvx21mf5ac81670xyrpwbaz>
+  </sdc4:ms-vxq98yo8545y4x4jjam1lebt>
+  </sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+  </sdc4:ms-iswfl2vzv0f9ctm5rjxa3ums>
+  <sdc4:ms-f3duci830odmou614vn1rpgu>
+    <label>Accounting Supplier Party</label>
+  <sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+    <label>Supplier Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+  </sdc4:ms-f3duci830odmou614vn1rpgu>
+  <sdc4:ms-ziv6gmpthgks5vkfsyx2ib4t>
+    <label>Additional Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  <sdc4:ms-jl90imb6cjrpdgipixlh07hf>
+    <sdc4:ms-z181ta9jftxc7k63rv4nz1zv>
+      <label>Document Description</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-z181ta9jftxc7k63rv4nz1zv>
+  </sdc4:ms-jl90imb6cjrpdgipixlh07hf>
+  <sdc4:ms-xkrijnxj470ojec234gx70uv>
+    <sdc4:ms-k153quyn7i9ravd1b3c61ad9>
+      <label>Document Reference ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-k153quyn7i9ravd1b3c61ad9>
+  </sdc4:ms-xkrijnxj470ojec234gx70uv>
+  <sdc4:ms-y66e3t7uigil3f61sc2vp96d>
+    <sdc4:ms-ia7qf3je696yjjgzz4l5q0sp>
+      <label>Document Type</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-ia7qf3je696yjjgzz4l5q0sp>
+  </sdc4:ms-y66e3t7uigil3f61sc2vp96d>
+  <sdc4:ms-pbt46pibez5c5hihmqv8dgni>
+    <sdc4:ms-ncxchb14dkm790w4rnuzafju>
+      <label>Document Reference Issue Date</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-date>_PH_</xdtemporal-date>
+    </sdc4:ms-ncxchb14dkm790w4rnuzafju>
+  </sdc4:ms-pbt46pibez5c5hihmqv8dgni>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-ziv6gmpthgks5vkfsyx2ib4t>
+  <sdc4:ms-wnpoc2q1z2vxw56658bb9ed4>
+    <label>Billing Reference</label>
+  <sdc4:ms-znjvyfaljuuhab4hje617fyh>
+    <label>Credit Note Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-znjvyfaljuuhab4hje617fyh>
+  <sdc4:ms-gf1jjk07yakcdvlgwo8wozsy>
+    <label>Invoice Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-gf1jjk07yakcdvlgwo8wozsy>
+  </sdc4:ms-wnpoc2q1z2vxw56658bb9ed4>
+  <sdc4:ms-anpufgp9b2pqetblqffkfggy>
+    <label>Payee Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-anpufgp9b2pqetblqffkfggy>
+  <sdc4:ms-pnpbq6767i7i05afp648yhdd>
+    <label>Payment Means Instruction</label>
+  <sdc4:ms-tn1sbi0vbjvrlyhl1faun9wu>
+    <sdc4:ms-zvkk8ztob9gmrvvkzyibyrzk>
+      <label>Note</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-zvkk8ztob9gmrvvkzyibyrzk>
+  </sdc4:ms-tn1sbi0vbjvrlyhl1faun9wu>
+  <sdc4:ms-eypy118xrs2j6i6a9x7ox6x1>
+    <sdc4:ms-pv15bnowaxjtczx4wx4vit4d>
+      <label>Payment Means</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-pv15bnowaxjtczx4wx4vit4d>
+  </sdc4:ms-eypy118xrs2j6i6a9x7ox6x1>
+  <sdc4:ms-vft2wpeny3khc2whtji4qve5>
+    <sdc4:ms-iw79shpxfxnmiueutlhubpr2>
+      <label>Payment Due Date</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-date>_PH_</xdtemporal-date>
+    </sdc4:ms-iw79shpxfxnmiueutlhubpr2>
+  </sdc4:ms-vft2wpeny3khc2whtji4qve5>
+  </sdc4:ms-pnpbq6767i7i05afp648yhdd>
+  <sdc4:ms-bkxu8lqco28bg8jn2te6n9hq>
+    <label>Remittance Advice Document</label>
+  <sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+    <label>Invoice Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  <sdc4:ms-jvr16i2xcvgkoeu0fb0foyf9>
+    <sdc4:ms-moo2lije2b05ylq8q4t52lcb>
+      <label>Date Range End</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-date>_PH_</xdtemporal-date>
+    </sdc4:ms-moo2lije2b05ylq8q4t52lcb>
+  </sdc4:ms-jvr16i2xcvgkoeu0fb0foyf9>
+  <sdc4:ms-qmsn5fmk6j41d2nvl7h4dsqr>
+    <sdc4:ms-bcyjfdwobh9q60umle1amw0w>
+      <label>Date Range Start</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-date>_PH_</xdtemporal-date>
+    </sdc4:ms-bcyjfdwobh9q60umle1amw0w>
+  </sdc4:ms-qmsn5fmk6j41d2nvl7h4dsqr>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+  <sdc4:ms-kq1axd3psm1tsnz26dtvpzb3>
+    <sdc4:ms-nsv2eblxq8s0vk28ue2vh1fl>
+      <label>Copy Indicator</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <true-value>true</true-value>
+    </sdc4:ms-nsv2eblxq8s0vk28ue2vh1fl>
+  </sdc4:ms-kq1axd3psm1tsnz26dtvpzb3>
+  <sdc4:ms-haiqjii7v81fewii6c47rrig>
+    <sdc4:ms-rgnvj03kjtej1s8brdeil4kq>
+      <label>Customization ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-rgnvj03kjtej1s8brdeil4kq>
+  </sdc4:ms-haiqjii7v81fewii6c47rrig>
+  <sdc4:ms-sl8a87bqrctj0rrfmrs0gtp0>
+    <sdc4:ms-xywkj11p7u8jhjaiim3h3gyp>
+      <label>Document Currency</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-xywkj11p7u8jhjaiim3h3gyp>
+  </sdc4:ms-sl8a87bqrctj0rrfmrs0gtp0>
+  <sdc4:ms-xabobrcq23y1c3c52z7lox5x>
+    <sdc4:ms-wa674d96vzd8um4nwbtjrorz>
+      <label>Document UUID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-wa674d96vzd8um4nwbtjrorz>
+  </sdc4:ms-xabobrcq23y1c3c52z7lox5x>
+  <sdc4:ms-b82wmo2i2yc30njikyhtm7kk>
+    <sdc4:ms-fgf5kn7bm9a9m4bxyqgw1c3r>
+      <label>Invoicing Party Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-fgf5kn7bm9a9m4bxyqgw1c3r>
+  </sdc4:ms-b82wmo2i2yc30njikyhtm7kk>
+  <sdc4:ms-jeourbutkmpa1u7f8udl9ecd>
+    <sdc4:ms-iawrqhchw4hnxvh58un6ry6d>
+      <label>Payer Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-iawrqhchw4hnxvh58un6ry6d>
+  </sdc4:ms-jeourbutkmpa1u7f8udl9ecd>
+  <sdc4:ms-x47ufbn7v9loifojxy8jgd6g>
+    <sdc4:ms-yzc81fh1c7y80msj8fqm5tgn>
+      <label>Payment Order Reference</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-yzc81fh1c7y80msj8fqm5tgn>
+  </sdc4:ms-x47ufbn7v9loifojxy8jgd6g>
+  <sdc4:ms-vu57v4kyp5ngwq8r8jdwfvd8>
+    <sdc4:ms-blz32vkqw11awazaklpdih7b>
+      <label>Profile Execution ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-blz32vkqw11awazaklpdih7b>
+  </sdc4:ms-vu57v4kyp5ngwq8r8jdwfvd8>
+  <sdc4:ms-v3muwa45bsb1zv8ymshfzae0>
+    <sdc4:ms-ato2r6lpk92i9e5djcwrna74>
+      <label>Profile ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-ato2r6lpk92i9e5djcwrna74>
+  </sdc4:ms-v3muwa45bsb1zv8ymshfzae0>
+  <sdc4:ms-njcnoovhhvrjw82eqf36d5sd>
+    <sdc4:ms-qrlhu795tx4ktkczzwjgmex0>
+      <label>Remittance Advice ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-qrlhu795tx4ktkczzwjgmex0>
+  </sdc4:ms-njcnoovhhvrjw82eqf36d5sd>
+  <sdc4:ms-epmd1tsidl9d5inpx6bzgj97>
+    <sdc4:ms-mnuyvuxqsy0qskx8hiy6epff>
+      <label>Document Status</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdtoken-value>_PH_</xdtoken-value>
+      <xdtoken-language>_OPT_PH_</xdtoken-language>
+    </sdc4:ms-mnuyvuxqsy0qskx8hiy6epff>
+  </sdc4:ms-epmd1tsidl9d5inpx6bzgj97>
+  <sdc4:ms-uhrr3e2qzx8yyt0rnnrtz4t9>
+    <sdc4:ms-c1c7iydc13os47ppwwtwsnum>
+      <label>Line Count</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdcount-value>_PH_</xdcount-value>
+      <xdcount-units>
+        <label>Items</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdcount-units>
+    </sdc4:ms-c1c7iydc13os47ppwwtwsnum>
+  </sdc4:ms-uhrr3e2qzx8yyt0rnnrtz4t9>
+  <sdc4:ms-fhawvo5fxxlp8wf7yffrqr7j>
+    <sdc4:ms-jce61gv76krf6vwk63ym367j>
+      <label>Total Credit Amount</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Currency</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-jce61gv76krf6vwk63ym367j>
+  </sdc4:ms-fhawvo5fxxlp8wf7yffrqr7j>
+  <sdc4:ms-rtciibrb8roxvsl5zse413s4>
+    <sdc4:ms-td3ikusqd8oil952mc5tshok>
+      <label>Total Debit Amount</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Currency</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-td3ikusqd8oil952mc5tshok>
+  </sdc4:ms-rtciibrb8roxvsl5zse413s4>
+  <sdc4:ms-nyssg058z9xm6mzm13dqqzr0>
+    <sdc4:ms-l41b25npnwox5z6ugjzctgus>
+      <label>Total Payment Amount</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Currency</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-l41b25npnwox5z6ugjzctgus>
+  </sdc4:ms-nyssg058z9xm6mzm13dqqzr0>
+  <sdc4:ms-s7avc24uiao7vsqvjoc2xxq0>
+    <sdc4:ms-tkd16hhh9wbn0qya2ykm0552>
+      <label>Issue Date</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-date>_PH_</xdtemporal-date>
+    </sdc4:ms-tkd16hhh9wbn0qya2ykm0552>
+  </sdc4:ms-s7avc24uiao7vsqvjoc2xxq0>
+  <sdc4:ms-q1u1nttzsb9blnszjdzpgd78>
+    <sdc4:ms-oybfzltffyfioix1zdblxcp3>
+      <label>Issue Time</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <xdtemporal-time>_PH_</xdtemporal-time>
+    </sdc4:ms-oybfzltffyfioix1zdblxcp3>
+  </sdc4:ms-q1u1nttzsb9blnszjdzpgd78>
+  </sdc4:ms-bkxu8lqco28bg8jn2te6n9hq>
+  <sdc4:ms-tprxhij1vk093uyusb7rwyf0>
+    <label>Remittance Advice Lines</label>
+  <sdc4:ms-kqgm183nrh74w89gy4f3akv2>
+    <label>Remittance Advice Line 1</label>
+  <sdc4:ms-q964qt4j2dtjvo06eea70en7>
+    <label>Remittance Advice Line</label>
+  <sdc4:ms-iswfl2vzv0f9ctm5rjxa3ums>
+    <label>Accounting Customer Party</label>
+  <sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+    <label>Customer Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+  </sdc4:ms-iswfl2vzv0f9ctm5rjxa3ums>
+  <sdc4:ms-f3duci830odmou614vn1rpgu>
+    <label>Accounting Supplier Party</label>
+  <sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+    <label>Supplier Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+  </sdc4:ms-f3duci830odmou614vn1rpgu>
+  <sdc4:ms-wnpoc2q1z2vxw56658bb9ed4>
+    <label>Billing Reference</label>
+  <sdc4:ms-znjvyfaljuuhab4hje617fyh>
+    <label>Credit Note Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-znjvyfaljuuhab4hje617fyh>
+  <sdc4:ms-gf1jjk07yakcdvlgwo8wozsy>
+    <label>Invoice Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-gf1jjk07yakcdvlgwo8wozsy>
+  </sdc4:ms-wnpoc2q1z2vxw56658bb9ed4>
+  <sdc4:ms-nylve3b8ss572vh8zso2u4l7>
+    <label>Buyer Customer Party</label>
+  <sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+    <label>Customer Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+  </sdc4:ms-nylve3b8ss572vh8zso2u4l7>
+  <sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+    <label>Invoice Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+  <sdc4:ms-zfqyw3u5kz7yxk8qgofj0dxj>
+    <label>Line Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-zfqyw3u5kz7yxk8qgofj0dxj>
+  <sdc4:ms-anpufgp9b2pqetblqffkfggy>
+    <label>Payee Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-anpufgp9b2pqetblqffkfggy>
+  <sdc4:ms-xkkk5vyegpy4xdig8vnabstc>
+    <label>Seller Supplier Party</label>
+  <sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+    <label>Supplier Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+  </sdc4:ms-xkkk5vyegpy4xdig8vnabstc>
+  <sdc4:ms-sy20cw9fbqms6s27gbtlihuz>
+    <sdc4:ms-qnymhn26y7zfy7jav1pi3dqi>
+      <label>Line ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-qnymhn26y7zfy7jav1pi3dqi>
+  </sdc4:ms-sy20cw9fbqms6s27gbtlihuz>
+  <sdc4:ms-o390y2frltl66rpvw1e6lrz4>
+    <sdc4:ms-xvv7o2f1hcgq54tmodaj5969>
+      <label>Payment Purpose</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-xvv7o2f1hcgq54tmodaj5969>
+  </sdc4:ms-o390y2frltl66rpvw1e6lrz4>
+  <sdc4:ms-ucmxweo9o01bxpgp4bt0reb0>
+    <sdc4:ms-x9eeu07d0se3zhqxe7jg2l83>
+      <label>Balance Amount</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Currency</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-x9eeu07d0se3zhqxe7jg2l83>
+  </sdc4:ms-ucmxweo9o01bxpgp4bt0reb0>
+  <sdc4:ms-a135b49c0k01dh2c7qx8smze>
+    <sdc4:ms-tmq39zrg2b2atrikdxx75mxk>
+      <label>Credit Line Amount</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Currency</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-tmq39zrg2b2atrikdxx75mxk>
+  </sdc4:ms-a135b49c0k01dh2c7qx8smze>
+  <sdc4:ms-asqrodlh2q6l8ixi0oghofig>
+    <sdc4:ms-b1vqdrgq824x3pcrfmhqzwfr>
+      <label>Debit Line Amount</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Currency</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-b1vqdrgq824x3pcrfmhqzwfr>
+  </sdc4:ms-asqrodlh2q6l8ixi0oghofig>
+  </sdc4:ms-q964qt4j2dtjvo06eea70en7>
+  </sdc4:ms-kqgm183nrh74w89gy4f3akv2>
+  <sdc4:ms-gx3hb6dnaofj771kat2jysnw>
+    <label>Remittance Advice Line 10</label>
+  <sdc4:ms-q964qt4j2dtjvo06eea70en7>
+    <label>Remittance Advice Line</label>
+  <sdc4:ms-iswfl2vzv0f9ctm5rjxa3ums>
+    <label>Accounting Customer Party</label>
+  <sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+    <label>Customer Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+  </sdc4:ms-iswfl2vzv0f9ctm5rjxa3ums>
+  <sdc4:ms-f3duci830odmou614vn1rpgu>
+    <label>Accounting Supplier Party</label>
+  <sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+    <label>Supplier Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+  </sdc4:ms-f3duci830odmou614vn1rpgu>
+  <sdc4:ms-wnpoc2q1z2vxw56658bb9ed4>
+    <label>Billing Reference</label>
+  <sdc4:ms-znjvyfaljuuhab4hje617fyh>
+    <label>Credit Note Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-znjvyfaljuuhab4hje617fyh>
+  <sdc4:ms-gf1jjk07yakcdvlgwo8wozsy>
+    <label>Invoice Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-gf1jjk07yakcdvlgwo8wozsy>
+  </sdc4:ms-wnpoc2q1z2vxw56658bb9ed4>
+  <sdc4:ms-nylve3b8ss572vh8zso2u4l7>
+    <label>Buyer Customer Party</label>
+  <sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+    <label>Customer Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+  </sdc4:ms-nylve3b8ss572vh8zso2u4l7>
+  <sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+    <label>Invoice Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+  <sdc4:ms-zfqyw3u5kz7yxk8qgofj0dxj>
+    <label>Line Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-zfqyw3u5kz7yxk8qgofj0dxj>
+  <sdc4:ms-anpufgp9b2pqetblqffkfggy>
+    <label>Payee Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-anpufgp9b2pqetblqffkfggy>
+  <sdc4:ms-xkkk5vyegpy4xdig8vnabstc>
+    <label>Seller Supplier Party</label>
+  <sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+    <label>Supplier Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+  </sdc4:ms-xkkk5vyegpy4xdig8vnabstc>
+  </sdc4:ms-q964qt4j2dtjvo06eea70en7>
+  </sdc4:ms-gx3hb6dnaofj771kat2jysnw>
+  <sdc4:ms-gq7zons1f95gn8x91w7yiez2>
+    <label>Remittance Advice Line 2</label>
+  <sdc4:ms-q964qt4j2dtjvo06eea70en7>
+    <label>Remittance Advice Line</label>
+  <sdc4:ms-iswfl2vzv0f9ctm5rjxa3ums>
+    <label>Accounting Customer Party</label>
+  <sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+    <label>Customer Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+  </sdc4:ms-iswfl2vzv0f9ctm5rjxa3ums>
+  <sdc4:ms-f3duci830odmou614vn1rpgu>
+    <label>Accounting Supplier Party</label>
+  <sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+    <label>Supplier Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+  </sdc4:ms-f3duci830odmou614vn1rpgu>
+  <sdc4:ms-wnpoc2q1z2vxw56658bb9ed4>
+    <label>Billing Reference</label>
+  <sdc4:ms-znjvyfaljuuhab4hje617fyh>
+    <label>Credit Note Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-znjvyfaljuuhab4hje617fyh>
+  <sdc4:ms-gf1jjk07yakcdvlgwo8wozsy>
+    <label>Invoice Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-gf1jjk07yakcdvlgwo8wozsy>
+  </sdc4:ms-wnpoc2q1z2vxw56658bb9ed4>
+  <sdc4:ms-nylve3b8ss572vh8zso2u4l7>
+    <label>Buyer Customer Party</label>
+  <sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+    <label>Customer Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+  </sdc4:ms-nylve3b8ss572vh8zso2u4l7>
+  <sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+    <label>Invoice Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+  <sdc4:ms-zfqyw3u5kz7yxk8qgofj0dxj>
+    <label>Line Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-zfqyw3u5kz7yxk8qgofj0dxj>
+  <sdc4:ms-anpufgp9b2pqetblqffkfggy>
+    <label>Payee Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-anpufgp9b2pqetblqffkfggy>
+  <sdc4:ms-xkkk5vyegpy4xdig8vnabstc>
+    <label>Seller Supplier Party</label>
+  <sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+    <label>Supplier Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+  </sdc4:ms-xkkk5vyegpy4xdig8vnabstc>
+  </sdc4:ms-q964qt4j2dtjvo06eea70en7>
+  </sdc4:ms-gq7zons1f95gn8x91w7yiez2>
+  <sdc4:ms-j6u4eoiwb8dpxctwbd805eqd>
+    <label>Remittance Advice Line 3</label>
+  <sdc4:ms-q964qt4j2dtjvo06eea70en7>
+    <label>Remittance Advice Line</label>
+  <sdc4:ms-iswfl2vzv0f9ctm5rjxa3ums>
+    <label>Accounting Customer Party</label>
+  <sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+    <label>Customer Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+  </sdc4:ms-iswfl2vzv0f9ctm5rjxa3ums>
+  <sdc4:ms-f3duci830odmou614vn1rpgu>
+    <label>Accounting Supplier Party</label>
+  <sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+    <label>Supplier Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+  </sdc4:ms-f3duci830odmou614vn1rpgu>
+  <sdc4:ms-wnpoc2q1z2vxw56658bb9ed4>
+    <label>Billing Reference</label>
+  <sdc4:ms-znjvyfaljuuhab4hje617fyh>
+    <label>Credit Note Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-znjvyfaljuuhab4hje617fyh>
+  <sdc4:ms-gf1jjk07yakcdvlgwo8wozsy>
+    <label>Invoice Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-gf1jjk07yakcdvlgwo8wozsy>
+  </sdc4:ms-wnpoc2q1z2vxw56658bb9ed4>
+  <sdc4:ms-nylve3b8ss572vh8zso2u4l7>
+    <label>Buyer Customer Party</label>
+  <sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+    <label>Customer Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+  </sdc4:ms-nylve3b8ss572vh8zso2u4l7>
+  <sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+    <label>Invoice Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+  <sdc4:ms-zfqyw3u5kz7yxk8qgofj0dxj>
+    <label>Line Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-zfqyw3u5kz7yxk8qgofj0dxj>
+  <sdc4:ms-anpufgp9b2pqetblqffkfggy>
+    <label>Payee Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-anpufgp9b2pqetblqffkfggy>
+  <sdc4:ms-xkkk5vyegpy4xdig8vnabstc>
+    <label>Seller Supplier Party</label>
+  <sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+    <label>Supplier Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+  </sdc4:ms-xkkk5vyegpy4xdig8vnabstc>
+  </sdc4:ms-q964qt4j2dtjvo06eea70en7>
+  </sdc4:ms-j6u4eoiwb8dpxctwbd805eqd>
+  <sdc4:ms-s4lfrqovarql7ecs9tf7js5l>
+    <label>Remittance Advice Line 4</label>
+  <sdc4:ms-q964qt4j2dtjvo06eea70en7>
+    <label>Remittance Advice Line</label>
+  <sdc4:ms-iswfl2vzv0f9ctm5rjxa3ums>
+    <label>Accounting Customer Party</label>
+  <sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+    <label>Customer Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+  </sdc4:ms-iswfl2vzv0f9ctm5rjxa3ums>
+  <sdc4:ms-f3duci830odmou614vn1rpgu>
+    <label>Accounting Supplier Party</label>
+  <sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+    <label>Supplier Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+  </sdc4:ms-f3duci830odmou614vn1rpgu>
+  <sdc4:ms-wnpoc2q1z2vxw56658bb9ed4>
+    <label>Billing Reference</label>
+  <sdc4:ms-znjvyfaljuuhab4hje617fyh>
+    <label>Credit Note Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-znjvyfaljuuhab4hje617fyh>
+  <sdc4:ms-gf1jjk07yakcdvlgwo8wozsy>
+    <label>Invoice Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-gf1jjk07yakcdvlgwo8wozsy>
+  </sdc4:ms-wnpoc2q1z2vxw56658bb9ed4>
+  <sdc4:ms-nylve3b8ss572vh8zso2u4l7>
+    <label>Buyer Customer Party</label>
+  <sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+    <label>Customer Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+  </sdc4:ms-nylve3b8ss572vh8zso2u4l7>
+  <sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+    <label>Invoice Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+  <sdc4:ms-zfqyw3u5kz7yxk8qgofj0dxj>
+    <label>Line Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-zfqyw3u5kz7yxk8qgofj0dxj>
+  <sdc4:ms-anpufgp9b2pqetblqffkfggy>
+    <label>Payee Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-anpufgp9b2pqetblqffkfggy>
+  <sdc4:ms-xkkk5vyegpy4xdig8vnabstc>
+    <label>Seller Supplier Party</label>
+  <sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+    <label>Supplier Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+  </sdc4:ms-xkkk5vyegpy4xdig8vnabstc>
+  </sdc4:ms-q964qt4j2dtjvo06eea70en7>
+  </sdc4:ms-s4lfrqovarql7ecs9tf7js5l>
+  <sdc4:ms-xu9shazwk3k2lysypuqpam9c>
+    <label>Remittance Advice Line 5</label>
+  <sdc4:ms-q964qt4j2dtjvo06eea70en7>
+    <label>Remittance Advice Line</label>
+  <sdc4:ms-iswfl2vzv0f9ctm5rjxa3ums>
+    <label>Accounting Customer Party</label>
+  <sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+    <label>Customer Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+  </sdc4:ms-iswfl2vzv0f9ctm5rjxa3ums>
+  <sdc4:ms-f3duci830odmou614vn1rpgu>
+    <label>Accounting Supplier Party</label>
+  <sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+    <label>Supplier Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+  </sdc4:ms-f3duci830odmou614vn1rpgu>
+  <sdc4:ms-wnpoc2q1z2vxw56658bb9ed4>
+    <label>Billing Reference</label>
+  <sdc4:ms-znjvyfaljuuhab4hje617fyh>
+    <label>Credit Note Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-znjvyfaljuuhab4hje617fyh>
+  <sdc4:ms-gf1jjk07yakcdvlgwo8wozsy>
+    <label>Invoice Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-gf1jjk07yakcdvlgwo8wozsy>
+  </sdc4:ms-wnpoc2q1z2vxw56658bb9ed4>
+  <sdc4:ms-nylve3b8ss572vh8zso2u4l7>
+    <label>Buyer Customer Party</label>
+  <sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+    <label>Customer Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+  </sdc4:ms-nylve3b8ss572vh8zso2u4l7>
+  <sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+    <label>Invoice Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+  <sdc4:ms-zfqyw3u5kz7yxk8qgofj0dxj>
+    <label>Line Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-zfqyw3u5kz7yxk8qgofj0dxj>
+  <sdc4:ms-anpufgp9b2pqetblqffkfggy>
+    <label>Payee Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-anpufgp9b2pqetblqffkfggy>
+  <sdc4:ms-xkkk5vyegpy4xdig8vnabstc>
+    <label>Seller Supplier Party</label>
+  <sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+    <label>Supplier Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+  </sdc4:ms-xkkk5vyegpy4xdig8vnabstc>
+  </sdc4:ms-q964qt4j2dtjvo06eea70en7>
+  </sdc4:ms-xu9shazwk3k2lysypuqpam9c>
+  <sdc4:ms-jdpxmvin8qc86f0vi1x4hl2k>
+    <label>Remittance Advice Line 6</label>
+  <sdc4:ms-q964qt4j2dtjvo06eea70en7>
+    <label>Remittance Advice Line</label>
+  <sdc4:ms-iswfl2vzv0f9ctm5rjxa3ums>
+    <label>Accounting Customer Party</label>
+  <sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+    <label>Customer Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+  </sdc4:ms-iswfl2vzv0f9ctm5rjxa3ums>
+  <sdc4:ms-f3duci830odmou614vn1rpgu>
+    <label>Accounting Supplier Party</label>
+  <sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+    <label>Supplier Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+  </sdc4:ms-f3duci830odmou614vn1rpgu>
+  <sdc4:ms-wnpoc2q1z2vxw56658bb9ed4>
+    <label>Billing Reference</label>
+  <sdc4:ms-znjvyfaljuuhab4hje617fyh>
+    <label>Credit Note Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-znjvyfaljuuhab4hje617fyh>
+  <sdc4:ms-gf1jjk07yakcdvlgwo8wozsy>
+    <label>Invoice Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-gf1jjk07yakcdvlgwo8wozsy>
+  </sdc4:ms-wnpoc2q1z2vxw56658bb9ed4>
+  <sdc4:ms-nylve3b8ss572vh8zso2u4l7>
+    <label>Buyer Customer Party</label>
+  <sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+    <label>Customer Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+  </sdc4:ms-nylve3b8ss572vh8zso2u4l7>
+  <sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+    <label>Invoice Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+  <sdc4:ms-zfqyw3u5kz7yxk8qgofj0dxj>
+    <label>Line Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-zfqyw3u5kz7yxk8qgofj0dxj>
+  <sdc4:ms-anpufgp9b2pqetblqffkfggy>
+    <label>Payee Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-anpufgp9b2pqetblqffkfggy>
+  <sdc4:ms-xkkk5vyegpy4xdig8vnabstc>
+    <label>Seller Supplier Party</label>
+  <sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+    <label>Supplier Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+  </sdc4:ms-xkkk5vyegpy4xdig8vnabstc>
+  </sdc4:ms-q964qt4j2dtjvo06eea70en7>
+  </sdc4:ms-jdpxmvin8qc86f0vi1x4hl2k>
+  <sdc4:ms-f6ebrpydxag8xkknrry5iqil>
+    <label>Remittance Advice Line 7</label>
+  <sdc4:ms-q964qt4j2dtjvo06eea70en7>
+    <label>Remittance Advice Line</label>
+  <sdc4:ms-iswfl2vzv0f9ctm5rjxa3ums>
+    <label>Accounting Customer Party</label>
+  <sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+    <label>Customer Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+  </sdc4:ms-iswfl2vzv0f9ctm5rjxa3ums>
+  <sdc4:ms-f3duci830odmou614vn1rpgu>
+    <label>Accounting Supplier Party</label>
+  <sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+    <label>Supplier Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+  </sdc4:ms-f3duci830odmou614vn1rpgu>
+  <sdc4:ms-wnpoc2q1z2vxw56658bb9ed4>
+    <label>Billing Reference</label>
+  <sdc4:ms-znjvyfaljuuhab4hje617fyh>
+    <label>Credit Note Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-znjvyfaljuuhab4hje617fyh>
+  <sdc4:ms-gf1jjk07yakcdvlgwo8wozsy>
+    <label>Invoice Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-gf1jjk07yakcdvlgwo8wozsy>
+  </sdc4:ms-wnpoc2q1z2vxw56658bb9ed4>
+  <sdc4:ms-nylve3b8ss572vh8zso2u4l7>
+    <label>Buyer Customer Party</label>
+  <sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+    <label>Customer Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+  </sdc4:ms-nylve3b8ss572vh8zso2u4l7>
+  <sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+    <label>Invoice Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+  <sdc4:ms-zfqyw3u5kz7yxk8qgofj0dxj>
+    <label>Line Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-zfqyw3u5kz7yxk8qgofj0dxj>
+  <sdc4:ms-anpufgp9b2pqetblqffkfggy>
+    <label>Payee Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-anpufgp9b2pqetblqffkfggy>
+  <sdc4:ms-xkkk5vyegpy4xdig8vnabstc>
+    <label>Seller Supplier Party</label>
+  <sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+    <label>Supplier Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+  </sdc4:ms-xkkk5vyegpy4xdig8vnabstc>
+  </sdc4:ms-q964qt4j2dtjvo06eea70en7>
+  </sdc4:ms-f6ebrpydxag8xkknrry5iqil>
+  <sdc4:ms-ockchs2y8ctrehqoqz9074o0>
+    <label>Remittance Advice Line 8</label>
+  <sdc4:ms-q964qt4j2dtjvo06eea70en7>
+    <label>Remittance Advice Line</label>
+  <sdc4:ms-iswfl2vzv0f9ctm5rjxa3ums>
+    <label>Accounting Customer Party</label>
+  <sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+    <label>Customer Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+  </sdc4:ms-iswfl2vzv0f9ctm5rjxa3ums>
+  <sdc4:ms-f3duci830odmou614vn1rpgu>
+    <label>Accounting Supplier Party</label>
+  <sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+    <label>Supplier Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+  </sdc4:ms-f3duci830odmou614vn1rpgu>
+  <sdc4:ms-wnpoc2q1z2vxw56658bb9ed4>
+    <label>Billing Reference</label>
+  <sdc4:ms-znjvyfaljuuhab4hje617fyh>
+    <label>Credit Note Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-znjvyfaljuuhab4hje617fyh>
+  <sdc4:ms-gf1jjk07yakcdvlgwo8wozsy>
+    <label>Invoice Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-gf1jjk07yakcdvlgwo8wozsy>
+  </sdc4:ms-wnpoc2q1z2vxw56658bb9ed4>
+  <sdc4:ms-nylve3b8ss572vh8zso2u4l7>
+    <label>Buyer Customer Party</label>
+  <sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+    <label>Customer Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+  </sdc4:ms-nylve3b8ss572vh8zso2u4l7>
+  <sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+    <label>Invoice Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+  <sdc4:ms-zfqyw3u5kz7yxk8qgofj0dxj>
+    <label>Line Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-zfqyw3u5kz7yxk8qgofj0dxj>
+  <sdc4:ms-anpufgp9b2pqetblqffkfggy>
+    <label>Payee Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-anpufgp9b2pqetblqffkfggy>
+  <sdc4:ms-xkkk5vyegpy4xdig8vnabstc>
+    <label>Seller Supplier Party</label>
+  <sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+    <label>Supplier Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+  </sdc4:ms-xkkk5vyegpy4xdig8vnabstc>
+  </sdc4:ms-q964qt4j2dtjvo06eea70en7>
+  </sdc4:ms-ockchs2y8ctrehqoqz9074o0>
+  <sdc4:ms-ig9gi98729gio9k9z6b8sjt9>
+    <label>Remittance Advice Line 9</label>
+  <sdc4:ms-q964qt4j2dtjvo06eea70en7>
+    <label>Remittance Advice Line</label>
+  <sdc4:ms-iswfl2vzv0f9ctm5rjxa3ums>
+    <label>Accounting Customer Party</label>
+  <sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+    <label>Customer Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+  </sdc4:ms-iswfl2vzv0f9ctm5rjxa3ums>
+  <sdc4:ms-f3duci830odmou614vn1rpgu>
+    <label>Accounting Supplier Party</label>
+  <sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+    <label>Supplier Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+  </sdc4:ms-f3duci830odmou614vn1rpgu>
+  <sdc4:ms-wnpoc2q1z2vxw56658bb9ed4>
+    <label>Billing Reference</label>
+  <sdc4:ms-znjvyfaljuuhab4hje617fyh>
+    <label>Credit Note Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-znjvyfaljuuhab4hje617fyh>
+  <sdc4:ms-gf1jjk07yakcdvlgwo8wozsy>
+    <label>Invoice Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-gf1jjk07yakcdvlgwo8wozsy>
+  </sdc4:ms-wnpoc2q1z2vxw56658bb9ed4>
+  <sdc4:ms-nylve3b8ss572vh8zso2u4l7>
+    <label>Buyer Customer Party</label>
+  <sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+    <label>Customer Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-asbbdn0eof6713wx4y2e90c2>
+  </sdc4:ms-nylve3b8ss572vh8zso2u4l7>
+  <sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+    <label>Invoice Period</label>
+  <sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+    <label>Date Range</label>
+  </sdc4:ms-ru9u47yxhe337pslpxm6cflx>
+  </sdc4:ms-lxcfaaj41jaqhetpy8ekmvwj>
+  <sdc4:ms-zfqyw3u5kz7yxk8qgofj0dxj>
+    <label>Line Document Reference</label>
+  <sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+    <label>Document Reference</label>
+  </sdc4:ms-xex1p4pq2b1ezqzlam9n5sv7>
+  </sdc4:ms-zfqyw3u5kz7yxk8qgofj0dxj>
+  <sdc4:ms-anpufgp9b2pqetblqffkfggy>
+    <label>Payee Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-anpufgp9b2pqetblqffkfggy>
+  <sdc4:ms-xkkk5vyegpy4xdig8vnabstc>
+    <label>Seller Supplier Party</label>
+  <sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+    <label>Supplier Party</label>
+  <sdc4:ms-useph7s4ienfhwerqx2thedj>
+    <label>Party</label>
+  <sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+    <label>International Address</label>
+  </sdc4:ms-upawqojmcfg3qsf4ffzi47ho>
+  <sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+    <label>Party Contact</label>
+  <sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+    <label>Contact Point</label>
+  </sdc4:ms-d2xwhnb2vqzxw70jcizj9csx>
+  </sdc4:ms-kibeh8vp79shumcdyj8xzqw1>
+  <sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+    <label>Party Identification</label>
+  </sdc4:ms-z0gdpy67iot29gdc2zq2v1jj>
+  <sdc4:ms-cslzdtawth1xxjjslf1975qt>
+    <label>Party Legal Entity</label>
+  </sdc4:ms-cslzdtawth1xxjjslf1975qt>
+  <sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+    <label>US Address</label>
+  </sdc4:ms-jqgvof35d7y83wkfcgiic5em>
+  </sdc4:ms-useph7s4ienfhwerqx2thedj>
+  </sdc4:ms-utcj07ovkb7ntkbq8ix0ro4l>
+  </sdc4:ms-xkkk5vyegpy4xdig8vnabstc>
+  </sdc4:ms-q964qt4j2dtjvo06eea70en7>
+  </sdc4:ms-ig9gi98729gio9k9z6b8sjt9>
+  </sdc4:ms-tprxhij1vk093uyusb7rwyf0>
+  <sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+    <label>Tax Total</label>
+  <sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+    <label>Tax Subtotal</label>
+  <sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+    <label>Tax Category</label>
+  <sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+    <label>Tax Scheme</label>
+  <sdc4:ms-pws7nq68fp2xy8pjvhtqc2s3>
+    <sdc4:ms-mexx9mfi4rglmgi71nqf37ux>
+      <label>Tax Scheme ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-mexx9mfi4rglmgi71nqf37ux>
+  </sdc4:ms-pws7nq68fp2xy8pjvhtqc2s3>
+  <sdc4:ms-cu10je9x3ad1ip3v8jwfr6aq>
+    <sdc4:ms-g7952fbwz8uh2ig9uidu9877>
+      <label>Tax Scheme Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-g7952fbwz8uh2ig9uidu9877>
+  </sdc4:ms-cu10je9x3ad1ip3v8jwfr6aq>
+  </sdc4:ms-u23p2mgw0aw90lu5eh3o2ix0>
+  <sdc4:ms-djtvfcxu7bigwbv7eznl1y0w>
+    <sdc4:ms-p6c7q343dafqwvcq6m1ffz5i>
+      <label>Tax Category ID</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-p6c7q343dafqwvcq6m1ffz5i>
+  </sdc4:ms-djtvfcxu7bigwbv7eznl1y0w>
+  <sdc4:ms-t37p0g2cgueam6ywe2zp8iqd>
+    <sdc4:ms-ehh24wvyu4fsa3rbeheft3kj>
+      <label>Tax Category Name</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <xdstring-value>_PH_</xdstring-value>
+      <xdstring-language>_OPT_PH_</xdstring-language>
+    </sdc4:ms-ehh24wvyu4fsa3rbeheft3kj>
+  </sdc4:ms-t37p0g2cgueam6ywe2zp8iqd>
+  <sdc4:ms-l3ue9scta9uq277rtu869kag>
+    <sdc4:ms-v4zn5xtqlkni8qr3ly7e2j1a>
+      <label>Tax Percent</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Percentage</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-v4zn5xtqlkni8qr3ly7e2j1a>
+  </sdc4:ms-l3ue9scta9uq277rtu869kag>
+  </sdc4:ms-f3hxcmvvq1jtowruh5y3evhc>
+  <sdc4:ms-mn3h6pcpnblaif2eocrytzip>
+    <sdc4:ms-cx5gdd7pofanddbh9yaf53xl>
+      <label>Taxable Amount</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Currency</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-cx5gdd7pofanddbh9yaf53xl>
+  </sdc4:ms-mn3h6pcpnblaif2eocrytzip>
+  <sdc4:ms-kffezf2yyrd2hi9azksuxy23>
+    <sdc4:ms-gi49b158luigt4x2bhhbnux0>
+      <label>Tax Amount</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <magnitude-status>_OPT_PH_</magnitude-status>
+      <accuracy_margin>_OPT_PH_</accuracy_margin>
+      <precision_digits>_OPT_PH_</precision_digits>
+      <xdquantity-value>_PH_</xdquantity-value>
+      <xdquantity-units>
+        <label>Currency</label>
+        <xdstring-value>_PH_</xdstring-value>
+      </xdquantity-units>
+    </sdc4:ms-gi49b158luigt4x2bhhbnux0>
+  </sdc4:ms-kffezf2yyrd2hi9azksuxy23>
+  </sdc4:ms-w4pmewp5mgp43q2k0p4bmyfw>
+  </sdc4:ms-yat9nppabvpq1jrgpsi5g226>
+  </sdc4:ms-oyd0sik2krxuplyn3dbfafiv>
+  </sdc4:ms-c58celu1ukeo9ntpzf25ewuk>
+  <workflow>
+    <label>Order Workflow</label>
+  <sdc4:ms-fxbfxh70zibln9vuiuxdvuh5>
+    <label>Order: Main path</label>
+  <sdc4:ms-unodm5dbms8i6d84w0t7sj5d>
+    <sdc4:ms-r3ptl4b9w3uoeryziruyyr0g>
+      <label>Order: Main path states</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <ordinal>0</ordinal>
+      <symbol>OrderPaymentDue</symbol>
+    </sdc4:ms-r3ptl4b9w3uoeryziruyyr0g>
+  </sdc4:ms-unodm5dbms8i6d84w0t7sj5d>
+  </sdc4:ms-fxbfxh70zibln9vuiuxdvuh5>
+  <sdc4:ms-yandfsildrgawqjm1npmemmx>
+    <label>Order: orderdelivered orderreturned</label>
+  <sdc4:ms-n4du06vuaghzb0of3o012r2l>
+    <sdc4:ms-nwm9jgu4xn7k4de1ccvi0ls9>
+      <label>Order: orderdelivered orderreturned states</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <ordinal>0</ordinal>
+      <symbol>OrderDelivered</symbol>
+    </sdc4:ms-nwm9jgu4xn7k4de1ccvi0ls9>
+  </sdc4:ms-n4du06vuaghzb0of3o012r2l>
+  </sdc4:ms-yandfsildrgawqjm1npmemmx>
+  <sdc4:ms-pgqxbcws0w8wgdkf5wyzhq58>
+    <label>Order: orderintransit orderproblem</label>
+  <sdc4:ms-e4ykcslpzsuu0eabcq6wzebx>
+    <sdc4:ms-kk7748z9xt41jyg406y8qr73>
+      <label>Order: orderintransit orderproblem states</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <ordinal>0</ordinal>
+      <symbol>OrderInTransit</symbol>
+    </sdc4:ms-kk7748z9xt41jyg406y8qr73>
+  </sdc4:ms-e4ykcslpzsuu0eabcq6wzebx>
+  </sdc4:ms-pgqxbcws0w8wgdkf5wyzhq58>
+  <sdc4:ms-eh4r815gdqgu1xz6a3efcq2f>
+    <label>Order: orderpaymentdue ordercancelled</label>
+  <sdc4:ms-zlcvuaslnzclpggfk552y8au>
+    <sdc4:ms-i73y73c1wb9rleqbf86olf8w>
+      <label>Order: orderpaymentdue ordercancelled states</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <ordinal>0</ordinal>
+      <symbol>OrderPaymentDue</symbol>
+    </sdc4:ms-i73y73c1wb9rleqbf86olf8w>
+  </sdc4:ms-zlcvuaslnzclpggfk552y8au>
+  </sdc4:ms-eh4r815gdqgu1xz6a3efcq2f>
+  <sdc4:ms-xr701u7jj2okhapf8bazq3i6>
+    <label>Order: orderproblem orderprocessing</label>
+  <sdc4:ms-u6z44akp38faamrwk7ltt1l6>
+    <sdc4:ms-wchjtpjshozfm3pwzpp4lu5s>
+      <label>Order: orderproblem orderprocessing states</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <ordinal>0</ordinal>
+      <symbol>OrderProblem</symbol>
+    </sdc4:ms-wchjtpjshozfm3pwzpp4lu5s>
+  </sdc4:ms-u6z44akp38faamrwk7ltt1l6>
+  </sdc4:ms-xr701u7jj2okhapf8bazq3i6>
+  <sdc4:ms-ex5tr4g87ozr4yll9gpv0wdr>
+    <label>Order: orderprocessing ordercancelled</label>
+  <sdc4:ms-lrni37b5eyf7bwlldtr1ej6x>
+    <sdc4:ms-ljk2wd9f30r9oftbcilg32ur>
+      <label>Order: orderprocessing ordercancelled states</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <ordinal>0</ordinal>
+      <symbol>OrderProcessing</symbol>
+    </sdc4:ms-ljk2wd9f30r9oftbcilg32ur>
+  </sdc4:ms-lrni37b5eyf7bwlldtr1ej6x>
+  </sdc4:ms-ex5tr4g87ozr4yll9gpv0wdr>
+  <sdc4:ms-yqcnjxce4q5k7w2os0ihi4cd>
+    <label>Order: orderprocessing orderproblem</label>
+  <sdc4:ms-a17lv0aeed8hkovpp3gihhib>
+    <sdc4:ms-jbbwrh34rewkegfgw8w622o1>
+      <label>Order: orderprocessing orderproblem states</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <ordinal>0</ordinal>
+      <symbol>OrderProcessing</symbol>
+    </sdc4:ms-jbbwrh34rewkegfgw8w622o1>
+  </sdc4:ms-a17lv0aeed8hkovpp3gihhib>
+  </sdc4:ms-yqcnjxce4q5k7w2os0ihi4cd>
+  <sdc4:ms-ooyaee7dyvrevmt55ry4tzyo>
+    <label>Order: Pickup</label>
+  <sdc4:ms-laaua5r9fauq3luocivl79r1>
+    <sdc4:ms-xgf58rmpjqu8obiclzadb7av>
+      <label>Order: Pickup states</label>
+      <act>_OPT_PH_</act>
+      <vtb>_OPT_PH_</vtb>
+      <vte>_OPT_PH_</vte>
+      <tr>_OPT_PH_</tr>
+      <modified>_OPT_PH_</modified>
+      <latitude>_OPT_PH_</latitude>
+      <longitude>_OPT_PH_</longitude>
+      <normal-status>_OPT_PH_</normal-status>
+      <ordinal>0</ordinal>
+      <symbol>OrderProcessing</symbol>
+    </sdc4:ms-xgf58rmpjqu8obiclzadb7av>
+  </sdc4:ms-laaua5r9fauq3luocivl79r1>
+  </sdc4:ms-ooyaee7dyvrevmt55ry4tzyo>
+  </workflow>
+  <sdc4:ms-vjsb1sede0row0dzz9hobson>
+    <label>Business Document Audit</label>
+    <system-id>
+      <label>Business Document Translator Identifier</label>
+      <xdstring-value>_PH_</xdstring-value>
+    </system-id>
+    <system-user>
+      <label>Business Document Translator User</label>
+    </system-user>
+    <location>
+      <label>Business Document Source</label>
+    </location>
+    <timestamp>2024-01-01T00:00:00</timestamp>
+  </sdc4:ms-vjsb1sede0row0dzz9hobson>
+</sdc4:dm-fgtbf38cj0bwxppxn69etcci>

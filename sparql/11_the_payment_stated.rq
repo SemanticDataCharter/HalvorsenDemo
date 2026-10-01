@@ -1,0 +1,27 @@
+# Beat 11: the payment, stated. Each payment run (one remittance advice) with the day it was paid, the totals it states
+# (debited, credited, paid), the invoices it settled and the credit notes it took into account, each picked out of the
+# run's document references (the Document Reference ID component names every invoice and credit note a run refers to)
+# by joining to the Invoice ID and the Credit Note ID. The lines of one run share their components in the graph (the
+# reifier is keyed by component and record), so which line paid which invoice, and the debit, credit and balance of
+# each, is the record's question, on its Table pane; what a run paid against which documents is the graph's. The
+# settled remittance advices do not exist: nothing settles a payment here. Every component bound.
+PREFIX sdc4: <https://semanticdatacharter.com/ns/sdc4/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?remittance_id (MAX(?issued) AS ?paid_on) ?debited ?credited ?paid (COUNT(DISTINCT ?invoice_id) AS ?invoices) (GROUP_CONCAT(DISTINCT ?invoice_id; separator=", ") AS ?invoices_paid) (GROUP_CONCAT(DISTINCT ?credit_note_id; separator=", ") AS ?credit_notes_taken) ?inst WHERE {
+  ?m rdfs:label "Remittance Advice ID" ; sdc4:inInstance ?inst ; sdc4:inDataModel sdc4:dm-fgtbf38cj0bwxppxn69etcci ; rdf:reifies <<sdc4:mc-qrlhu795tx4ktkczzwjgmex0 ?p1 ?remittance_id>> .
+  ?t rdfs:label "Issue Date" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-tkd16hhh9wbn0qya2ykm0552 ?p2 ?issued>> .
+  ?d rdfs:label "Total Debit Amount" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-td3ikusqd8oil952mc5tshok ?p3 ?debited>> .
+  ?c rdfs:label "Total Credit Amount" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-jce61gv76krf6vwk63ym367j ?p4 ?credited>> .
+  ?y rdfs:label "Total Payment Amount" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-l41b25npnwox5z6ugjzctgus ?p5 ?paid>> .
+  ?r rdfs:label "Document Reference ID" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-k153quyn7i9ravd1b3c61ad9 ?p6 ?invoice_id>> .
+  ?i rdfs:label "Invoice ID" ; sdc4:inInstance ?inst_2 ; sdc4:inDataModel sdc4:dm-u19w614300a8ot4a7qnn2o1c ; rdf:reifies <<sdc4:mc-jjrdrfy8mwl5mrhknuj91xnl ?p7 ?invoice_id>> .
+  OPTIONAL {
+    ?r2 rdfs:label "Document Reference ID" ; sdc4:inInstance ?inst ; rdf:reifies <<sdc4:mc-k153quyn7i9ravd1b3c61ad9 ?p8 ?credit_note_id>> .
+    ?n rdfs:label "Credit Note ID" ; sdc4:inInstance ?inst_3 ; sdc4:inDataModel sdc4:dm-jkuyr38hydqaiwlq5vhp2rjr ; rdf:reifies <<sdc4:mc-tnapfsz8ytrxb7oqk54ju0r7 ?p9 ?credit_note_id>> .
+  }
+}
+GROUP BY ?remittance_id ?debited ?credited ?paid ?inst
+ORDER BY ?paid_on ?remittance_id
+LIMIT 200

@@ -68,6 +68,7 @@ TITLE_LABELS: Dict[str, List[List[str]]] = {
     'u19w614300a8ot4a7qnn2o1c': [['Invoice ID']],          # Invoice
     'cq1fjrvyn0fxl1kyk9y3kr1w': [['Order ID']],            # Torvale Order
     'jkuyr38hydqaiwlq5vhp2rjr': [['Credit Note ID']],      # Credit Note
+    'fgtbf38cj0bwxppxn69etcci': [['Remittance Advice ID']], # Remittance Advice
 }
 
 MAX_RECORDS = 150
