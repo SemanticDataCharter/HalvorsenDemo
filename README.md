@@ -4,7 +4,7 @@ Halvorsen Foods is a fictitious food manufacturer. It shipped a mixed pallet to 
 
 This is the demonstration in which the verdict survives a question. Two stacks on one machine, the supplier and the retailer, exchange business documents as governed records composed from the published component libraries and the business documents library built from the OASIS Universal Business Language and GS1 identifiers, with the document written on the way out of one stack and read on the way in to the other. Every record carries its provenance and the model that governs it. The document is a projection of the record.
 
-**Scheduled for the first quarter of 2027. Private until it ships.** This is release 4.1.10: seven documents, the exchange in both directions from the order to the payment, the deductions settled with Settlement Receipts that verify offline and credited against the invoice, a second retailer's order profile as a model on the same components, and eleven beats. Built on the CordovaOS 4.4.2 skeleton, the way the FAIR Data Demo was.
+**Released 6 October 2026, ahead of the first-quarter 2027 schedule.** This is release 4.1.10: seven documents, the exchange in both directions from the order to the payment, the deductions settled with Settlement Receipts that verify offline and credited against the invoice, a second retailer's order profile as a model on the same components, and eleven beats. Built on the CordovaOS 4.4.2 skeleton, the way the FAIR Data Demo was.
 
 ## Two guides, depending on why you are here
 
