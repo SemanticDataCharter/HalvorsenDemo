@@ -7,7 +7,16 @@
       "alg": "ES256",
       "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEq1A+8aHEejYlmB8oS+IbLNW1xlL7\nip8PGQOLET81gl/21dSdUUzMBkJt97E3aanF8KnmOiAG79VqRM/6rAzXkg==\n-----END PUBLIC KEY-----\n",
       "status": "active",
-      "not_before": "2026-09-17T00:20:33Z",
+      "not_before": "2026-02-22T16:00:30Z",
+      "not_after": null
+    },
+    {
+      "key_id": "sdcstudio-pq-signing-key-v1",
+      "algorithm": "PQ_SIGN_ML_DSA_65",
+      "alg": "ML-DSA-65",
+      "public_key_pem": "-----BEGIN PUBLIC KEY-----\n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\nPK4f8yyw\n-----END PUBLIC KEY-----\n",
+      "status": "active",
+      "not_before": "2026-10-09T22:28:07Z",
       "not_after": null
     }
   ]

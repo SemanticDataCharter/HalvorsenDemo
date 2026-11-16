@@ -30,3 +30,10 @@ def norm(entry: dict) -> dict:
     e.setdefault("from_state", "OrderProblem")
     e["agent"] = agent
     return e
+
+
+def held_receipts(settlement_dir) -> list:
+    """Every Receipt held in settlement/receipts/: the earlier links a chained Receipt is verified against, never fetched."""
+    import json
+    from pathlib import Path
+    return [json.loads(p.read_text(encoding="utf-8")) for p in sorted(Path(settlement_dir, "receipts").glob("*.json"))]

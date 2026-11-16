@@ -1,0 +1,17 @@
+{
+  "notice": "Delivery confirmed",
+  "issued_by": "Torvale Markets, Inc.",
+  "to": "Halvorsen Foods, Inc.",
+  "order_id": "TV-PO-2026-000001",
+  "released_by_receipt": "c5xx3x87h609sbwp2dn9gart",
+  "profile": {
+    "model": "Torvale Order",
+    "model_ct": "cq1fjrvyn0fxl1kyk9y3kr1w",
+    "delivery_terms": "DDP",
+    "delivery_window_days": {
+      "magnitude": "2",
+      "unit": "days"
+    }
+  },
+  "resolution": "Torvale confirms the order released to transit under its profile has been delivered; the order moves from OrderInTransit to OrderDelivered."
+}

@@ -92,3 +92,14 @@ def test_two_party_documents_claiming_one_key_id_are_refused(held):
     (held / "keys" / "zz-copy-key.json").write_text(json.dumps(first))
     with pytest.raises(PartyError, match="exactly one document"):
         key_roles(held)
+
+
+def test_the_delivery_condition_reads_the_settled_record():
+    """#18: the delivered step's condition comes from the record the release Receipt produced, and names that Receipt."""
+    import settle
+    path = Path(os.environ.get("HALVORSEN_IMPORT_DIR", ROOT / "app" / "sdc4" / "import_data")) / "halvorsen" / "torvale_order" / "torvale_order-tv-po-2026-000001-settled.xml"
+    if not path.exists():
+        pytest.skip("no settled Torvale record: run make generate")
+    notice = settle.delivery_notice(path.read_text(encoding="utf-8"), "c5xx3x87h609sbwp2dn9gart")
+    assert notice["order_id"] == "TV-PO-2026-000001" and notice["released_by_receipt"] == "c5xx3x87h609sbwp2dn9gart"
+    assert "OrderInTransit to OrderDelivered" in notice["resolution"]

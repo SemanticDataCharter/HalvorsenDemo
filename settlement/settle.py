@@ -20,6 +20,13 @@ the condition that the order is released to transit under the profile it carries
 version, its delivery window, and what the model's own schema requires). The Receipt names the Torvale model by its
 schema bytes, so the verdict says which profile governed.
 
+That order then goes on: the settled record the first Receipt produced (the order in OrderInTransit, its provenance naming
+the Receipt) moves to OrderDelivered between the same two parties, and the Receipt for it names the first by
+`previous_receipt_id`. The issuer puts the first Receipt's hash in the second's `previous_hash`, inside what it signs, so
+the two are one chain: `verify --chain` follows it, and `settlement/verify_all.py` and the Settlements page check both
+links. The payment documents are not chained: the Order workflow the models bind has no state an invoice, credit note
+or remittance moves to that means paid.
+
 Each Receipt costs the issuer's account one credit. The parties' private keys stay in settlement/keys/
 and are not committed; their key documents are.
 """
@@ -152,10 +159,26 @@ def release_notice(record_text: str) -> dict:
     }
 
 
-def settle_one(text: str, *, tok: str, kind: str, current_state: str, target: str, condition: dict, parties: list[str], keys: dict, label: str) -> dict | None:
+def delivery_notice(record_text: str, previous_receipt_id: str) -> dict:
+    """The condition on the settled Torvale order: delivered under the profile it carries, after the release the previous Receipt attests."""
+    t = read_tree(record_text, Schema.for_dm(TORVALE.ct)).get(*TORVALE.root)
+    window = t.leaf("Torvale Order Requirements", "Torvale Delivery Window Days")
+    return {
+        "notice": "Delivery confirmed", "issued_by": "Torvale Markets, Inc.", "to": "Halvorsen Foods, Inc.",
+        "order_id": t.leaf("Order Document", "Order ID"), "released_by_receipt": previous_receipt_id,
+        "profile": {"model": "Torvale Order", "model_ct": TORVALE.ct,
+                    "delivery_terms": t.leaf("Torvale Delivery Terms", "Torvale Delivery Terms Code"),
+                    "delivery_window_days": {"magnitude": window.magnitude, "unit": window.unit}},
+        "resolution": "Torvale confirms the order released to transit under its profile has been delivered; the order moves from OrderInTransit to OrderDelivered.",
+    }
+
+
+def settle_one(text: str, *, tok: str, kind: str, current_state: str, target: str, condition: dict, parties: list[str], keys: dict, label: str,
+               previous_receipt_id: str = "") -> dict | None:
     """One settlement, live: the Receipt as issued, both parties' triggers, the Receipt as it finally stands; None on a refusal the issuer explains."""
     try:
-        response = issue.settle(text, endpoint=ENDPOINT, token=tok, current_state=current_state, target_state=target, condition=condition, parties=parties)
+        response = issue.settle(text, endpoint=ENDPOINT, token=tok, current_state=current_state, target_state=target, condition=condition, parties=parties,
+                                previous_receipt_id=previous_receipt_id)
     except issue.SettleError as exc:   # a refusal the issuer explains (INDETERMINATE, a bad state) is kept as text, not as a Receipt
         print(f"  {label} -> {target}: {exc}")
         (RESPONSES / f"{label}-{kind}-error.txt").write_text(str(exc) + "\n")
@@ -239,6 +262,25 @@ def main() -> int:
                 index_path.write_text(json.dumps(index, indent=2) + "\n")
     else:
         print(f"  no {tpath.name} under {IMPORT_ROOT}: run the generator first for the Torvale settlement")
+    # the same order, delivered: chained onto the release Receipt, settling the record that Receipt produced
+    released = next((e for e in index if e.get("document_id") == TORVALE_ORDER and e.get("target_state") == "OrderInTransit" and e.get("decision") == "PERMIT"), None)
+    spath = Path(IMPORT_ROOT) / "halvorsen" / "torvale_order" / f"torvale_order-{TORVALE_ORDER.lower()}-settled.xml"
+    if released and spath.exists():
+        text = spath.read_text(encoding="utf-8")
+        sha = hashlib.sha256(text.encode("utf-8")).hexdigest()
+        if (sha, "permit") not in done:
+            condition = delivery_notice(text, released["receipt_id"])
+            (CONDITIONS / f"{TORVALE_ORDER}-delivered.json").write_text(json.dumps(condition, indent=2) + "\n")
+            tpair = {n: keys[n] for n in ("torvale", "halvorsen")}
+            got = settle_one(text, tok=tok, kind="permit", current_state="OrderInTransit", target="OrderDelivered", condition=condition,
+                             parties=[kid for kid, _ in tpair.values()], keys=tpair, label=f"{TORVALE_ORDER}-delivered", previous_receipt_id=released["receipt_id"])
+            if got is not None:
+                index.append({"document_id": TORVALE_ORDER, "model_ct": TORVALE.ct, "model": "Torvale Order", "record_dir": "halvorsen/torvale_order", "from_state": "OrderInTransit",
+                              "order_id": TORVALE_ORDER, "invoice_id": None, "record_file": spath.name, "record_sha256": sha, "condition_file": f"conditions/{TORVALE_ORDER}-delivered.json",
+                              "previous_receipt_id": released["receipt_id"], "settled_name": f"{TORVALE_ORDER.lower()}-delivered-settled", **got})
+                index_path.write_text(json.dumps(index, indent=2) + "\n")
+    elif released:
+        print(f"  no {spath.name} under {IMPORT_ROOT}: run `make generate` after the release Receipt, then settle again for delivery")
     print(f"{len(index)} Receipts in settlement/receipts; index.json written")
     return 0
 

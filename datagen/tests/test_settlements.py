@@ -33,11 +33,12 @@ def test_every_receipt_names_bytes_the_generator_still_writes(tmp_path):
     for name in settled:
         xml = (tmp_path / "retailer" / "receipt_advice" / name).read_text(encoding="utf-8")
         assert "<current-state>OrderProcessing</current-state>" in xml and "urn:vsl:receipt:" in xml and "Kestrel Mercantile settlement agent" in xml
-    torvale = sorted(p.name for p in (tmp_path / "halvorsen" / "torvale_order").glob("*-settled.xml"))
-    assert len(torvale) == sum(1 for e in map(norm, entries()) if e["kind"] == "permit" and e["decision"] == "PERMIT" and e["model"] == "Torvale Order")
-    for name in torvale:
+    torvale = [e for e in map(norm, entries()) if e["kind"] == "permit" and e["decision"] == "PERMIT" and e["model"] == "Torvale Order"]
+    assert len(sorted((tmp_path / "halvorsen" / "torvale_order").glob("*-settled.xml"))) == len(torvale)
+    for e in torvale:   # each in the state its Receipt reached, naming that Receipt; a chained one under its own name
+        name = f"torvale_order-{e.get('settled_name') or e['document_id'].lower() + '-settled'}.xml"
         xml = (tmp_path / "halvorsen" / "torvale_order" / name).read_text(encoding="utf-8")
-        assert "<current-state>OrderInTransit</current-state>" in xml and "urn:vsl:receipt:" in xml and "Halvorsen Foods settlement agent" in xml
+        assert f"<current-state>{e['target_state']}</current-state>" in xml and f"urn:vsl:receipt:{e['receipt_id']}" in xml and "Halvorsen Foods settlement agent" in xml
 
 
 def test_every_receipt_verifies_offline_against_the_record_and_schema_bytes(tmp_path):
@@ -50,6 +51,10 @@ def test_every_receipt_verifies_offline_against_the_record_and_schema_bytes(tmp_
         r = verify_all.check(e, keys, import_root=str(tmp_path))
         assert r["payload_matches"] and r["schema_matches"], (e["receipt_id"], r)
         assert r["verified"], (e["receipt_id"], r["failures"])
+        if e.get("previous_receipt_id"):   # chained: verified with the link to the Receipt before it
+            assert r["chain"] == 2 and r["previous_receipt_id"] == e["previous_receipt_id"], r
+        else:
+            assert r["chain"] == 1, r
         if e["kind"] == "permit":
             assert r["decision"] == "PERMIT" and r["triggers"] == 2
         else:
