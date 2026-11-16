@@ -25,6 +25,7 @@ SETTLEMENT_DIR = _docker_path if _docker_path.exists() else _host_path
 if str(SETTLEMENT_DIR) not in sys.path:
     sys.path.insert(0, str(SETTLEMENT_DIR))
 from entries import RECEIPT_ADVICE_CT, norm  # noqa: E402
+from key_roles import key_roles  # noqa: E402
 
 
 def _load(name: str):
@@ -33,26 +34,8 @@ def _load(name: str):
 
 
 def key_documents():
-    """Every key document held: the issuer's as saved, and each party's, merged into one key set."""
-    from sdcreceipt.party import KeySet, load_key_set_file
-    keyset = KeySet()
-    for path in [SETTLEMENT_DIR / 'issuer-keys.json'] + sorted((SETTLEMENT_DIR / 'keys').glob('*-key.json')):
-        if path.exists():
-            keyset.merge(load_key_set_file(path))
-    return keyset
-
-
-def split_keys(receipt, keyset):
-    """The Receipt says which key ids signed it; the verifier wants the issuer's keys and the parties' apart."""
-    from sdcreceipt.party import KeySet
-    issuer_ids = {sig.get('key_id') for sig in receipt.get('signatures', []) if isinstance(sig, dict)}
-    issuer, parties = KeySet(), KeySet()
-    for key_id, key in keyset.items():
-        target = issuer if key_id in issuer_ids else parties
-        target[key_id] = key
-        if key_id in keyset.status:
-            target.status[key_id] = keyset.status[key_id]
-    return issuer, (parties or None)
+    """``(issuer_keys, party_keys)``: the issuer's document as saved, and each party's, each in its own role (settlement/key_roles.py)."""
+    return key_roles(SETTLEMENT_DIR)
 
 
 #: Where this stack's own records were read from: the Receipt names the record by the bytes on the wire, and the
@@ -98,9 +81,9 @@ def settlements() -> Dict[str, Any]:
     if not index:
         return {'rows': [], 'issued': False}
     try:
-        keyset = key_documents()
-    except Exception as exc:   # sdcreceipt missing or a malformed document: the page says so on every row
-        keyset, key_error = None, str(exc)
+        keys = key_documents()
+    except Exception as exc:   # sdcreceipt missing, a malformed document, or a key in two roles: the page says so on every row
+        keys, key_error = None, str(exc)
     else:
         key_error = None
     entries = [norm(e) for e in index]
@@ -117,10 +100,10 @@ def settlements() -> Dict[str, Any]:
         schema_path = dmlib / f"dm-{receipt.get('schema_ct_id', '')}.xsd"
         schema_ok = schema_path.exists() and hashlib.sha256(schema_path.read_bytes()).hexdigest() == receipt.get('schema_hash')
         verified, failures = False, [key_error] if key_error else []
-        if keyset is not None and receipt:
+        if keys is not None and receipt:
             try:
                 from sdcreceipt import verify
-                issuer, parties = split_keys(receipt, keyset)
+                issuer, parties = keys
                 result = verify(receipt, issuer_keys=issuer, party_keys=parties if entry['decision'] == 'PERMIT' else None,
                                 payload=payload if payload_matches else None)   # a copy that is not the bytes named (the supplier's, read from the document) is not the payload
                 # a DENY attests a refusal and accepts no triggers: its settlement is never complete, and that is not a failure
