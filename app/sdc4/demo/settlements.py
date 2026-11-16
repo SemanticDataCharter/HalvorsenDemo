@@ -24,7 +24,8 @@ _host_path = settings.BASE_DIR.parent.parent / 'settlement'
 SETTLEMENT_DIR = _docker_path if _docker_path.exists() else _host_path
 if str(SETTLEMENT_DIR) not in sys.path:
     sys.path.insert(0, str(SETTLEMENT_DIR))
-from entries import RECEIPT_ADVICE_CT, norm  # noqa: E402
+from entries import RECEIPT_ADVICE_CT, held_receipts, norm  # noqa: E402
+from key_roles import key_roles  # noqa: E402
 
 
 def _load(name: str):
@@ -33,26 +34,8 @@ def _load(name: str):
 
 
 def key_documents():
-    """Every key document held: the issuer's as saved, and each party's, merged into one key set."""
-    from sdcreceipt.party import KeySet, load_key_set_file
-    keyset = KeySet()
-    for path in [SETTLEMENT_DIR / 'issuer-keys.json'] + sorted((SETTLEMENT_DIR / 'keys').glob('*-key.json')):
-        if path.exists():
-            keyset.merge(load_key_set_file(path))
-    return keyset
-
-
-def split_keys(receipt, keyset):
-    """The Receipt says which key ids signed it; the verifier wants the issuer's keys and the parties' apart."""
-    from sdcreceipt.party import KeySet
-    issuer_ids = {sig.get('key_id') for sig in receipt.get('signatures', []) if isinstance(sig, dict)}
-    issuer, parties = KeySet(), KeySet()
-    for key_id, key in keyset.items():
-        target = issuer if key_id in issuer_ids else parties
-        target[key_id] = key
-        if key_id in keyset.status:
-            target.status[key_id] = keyset.status[key_id]
-    return issuer, (parties or None)
+    """``(issuer_keys, party_keys)``: the issuer's document as saved, and each party's, each in its own role (settlement/key_roles.py)."""
+    return key_roles(SETTLEMENT_DIR)
 
 
 #: Where this stack's own records were read from: the Receipt names the record by the bytes on the wire, and the
@@ -98,9 +81,9 @@ def settlements() -> Dict[str, Any]:
     if not index:
         return {'rows': [], 'issued': False}
     try:
-        keyset = key_documents()
-    except Exception as exc:   # sdcreceipt missing or a malformed document: the page says so on every row
-        keyset, key_error = None, str(exc)
+        keys = key_documents()
+    except Exception as exc:   # sdcreceipt missing, a malformed document, or a key in two roles: the page says so on every row
+        keys, key_error = None, str(exc)
     else:
         key_error = None
     entries = [norm(e) for e in index]
@@ -113,16 +96,21 @@ def settlements() -> Dict[str, Any]:
         condition = _load(entry['condition_file']) or {}
         payload = record_bytes(entry['record_dir'], entry['record_file'])
         payload_matches = payload is not None and hashlib.sha256(payload).hexdigest() == receipt.get('payload_hash')
-        record = {'instance_id': original_by_id[entry['document_id']]} if entry['document_id'] in original_by_id else None
+        # a chained Receipt settled the record the previous Receipt produced, so that settled record is the one it names
+        named = settled_by_receipt.get(entry['previous_receipt_id']) if entry.get('previous_receipt_id') else original_by_id.get(entry['document_id'])
+        record = {'instance_id': named} if named else None
         schema_path = dmlib / f"dm-{receipt.get('schema_ct_id', '')}.xsd"
         schema_ok = schema_path.exists() and hashlib.sha256(schema_path.read_bytes()).hexdigest() == receipt.get('schema_hash')
-        verified, failures = False, [key_error] if key_error else []
-        if keyset is not None and receipt:
+        verified, failures, chain = False, [key_error] if key_error else [], 1
+        if keys is not None and receipt:
             try:
-                from sdcreceipt import verify
-                issuer, parties = split_keys(receipt, keyset)
-                result = verify(receipt, issuer_keys=issuer, party_keys=parties if entry['decision'] == 'PERMIT' else None,
+                from sdcreceipt import verify, verify_chain
+                issuer, parties = keys
+                evidence = dict(issuer_keys=issuer, party_keys=parties if entry['decision'] == 'PERMIT' else None,
                                 payload=payload if payload_matches else None)   # a copy that is not the bytes named (the supplier's, read from the document) is not the payload
+                # chained onto an earlier Receipt: previous_hash is followed through the Receipts held here, every link checked
+                result = verify_chain(receipt, held=held_receipts(SETTLEMENT_DIR), **evidence) if receipt.get('previous_hash') else verify(receipt, **evidence)
+                chain = 1 + sum(1 for c in result.checks if c.name.startswith('chain.link[') and c.name.endswith(' previous_hash'))
                 # a DENY attests a refusal and accepts no triggers: its settlement is never complete, and that is not a failure
                 deny = entry['decision'] == 'DENY'
                 failures = [str(f) for f in result.failures if not (deny and getattr(f, 'name', '') == 'settlement.complete')]
@@ -134,10 +122,11 @@ def settlements() -> Dict[str, Any]:
             'kind': entry['kind'], 'from_state': entry['from_state'], 'target_state': entry['target_state'], 'decision': entry['decision'], 'settleable': entry['settleable'],
             'receipt_id': entry['receipt_id'], 'timestamp': receipt.get('timestamp', ''), 'triggers': len(receipt.get('settlement', {}).get('triggers', [])),
             'parties': receipt.get('settlement', {}).get('parties', []), 'verified': verified, 'failures': failures,
+            'previous_receipt_id': entry.get('previous_receipt_id'), 'chain': chain,
             'record_found': record is not None, 'record_instance': record['instance_id'] if record else None, 'payload_here': payload is not None, 'payload_matches': payload_matches,
             'settled_instance': settled_by_receipt.get(entry['receipt_id']), 'schema_ok': schema_ok,
             'payload_hash': receipt.get('payload_hash', ''), 'schema_hash': receipt.get('schema_hash', ''), 'condition_hash': receipt.get('settlement', {}).get('condition_hash', ''),
-            'deduction': condition.get('deduction_amount'), 'pallets': condition.get('pallets', []), 'profile': condition.get('profile'), 'condition_json': json.dumps(condition, indent=2), 'receipt_json': json.dumps(receipt, indent=2),
+            'deduction': condition.get('deduction_amount'), 'pallets': condition.get('pallets', []), 'profile': condition.get('profile'), 'notice': condition.get('notice'), 'condition_json': json.dumps(condition, indent=2), 'receipt_json': json.dumps(receipt, indent=2),
         })
     return {'rows': rows, 'issued': True,
             'verified': sum(r['verified'] for r in rows), 'permits': sum(r['decision'] == 'PERMIT' for r in rows), 'denies': sum(r['decision'] == 'DENY' for r in rows),

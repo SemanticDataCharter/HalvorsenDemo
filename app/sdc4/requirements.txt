@@ -34,4 +34,4 @@ sdcgovernance==4.2.4  # governed execution (DMN decisions + tamper-evident recei
 # SirixDB client (HTTPS requests)
 httpx==0.28.1
 urllib3==2.7.0  # Security: CVE-2026-44431/44432
-sdcreceipt==4.2.3  # verifies the Settlement Receipts held in settlement/ against the record and schema bytes, with nothing from the issuer
+sdcreceipt==4.4.0  # verifies the Settlement Receipts held in settlement/ against the record and schema bytes, with nothing from the issuer
