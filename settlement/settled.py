@@ -66,7 +66,8 @@ def write_settled_records(import_root: str) -> tuple[int, int]:
                              f"Settlement Receipt {receipt['receipt_id']}: governance {receipt['governance']['decision']} for {entry['from_state']} to {entry['target_state']}, "
                              f"condition {receipt['settlement']['condition_hash'][:16]}, payload {receipt['payload_hash'][:16]}, {len(receipt['settlement'].get('triggers', []))} triggers"),
                      agent=settlement_agent(*entry["agent"]), current_state=entry["target_state"], instance_id=cuid_generator(random.Random(receipt["receipt_id"])))
-        write_record(directory, entry["record_dir"].rsplit("/", 1)[-1], xml, name=f"{did.lower()}-settled")
+        # a Receipt chained onto an earlier one settles that one's settled record, so its own needs a name of its own
+        write_record(directory, entry["record_dir"].rsplit("/", 1)[-1], xml, name=entry.get("settled_name") or f"{did.lower()}-settled")
         written += 1
     return written, skipped
 

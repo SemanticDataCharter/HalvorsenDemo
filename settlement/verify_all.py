@@ -21,10 +21,10 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 sys.path.insert(0, str(ROOT / "datagen"))
 sys.path.insert(0, str(HERE))
-from entries import norm  # noqa: E402
+from entries import held_receipts, norm  # noqa: E402
 from shared import DMLIB, IMPORT_ROOT  # noqa: E402
 from key_roles import key_roles  # noqa: E402
-from sdcreceipt import verify  # noqa: E402
+from sdcreceipt import verify, verify_chain  # noqa: E402
 
 
 def key_documents():
@@ -47,14 +47,17 @@ def check(entry: dict, keys: tuple, import_root: str = IMPORT_ROOT, dmlib: str =
     payload = payload_path.read_bytes() if payload_path.exists() else None
     schema_path = Path(dmlib) / f"dm-{receipt['schema_ct_id']}.xsd"
     schema_hash = hashlib.sha256(schema_path.read_bytes()).hexdigest() if schema_path.exists() else None
-    result = verify(receipt, issuer_keys=issuer, party_keys=parties if entry["decision"] == "PERMIT" else None, payload=payload)
+    evidence = dict(issuer_keys=issuer, party_keys=parties if entry["decision"] == "PERMIT" else None, payload=payload)
+    # a Receipt chained onto an earlier one is verified with every Receipt held: its previous_hash is followed to the head
+    result = verify_chain(receipt, held=held_receipts(HERE), **evidence) if receipt.get("previous_hash") else verify(receipt, **evidence)
+    links = sum(1 for c in result.checks if c.name.startswith("chain.link[") and c.name.endswith(" previous_hash"))
     failures, verified = expected_failures(receipt, result)
     return {
         "receipt_advice_id": entry["document_id"], "document_id": entry["document_id"], "model": entry["model"], "receipt_id": entry["receipt_id"], "decision": receipt["governance"]["decision"], "kind": entry["kind"],
         "verified": verified, "failures": failures, "record": dict(result.record) if hasattr(result, "record") and isinstance(result.record, dict) else str(getattr(result, "record", "")),
         "payload_present": payload is not None, "payload_matches": payload is not None and hashlib.sha256(payload).hexdigest() == receipt["payload_hash"],
         "schema_matches": schema_hash == receipt["schema_hash"], "triggers": len(receipt.get("settlement", {}).get("triggers", [])), "parties": receipt.get("settlement", {}).get("parties", []),
-        "timestamp": receipt.get("timestamp", ""),
+        "timestamp": receipt.get("timestamp", ""), "previous_receipt_id": entry.get("previous_receipt_id"), "chain": links + 1,
     }
 
 
@@ -70,6 +73,7 @@ def main() -> int:
         ok = r["verified"] and r["payload_matches"] and r["schema_matches"]
         bad += not ok
         print(f"{'VERIFIED' if ok else 'FAILED  '} {r['receipt_advice_id']} {r['decision']:<6} receipt {r['receipt_id']} triggers {r['triggers']} payload {'ok' if r['payload_matches'] else 'MISMATCH'} schema {'ok' if r['schema_matches'] else 'MISMATCH'}"
+              + (f" chain of {r['chain']}, after {r['previous_receipt_id']}" if r["chain"] > 1 else "")
               + (f"  {r['failures']}" if r["failures"] else ""))
     print(f"{bad} failed" if bad else "every Receipt verifies against the record bytes and the schema bytes held here")
     return 1 if bad else 0
